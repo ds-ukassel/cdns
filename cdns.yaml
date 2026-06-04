@@ -1,1 +1,166 @@
 # yaml-language-server: $schema=schemas/cdns.schema.json
+- name: Cloudflare
+  headers:
+    - 'CF-Cache-Status'
+    - 'CF-RAY'
+    - 'Server: cloudflare'
+    - 'CF-Connecting-IP'
+    - 'CF-Request-ID'
+    - 'CF-WORKER'
+- name: Akamai
+  headers:
+    - 'X-Akamai-Request-ID'
+    - 'X-Akamai-Transformed'
+    - 'X-Akamai-SSL'
+    - 'X-Akamai-Edge-Cache'
+    - 'Server: AkamaiGHost'
+    - 'X-Akamai-Staging'
+    - 'Edge-Control'
+    - 'X-True-Cache-Key'
+    - 'X-Akamai-Device-Characteristics'
+- name: Amazon CloudFront
+  headers:
+    - 'X-Amz-Cf-Id'
+    - 'X-Cache: Hit from cloudfront'
+    - 'Server: CloudFront'
+    - 'X-Amz-Cf-Pop'
+    - 'Via: CloudFront'
+    - 'X-Amz-Acl'
+    - 'X-Amz-Cf-Request-Id'
+- name: Fastly
+  headers:
+    - 'Server: Varnish'
+    - 'X-Varnish'
+    - 'X-Fastly-Request-ID'
+    - 'X-Timer'
+    - 'X-Served-By'
+- name: StackPath
+  headers:
+    - 'Server: StackPath'
+    - 'X-Powered-By: StackPath'
+    - 'X-StackPath-Request-ID'
+    - 'X-SP-Edge-Cache'
+    - 'X-CDN: StackPath'
+- name: KeyCDN
+  headers:
+    - 'Server: KeyCDN'
+    - 'X-CDN: KeyCDN'
+- name: BunnyCDN
+  headers:
+    - 'Server: BunnyCDN'
+    - 'Bunny-Cache'
+    - 'Bunny-Region'
+    - 'Bunny-Storage-Zone'
+- name: Sucuri
+  headers:
+    - 'Server: Sucuri/Cloudproxy'
+    - 'Server: Sucuri'
+    - 'X-Sucuri-ID'
+    - 'X-Sucuri-Cache'
+    - 'X-Sucuri-Block'
+    - 'X-Sucuri-Cloudproxy-Cache'
+- name: Imperva # Incapsula
+  headers:
+    - 'Server: Imperva'
+    - 'X-CDN: Incapsula'
+    - 'X-Info'
+    - 'X-CDN-Request-ID'
+    - 'X-Cdn-Provider: Incapsula'
+- name: CacheFly
+  headers:
+    - 'Server: CacheFly'
+- name: QUIC.cloud
+  headers:
+    - 'Server: LiteSpeed'
+    - 'X-QC-Cache'
+- name: ArvanCloud
+  headers:
+    - 'Server: ArvanCloud'
+    - 'AR-PoweredBy'
+- name: G-Core Labs
+  headers:
+    - 'Server: GCL'
+    - 'Server: G-Core Labs'
+    - 'X-GCL-Cache'
+    - 'X-GCL-Pop'
+    - 'X-GCL-Request-ID'
+    - 'X-GCL-Region'
+    - 'X-GCL-Server'
+    - 'X-GCL-Status'
+    - 'X-GCL-Storage-Zone'
+    - 'X-GCL-User'
+    - 'X-GCL-User-Request-ID'
+    - 'X-GCL-User-Status'
+- name: Microsoft Azure CDN
+  headers:
+    - 'X-Azure-Ref'
+    - 'Server: Azure Front Door'
+    - 'X-Ms-Cdn-Ref'
+    - 'X-Ms-Cdn-Request-Id'
+- name: Google Cloud CDN
+  headers:
+    # - 'Server: Google Frontend'
+    - 'Server: Google Cloud CDN'
+    - 'X-Google-Cache-Status'
+    - 'Via: Google'
+    - 'X-Edge-Location' # also an identifier of KeyCDN
+- name: Verizon EdgeCast
+  headers:
+    - 'Server: ECS'
+- name: Alibaba Cloud CDN
+  headers:
+    - 'Via: Alibaba Cloud CDN'
+    - 'Ali-CDN-Cache'
+    - 'X-Alibaba-Edge'
+    - 'Server: Alibaba'
+- name: CDN77
+  headers:
+    - 'Server: CDN77'
+    - 'CDN77'
+    - 'X-CDN: CDN77'
+- name: OVH CDN
+  headers:
+    - 'Server: OVHcdn'
+- name: BelugaCDN
+  headers:
+    - 'X-Beluga-Cache'
+    - 'Server: BelugaCDN'
+- name: ChinaCache
+  headers:
+    - 'Server: ChinaCache'
+- name: CDNetworks
+  headers:
+    - 'X-CDN: CDNetworks'
+    - 'Server: CDNetworks'
+- name: Medianova
+  headers:
+    - 'X-Medianova-Cache'
+- name: Azion
+  headers:
+    - 'X-Azion-Cache'
+    - 'Server: AzionCDN'
+- name: Netlify
+  headers:
+    - 'Server: Netlify'
+    - 'X-NF-Cache-Status'
+- name: Vercel
+  headers:
+    - 'Server: Vercel'
+- name: RocketCDN
+  headers:
+    - 'X-Rocket-CDN'
+    - 'Server: RocketCDN'
+- name: Reblaze
+  headers:
+    - 'X-Reblaze-Cache'
+    - 'Server: Reblaze'
+- name: Express CDN # dont know if it exists.
+  headers:
+    - 'X-Express-CDN'
+    - 'Express-CDN-Cache'
+    - 'Express-CDN-Cache-Status'
+    - 'Express-CDN-Cache-Control'
+    - 'Express-CDN-Request-ID'
+- name: KeyCDN
+  headers:
+    - 'X-Edge-Location' # also an identifier of Google Cloud CDN
