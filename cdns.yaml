@@ -46,6 +46,9 @@
     - 'X-Fastly-Request-ID'
     - 'X-Timer'
     - 'X-Served-By'
+  ranges:
+    combined:
+      - 'https://api.fastly.com/public-ip-list'
 - name: StackPath
   headers:
     - 'Server: StackPath'
