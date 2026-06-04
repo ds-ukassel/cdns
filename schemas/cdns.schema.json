@@ -34,6 +34,9 @@
           },
           "ipv6": {
             "$ref": "#/$defs/url_array"
+          },
+          "combined": {
+            "$ref": "#/$defs/url_array"
           }
         },
         "additionalProperties": false
