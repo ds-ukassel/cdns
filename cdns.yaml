@@ -7,6 +7,11 @@
     - 'CF-Connecting-IP'
     - 'CF-Request-ID'
     - 'CF-WORKER'
+  ranges:
+    ipv4:
+      - 'https://www.cloudflare.com/ips-v4/'
+    ipv6:
+      - 'https://www.cloudflare.com/ips-v6/'
 - name: Akamai
   headers:
     - 'X-Akamai-Request-ID'
@@ -27,6 +32,13 @@
     - 'Via: CloudFront'
     - 'X-Amz-Acl'
     - 'X-Amz-Cf-Request-Id'
+  ranges:
+    combined:
+      - 'https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips'
+- name: Amazon AWS
+  ranges:
+    combined:
+      - 'https://ip-ranges.amazonaws.com/ip-ranges.json'
 - name: Fastly
   headers:
     - 'Server: Varnish'
