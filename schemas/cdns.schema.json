@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cdns.schema.json",
+  "title": "CDNs",
+  "description": "A list of CDNs with identifiers",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "description": "The unique name of the CDN",
+        "type": "string",
+        "minLength": 1
+      },
+      "homepage": {
+        "description": "The homepage URL of the CDN",
+        "type": "string",
+        "minLength": 1
+      },
+      "domains": {
+        "description": "The domains (or domain snippets) associated with the CDN",
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 1
+      },
+      "ranges": {
+        "description": "The IP ranges associated with the CDN",
+        "type": "object",
+        "properties": {
+          "ipv4": {
+            "$ref": "#/$defs/url_array"
+          },
+          "ipv6": {
+            "$ref": "#/$defs/url_array"
+          }
+        },
+        "additionalProperties": false
+      },
+      "asns": {
+        "description": "The ASNs associated with the CDN",
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "minItems": 1
+      },
+      "headers": {
+        "description": "The HTTP headers commonly used by the CDN",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minItems": 1
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "name"
+    ]
+  },
+  "$defs": {
+    "url_array": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
+    }
+  }
+}
