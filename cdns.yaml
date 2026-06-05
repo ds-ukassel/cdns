@@ -103,10 +103,16 @@
 - name: CacheFly
   headers:
     - 'Server: CacheFly'
+  ranges:
+    - range_type: 'combined'
+      url: 'https://cachefly.cachefly.net/ips/cdn.txt'
 - name: QUIC.cloud
   headers:
     - 'Server: LiteSpeed'
     - 'X-QC-Cache'
+  ranges:
+    - range_type: 'combined'
+      url: 'https://quic.cloud/ips'
 - name: ArvanCloud
   headers:
     - 'Server: ArvanCloud'
@@ -138,7 +144,12 @@
     - 'X-Google-Cache-Status'
     - 'Via: Google'
     - 'X-Edge-Location' # also an identifier of KeyCDN
-- name: Verizon EdgeCast
+  ranges:
+    - range_type: 'combined'
+      url: 'https://www.gstatic.com/ipranges/cloud.json'
+    - range_type: 'combined'
+      url: 'https://www.gstatic.com/ipranges/goog.json'
+- name: Verizon EdgeCast # apparently shut down in 2025
   headers:
     - 'Server: ECS'
 - name: Alibaba Cloud CDN
@@ -155,11 +166,28 @@
 - name: OVH CDN
   headers:
     - 'Server: OVHcdn'
+  ranges: # https://docs.ovhcloud.com/en/guides/network/content-delivery-network-infrastructure/cdn-infrastructure-ip-range
+    - range_type: ipv4
+      ranges:
+        - 144.217.2.0/23
+        - 46.105.192.0/20
+        - 51.254.41.128/25
+        - 137.74.120.0/22
+        - 51.68.15.224/27
+        - 139.99.0.128/26
+        - 139.99.128.192/26
+        - 139.99.229.0/27
+        - 139.99.1.0/26
+        - 15.235.137.224/27
+        - 178.32.132.0/27
+        - 178.32.133.0/27
+        - 178.32.134.0/27
+      last_updated: 2026-06-05
 - name: BelugaCDN
   headers:
     - 'X-Beluga-Cache'
     - 'Server: BelugaCDN'
-- name: ChinaCache
+- name: ChinaCache # seems to have been sold (website redirects)
   headers:
     - 'Server: ChinaCache'
 - name: CDNetworks
@@ -169,6 +197,9 @@
 - name: Medianova
   headers:
     - 'X-Medianova-Cache'
+  ranges:
+    - range_type: 'combined'
+      url: 'https://cloud.medianova.com/api/v1/ip/addresses-txt'
 - name: Azion
   headers:
     - 'X-Azion-Cache'

@@ -7,12 +7,19 @@ import yaml
 from requests import Session
 
 
-def cloudflare_ipv4(text: str) -> tuple[set[str], set[str]]:
+def splitlines_ipv4(text: str) -> tuple[set[str], set[str]]:
     return set(text.splitlines()), set()
 
 
-def cloudflare_ipv6(text: str) -> tuple[set[str], set[str]]:
+def splitline_ipv6(text: str) -> tuple[set[str], set[str]]:
     return set(), set(text.splitlines())
+
+
+def splitline_combined(text: str) -> tuple[set[str], set[str]]:
+    lines = text.splitlines()
+    ipv4_ranges = set(line for line in lines if ":" not in line)
+    ipv6_ranges = set(line for line in lines if ":" in line)
+    return ipv4_ranges, ipv6_ranges
 
 
 def amazon_cf_ipv4(text: str) -> tuple[set[str], set[str]]:
@@ -30,24 +37,31 @@ def fastly_combined(text: str) -> tuple[set[str], set[str]]:
     data = json.loads(text)
     return set(data.get("addresses", [])), set(data.get("ipv6_addresses", []))
 
-
-def bunnycdn_combined(text: str) -> tuple[set[str], set[str]]:
-    lines = text.splitlines()
-    ipv4_ranges = set(line for line in lines if ":" not in line)
-    ipv6_ranges = set(line for line in lines if ":" in line)
-    return ipv4_ranges, ipv6_ranges
-
 def imperva_combined(text: str) -> tuple[set[str], set[str]]:
     data = json.loads(text)
     return set(data.get("ipRanges", [])), set(data.get("ipv6Ranges", []))
 
+def quiccloud_combined(text: str) -> tuple[set[str], set[str]]:
+    prefixes = text.split("<br />")
+    return set(prefix + "/32" for prefix in prefixes if ":" not in prefix), set(prefix + "/128" for prefix in prefixes if ":" in prefix)
+
+def google_cloud_combined(text: str) -> tuple[set[str], set[str]]:
+    data = json.loads(text)
+    ipv4 = set(prefix["ipv4Prefix"] for prefix in data.get("prefixes", []) if "ipv4Prefix" in prefix)
+    ipv6 = set(prefix["ipv6Prefix"] for prefix in data.get("prefixes", []) if "ipv6Prefix" in prefix)
+    return ipv4, ipv6
+
 CONVERTER = {
-    "Cloudflare": (cloudflare_ipv4, cloudflare_ipv6, None),
+    "Cloudflare": (splitlines_ipv4, splitline_ipv6, None),
     "Amazon CloudFront": (amazon_cf_ipv4, None, None),
     "Amazon AWS": (None, None, amazon_aws_combined),
     "Fastly": (None, None, fastly_combined),
-    "BunnyCDN": (None, None, bunnycdn_combined),
+    "BunnyCDN": (None, None, splitline_combined),
     "Imperva": (None, None, imperva_combined),
+    "CacheFly": (None, None, splitline_combined),
+    "QUIC.cloud": (None, None, quiccloud_combined),
+    "Google Cloud CDN": (None, None, google_cloud_combined),
+    "Medianova": (None, None, splitline_combined),
 }
 
 
