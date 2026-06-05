@@ -27,18 +27,11 @@
       },
       "ranges": {
         "description": "The IP ranges associated with the CDN",
-        "type": "object",
-        "properties": {
-          "ipv4": {
-            "$ref": "#/$defs/url_array"
-          },
-          "ipv6": {
-            "$ref": "#/$defs/url_array"
-          },
-          "combined": {
-            "$ref": "#/$defs/url_array"
-          }
+        "type": "array",
+        "items": {
+          "$ref": "#/$defs/range_source"
         },
+        "minItems": 1,
         "additionalProperties": false
       },
       "asns": {
@@ -66,13 +59,45 @@
     ]
   },
   "$defs": {
-    "url_array": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "format": "uri"
+    "range_source": {
+      "type": "object",
+      "properties": {
+        "range_type": {
+          "type": "string",
+          "enum": ["ipv4", "ipv6", "combined"]
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "ranges": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
       },
-      "minItems": 1
+      "required": ["range_type"],
+      "oneOf": [
+        {
+          "required": ["url"],
+          "not": {
+            "required": ["ranges"]
+          }
+        },
+        {
+          "required": ["ranges", "last_updated"],
+          "not": {
+            "required": ["url"]
+          }
+        }
+      ],
+      "additionalProperties": false
     }
   }
 }

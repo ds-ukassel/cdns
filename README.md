@@ -9,10 +9,15 @@
     - awe.some
     - cdn.awesome
   ranges:
-    ipv4:
-      - https://ip-ranges.awesomecdn.com/ipv4.txt
-    ipv6:
-      - https://ip-ranges.awesomecdn.com/ipv6.txt
+    - range_type: 'ipv4'
+      url: 'https://api.awesomecdn.com/ips-v4/'
+    - range_type: 'ipv6'
+      url: 'https://api.awesomecdn.com/ips-v6/'
+    - range_type: 'combined'
+      url: 'https://api.awesomecdn.com/ips/'
+    - range_type: 'ipv4'
+      ranges:
+        - '111.111.111.111/32'
   asns:
     - 12345
     - 67890
