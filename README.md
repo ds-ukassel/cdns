@@ -25,3 +25,6 @@
     - X-AwesomeCDN
     - X-AwesomeCDN-Edge
 ```
+
+## References
+- [TurboBytes CDN List](https://github.com/turbobytes/cdnfinder/blob/master/assets/cnamechain.json) ([MIT](https://github.com/turbobytes/cdnfinder/blob/master/LICENSE))
