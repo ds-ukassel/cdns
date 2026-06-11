@@ -1,5 +1,8 @@
 # yaml-language-server: $schema=schemas/cdns.schema.json
 - name: Cloudflare
+  domains:
+    - cloudflare.net
+    - cloudflare.com
   headers:
     - 'CF-Cache-Status'
     - 'CF-RAY'
@@ -13,6 +16,11 @@
     - range_type: 'ipv6'
       url: 'https://www.cloudflare.com/ips-v6/'
 - name: Akamai
+  domains:
+    - akamai.net
+    - akamaiedge.net
+    - akadns.net
+    - akamaitechnologies.com
   headers:
     - 'X-Akamai-Request-ID'
     - 'X-Akamai-Transformed'
@@ -24,6 +32,8 @@
     - 'X-True-Cache-Key'
     - 'X-Akamai-Device-Characteristics'
 - name: Amazon CloudFront
+  domains:
+    - cloudfront.net
   headers:
     - 'X-Amz-Cf-Id'
     - 'X-Cache: Hit from cloudfront'
@@ -40,6 +50,9 @@
     - range_type: 'combined'
       url: 'https://ip-ranges.amazonaws.com/ip-ranges.json'
 - name: Fastly
+  domains:
+    - fastly.net
+    - fastlylb.net
   headers:
     - 'Server: Varnish'
     - 'X-Varnish'
@@ -57,6 +70,8 @@
     - 'X-SP-Edge-Cache'
     - 'X-CDN: StackPath'
 - name: KeyCDN
+  domains:
+    - kxcdn.com
   headers:
     - 'Server: KeyCDN'
     - 'X-CDN: KeyCDN'
@@ -93,6 +108,8 @@
         - 2a02:fe80::/29
       last_updated: 2026-06-05
 - name: Imperva # Incapsula
+  domains:
+    - incapdns.net
   headers:
     - 'Server: Imperva'
     - 'X-CDN: Incapsula'
@@ -103,6 +120,8 @@
     - range_type: 'combined'
       url: 'https://my.imperva.com/api/integration/v1/ips'
 - name: CacheFly
+  domains:
+    - cachefly.net
   headers:
     - 'Server: CacheFly'
   ranges:
@@ -120,6 +139,8 @@
     - 'Server: ArvanCloud'
     - 'AR-PoweredBy'
 - name: G-Core Labs
+  domains:
+    - d.gcdn.co
   headers:
     - 'Server: GCL'
     - 'Server: G-Core Labs'
@@ -140,6 +161,12 @@
     - 'X-Ms-Cdn-Ref'
     - 'X-Ms-Cdn-Request-Id'
 - name: Google Cloud CDN
+  domains:
+    - .google.
+    - googlesyndication.
+    - youtube.
+    - googleusercontent.com
+    - l.doubleclick.net
   headers:
     # - 'Server: Google Frontend'
     - 'Server: Google Cloud CDN'
@@ -161,6 +188,9 @@
     - 'X-Alibaba-Edge'
     - 'Server: Alibaba'
 - name: CDN77
+  domains:
+    - cdn77.net
+    - cdn77.org
   headers:
     - 'Server: CDN77'
     - 'CDN77'
@@ -186,13 +216,26 @@
         - 178.32.134.0/27
       last_updated: 2026-06-05
 - name: BelugaCDN
+  domains:
+    - belugacdn.com
   headers:
     - 'X-Beluga-Cache'
     - 'Server: BelugaCDN'
 - name: ChinaCache # seems to have been sold (website redirects)
+  domains:
+    - ccgslb.com
+    - ccgslb.net
+    - c3cache.net
+    - chinacache.net
+    - c3cdn.net
   headers:
     - 'Server: ChinaCache'
 - name: CDNetworks
+  domains:
+    - panthercdn.com
+    - cdngc.net
+    - gccdn.net
+    - gccdn.cn
   headers:
     - 'X-CDN: CDNetworks'
     - 'Server: CDNetworks'
@@ -203,6 +246,8 @@
     - range_type: 'combined'
       url: 'https://cloud.medianova.com/api/v1/ip/addresses-txt'
 - name: Azion
+  domains:
+    - azioncdn.net
   headers:
     - 'X-Azion-Cache'
     - 'Server: AzionCDN'
@@ -228,3 +273,61 @@
     - 'Express-CDN-Cache-Status'
     - 'Express-CDN-Cache-Control'
     - 'Express-CDN-Request-ID'
+
+- name: TurboBytes
+  domains:
+    - clients.turbobytes.net
+    - turbobytes-cdn.com
+
+- name: afxcdn.net
+  domains:
+    - afxcdn.net
+
+- name: Alimama
+  domains:
+    - gslb.tbcache.com
+
+- name: Ananke
+  domains:
+    - anankecdn.com.br
+
+- name: AT&T
+  domains:
+    - att-dsa.net
+
+- name: Blue Hat Network
+  domains:
+    - bluehatnetwork.com
+
+- name: EdgeCast
+  domains:
+    - systemcdn.net
+    - edgecastcdn.net
+    - .adn.
+    - .wac.
+    - .wpc.
+
+- name: CDNify
+  domains:
+    - cdnify.io
+
+- name: ChinaNetCenter
+  domains:
+    - lxdns.com
+
+- name: Hibernia
+  domains:
+    - hiberniacdn.com
+
+- name: Highwinds
+  domains:
+    - hwcdn.net
+
+- name: Instartlogic
+  domains:
+    - inscname.net
+    - insnw.net
+
+- name: Internap
+  domains:
+    - internapcdn.net
