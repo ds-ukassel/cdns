@@ -63,6 +63,8 @@
     - range_type: 'combined'
       url: 'https://api.fastly.com/public-ip-list'
 - name: StackPath
+  domains:
+    - stackpathdns.com
   headers:
     - 'Server: StackPath'
     - 'X-Powered-By: StackPath'
@@ -155,6 +157,8 @@
     - 'X-GCL-User-Request-ID'
     - 'X-GCL-User-Status'
 - name: Microsoft Azure CDN
+  domains:
+    - vo.msecnd.net
   headers:
     - 'X-Azure-Ref'
     - 'Server: Azure Front Door'
@@ -240,6 +244,8 @@
     - 'X-CDN: CDNetworks'
     - 'Server: CDNetworks'
 - name: Medianova
+  domains:
+    - mncdn.com
   headers:
     - 'X-Medianova-Cache'
   ranges:
@@ -331,3 +337,69 @@
 - name: Internap
   domains:
     - internapcdn.net
+
+- name: LeaseWeb CDN
+  domains:
+    - lswcdn.net
+
+- name: Level3
+  domains:
+    - footprint.net
+
+- name: Limelight
+  domains:
+    - llnwd.net
+    - lldns.net
+
+- name: MaxCDN
+  domains:
+    - netdna-cdn.com
+    - netdna-ssl.com
+    - netdna.com
+
+- name: Mirror Image
+  domains:
+    - instacontent.net
+    - mirror-image.net
+    - cap-mii.net
+
+- name: Reflected Networks
+  domains:
+    - rncdn1.com
+
+- name: Simple CDN
+  domains:
+    - simplecdn.net
+
+- name: SwiftCDN
+  domains:
+    - swiftcdn1.com
+
+- name: SwiftServe
+  domains:
+    - swiftserve.com
+
+- name: Taobao
+  domains:
+    - gslb.taobao.com
+
+- name: Tata communications
+  domains:
+    - cdn.bitgravity.com
+
+- name: Telefonica
+  domains:
+    - cdn.telefonica.com
+
+- name: Yahoo
+  domains:
+    - ay1.b.yahoo.com
+    - .yimg.
+
+- name: Zenedge
+  domains:
+    - zenedge.net
+
+- name: Kingsoft
+  domains:
+    - .ksyuncdn.com
