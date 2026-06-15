@@ -21,6 +21,8 @@
     - akamaiedge.net
     - akadns.net
     - akamaitechnologies.com
+    - edgekey
+    - edgesuit
   headers:
     - 'X-Akamai-Request-ID'
     - 'X-Akamai-Transformed'
@@ -65,6 +67,9 @@
 - name: StackPath
   domains:
     - stackpathdns.com
+    - stackpath
+    - netdna
+    - hwcdn
   headers:
     - 'Server: StackPath'
     - 'X-Powered-By: StackPath'
@@ -112,6 +117,7 @@
 - name: Imperva # Incapsula
   domains:
     - incapdns.net
+    - impervadns
   headers:
     - 'Server: Imperva'
     - 'X-CDN: Incapsula'
@@ -159,6 +165,8 @@
 - name: Microsoft Azure CDN
   domains:
     - vo.msecnd.net
+    - trafficmanager
+    - msedge
   headers:
     - 'X-Azure-Ref'
     - 'Server: Azure Front Door'
@@ -183,9 +191,38 @@
     - range_type: 'combined'
       url: 'https://www.gstatic.com/ipranges/goog.json'
 - name: Verizon EdgeCast # apparently shut down in 2025
+  domains:
+    - edgecastcdn
+    - alphacdn
+    - betacdn
+    - chicdn
+    - deltacdn
+    - edgecastcdn
+    - gammacdn
+    - iotacdn
+    - kappacdn
+    - lambdacdn
+    - mucdn
+    - nucdn
+    - omegacdn
+    - omicroncdn
+    - phicdn
+    - psicdn
+    - rhocdn
+    - sigmacdn
+    - systemcdn
+    - taucdn
+    - thetacdn
+    - upsiloncdn
+    - xicdn
+    - zetacdn
+    - transactcdn
   headers:
     - 'Server: ECS'
 - name: Alibaba Cloud CDN
+  domains:
+    - kunlun
+    - cdngslb
   headers:
     - 'Via: Alibaba Cloud CDN'
     - 'Ali-CDN-Cache'
@@ -240,6 +277,8 @@
     - cdngc.net
     - gccdn.net
     - gccdn.cn
+    - cdnga
+    - cdnetworks
   headers:
     - 'X-CDN: CDNetworks'
     - 'Server: CDNetworks'
@@ -254,6 +293,7 @@
 - name: Azion
   domains:
     - azioncdn.net
+    - azion
   headers:
     - 'X-Azion-Cache'
     - 'Server: AzionCDN'
@@ -320,6 +360,12 @@
 - name: ChinaNetCenter
   domains:
     - lxdns.com
+    - wscdns
+    - wswebpic
+    - tl88
+    - cdn30
+    - qtlcdn
+    - cdn20
 
 - name: Hibernia
   domains:
@@ -350,6 +396,7 @@
   domains:
     - llnwd.net
     - lldns.net
+    - llnw
 
 - name: MaxCDN
   domains:
@@ -403,3 +450,48 @@
 - name: Kingsoft
   domains:
     - .ksyuncdn.com
+    - ksyun
+
+- name: baishan
+  domains:
+    - baishan
+    - bsccdn
+    - bsgslb
+
+- name: baidu
+  domains:
+    - jomodns
+    - zjsxlt
+    - yunjiasu
+    - yjs-cdn
+    - shifen
+
+- name: tencent
+  domains:
+    - dayugslb
+    - tdnsv8
+    - intlscdn
+    - dnsv1
+    - tdnsdp1
+    - tcloudscdn
+
+- name: yunduncdn
+  domains:
+    - yundun
+
+- name: merlincdn
+  domains:
+    - merlin
+
+- name: jingdong
+  domains:
+    - jcloud-cdn
+
+- name: bilibili
+  domains:
+    - bilicdn
+
+- name: huawei
+  domains:
+    - cdnhwc
+    - hwclouds
