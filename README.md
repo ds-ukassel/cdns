@@ -28,3 +28,5 @@
 
 ## References
 - [TurboBytes CDN List](https://github.com/turbobytes/cdnfinder/blob/master/assets/cnamechain.json) ([MIT](https://github.com/turbobytes/cdnfinder/blob/master/LICENSE))
+- [CDNProbe 'cname cache'](https://github.com/njuzmy/CDNProbe/blob/main/assets/static/cdn/cname_cache.json) ([Apache 2.0](https://github.com/njuzmy/CDNProbe/blob/main/LICENSE))
+  - Parts of their CNAME substring list was used to expand our own list.
