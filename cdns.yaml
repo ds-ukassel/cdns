@@ -137,6 +137,9 @@
     - 'Server: Azure Front Door'
     - 'X-Ms-Cdn-Ref'
     - 'X-Ms-Cdn-Request-Id'
+  ranges:
+    - range_type: combined
+      url: 'https://www.microsoft.com/en-us/download/details.aspx?id=56519'
 - name: Google Cloud CDN
   headers:
     # - 'Server: Google Frontend'

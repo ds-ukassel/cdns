@@ -9,7 +9,7 @@ from common.config import CDN_YAML
 from common.logger import LOGGER
 from common.utils import read_yaml
 from ranges.clickhouse_service import ClickhouseService
-from ranges.parser import PARSERS
+from ranges.parser import PARSERS, Parser
 
 
 def main():
@@ -36,12 +36,13 @@ def main():
             timestamp = datetime.datetime.now(timezone.utc)
             if "url" in source:
                 LOGGER.info(f"Processing URL source for CDN '{cdn.get('name')}' (type: {source.get('range_type')})...")
-                parser = PARSERS.get(cdn.get("name"))
+                parser: Parser = PARSERS.get(cdn.get("name"))
                 if not parser:
                     LOGGER.error(f"No parser found for CDN '{cdn.get('name')}'. Skipping URL source...")
                     continue
                 try:
-                    ipv4_ranges, ipv6_ranges = parser.parse(source["url"], session)
+                    content = parser.fetch(source["url"], session)
+                    ipv4_ranges, ipv6_ranges = parser.parse(content)
                     LOGGER.info(f"Successfully parsed {len(ipv4_ranges)} IPv4 and {len(ipv6_ranges)} IPv6 ranges for CDN '{cdn.get('name')}'.")
                     clickhouse.insert_data(timestamp, cdn.get("name"), (ipv4_ranges, ipv6_ranges))
                     LOGGER.info(f"Successfully inserted ranges for CDN '{cdn.get('name')}' into ClickHouse.")
