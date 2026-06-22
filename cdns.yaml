@@ -22,7 +22,7 @@
     - akadns.net
     - akamaitechnologies.com
     - edgekey
-    - edgesuit
+    - edgesuite
   headers:
     - 'X-Akamai-Request-ID'
     - 'X-Akamai-Transformed'
