@@ -452,7 +452,7 @@
     - .ksyuncdn.com
     - ksyun
 
-- name: baishan
+- name: Baishan Cloud
   domains:
     - baishan
     - bsccdn
@@ -466,7 +466,7 @@
     - yjs-cdn
     - shifen
 
-- name: tencent
+- name: Tencent Cloud
   domains:
     - dayugslb
     - tdnsv8
@@ -475,23 +475,23 @@
     - tdnsdp1
     - tcloudscdn
 
-- name: yunduncdn
+- name: yunduncdn # Yandex Cloud
   domains:
     - yundun
 
-- name: merlincdn
+- name: Merlin CDN
   domains:
     - merlin
 
-- name: jingdong
+- name: jingdong # JINGDONG CLoud
   domains:
     - jcloud-cdn
 
-- name: bilibili
+- name: Bilibili
   domains:
     - bilicdn
 
-- name: huawei
+- name: Huawei
   domains:
     - cdnhwc
     - hwclouds
