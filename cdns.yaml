@@ -17,12 +17,12 @@
       url: 'https://www.cloudflare.com/ips-v6/'
 - name: Akamai
   domains:
-    - akamai.net
+    - "*.akamai.net"
     - akamaiedge.net
-    - akadns.net
+    - "*.akadns.net"
     - akamaitechnologies.com
     - edgekey
-    - edgesuite
+    - "*.edgesuite.net"
   headers:
     - 'X-Akamai-Request-ID'
     - 'X-Akamai-Transformed'
@@ -35,7 +35,7 @@
     - 'X-Akamai-Device-Characteristics'
 - name: Amazon CloudFront
   domains:
-    - cloudfront.net
+    - "*.cloudfront.net"
   headers:
     - 'X-Amz-Cf-Id'
     - 'X-Cache: Hit from cloudfront'
@@ -486,6 +486,7 @@
 - name: jingdong # JINGDONG CLoud
   domains:
     - jcloud-cdn
+    - "*.jcloud.kz"
 
 - name: Bilibili
   domains:
