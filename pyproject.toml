@@ -5,6 +5,7 @@ description = "List of CDNs with identification and detection tools."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "minioservice",
     "PyYAML~=6.0.0",
 ]
 
@@ -48,3 +49,7 @@ dev = [
 
 [tool.pytest.ini_options]
 pythonpath = ["src", "tests"]
+
+# Temporary workaround until libs are published
+[tool.uv.sources]
+minioservice = { path = "libs/minioservice-0.1.0-py3-none-any.whl" }
