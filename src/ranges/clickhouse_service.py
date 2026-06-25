@@ -39,3 +39,12 @@ class ClickhouseService:
         ipv4_rows = [(cdn, timestamp, ip_range, 4) for ip_range in data[0]]
         ipv6_rows = [(cdn, timestamp, ip_range, 6) for ip_range in data[1]]
         self.client.insert(self.table, ipv4_rows + ipv6_rows)
+
+    def close(self) -> None:
+        self.client.close()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.close()
