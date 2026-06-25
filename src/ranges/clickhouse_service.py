@@ -24,7 +24,7 @@ class ClickhouseService:
             raise ValueError(f"Invalid table name: {self.table}")
 
         query = f"""
-            CREATE OR REPLACE TABLE {self.table} (
+            CREATE TABLE IF NOT EXISTS {self.table} (
                 cdn_name String,
                 timestamp DateTime64 DEFAULT now(),
                 ip_range String,
