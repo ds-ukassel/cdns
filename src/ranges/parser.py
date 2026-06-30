@@ -111,6 +111,7 @@ class GoogleCloudParser(Parser):
         ipv6 = set(prefix["ipv6Prefix"] for prefix in data.get("prefixes", []) if "ipv6Prefix" in prefix)
         return ipv4, ipv6
 
+
 class SucuriParser(Parser):
     @staticmethod
     def parse(content: str):
@@ -135,6 +136,31 @@ class SucuriParser(Parser):
                 ipv4.add(line)
         return ipv4, ipv6
 
+
+class OVHParser(Parser):
+    @staticmethod
+    def parse(content: str):
+        soup = BeautifulSoup(content, "html.parser")
+
+        ipv4 = set()
+        ipv6 = set()
+
+        table = soup.find("table")
+        if not table:
+            raise ValueError("Could not find 'Adresse IP' table in OVH page.")
+        for row in table.find_all("tr"):
+            cells = row.find_all("td")
+            for cell in cells:
+                cell_text = cell.get_text().strip()
+                if not cell_text:
+                    continue
+                if ":" in cell_text:
+                    ipv6.add(cell_text)
+                else:
+                    ipv4.add(cell_text)
+        return ipv4, ipv6
+
+
 PARSERS = {
     "Cloudflare": SplitLinesParser,
     "Amazon CloudFront": AmazonCFParser,
@@ -147,5 +173,6 @@ PARSERS = {
     "Google Cloud": GoogleCloudParser,
     "Medianova": SplitLinesParser,
     "Microsoft Azure CDN": MicrosoftParser,
-    "Sucuri": SucuriParser, # Currently unused because of 503
+    "Sucuri": SucuriParser,  # Currently unused because of 503
+    "OVH CDN": OVHParser,
 }

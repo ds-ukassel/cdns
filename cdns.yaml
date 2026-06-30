@@ -169,22 +169,9 @@
 - name: OVH CDN
   headers:
     - 'Server: OVHcdn'
-  ranges: # https://docs.ovhcloud.com/en/guides/network/content-delivery-network-infrastructure/cdn-infrastructure-ip-range
+  ranges:
     - range_type: ipv4
-      ranges:
-        - 144.217.2.0/23
-        - 46.105.192.0/20
-        - 51.254.41.128/25
-        - 137.74.120.0/22
-        - 51.68.15.224/27
-        - 139.99.0.128/26
-        - 139.99.128.192/26
-        - 139.99.229.0/27
-        - 139.99.1.0/26
-        - 15.235.137.224/27
-        - 178.32.132.0/27
-        - 178.32.133.0/27
-        - 178.32.134.0/27
+      url: 'https://docs.ovhcloud.com/en/guides/network/content-delivery-network-infrastructure/cdn-infrastructure-ip-range'
       last_updated: 2026-06-05
 - name: BelugaCDN
   headers:
