@@ -43,8 +43,7 @@ def main():
             for source in ranges:
                 timestamp = datetime.datetime.now(timezone.utc)
                 if "url" in source:
-                    LOGGER.info(
-                        f"Processing URL source for CDN '{cdn.get('name')}' (type: {source.get('range_type')})...")
+                    LOGGER.info(f"Processing URL source for CDN '{cdn.get('name')}' (type: {source.get('range_type')})...")
                     parser: Parser = PARSERS.get(cdn.get("name"))
                     if not parser:
                         LOGGER.error(f"No parser found for CDN '{cdn.get('name')}'. Skipping URL source...")

@@ -4,6 +4,7 @@ from abc import ABC, abstractmethod
 from typing import TypeAlias
 
 from requests import Session
+from bs4 import BeautifulSoup
 
 from ranges import utils
 
@@ -110,6 +111,29 @@ class GoogleCloudParser(Parser):
         ipv6 = set(prefix["ipv6Prefix"] for prefix in data.get("prefixes", []) if "ipv6Prefix" in prefix)
         return ipv4, ipv6
 
+class SucuriParser(Parser):
+    @staticmethod
+    def parse(content: str):
+        soup = BeautifulSoup(content, "html.parser")
+
+        ipv4 = set()
+        ipv6 = set()
+
+        error = soup.find("strong", string="502 Errors")
+        if not error:
+            raise ValueError("Could not find '502 Errors' section in Sucuri page.")
+        code_block = error.find_next("code")
+        if not code_block:
+            raise ValueError("Could not find code block after '502 Errors' section in Sucuri page.")
+        for line in code_block.get_text().splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            if ":" in line:
+                ipv6.add(line)
+            else:
+                ipv4.add(line)
+        return ipv4, ipv6
 
 PARSERS = {
     "Cloudflare": SplitLinesParser,
@@ -123,4 +147,5 @@ PARSERS = {
     "Google Cloud": GoogleCloudParser,
     "Medianova": SplitLinesParser,
     "Microsoft Azure CDN": MicrosoftParser,
+    "Sucuri": SucuriParser, # Currently unused because of 503
 }
