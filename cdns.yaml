@@ -78,7 +78,7 @@
     - 'X-Sucuri-Cache'
     - 'X-Sucuri-Block'
     - 'X-Sucuri-Cloudproxy-Cache'
-  ranges: # https://docs.sucuri.net/website-firewall/sucuri-firewall-troubleshooting-guide/
+  ranges: # https://docs.sucuri.net/website-firewall/sucuri-firewall-troubleshooting-guide/ (parser exists, but website 503s)
     - range_type: 'ipv4'
       ranges:
         - 192.88.134.0/23
