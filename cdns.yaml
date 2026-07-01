@@ -162,7 +162,7 @@
     - X-GCL-User:
     - X-GCL-User-Request-ID:
     - X-GCL-User-Status:
-- name: Microsoft Azure CDN:
+- name: Microsoft Azure CDN
   domains:
     - vo.msecnd.net
     - trafficmanager
