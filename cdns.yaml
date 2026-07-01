@@ -4,12 +4,12 @@
     - cloudflare.net
     - cloudflare.com
   headers:
-    - 'CF-Cache-Status'
-    - 'CF-RAY'
-    - 'Server: cloudflare'
-    - 'CF-Connecting-IP'
-    - 'CF-Request-ID'
-    - 'CF-WORKER'
+    - CF-Cache-Status:
+    - CF-RAY:
+    - Server: cloudflare
+    - CF-Connecting-IP:
+    - CF-Request-ID:
+    - CF-WORKER:
   ranges:
     - range_type: 'ipv4'
       url: 'https://www.cloudflare.com/ips-v4/'
@@ -24,26 +24,26 @@
     - edgekey
     - edgesuite
   headers:
-    - 'X-Akamai-Request-ID'
-    - 'X-Akamai-Transformed'
-    - 'X-Akamai-SSL'
-    - 'X-Akamai-Edge-Cache'
-    - 'Server: AkamaiGHost'
-    - 'X-Akamai-Staging'
-    - 'Edge-Control'
-    - 'X-True-Cache-Key'
-    - 'X-Akamai-Device-Characteristics'
+    - X-Akamai-Request-ID:
+    - X-Akamai-Transformed:
+    - X-Akamai-SSL:
+    - X-Akamai-Edge-Cache:
+    - Server: AkamaiGHost
+    - X-Akamai-Staging:
+    - Edge-Control:
+    - X-True-Cache-Key:
+    - X-Akamai-Device-Characteristics:
 - name: Amazon CloudFront
   domains:
     - cloudfront.net
   headers:
-    - 'X-Amz-Cf-Id'
-    - 'X-Cache: Hit from cloudfront'
-    - 'Server: CloudFront'
-    - 'X-Amz-Cf-Pop'
-    - 'Via: CloudFront'
-    - 'X-Amz-Acl'
-    - 'X-Amz-Cf-Request-Id'
+    - X-Amz-Cf-Id:
+    - X-Cache: Hit from cloudfront
+    - Server: CloudFront
+    - X-Amz-Cf-Pop:
+    - Via: CloudFront
+    - X-Amz-Acl:
+    - X-Amz-Cf-Request-Id:
   ranges:
     - range_type: 'ipv4'
       url: 'https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips'
@@ -56,11 +56,11 @@
     - fastly.net
     - fastlylb.net
   headers:
-    - 'Server: Varnish'
-    - 'X-Varnish'
-    - 'X-Fastly-Request-ID'
-    - 'X-Timer'
-    - 'X-Served-By'
+    - Server: Varnish
+    - X-Varnish:
+    - X-Fastly-Request-ID:
+    - X-Timer:
+    - X-Served-By:
   ranges:
     - range_type: 'combined'
       url: 'https://api.fastly.com/public-ip-list'
@@ -71,37 +71,37 @@
     - netdna
     - hwcdn
   headers:
-    - 'Server: StackPath'
-    - 'X-Powered-By: StackPath'
-    - 'X-StackPath-Request-ID'
-    - 'X-SP-Edge-Cache'
-    - 'X-CDN: StackPath'
+    - Server: StackPath
+    - X-Powered-By: StackPath
+    - X-StackPath-Request-ID:
+    - X-SP-Edge-Cache:
+    - X-CDN: StackPath
 - name: KeyCDN
   domains:
     - kxcdn.com
   headers:
-    - 'Server: KeyCDN'
-    - 'X-CDN: KeyCDN'
-    - 'X-Edge-Location' # also an identifier of Google Cloud CDN
+    - Server: KeyCDN
+    - X-CDN: KeyCDN
+    - X-Edge-Location: # also an identifier of Google Cloud CDN
 - name: BunnyCDN
   domains:
     - b-cdn.net
   headers:
-    - 'Server: BunnyCDN'
-    - 'Bunny-Cache'
-    - 'Bunny-Region'
-    - 'Bunny-Storage-Zone'
+    - Server: BunnyCDN
+    - Bunny-Cache:
+    - Bunny-Region:
+    - Bunny-Storage-Zone:
   ranges:
     - range_type: 'ipv4'
       url: 'https://api.bunny.net/mc/nodes/plain'
 - name: Sucuri
   headers:
-    - 'Server: Sucuri/Cloudproxy'
-    - 'Server: Sucuri'
-    - 'X-Sucuri-ID'
-    - 'X-Sucuri-Cache'
-    - 'X-Sucuri-Block'
-    - 'X-Sucuri-Cloudproxy-Cache'
+    - Server: Sucuri/Cloudproxy
+    - Server: Sucuri
+    - X-Sucuri-ID:
+    - X-Sucuri-Cache:
+    - X-Sucuri-Block:
+    - X-Sucuri-Cloudproxy-Cache:
   ranges: # https://docs.sucuri.net/website-firewall/sucuri-firewall-troubleshooting-guide/ (parser exists, but website 503s)
     - range_type: 'ipv4'
       ranges:
@@ -119,11 +119,11 @@
     - incapdns.net
     - impervadns
   headers:
-    - 'Server: Imperva'
-    - 'X-CDN: Incapsula'
-    - 'X-Info'
-    - 'X-CDN-Request-ID'
-    - 'X-Cdn-Provider: Incapsula'
+    - Server: Imperva
+    - X-CDN: Incapsula
+    - X-Info:
+    - X-CDN-Request-ID:
+    - X-Cdn-Provider: Incapsula
   ranges:
     - range_type: 'combined'
       url: 'https://my.imperva.com/api/integration/v1/ips'
@@ -131,47 +131,47 @@
   domains:
     - cachefly.net
   headers:
-    - 'Server: CacheFly'
+    - Server: CacheFly
   ranges:
     - range_type: 'combined'
       url: 'https://cachefly.cachefly.net/ips/cdn.txt'
 - name: QUIC.cloud
   headers:
-    - 'Server: LiteSpeed'
-    - 'X-QC-Cache'
+    - Server: LiteSpeed
+    - X-QC-Cache:
   ranges:
     - range_type: 'combined'
       url: 'https://quic.cloud/ips'
 - name: ArvanCloud
   headers:
-    - 'Server: ArvanCloud'
-    - 'AR-PoweredBy'
+    - Server: ArvanCloud
+    - AR-PoweredBy:
 - name: G-Core Labs
   domains:
     - d.gcdn.co
   headers:
-    - 'Server: GCL'
-    - 'Server: G-Core Labs'
-    - 'X-GCL-Cache'
-    - 'X-GCL-Pop'
-    - 'X-GCL-Request-ID'
-    - 'X-GCL-Region'
-    - 'X-GCL-Server'
-    - 'X-GCL-Status'
-    - 'X-GCL-Storage-Zone'
-    - 'X-GCL-User'
-    - 'X-GCL-User-Request-ID'
-    - 'X-GCL-User-Status'
+    - Server: GCL
+    - Server: G-Core Labs
+    - X-GCL-Cache:
+    - X-GCL-Pop:
+    - X-GCL-Request-ID:
+    - X-GCL-Region:
+    - X-GCL-Server:
+    - X-GCL-Status:
+    - X-GCL-Storage-Zone:
+    - X-GCL-User:
+    - X-GCL-User-Request-ID:
+    - X-GCL-User-Status:
 - name: Microsoft Azure CDN
   domains:
     - vo.msecnd.net
     - trafficmanager
     - msedge
   headers:
-    - 'X-Azure-Ref'
-    - 'Server: Azure Front Door'
-    - 'X-Ms-Cdn-Ref'
-    - 'X-Ms-Cdn-Request-Id'
+    - X-Azure-Ref:
+    - Server: Azure Front Door
+    - X-Ms-Cdn-Ref:
+    - X-Ms-Cdn-Request-Id:
   ranges:
     - range_type: combined
       url: 'https://www.microsoft.com/en-us/download/details.aspx?id=56519'
@@ -183,11 +183,11 @@
     - googleusercontent.com
     - l.doubleclick.net
   headers:
-    # - 'Server: Google Frontend'
-    - 'Server: Google Cloud CDN'
-    - 'X-Google-Cache-Status'
-    - 'Via: Google'
-    - 'X-Edge-Location' # also an identifier of KeyCDN
+    # - Server: Google Frontend
+    - Server: Google Cloud CDN
+    - X-Google-Cache-Status:
+    - Via: Google
+    - X-Edge-Location: # also an identifier of KeyCDN
   ranges:
     - range_type: 'combined'
       url: 'https://www.gstatic.com/ipranges/cloud.json'
@@ -221,27 +221,27 @@
     - zetacdn
     - transactcdn
   headers:
-    - 'Server: ECS'
+    - Server: ECS
 - name: Alibaba Cloud CDN
   domains:
     - kunlun
     - cdngslb
   headers:
-    - 'Via: Alibaba Cloud CDN'
-    - 'Ali-CDN-Cache'
-    - 'X-Alibaba-Edge'
-    - 'Server: Alibaba'
+    - Via: Alibaba Cloud CDN
+    - Ali-CDN-Cache:
+    - X-Alibaba-Edge:
+    - Server: Alibaba
 - name: CDN77
   domains:
     - cdn77.net
     - cdn77.org
   headers:
-    - 'Server: CDN77'
-    - 'CDN77'
-    - 'X-CDN: CDN77'
+    - Server: CDN77
+    - CDN77: # TODO: Check if this is supposed to be a value or or a key
+    - X-CDN: CDN77
 - name: OVH CDN
   headers:
-    - 'Server: OVHcdn'
+    - Server: OVHcdn
   ranges:
     - range_type: ipv4
       url: 'https://docs.ovhcloud.com/en/guides/network/content-delivery-network-infrastructure/cdn-infrastructure-ip-range'
@@ -250,8 +250,8 @@
   domains:
     - belugacdn.com
   headers:
-    - 'X-Beluga-Cache'
-    - 'Server: BelugaCDN'
+    - X-Beluga-Cache:
+    - Server: BelugaCDN
 - name: ChinaCache # seems to have been sold (website redirects)
   domains:
     - ccgslb.com
@@ -260,7 +260,7 @@
     - chinacache.net
     - c3cdn.net
   headers:
-    - 'Server: ChinaCache'
+    - Server: ChinaCache
 - name: CDNetworks
   domains:
     - panthercdn.com
@@ -270,13 +270,13 @@
     - cdnga
     - cdnetworks
   headers:
-    - 'X-CDN: CDNetworks'
-    - 'Server: CDNetworks'
+    - X-CDN: CDNetworks
+    - Server: CDNetworks
 - name: Medianova
   domains:
     - mncdn.com
   headers:
-    - 'X-Medianova-Cache'
+    - X-Medianova-Cache:
   ranges:
     - range_type: 'combined'
       url: 'https://cloud.medianova.com/api/v1/ip/addresses-txt'
@@ -285,30 +285,30 @@
     - azioncdn.net
     - azion
   headers:
-    - 'X-Azion-Cache'
-    - 'Server: AzionCDN'
+    - X-Azion-Cache:
+    - Server: AzionCDN
 - name: Netlify
   headers:
-    - 'Server: Netlify'
-    - 'X-NF-Cache-Status'
+    - Server: Netlify
+    - X-NF-Cache-Status:
 - name: Vercel
   headers:
-    - 'Server: Vercel'
+    - Server: Vercel
 - name: RocketCDN
   headers:
-    - 'X-Rocket-CDN'
-    - 'Server: RocketCDN'
+    - X-Rocket-CDN:
+    - Server: RocketCDN
 - name: Reblaze
   headers:
-    - 'X-Reblaze-Cache'
-    - 'Server: Reblaze'
+    - X-Reblaze-Cache:
+    - Server: Reblaze
 - name: Express CDN # dont know if it exists.
   headers:
-    - 'X-Express-CDN'
-    - 'Express-CDN-Cache'
-    - 'Express-CDN-Cache-Status'
-    - 'Express-CDN-Cache-Control'
-    - 'Express-CDN-Request-ID'
+    - X-Express-CDN:
+    - Express-CDN-Cache:
+    - Express-CDN-Cache-Status:
+    - Express-CDN-Cache-Control:
+    - Express-CDN-Request-ID:
 
 - name: TurboBytes
   domains:

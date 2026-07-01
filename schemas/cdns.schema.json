@@ -46,11 +46,20 @@
       "headers": {
         "description": "The HTTP headers commonly used by the CDN",
         "type": "array",
+        "minItems": 1,
         "items": {
-          "type": "string",
-          "minLength": 1
-        },
-        "minItems": 1
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "null"
+            ]
+          }
+        }
       }
     },
     "additionalProperties": false,

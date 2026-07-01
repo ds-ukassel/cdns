@@ -18,12 +18,15 @@
     - range_type: 'ipv4'
       ranges:
         - '111.111.111.111/32'
+      last_updated: 1970-01-01
   asns:
     - 12345
     - 67890
   headers:
-    - X-AwesomeCDN
-    - X-AwesomeCDN-Edge
+    - X-AwesomeCDN:         # 'X-AwesomeCDN' header must be present
+    - Server: AwesomeCDN    # 'Server' header must contain 'AwesomeCDN'
+    - X-Cache: HIT          # 'X-Cache' header must contain 'HIT' and 'X-Whatever' header must be present
+      X-Whatever:           
 ```
 
 ## References
