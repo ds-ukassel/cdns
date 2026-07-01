@@ -1,0 +1,13 @@
+timeZone: Europe/Berlin
+imagePullSecrets:
+  - name: registry-vs
+
+cdn_ranges:
+  image: registry.uni-kassel.dev/scraper/cdn_ranges:latest
+  imagePullPolicy: Always
+  secret:
+    existingSecret: cdn_ranges
+  successfulJobsHistoryLimit: 6
+  failedJobsHistoryLimit: 6
+  schedule: "0 10 * * 1" # every Monday at 10:00 AM
+  activeDeadlineSeconds: 3600

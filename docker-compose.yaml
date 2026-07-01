@@ -1,6 +1,21 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json
 
 services:
+
+  ranges:
+    image: registry.uni-kassel.dev/scraper/cdn_ranges
+    build:
+      dockerfile: ./src/ranges/Dockerfile
+      platforms: [ linux/amd64, linux/arm64 ]
+    depends_on:
+      - clickhouse-cdns
+    ipc: host
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
+    environment:
+      - CLICKHOUSE_HOST=clickhouse-cdns
+
   clickhouse-cdns:
     image: clickhouse/clickhouse-server:latest
     container_name: clickhouse-cdns
