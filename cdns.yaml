@@ -1,8 +1,9 @@
 # yaml-language-server: $schema=schemas/cdns.schema.json
 - name: Cloudflare
   domains:
-    - cloudflare.net
-    - cloudflare.com
+    - "**.cloudflare.com"
+    - "*.cloudflare.*"
+    - "*.cloudflare.net.in"
   headers:
     - 'CF-Cache-Status'
     - 'CF-RAY'
@@ -17,11 +18,11 @@
       url: 'https://www.cloudflare.com/ips-v6/'
 - name: Akamai
   domains:
-    - "*.akamai.net"
+    - "**.akamai.**"
     - akamaiedge.net
     - "*.akadns.net"
     - akamaitechnologies.com
-    - edgekey
+    - "**.edgekey.net"
     - "*.edgesuite.net"
   headers:
     - 'X-Akamai-Request-ID'
@@ -53,7 +54,7 @@
       url: 'https://ip-ranges.amazonaws.com/ip-ranges.json'
 - name: Fastly
   domains:
-    - fastly.net
+    - "**.fastly.**"
     - fastlylb.net
   headers:
     - 'Server: Varnish'
@@ -69,7 +70,7 @@
     - stackpathdns.com
     - stackpath
     - netdna
-    - hwcdn
+    - "*.hwcdn.*"
   headers:
     - 'Server: StackPath'
     - 'X-Powered-By: StackPath'
@@ -78,14 +79,14 @@
     - 'X-CDN: StackPath'
 - name: KeyCDN
   domains:
-    - kxcdn.com
+    - "*.kxcdn.com"
   headers:
     - 'Server: KeyCDN'
     - 'X-CDN: KeyCDN'
     - 'X-Edge-Location' # also an identifier of Google Cloud CDN
 - name: BunnyCDN
   domains:
-    - b-cdn.net
+    - "*.b-cdn.net"
   headers:
     - 'Server: BunnyCDN'
     - 'Bunny-Cache'
@@ -129,7 +130,7 @@
       url: 'https://my.imperva.com/api/integration/v1/ips'
 - name: CacheFly
   domains:
-    - cachefly.net
+    - "*.cachefly.net"
   headers:
     - 'Server: CacheFly'
   ranges:
@@ -148,7 +149,7 @@
     - 'AR-PoweredBy'
 - name: G-Core Labs
   domains:
-    - d.gcdn.co
+    - "**.gcdn.co"
   headers:
     - 'Server: GCL'
     - 'Server: G-Core Labs'
@@ -164,8 +165,8 @@
     - 'X-GCL-User-Status'
 - name: Microsoft Azure CDN
   domains:
-    - vo.msecnd.net
-    - trafficmanager
+    - "*.vo.msecnd.net"
+    - "*.trafficmanager.net"
     - msedge
   headers:
     - 'X-Azure-Ref'
@@ -174,11 +175,11 @@
     - 'X-Ms-Cdn-Request-Id'
 - name: Google Cloud CDN
   domains:
-    - .google.
-    - googlesyndication.
-    - youtube.
-    - googleusercontent.com
-    - l.doubleclick.net
+    - "**.google.**"
+    - "**.googlesyndication.com"
+    - "**.youtube.*"
+    - "*googleusercontent.com"
+    - "**.doubleclick.net"
   headers:
     # - 'Server: Google Frontend'
     - 'Server: Google Cloud CDN'
@@ -197,8 +198,7 @@
     - betacdn
     - chicdn
     - deltacdn
-    - edgecastcdn
-    - gammacdn
+    - "**.gammacdn.com"
     - iotacdn
     - kappacdn
     - lambdacdn
@@ -214,7 +214,7 @@
     - taucdn
     - thetacdn
     - upsiloncdn
-    - xicdn
+    - "*.xicdn.cc"
     - zetacdn
     - transactcdn
   headers:
@@ -230,8 +230,7 @@
     - 'Server: Alibaba'
 - name: CDN77
   domains:
-    - cdn77.net
-    - cdn77.org
+    - "**.cdn77.*"
   headers:
     - 'Server: CDN77'
     - 'CDN77'
@@ -278,13 +277,13 @@
     - gccdn.net
     - gccdn.cn
     - cdnga
-    - cdnetworks
+    - "*.cdnetworks.*"
   headers:
     - 'X-CDN: CDNetworks'
     - 'Server: CDNetworks'
 - name: Medianova
   domains:
-    - mncdn.com
+    - "**.mncdn.com"
   headers:
     - 'X-Medianova-Cache'
   ranges:
@@ -292,8 +291,8 @@
       url: 'https://cloud.medianova.com/api/v1/ip/addresses-txt'
 - name: Azion
   domains:
-    - azioncdn.net
-    - azion
+    - "**.azioncdn.net"
+    - "*.azion.*"
   headers:
     - 'X-Azion-Cache'
     - 'Server: AzionCDN'
@@ -349,13 +348,13 @@
   domains:
     - systemcdn.net
     - edgecastcdn.net
-    - .adn.
-    - .wac.
-    - .wpc.
+    - "**.adn.*"
+    - "*.wac.*"
+    - "*.wpc.**"
 
 - name: CDNify
   domains:
-    - cdnify.io
+    - "**.cdnify.io"
 
 - name: ChinaNetCenter
   domains:
@@ -373,7 +372,7 @@
 
 - name: Highwinds
   domains:
-    - hwcdn.net
+    - "*.hwcdn.*"
 
 - name: Instartlogic
   domains:
@@ -386,11 +385,11 @@
 
 - name: LeaseWeb CDN
   domains:
-    - lswcdn.net
+    - "**.lswcdn.net"
 
 - name: Level3
   domains:
-    - footprint.net
+    - "*.footprint.*"
 
 - name: Limelight
   domains:
@@ -401,7 +400,7 @@
 - name: MaxCDN
   domains:
     - netdna-cdn.com
-    - netdna-ssl.com
+    - "*.netdna-ssl.com"
     - netdna.com
 
 - name: Mirror Image
@@ -432,16 +431,16 @@
 
 - name: Tata communications
   domains:
-    - cdn.bitgravity.com
+    - "**.cdn.bitgravity.com"
 
 - name: Telefonica
   domains:
-    - cdn.telefonica.com
+    - "**.cdn.telefonica.com"
 
 - name: Yahoo
   domains:
     - ay1.b.yahoo.com
-    - .yimg.
+    - "**.yimg.*"
 
 - name: Zenedge
   domains:
