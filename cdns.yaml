@@ -15,6 +15,17 @@
       url: 'https://www.cloudflare.com/ips-v4/'
     - range_type: 'ipv6'
       url: 'https://www.cloudflare.com/ips-v6/'
+  asns:
+    - 209242
+    - 13335
+    - 132892
+    - 14789
+    - 202623
+    - 395747
+    - 400095
+    - 394536
+    - 203898
+    - 139242
 - name: Akamai
   domains:
     - akamai.net
@@ -33,6 +44,26 @@
     - Edge-Control:
     - X-True-Cache-Key:
     - X-Akamai-Device-Characteristics:
+  asns:
+    - 24319
+    - 20940
+    - 16625
+    - 63949
+    - 32787
+    - 26008
+    - 34164
+    - 213120
+    - 35994
+    - 21342
+    - 17204
+    - 31108
+    - 33905
+    - 12222
+    - 36183
+    - 393560
+    - 200005
+    - 49846
+    - 393234
 - name: Amazon CloudFront
   domains:
     - cloudfront.net
