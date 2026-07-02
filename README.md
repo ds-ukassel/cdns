@@ -6,8 +6,9 @@
 - name: AwesomeCDN
   homepage: https://www.awesomecdn.com
   domains:
-    - awe.some
-    - cdn.awesome
+    - awessomecdn           # 'awessomecdn' is a substring of the CNAME (e.g. 'a.awessomecdn.com')
+    - '*.cdn.awesome.com'   # '*' is a wildcard for a single domain level (e.g. 'a.cdn.awesome.com' or 'b.cdn.awesome.com')
+    - '**.awesomecdn.*'     # '**' is a wildcard for one or more domain levels (e.g. 'a.b.awesomecdn.de' or 'c.d.e.awesomecdn.com')
   ranges:
     - range_type: 'ipv4'
       url: 'https://api.awesomecdn.com/ips-v4/'
