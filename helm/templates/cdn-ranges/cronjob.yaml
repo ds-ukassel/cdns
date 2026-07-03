@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  namespace: {{ .Release.Namespace }}
+  name: {{ .Release.Name }}-cdn_ranges
+spec:
+  schedule: {{ .Values.cdn_ranges.schedule | quote }}
+  timeZone: {{ .Values.timeZone }}
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: {{ $.Values.cdn_ranges.successfulJobsHistoryLimit }}
+  failedJobsHistoryLimit: {{ $.Values.cdn_ranges.failedJobsHistoryLimit }}
+  jobTemplate:
+    metadata:
+      namespace: {{ .Release.Namespace }}
+    spec:
+      parallelism: 1
+      activeDeadlineSeconds: {{ .Values.cdn_ranges.activeDeadlineSeconds }}
+      template:
+        spec:
+          containers:
+            - name: cdn_ranges
+              image: {{ .Values.cdn_ranges.image }}
+              imagePullPolicy: {{ .Values.cdn_ranges.imagePullPolicy }}
+              envFrom:
+                - secretRef:
+                    name: {{ .Values.cdn_ranges.secret.existingSecret }}
+                    optional: false
+          restartPolicy: Never
+          imagePullSecrets:
+  {{ toYaml .Values.imagePullSecrets | indent 12 }}

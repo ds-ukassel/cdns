@@ -1,6 +1,21 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json
 
 services:
+
+  ranges:
+    image: registry.uni-kassel.dev/scraper/cdn_ranges
+    build:
+      dockerfile: ./src/ranges/Dockerfile
+      platforms: [ linux/amd64, linux/arm64 ]
+    depends_on:
+      - clickhouse-cdns
+    ipc: host
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
+    environment:
+      - CLICKHOUSE_HOST=clickhouse-cdns
+
   clickhouse-cdns:
     image: clickhouse/clickhouse-server:latest
     container_name: clickhouse-cdns
@@ -19,22 +34,5 @@ services:
         soft: 262144
         hard: 262144
 
-
-  minio:
-    # The last good Minio version. Everything after this version removes the admin console.
-    # See https://github.com/minio/minio/releases/tag/RELEASE.2025-05-24T17-08-30Z
-    image: quay.io/minio/minio:RELEASE.2025-04-22T22-12-26Z
-    command: server --console-address ":9001" /data
-    restart: unless-stopped
-    environment:
-      MINIO_ROOT_USER: minioadmin
-      MINIO_ROOT_PASSWORD: minioadmin
-    ports:
-      - "9100:9000"
-      - "9101:9001" # Admin Console http://localhost:9101
-    volumes:
-      - minio_data:/data
-
 volumes:
   clickhouse_data:
-  minio_data:

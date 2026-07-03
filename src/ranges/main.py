@@ -1,9 +1,6 @@
 import datetime
-from io import BytesIO
 from pathlib import Path
 
-from black import timezone
-from minioservice import MinioService
 from requests import Session
 
 from common import config
@@ -28,20 +25,15 @@ def main():
             password=config.CLICKHOUSE_PASSWORD,
             database=config.CLICKHOUSE_DATABASE,
             table=config.CLICKHOUSE_TABLE
-        ) as clickhouse,
-        MinioService(
-            minio_endpoint=config.MINIO_ENDPOINT,
-            access_key=config.MINIO_ACCESS_KEY,
-            secret_key=config.MINIO_SECRET_KEY,
-            secure=config.MINIO_SECURE
-        ) as minio):
+        ) as clickhouse
+    ):
         for cdn in cdns:
             ranges = cdn.get("ranges", [])
             if not ranges:
                 LOGGER.info(f"No ranges found for CDN '{cdn.get('name')}'. Skipping...")
                 continue
             for source in ranges:
-                timestamp = datetime.datetime.now(timezone.utc)
+                timestamp = datetime.datetime.now(datetime.timezone.utc)
                 if "url" in source:
                     LOGGER.info(f"Processing URL source for CDN '{cdn.get('name')}' (type: {source.get('range_type')})...")
                     parser: Parser = PARSERS.get(cdn.get("name"))
@@ -50,12 +42,6 @@ def main():
                         continue
                     try:
                         content = parser.fetch(source["url"], session)
-                        minio.upload_file(
-                            bucket_name=config.MINIO_BUCKET,
-                            object_name=f"{cdn.get('name')}/{timestamp.strftime('%Y-%m-%d_%H-%M-%S')}.{source.get('range_type')}",
-                            data=BytesIO(content.encode("utf-8")),
-                            content_size=len(content),
-                        )
                         ipv4_ranges, ipv6_ranges = parser.parse(content)
                         LOGGER.info(
                             f"Successfully parsed {len(ipv4_ranges)} IPv4 and {len(ipv6_ranges)} IPv6 ranges for CDN '{cdn.get('name')}'.")

@@ -1,0 +1,8 @@
+apiVersion: v2
+
+name: cdn_ranges
+type: application
+description: "Helm chart for CDN Ranges Scraper"
+
+version: 0.0.1
+appVersion: 0.0.1
