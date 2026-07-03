@@ -16,16 +16,16 @@
     - range_type: 'ipv6'
       url: 'https://www.cloudflare.com/ips-v6/'
   asns:
-    - 209242
     - 13335
-    - 132892
     - 14789
+    - 132892
+    - 139242
     - 202623
+    - 203898
+    - 209242
+    - 394536
     - 395747
     - 400095
-    - 394536
-    - 203898
-    - 139242
 - name: Akamai
   domains:
     - akamai.net
@@ -45,25 +45,25 @@
     - X-True-Cache-Key:
     - X-Akamai-Device-Characteristics:
   asns:
-    - 24319
-    - 20940
-    - 16625
-    - 63949
-    - 32787
-    - 26008
-    - 34164
-    - 213120
-    - 35994
-    - 21342
-    - 17204
-    - 31108
-    - 33905
     - 12222
+    - 16625
+    - 17204
+    - 20940
+    - 21342
+    - 24319
+    - 26008
+    - 31108
+    - 32787
+    - 33905
+    - 34164
+    - 35994
     - 36183
-    - 393560
-    - 200005
     - 49846
+    - 63949
+    - 200005
+    - 213120
     - 393234
+    - 393560
 - name: Amazon CloudFront
   domains:
     - cloudfront.net
@@ -78,6 +78,17 @@
   ranges:
     - range_type: 'ipv4'
       url: 'https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips'
+  asns:
+    - 801
+    - 7224
+    - 8987
+    - 14168
+    - 16509
+    - 19047
+    - 21664
+    - 36263
+    - 62785
+    - 401395
 - name: Amazon AWS
   ranges:
     - range_type: 'combined'
@@ -95,6 +106,9 @@
   ranges:
     - range_type: 'combined'
       url: 'https://api.fastly.com/public-ip-list'
+  asns:
+    - 54113
+    - 14618
 - name: StackPath
   domains:
     - stackpathdns.com
@@ -125,6 +139,8 @@
   ranges:
     - range_type: 'ipv4'
       url: 'https://api.bunny.net/mc/nodes/plain'
+  asns:
+    - 200325
 - name: Sucuri
   headers:
     - Server: Sucuri/Cloudproxy
@@ -145,6 +161,8 @@
       ranges:
         - 2a02:fe80::/29
       last_updated: 2026-06-05
+  asns:
+    - 30148
 - name: Imperva # Incapsula
   domains:
     - incapdns.net
@@ -158,6 +176,9 @@
   ranges:
     - range_type: 'combined'
       url: 'https://my.imperva.com/api/integration/v1/ips'
+  asns:
+    - 62571
+    - 19551
 - name: CacheFly
   domains:
     - cachefly.net
@@ -166,6 +187,8 @@
   ranges:
     - range_type: 'combined'
       url: 'https://cachefly.cachefly.net/ips/cdn.txt'
+  asns:
+    - 30081
 - name: QUIC.cloud
   headers:
     - Server: LiteSpeed
@@ -173,10 +196,15 @@
   ranges:
     - range_type: 'combined'
       url: 'https://quic.cloud/ips'
+  asns:
+    - 26116
 - name: ArvanCloud
   headers:
     - Server: ArvanCloud
     - AR-PoweredBy:
+  asns:
+    - 57568
+    - 208006
 - name: G-Core Labs
   domains:
     - d.gcdn.co
@@ -193,6 +221,11 @@
     - X-GCL-User:
     - X-GCL-User-Request-ID:
     - X-GCL-User-Status:
+  asns:
+    - 59245
+    - 199524
+    - 202422
+    - 210559
 - name: Microsoft Azure CDN
   domains:
     - vo.msecnd.net
@@ -206,6 +239,24 @@
   ranges:
     - range_type: combined
       url: 'https://www.microsoft.com/en-us/download/details.aspx?id=56519'
+  asns:
+    - 3598
+    - 5761
+    - 6584
+    - 8068
+    - 8069
+    - 8070
+    - 8075
+    - 12076
+    - 17144
+    - 30520
+    - 35106
+    - 45139
+    - 46182
+    - 54396
+    - 58862
+    - 59067
+    - 63314
 - name: Google Cloud CDN
   domains:
     - .google.
@@ -224,6 +275,31 @@
       url: 'https://www.gstatic.com/ipranges/cloud.json'
     - range_type: 'combined'
       url: 'https://www.gstatic.com/ipranges/goog.json'
+  asns:
+    - 15169
+    - 16550
+    - 16591
+    - 19527
+    - 32381
+    - 33715
+    - 36040
+    - 36383
+    - 36384
+    - 36385
+    - 36411
+    - 36492
+    - 41264
+    - 43515
+    - 45566
+    - 139070
+    - 139190
+    - 151231
+    - 214609
+    - 214611
+    - 394089
+    - 395973
+    - 396178
+    - 396982
 - name: Verizon EdgeCast # apparently shut down in 2025
   domains:
     - edgecastcdn
@@ -270,19 +346,25 @@
     - Server: CDN77
     - CDN77: # TODO: Check if this is supposed to be a value or or a key
     - X-CDN: CDN77
+  asns:
+    - 60068
 - name: OVH CDN
   headers:
     - Server: OVHcdn
   ranges:
     - range_type: ipv4
       url: 'https://docs.ovhcloud.com/en/guides/network/content-delivery-network-infrastructure/cdn-infrastructure-ip-range'
-      last_updated: 2026-06-05
-- name: BelugaCDN
+  asns:
+    - 16276
+    - 35540
+- name: BelugaCDN # Maybe also NuCDN? See https://www.peeringdb.com/asn/23393
   domains:
     - belugacdn.com
   headers:
     - X-Beluga-Cache:
     - Server: BelugaCDN
+  asns:
+    - 23393
 - name: ChinaCache # seems to have been sold (website redirects)
   domains:
     - ccgslb.com
@@ -292,6 +374,8 @@
     - c3cdn.net
   headers:
     - Server: ChinaCache
+  asns:
+    - 18216
 - name: CDNetworks
   domains:
     - panthercdn.com
@@ -303,6 +387,9 @@
   headers:
     - X-CDN: CDNetworks
     - Server: CDNetworks
+  asns:
+    - 36408
+    - 38107
 - name: Medianova
   domains:
     - mncdn.com
@@ -311,6 +398,8 @@
   ranges:
     - range_type: 'combined'
       url: 'https://cloud.medianova.com/api/v1/ip/addresses-txt'
+  asns:
+    - 21245
 - name: Azion
   domains:
     - azioncdn.net
