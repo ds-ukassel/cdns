@@ -6,7 +6,7 @@
 - name: AwesomeCDN
   homepage: https://www.awesomecdn.com
   domains:
-    - awessomecdn           # 'awessomecdn' is a substring of the CNAME (e.g. 'a.awessomecdn.com')
+    - awesomecdn           # 'awesomecdn' is a substring of the CNAME (e.g. 'a.awessomecdn.com')
     - '*.cdn.awesome.com'   # '*' is a wildcard for a single domain level (e.g. 'a.cdn.awesome.com' or 'b.cdn.awesome.com')
     - '**.awesomecdn.*'     # '**' is a wildcard for one or more domain levels (e.g. 'a.b.awesomecdn.de' or 'c.d.e.awesomecdn.com')
   ranges:
@@ -34,3 +34,28 @@
 - [TurboBytes CDN List](https://github.com/turbobytes/cdnfinder/blob/master/assets/cnamechain.json) ([MIT](https://github.com/turbobytes/cdnfinder/blob/master/LICENSE))
 - [CDNProbe 'cname cache'](https://github.com/njuzmy/CDNProbe/blob/main/assets/static/cdn/cname_cache.json) ([Apache 2.0](https://github.com/njuzmy/CDNProbe/blob/main/LICENSE))
   - Parts of their CNAME substring list was used to expand our own list.
+
+## Wildcard Syntax
+When implementing the wildcard syntax, the following rules apply:
+- `*` matches a single domain level
+  - `*.example.com` matches `abc.example.com` 
+  - `*.example.com` does **not** match `abc.def.example.com`
+- `**` matches one or more domain levels or any prefix 
+  - `**.example.com` matches `a.example.com` and `b.c.example.com`
+  - `**example.com` matches `example.com`, `a.example.com`, and `b.c.example.com`
+
+
+`*` and `**` can appear anywhere in the domain string, including the beginning, middle, or end.
+
+### Regex Equivalents
+- `*` is equivalent to `[^.]+` (matches any character except dots, one or more times)
+- `**` is equivalent to `.*` (matches any character, including dots, zero or more times)
+
+
+- All special characters are escaped, e.g. `.` turns into `\.`.
+- The regex receives the prefix `^` and suffix `$`.
+
+#### Examples
+
+- `**example.com` -> `^.*example\.com$`
+- `*.example.com` -> `^[^.]+\.example\.com$`
