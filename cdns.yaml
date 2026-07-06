@@ -18,9 +18,9 @@
 - name: Akamai
   domains:
     - "**.akamai.**"
-    - akamaiedge.net
+    - "**akamaiedge.net"
     - "*.akadns.net"
-    - akamaitechnologies.com
+    - "**akamaitechnologies.com"
     - "**.edgekey.net"
     - "*.edgesuite.net"
   headers:
@@ -54,7 +54,7 @@
 - name: Fastly
   domains:
     - "**.fastly.**"
-    - fastlylb.net
+    - "**fastlylb.net"
   headers:
     - Server: Varnish
     - X-Varnish:
@@ -66,9 +66,9 @@
       url: 'https://api.fastly.com/public-ip-list'
 - name: StackPath
   domains:
-    - stackpathdns.com
-    - stackpath
-    - netdna
+    - "**stackpathdns.com"
+    - "**stackpath**"
+    - "**netdna**"
     - "*.hwcdn.*"
   headers:
     - Server: StackPath
@@ -116,8 +116,8 @@
       last_updated: 2026-06-05
 - name: Imperva # Incapsula
   domains:
-    - incapdns.net
-    - impervadns
+    - "**incapdns.net"
+    - "**impervadns**"
   headers:
     - Server: Imperva
     - X-CDN: Incapsula
@@ -166,7 +166,7 @@
   domains:
     - "*.vo.msecnd.net"
     - "*.trafficmanager.net"
-    - msedge
+    - "**msedge**"
   headers:
     - X-Azure-Ref:
     - Server: Azure Front Door
@@ -195,36 +195,36 @@
       url: 'https://www.gstatic.com/ipranges/goog.json'
 - name: Verizon EdgeCast # apparently shut down in 2025
   domains:
-    - edgecastcdn
-    - alphacdn
-    - betacdn
-    - chicdn
-    - deltacdn
+    - "**edgecastcdn**"
+    - "**alphacdn**"
+    - "**betacdn**"
+    - "**chicdn**"
+    - "**deltacdn**"
     - "**.gammacdn.com"
-    - iotacdn
-    - kappacdn
-    - lambdacdn
-    - mucdn
-    - nucdn
-    - omegacdn
-    - omicroncdn
-    - phicdn
-    - psicdn
-    - rhocdn
-    - sigmacdn
-    - systemcdn
-    - taucdn
-    - thetacdn
-    - upsiloncdn
+    - "**iotacdn**"
+    - "**kappacdn**"
+    - "**lambdacdn**"
+    - "**mucdn**"
+    - "**nucdn**"
+    - "**omegacdn**"
+    - "**omicroncdn**"
+    - "**phicdn**"
+    - "**psicdn**"
+    - "**rhocdn**"
+    - "**sigmacdn**"
+    - "**systemcdn**"
+    - "**taucdn**"
+    - "**thetacdn**"
+    - "**upsiloncdn**"
     - "*.xicdn.cc"
-    - zetacdn
-    - transactcdn
+    - "**zetacdn**"
+    - "**transactcdn**"
   headers:
     - Server: ECS
 - name: Alibaba Cloud CDN
   domains:
-    - kunlun
-    - cdngslb
+    - "**kunlun**"
+    - "**cdngslb**"
   headers:
     - Via: Alibaba Cloud CDN
     - Ali-CDN-Cache:
@@ -246,26 +246,26 @@
       last_updated: 2026-06-05
 - name: BelugaCDN
   domains:
-    - belugacdn.com
+    - "**belugacdn.com"
   headers:
     - X-Beluga-Cache:
     - Server: BelugaCDN
 - name: ChinaCache # seems to have been sold (website redirects)
   domains:
-    - ccgslb.com
-    - ccgslb.net
-    - c3cache.net
-    - chinacache.net
-    - c3cdn.net
+    - "**ccgslb.com"
+    - "**ccgslb.net"
+    - "**c3cache.net"
+    - "**chinacache.net"
+    - "**c3cdn.net"
   headers:
     - Server: ChinaCache
 - name: CDNetworks
   domains:
-    - panthercdn.com
-    - cdngc.net
-    - gccdn.net
-    - gccdn.cn
-    - cdnga
+    - "**panthercdn.com"
+    - "**cdngc.net"
+    - "**gccdn.net"
+    - "**gccdn.cn"
+    - "**cdnga**"
     - "*.cdnetworks.*"
   headers:
     - X-CDN: CDNetworks
@@ -310,33 +310,33 @@
 
 - name: TurboBytes
   domains:
-    - clients.turbobytes.net
-    - turbobytes-cdn.com
+    - "**clients.turbobytes.net"
+    - "**turbobytes-cdn.com"
 
 - name: afxcdn.net
   domains:
-    - afxcdn.net
+    - "**afxcdn.net"
 
 - name: Alimama
   domains:
-    - gslb.tbcache.com
+    - "**gslb.tbcache.com"
 
 - name: Ananke
   domains:
-    - anankecdn.com.br
+    - "**anankecdn.com.br"
 
 - name: AT&T
   domains:
-    - att-dsa.net
+    - "**att-dsa.net"
 
 - name: Blue Hat Network
   domains:
-    - bluehatnetwork.com
+    - "**bluehatnetwork.com"
 
 - name: EdgeCast
   domains:
-    - systemcdn.net
-    - edgecastcdn.net
+    - "**systemcdn.net"
+    - "**edgecastcdn.net"
     - "**.adn.*"
     - "*.wac.*"
     - "*.wpc.**"
@@ -347,17 +347,17 @@
 
 - name: ChinaNetCenter
   domains:
-    - lxdns.com
-    - wscdns
-    - wswebpic
-    - tl88
-    - cdn30
-    - qtlcdn
-    - cdn20
+    - "**lxdns.com"
+    - "**wscdns**"
+    - "**wswebpic**"
+    - "**tl88**"
+    - "**cdn30**"
+    - "**qtlcdn**"
+    - "**cdn20**"
 
 - name: Hibernia
   domains:
-    - hiberniacdn.com
+    - "**hiberniacdn.com"
 
 - name: Highwinds
   domains:
@@ -365,12 +365,12 @@
 
 - name: Instartlogic
   domains:
-    - inscname.net
-    - insnw.net
+    - "**inscname.net"
+    - "**insnw.net"
 
 - name: Internap
   domains:
-    - internapcdn.net
+    - "**internapcdn.net"
 
 - name: LeaseWeb CDN
   domains:
@@ -382,41 +382,41 @@
 
 - name: Limelight
   domains:
-    - llnwd.net
-    - lldns.net
-    - llnw
+    - "**llnwd.net"
+    - "**lldns.net"
+    - "**llnw**"
 
 - name: MaxCDN
   domains:
-    - netdna-cdn.com
+    - "**netdna-cdn.com"
     - "*.netdna-ssl.com"
-    - netdna.com
+    - "**netdna.com"
 
 - name: Mirror Image
   domains:
-    - instacontent.net
-    - mirror-image.net
-    - cap-mii.net
+    - "**instacontent.net"
+    - "**mirror-image.net"
+    - "**cap-mii.net"
 
 - name: Reflected Networks
   domains:
-    - rncdn1.com
+    - "**rncdn1.com"
 
 - name: Simple CDN
   domains:
-    - simplecdn.net
+    - "**simplecdn.net"
 
 - name: SwiftCDN
   domains:
-    - swiftcdn1.com
+    - "**swiftcdn1.com"
 
 - name: SwiftServe
   domains:
-    - swiftserve.com
+    - "**swiftserve.com"
 
 - name: Taobao
   domains:
-    - gslb.taobao.com
+    - "**gslb.taobao.com"
 
 - name: Tata communications
   domains:
@@ -428,59 +428,59 @@
 
 - name: Yahoo
   domains:
-    - ay1.b.yahoo.com
+    - "**ay1.b.yahoo.com"
     - "**.yimg.*"
 
 - name: Zenedge
   domains:
-    - zenedge.net
+    - "**zenedge.net"
 
 - name: Kingsoft
   domains:
-    - .ksyuncdn.com
-    - ksyun
+    - "**ksyuncdn.com"
+    - "**ksyun**"
 
 - name: Baishan Cloud
   domains:
-    - baishan
-    - bsccdn
-    - bsgslb
+    - "**baishan**"
+    - "**bsccdn**"
+    - "**bsgslb**"
 
 - name: baidu
   domains:
-    - jomodns
-    - zjsxlt
-    - yunjiasu
-    - yjs-cdn
-    - shifen
+    - "**jomodns**"
+    - "**zjsxlt**"
+    - "**yunjiasu**"
+    - "**yjs-cdn**"
+    - "**shifen**"
 
 - name: Tencent Cloud
   domains:
-    - dayugslb
-    - tdnsv8
-    - intlscdn
-    - dnsv1
-    - tdnsdp1
-    - tcloudscdn
+    - "**dayugslb**"
+    - "**tdnsv8**"
+    - "**intlscdn**"
+    - "**dnsv1**"
+    - "**tdnsdp1**"
+    - "**tcloudscdn**"
 
 - name: yunduncdn # Yandex Cloud
   domains:
-    - yundun
+    - "**yundun**"
 
 - name: Merlin CDN
   domains:
-    - merlin
+    - "**merlin**"
 
 - name: jingdong # JINGDONG CLoud
   domains:
-    - jcloud-cdn
+    - "**jcloud-cdn**"
     - "*.jcloud.kz"
 
 - name: Bilibili
   domains:
-    - bilicdn
+    - "**bilicdn**"
 
 - name: Huawei
   domains:
-    - cdnhwc
-    - hwclouds
+    - "**cdnhwc**"
+    - "**hwclouds**"
