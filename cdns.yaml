@@ -407,6 +407,8 @@
   headers:
     - X-Azion-Cache:
     - Server: AzionCDN
+  asns:
+    - 52580
 - name: Netlify
   headers:
     - Server: Netlify
@@ -630,7 +632,6 @@
     - yunjiasu
     - yjs-cdn
     - shifen
-
 - name: Tencent Cloud
   domains:
     - dayugslb
@@ -639,24 +640,31 @@
     - dnsv1
     - tdnsdp1
     - tcloudscdn
-
-- name: yunduncdn # Yandex Cloud
+  asns:
+    - 133478
+- name: YundunCDN # Yandex Cloud
   domains:
-    - yundun
-
+    - "**yunduncdn.com**"
 - name: Merlin CDN
   domains:
     - merlin
-
-- name: jingdong # JINGDONG CLoud
+- name: JINGDONG # JINGDONG Cloud
   domains:
     - jcloud-cdn
-
+  asns:
+    - 131486
+    - 137753
+    - 137787
 - name: Bilibili
   domains:
     - bilicdn
-
+  asns:
+    - 140633
 - name: Huawei
   domains:
     - cdnhwc
     - hwclouds
+  asns:
+    - 55990
+    - 63727
+    - 131444
