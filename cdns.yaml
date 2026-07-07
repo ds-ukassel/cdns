@@ -430,7 +430,7 @@
     - Express-CDN-Cache-Control:
     - Express-CDN-Request-ID:
 
-- name: TurboBytes
+- name: TurboBytes # out of business. See https://www.cdnplanet.com/blog/turbobytes-multi-cdn-made-easy/
   domains:
     - clients.turbobytes.net
     - turbobytes-cdn.com
@@ -462,6 +462,57 @@
     - .adn.
     - .wac.
     - .wpc.
+  asns:
+    - 797
+    - 2386
+    - 2685
+    - 2686
+    - 2687
+    - 2688
+    - 3423
+    - 3555
+    - 4185
+    - 4186
+    - 4466
+    - 4468
+    - 4473
+    - 5623
+    - 5671
+    - 5672
+    - 5728
+    - 6269
+    - 6290
+    - 6389
+    - 6431
+    - 6686
+    - 6688
+    - 6742
+    - 6748
+    - 6904
+    - 7018
+    - 7287
+    - 7291
+    - 8030
+    - 8238
+    - 11712
+    - 12967
+    - 12980
+    - 13965
+    - 13979
+    - 14654
+    - 15840
+    - 18289
+    - 19957
+    - 20057
+    - 20492
+    - 21302
+    - 21326
+    - 21443
+    - 25497
+    - 25993
+    - 28469
+    - 28521
+
 
 - name: CDNify
   domains:
@@ -476,10 +527,14 @@
     - cdn30
     - qtlcdn
     - cdn20
+  asns:
+    - 17442
 
 - name: Hibernia
   domains:
     - hiberniacdn.com
+  asns:
+    - 51677
 
 - name: Highwinds
   domains:
