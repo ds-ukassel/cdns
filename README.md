@@ -6,7 +6,8 @@
 - name: AwesomeCDN
   homepage: https://www.awesomecdn.com
   domains:
-    - awesomecdn           # 'awesomecdn' is a substring of the CNAME (e.g. 'a.awessomecdn.com')
+    - 'awesomecdn.com'      # 'awesomecdn.com' is a full match of the CNAME (e.g. 'awesomecdn.com')
+    - '**awesomecdn**'      # 'awesomecdn' is a substring of the CNAME (e.g. 'a.awessomecdn.com')
     - '*.cdn.awesome.com'   # '*' is a wildcard for a single domain level (e.g. 'a.cdn.awesome.com' or 'b.cdn.awesome.com')
     - '**.awesomecdn.*'     # '**' is a wildcard for one or more domain levels (e.g. 'a.b.awesomecdn.de' or 'c.d.e.awesomecdn.com')
   ranges:
