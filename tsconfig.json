@@ -20,6 +20,7 @@
 
     // Other Outputs
     "sourceMap": false,
+    "removeComments": false,
     "declaration": true,
     "declarationMap": false,
 

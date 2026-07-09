@@ -10,3 +10,5 @@ export interface CDN {
 }
 
 export const cdns: CDN[] = _cdns;
+export * from './domains.js';
+export * from './headers.js';
