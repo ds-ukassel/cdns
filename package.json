@@ -1,0 +1,19 @@
+{
+  "name": "@ds-ukassel/cdns",
+  "version": "1.0.0",
+  "description": "A list of CDNs and ways to identify them.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "packageManager": "pnpm@11.10.0+sha512.0b7f8b98060031904c017e3a41eb187a16d40eeb829b95c4f8cb03681761fc4ab53dd219115b9b447f4dce1a05a214764461e7d3703392a9f32f9511ce8c86c8",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

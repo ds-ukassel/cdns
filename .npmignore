@@ -1,0 +1,4 @@
+**
+!package.json
+!src/**/*.js
+!src/**/*.d.ts
