@@ -9,9 +9,9 @@ export function compileDomain(domain: string): RegExp {
 
 function domain2pattern(domain: string): string {
     return '^' + domain
+        .replace(/\*\*/g, '\u0001')
         .replace(/\./g, '\\.')
-        .replace(/\*\*/g, '.*')
         .replace(/\*/g, '[^.]+')
-        + '$'
-    ;
+        .replace(/\u0001/g, '.*')
+        + '$';
 }
