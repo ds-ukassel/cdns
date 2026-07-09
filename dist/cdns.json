@@ -2,8 +2,8 @@
   {
     "name": "Cloudflare",
     "domains": [
-      "cloudflare.net",
-      "cloudflare.com"
+      "**.cloudflare.*",
+      "*.cloudflare.net.in"
     ],
     "headers": [
       {
@@ -51,12 +51,12 @@
   {
     "name": "Akamai",
     "domains": [
-      "akamai.net",
-      "akamaiedge.net",
-      "akadns.net",
-      "akamaitechnologies.com",
-      "edgekey",
-      "edgesuite"
+      "**.akamai.**",
+      "**akamaiedge.net",
+      "*.akadns.net",
+      "**akamaitechnologies.com",
+      "**.edgekey.net",
+      "*.edgesuite.net"
     ],
     "headers": [
       {
@@ -112,7 +112,7 @@
   {
     "name": "Amazon CloudFront",
     "domains": [
-      "cloudfront.net"
+      "*.cloudfront.net"
     ],
     "headers": [
       {
@@ -168,8 +168,8 @@
   {
     "name": "Fastly",
     "domains": [
-      "fastly.net",
-      "fastlylb.net"
+      "**.fastly.**",
+      "**fastlylb.net"
     ],
     "headers": [
       {
@@ -202,10 +202,9 @@
   {
     "name": "StackPath",
     "domains": [
-      "stackpathdns.com",
-      "stackpath",
-      "netdna",
-      "hwcdn"
+      "**stackpath**",
+      "**netdna**",
+      "*.hwcdn.*"
     ],
     "headers": [
       {
@@ -228,7 +227,7 @@
   {
     "name": "KeyCDN",
     "domains": [
-      "kxcdn.com"
+      "*.kxcdn.com"
     ],
     "headers": [
       {
@@ -245,7 +244,7 @@
   {
     "name": "BunnyCDN",
     "domains": [
-      "b-cdn.net"
+      "*.b-cdn.net"
     ],
     "headers": [
       {
@@ -319,8 +318,8 @@
   {
     "name": "Imperva",
     "domains": [
-      "incapdns.net",
-      "impervadns"
+      "**incapdns.net",
+      "**impervadns**"
     ],
     "headers": [
       {
@@ -353,7 +352,7 @@
   {
     "name": "CacheFly",
     "domains": [
-      "cachefly.net"
+      "*.cachefly.net"
     ],
     "headers": [
       {
@@ -408,7 +407,7 @@
   {
     "name": "G-Core Labs",
     "domains": [
-      "d.gcdn.co"
+      "**.gcdn.co"
     ],
     "headers": [
       {
@@ -458,9 +457,9 @@
   {
     "name": "Microsoft Azure CDN",
     "domains": [
-      "vo.msecnd.net",
-      "trafficmanager",
-      "msedge"
+      "*.vo.msecnd.net",
+      "*.trafficmanager.net",
+      "**msedge**"
     ],
     "headers": [
       {
@@ -505,11 +504,11 @@
   {
     "name": "Google Cloud CDN",
     "domains": [
-      ".google.",
-      "googlesyndication.",
-      "youtube.",
-      "googleusercontent.com",
-      "l.doubleclick.net"
+      "**.google.**",
+      "**.googlesyndication.com",
+      "**.youtube.*",
+      "*.googleusercontent.com",
+      "**.doubleclick.net"
     ],
     "headers": [
       {
@@ -565,31 +564,30 @@
   {
     "name": "Verizon EdgeCast",
     "domains": [
-      "edgecastcdn",
-      "alphacdn",
-      "betacdn",
-      "chicdn",
-      "deltacdn",
-      "edgecastcdn",
-      "gammacdn",
-      "iotacdn",
-      "kappacdn",
-      "lambdacdn",
-      "mucdn",
-      "nucdn",
-      "omegacdn",
-      "omicroncdn",
-      "phicdn",
-      "psicdn",
-      "rhocdn",
-      "sigmacdn",
-      "systemcdn",
-      "taucdn",
-      "thetacdn",
-      "upsiloncdn",
-      "xicdn",
-      "zetacdn",
-      "transactcdn"
+      "**edgecastcdn**",
+      "**alphacdn**",
+      "**betacdn**",
+      "**chicdn**",
+      "**deltacdn**",
+      "**.gammacdn.com",
+      "**iotacdn**",
+      "**kappacdn**",
+      "**lambdacdn**",
+      "**mucdn**",
+      "**nucdn**",
+      "**omegacdn**",
+      "**omicroncdn**",
+      "**phicdn**",
+      "**psicdn**",
+      "**rhocdn**",
+      "**sigmacdn**",
+      "**systemcdn**",
+      "**taucdn**",
+      "**thetacdn**",
+      "**upsiloncdn**",
+      "*.xicdn.cc",
+      "**zetacdn**",
+      "**transactcdn**"
     ],
     "headers": [
       {
@@ -600,8 +598,8 @@
   {
     "name": "Alibaba Cloud CDN",
     "domains": [
-      "kunlun",
-      "cdngslb"
+      "**kunlun**",
+      "**cdngslb**"
     ],
     "headers": [
       {
@@ -621,8 +619,7 @@
   {
     "name": "CDN77",
     "domains": [
-      "cdn77.net",
-      "cdn77.org"
+      "**.cdn77.*"
     ],
     "headers": [
       {
@@ -660,7 +657,7 @@
   {
     "name": "BelugaCDN",
     "domains": [
-      "belugacdn.com"
+      "**belugacdn.com"
     ],
     "headers": [
       {
@@ -677,11 +674,11 @@
   {
     "name": "ChinaCache",
     "domains": [
-      "ccgslb.com",
-      "ccgslb.net",
-      "c3cache.net",
-      "chinacache.net",
-      "c3cdn.net"
+      "**ccgslb.com",
+      "**ccgslb.net",
+      "**c3cache.net",
+      "**chinacache.net",
+      "**c3cdn.net"
     ],
     "headers": [
       {
@@ -695,12 +692,12 @@
   {
     "name": "CDNetworks",
     "domains": [
-      "panthercdn.com",
-      "cdngc.net",
-      "gccdn.net",
-      "gccdn.cn",
-      "cdnga",
-      "cdnetworks"
+      "**panthercdn.com",
+      "**cdngc.net",
+      "**gccdn.net",
+      "**gccdn.cn",
+      "**cdnga**",
+      "*.cdnetworks.*"
     ],
     "headers": [
       {
@@ -718,7 +715,7 @@
   {
     "name": "Medianova",
     "domains": [
-      "mncdn.com"
+      "**.mncdn.com"
     ],
     "headers": [
       {
@@ -738,8 +735,8 @@
   {
     "name": "Azion",
     "domains": [
-      "azioncdn.net",
-      "azion"
+      "**.azioncdn.net",
+      "*.azion.*"
     ],
     "headers": [
       {
@@ -817,48 +814,48 @@
   {
     "name": "TurboBytes",
     "domains": [
-      "clients.turbobytes.net",
-      "turbobytes-cdn.com"
+      "**clients.turbobytes.net",
+      "**turbobytes-cdn.com"
     ]
   },
   {
     "name": "afxcdn.net",
     "domains": [
-      "afxcdn.net"
+      "**afxcdn.net"
     ]
   },
   {
     "name": "Alimama",
     "domains": [
-      "gslb.tbcache.com"
+      "**gslb.tbcache.com"
     ]
   },
   {
     "name": "Ananke",
     "domains": [
-      "anankecdn.com.br"
+      "**anankecdn.com.br"
     ]
   },
   {
     "name": "AT&T",
     "domains": [
-      "att-dsa.net"
+      "**att-dsa.net"
     ]
   },
   {
     "name": "Blue Hat Network",
     "domains": [
-      "bluehatnetwork.com"
+      "**bluehatnetwork.com"
     ]
   },
   {
     "name": "EdgeCast",
     "domains": [
-      "systemcdn.net",
-      "edgecastcdn.net",
-      ".adn.",
-      ".wac.",
-      ".wpc."
+      "**systemcdn.net",
+      "**edgecastcdn.net",
+      "**.adn.*",
+      "*.wac.*",
+      "*.wpc.**"
     ],
     "asns": [
       797,
@@ -915,19 +912,19 @@
   {
     "name": "CDNify",
     "domains": [
-      "cdnify.io"
+      "**.cdnify.io"
     ]
   },
   {
     "name": "ChinaNetCenter",
     "domains": [
-      "lxdns.com",
-      "wscdns",
-      "wswebpic",
-      "tl88",
-      "cdn30",
-      "qtlcdn",
-      "cdn20"
+      "**lxdns.com",
+      "**wscdns**",
+      "**wswebpic**",
+      "**tl88**",
+      "**cdn30**",
+      "**qtlcdn**",
+      "**cdn20**"
     ],
     "asns": [
       17442
@@ -936,7 +933,7 @@
   {
     "name": "Hibernia",
     "domains": [
-      "hiberniacdn.com"
+      "**hiberniacdn.com"
     ],
     "asns": [
       51677
@@ -945,14 +942,14 @@
   {
     "name": "Highwinds",
     "domains": [
-      "hwcdn.net"
+      "*.hwcdn.*"
     ]
   },
   {
     "name": "Instartlogic",
     "domains": [
-      "inscname.net",
-      "insnw.net"
+      "**inscname.net",
+      "**insnw.net"
     ]
   },
   {
@@ -962,7 +959,7 @@
       32475
     ],
     "domains": [
-      "internapcdn.net"
+      "**internapcdn.net"
     ]
   },
   {
@@ -971,7 +968,7 @@
       60781
     ],
     "domains": [
-      "lswcdn.net"
+      "**.lswcdn.net"
     ]
   },
   {
@@ -980,31 +977,30 @@
       58682
     ],
     "domains": [
-      "footprint.net"
+      "*.footprint.*"
     ]
   },
   {
     "name": "Limelight",
     "domains": [
-      "llnwd.net",
-      "lldns.net",
-      "llnw"
+      "**lldns.net",
+      "**llnw**"
     ]
   },
   {
     "name": "MaxCDN",
     "domains": [
-      "netdna-cdn.com",
-      "netdna-ssl.com",
-      "netdna.com"
+      "**netdna-cdn.com",
+      "*.netdna-ssl.com",
+      "**netdna.com"
     ]
   },
   {
     "name": "Mirror Image",
     "domains": [
-      "instacontent.net",
-      "mirror-image.net",
-      "cap-mii.net"
+      "**instacontent.net",
+      "**mirror-image.net",
+      "**cap-mii.net"
     ]
   },
   {
@@ -1013,25 +1009,25 @@
       29789
     ],
     "domains": [
-      "rncdn1.com"
+      "**rncdn1.com"
     ]
   },
   {
     "name": "Simple CDN",
     "domains": [
-      "simplecdn.net"
+      "**simplecdn.net"
     ]
   },
   {
     "name": "SwiftCDN",
     "domains": [
-      "swiftcdn1.com"
+      "**swiftcdn1.com"
     ]
   },
   {
     "name": "SwiftServe",
     "domains": [
-      "swiftserve.com"
+      "**swiftserve.com"
     ]
   },
   {
@@ -1040,7 +1036,7 @@
       24429
     ],
     "domains": [
-      "gslb.taobao.com"
+      "**gslb.taobao.com"
     ]
   },
   {
@@ -1059,20 +1055,20 @@
       273732
     ],
     "domains": [
-      "cdn.bitgravity.com"
+      "**.cdn.bitgravity.com"
     ]
   },
   {
     "name": "Telefonica",
     "domains": [
-      "cdn.telefonica.com"
+      "**.cdn.telefonica.com"
     ]
   },
   {
     "name": "Yahoo",
     "domains": [
-      "ay1.b.yahoo.com",
-      ".yimg."
+      "**ay1.b.yahoo.com",
+      "**.yimg.*"
     ]
   },
   {
@@ -1081,7 +1077,7 @@
       31898
     ],
     "domains": [
-      "zenedge.net"
+      "**zenedge.net"
     ]
   },
   {
@@ -1090,16 +1086,15 @@
       59019
     ],
     "domains": [
-      ".ksyuncdn.com",
-      "ksyun"
+      "**ksyun**"
     ]
   },
   {
     "name": "Baishan Cloud",
     "domains": [
-      "baishan",
-      "bsccdn",
-      "bsgslb"
+      "**baishan**",
+      "**bsccdn**",
+      "**bsgslb**"
     ]
   },
   {
@@ -1109,22 +1104,22 @@
       55967
     ],
     "domains": [
-      "jomodns",
-      "zjsxlt",
-      "yunjiasu",
-      "yjs-cdn",
-      "shifen"
+      "**jomodns**",
+      "**zjsxlt**",
+      "**yunjiasu**",
+      "**yjs-cdn**",
+      "**shifen**"
     ]
   },
   {
     "name": "Tencent Cloud",
     "domains": [
-      "dayugslb",
-      "tdnsv8",
-      "intlscdn",
-      "dnsv1",
-      "tdnsdp1",
-      "tcloudscdn"
+      "**dayugslb**",
+      "**tdnsv8**",
+      "**intlscdn**",
+      "**dnsv1**",
+      "**tdnsdp1**",
+      "**tcloudscdn**"
     ],
     "asns": [
       133478
@@ -1139,13 +1134,14 @@
   {
     "name": "Merlin CDN",
     "domains": [
-      "merlin"
+      "**merlin**"
     ]
   },
   {
     "name": "JINGDONG",
     "domains": [
-      "jcloud-cdn"
+      "**jcloud-cdn**",
+      "*.jcloud.kz"
     ],
     "asns": [
       131486,
@@ -1156,7 +1152,7 @@
   {
     "name": "Bilibili",
     "domains": [
-      "bilicdn"
+      "**bilicdn**"
     ],
     "asns": [
       140633
@@ -1165,8 +1161,8 @@
   {
     "name": "Huawei",
     "domains": [
-      "cdnhwc",
-      "hwclouds"
+      "**cdnhwc**",
+      "**hwclouds**"
     ],
     "asns": [
       55990,
