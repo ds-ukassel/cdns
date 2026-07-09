@@ -66,8 +66,7 @@
       url: 'https://api.fastly.com/public-ip-list'
 - name: StackPath
   domains:
-    - "**stackpathdns.com"
-    - "**stackpath**"
+    - "**stackpath**" # stackpathdns.com
     - "**netdna**"
     - "*.hwcdn.*"
   headers:
@@ -382,9 +381,8 @@
 
 - name: Limelight
   domains:
-    - "**llnwd.net"
     - "**lldns.net"
-    - "**llnw**"
+    - "**llnw**" # llnwd.net
 
 - name: MaxCDN
   domains:
@@ -437,8 +435,7 @@
 
 - name: Kingsoft
   domains:
-    - "**ksyuncdn.com"
-    - "**ksyun**"
+    - "**ksyun**" # ksyuncdn.com
 
 - name: Baishan Cloud
   domains:
