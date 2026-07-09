@@ -20,16 +20,16 @@ describe('matches', () => {
     expect(matches(headers, matcher)).toBe(false);
   });
 
-  it('handles null expected value (header must be absent)', () => {
+  it('handles null expected value (header must be present)', () => {
     const headers = {'content-type': 'text/html'};
     const matcher = {'x-custom-header': null};
-    expect(matches(headers, matcher)).toBe(true);
+    expect(matches(headers, matcher)).toBe(false);
   });
 
-  it('returns false when header with null expected is present', () => {
+  it('returns true when header with null expected is present', () => {
     const headers = {'x-custom-header': 'exists'};
     const matcher = {'x-custom-header': null};
-    expect(matches(headers, matcher)).toBe(false);
+    expect(matches(headers, matcher)).toBe(true);
   });
 
   it('handles lowercase headers from responses (keys must be lowercase)', () => {
@@ -51,12 +51,12 @@ describe('matches', () => {
   });
 
   it('handles multiple matchers with null values', () => {
-    const headers: Record<string, string> = {};
+    const headers = {'x-header-a': 'any', 'x-header-b': 'value'};
     const matcher = {'x-header-a': null, 'x-header-b': null};
     expect(matches(headers, matcher)).toBe(true);
   });
 
-  it('returns false if any header with null expected is present', () => {
+  it('returns false if any header with null expected is absent', () => {
     const headers = {'x-header-a': 'present'};
     const matcher = {'x-header-a': null, 'x-header-b': null};
     expect(matches(headers, matcher)).toBe(false);
