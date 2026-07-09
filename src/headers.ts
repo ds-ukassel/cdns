@@ -30,8 +30,8 @@ export function matchHeaders(
 export function matches(headers: Record<string, string>, matcher: Record<string, string | null>): boolean {
   for (const [key, expectedValue] of Object.entries(matcher)) {
     const headerValue = headers[key.toLowerCase()];
-    if (expectedValue === null) {
-      if (headerValue !== undefined) {
+    if (expectedValue === null) { // any value is acceptable
+      if (headerValue === undefined) {
         return false;
       }
     } else if (headerValue !== expectedValue) {
