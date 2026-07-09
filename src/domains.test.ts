@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { compileDomains, compileDomain } from './domains.js';
+import {describe, expect, it} from 'vitest';
+import {compileDomain, compileDomains} from './domains.js';
 
 describe('compileDomain', () => {
     it('matches an exact domain', () => {

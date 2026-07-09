@@ -1,19 +1,22 @@
-
 export function compileDomains(domains: string[]): RegExp {
-    return new RegExp(domains.map(d => domain2pattern(d)).join('|'), 'i');
+  return new RegExp(domains.map(d => domain2pattern(d)).join('|'), 'i');
 }
 
 export function compileDomain(domain: string): RegExp {
-    return new RegExp(domain2pattern(domain), 'i');
+  return new RegExp(domain2pattern(domain), 'i');
 }
 
 function domain2pattern(domain: string): string {
-    return '^' + domain.replace(/\*\*|\*|\./g, (token) => {
-        switch (token) {
-            case '**': return '.*';
-            case '*':  return '[^.]+';
-            case '.':  return '\\.';
-            default:   return token;
-        }
-    }) + '$';
+  return '^' + domain.replace(/\*\*|\*|\./g, (token) => {
+    switch (token) {
+      case '**':
+        return '.*';
+      case '*':
+        return '[^.]+';
+      case '.':
+        return '\\.';
+      default:
+        return token;
+    }
+  }) + '$';
 }

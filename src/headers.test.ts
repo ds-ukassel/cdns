@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { matchHeaders, matches } from './headers.js';
+import {describe, expect, it} from 'vitest';
+import {matches, matchHeaders} from './headers.js';
 
 describe('matches', () => {
     it('returns true when all headers match exactly', () => {
