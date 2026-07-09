@@ -1,0 +1,6 @@
+[
+    {
+        "name": "Dummy",
+        "//": "This file exists to satisfy typescript compilation, the actual cdns.json will be in dist/."
+    }
+]

@@ -1,4 +1,4 @@
-import _cdns from 'cdns.json' with {type: 'json'};
+import _cdns from './cdns.json' with {type: 'json'};
 
 export interface CDN {
     name: string;

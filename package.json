@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && yq -o=json . cdns.yaml > dist/cdns.json",
     "test": "vitest"
   },
   "keywords": [],
