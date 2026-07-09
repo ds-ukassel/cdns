@@ -15,6 +15,17 @@
       url: 'https://www.cloudflare.com/ips-v4/'
     - range_type: 'ipv6'
       url: 'https://www.cloudflare.com/ips-v6/'
+  asns:
+    - 13335
+    - 14789
+    - 132892
+    - 139242
+    - 202623
+    - 203898
+    - 209242
+    - 394536
+    - 395747
+    - 400095
 - name: Akamai
   domains:
     - akamai.net
@@ -33,6 +44,26 @@
     - Edge-Control:
     - X-True-Cache-Key:
     - X-Akamai-Device-Characteristics:
+  asns:
+    - 12222
+    - 16625
+    - 17204
+    - 20940
+    - 21342
+    - 24319
+    - 26008
+    - 31108
+    - 32787
+    - 33905
+    - 34164
+    - 35994
+    - 36183
+    - 49846
+    - 63949
+    - 200005
+    - 213120
+    - 393234
+    - 393560
 - name: Amazon CloudFront
   domains:
     - cloudfront.net
@@ -47,6 +78,17 @@
   ranges:
     - range_type: 'ipv4'
       url: 'https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips'
+  asns:
+    - 801
+    - 7224
+    - 8987
+    - 14168
+    - 16509
+    - 19047
+    - 21664
+    - 36263
+    - 62785
+    - 401395
 - name: Amazon AWS
   ranges:
     - range_type: 'combined'
@@ -64,7 +106,10 @@
   ranges:
     - range_type: 'combined'
       url: 'https://api.fastly.com/public-ip-list'
-- name: StackPath
+  asns:
+    - 54113
+    - 14618
+- name: StackPath # closure in 2024. See: https://www.cdnhandbook.com/providers/stackpath/
   domains:
     - stackpathdns.com
     - stackpath
@@ -94,6 +139,8 @@
   ranges:
     - range_type: 'ipv4'
       url: 'https://api.bunny.net/mc/nodes/plain'
+  asns:
+    - 200325
 - name: Sucuri
   headers:
     - Server: Sucuri/Cloudproxy
@@ -114,7 +161,9 @@
       ranges:
         - 2a02:fe80::/29
       last_updated: 2026-06-05
-- name: Imperva # Incapsula
+  asns:
+    - 30148
+- name: Imperva # Incapsula is part of Imperva
   domains:
     - incapdns.net
     - impervadns
@@ -127,6 +176,9 @@
   ranges:
     - range_type: 'combined'
       url: 'https://my.imperva.com/api/integration/v1/ips'
+  asns:
+    - 62571
+    - 19551
 - name: CacheFly
   domains:
     - cachefly.net
@@ -135,6 +187,8 @@
   ranges:
     - range_type: 'combined'
       url: 'https://cachefly.cachefly.net/ips/cdn.txt'
+  asns:
+    - 30081
 - name: QUIC.cloud
   headers:
     - Server: LiteSpeed
@@ -142,10 +196,15 @@
   ranges:
     - range_type: 'combined'
       url: 'https://quic.cloud/ips'
+  asns:
+    - 26116
 - name: ArvanCloud
   headers:
     - Server: ArvanCloud
     - AR-PoweredBy:
+  asns:
+    - 57568
+    - 208006
 - name: G-Core Labs
   domains:
     - d.gcdn.co
@@ -162,6 +221,11 @@
     - X-GCL-User:
     - X-GCL-User-Request-ID:
     - X-GCL-User-Status:
+  asns:
+    - 59245
+    - 199524
+    - 202422
+    - 210559
 - name: Microsoft Azure CDN
   domains:
     - vo.msecnd.net
@@ -175,6 +239,24 @@
   ranges:
     - range_type: combined
       url: 'https://www.microsoft.com/en-us/download/details.aspx?id=56519'
+  asns:
+    - 3598
+    - 5761
+    - 6584
+    - 8068
+    - 8069
+    - 8070
+    - 8075
+    - 12076
+    - 17144
+    - 30520
+    - 35106
+    - 45139
+    - 46182
+    - 54396
+    - 58862
+    - 59067
+    - 63314
 - name: Google Cloud CDN
   domains:
     - .google.
@@ -193,7 +275,32 @@
       url: 'https://www.gstatic.com/ipranges/cloud.json'
     - range_type: 'combined'
       url: 'https://www.gstatic.com/ipranges/goog.json'
-- name: Verizon EdgeCast # apparently shut down in 2025
+  asns:
+    - 15169
+    - 16550
+    - 16591
+    - 19527
+    - 32381
+    - 33715
+    - 36040
+    - 36383
+    - 36384
+    - 36385
+    - 36411
+    - 36492
+    - 41264
+    - 43515
+    - 45566
+    - 139070
+    - 139190
+    - 151231
+    - 214609
+    - 214611
+    - 394089
+    - 395973
+    - 396178
+    - 396982
+- name: Verizon EdgeCast # apparently shut down in 2025. sold to Parler. See: https://www.cdnhandbook.com/providers/verizon-media-vmds/
   domains:
     - edgecastcdn
     - alphacdn
@@ -239,20 +346,26 @@
     - Server: CDN77
     - CDN77: # TODO: Check if this is supposed to be a value or or a key
     - X-CDN: CDN77
+  asns:
+    - 60068
 - name: OVH CDN
   headers:
     - Server: OVHcdn
   ranges:
     - range_type: ipv4
       url: 'https://docs.ovhcloud.com/en/guides/network/content-delivery-network-infrastructure/cdn-infrastructure-ip-range'
-      last_updated: 2026-06-05
-- name: BelugaCDN
+  asns:
+    - 16276
+    - 35540
+- name: BelugaCDN # Maybe also NuCDN? See https://www.peeringdb.com/asn/23393
   domains:
     - belugacdn.com
   headers:
     - X-Beluga-Cache:
     - Server: BelugaCDN
-- name: ChinaCache # seems to have been sold (website redirects)
+  asns:
+    - 23393
+- name: ChinaCache # seems to have been sold (website redirects). acquired by EdgeNext in 2023. See: https://www.cdnhandbook.com/providers/chinacache/
   domains:
     - ccgslb.com
     - ccgslb.net
@@ -261,6 +374,8 @@
     - c3cdn.net
   headers:
     - Server: ChinaCache
+  asns:
+    - 18216
 - name: CDNetworks
   domains:
     - panthercdn.com
@@ -272,6 +387,9 @@
   headers:
     - X-CDN: CDNetworks
     - Server: CDNetworks
+  asns:
+    - 36408
+    - 38107
 - name: Medianova
   domains:
     - mncdn.com
@@ -280,6 +398,8 @@
   ranges:
     - range_type: 'combined'
       url: 'https://cloud.medianova.com/api/v1/ip/addresses-txt'
+  asns:
+    - 21245
 - name: Azion
   domains:
     - azioncdn.net
@@ -287,6 +407,8 @@
   headers:
     - X-Azion-Cache:
     - Server: AzionCDN
+  asns:
+    - 52580
 - name: Netlify
   headers:
     - Server: Netlify
@@ -310,7 +432,7 @@
     - Express-CDN-Cache-Control:
     - Express-CDN-Request-ID:
 
-- name: TurboBytes
+- name: TurboBytes # out of business. See https://www.cdnplanet.com/blog/turbobytes-multi-cdn-made-easy/
   domains:
     - clients.turbobytes.net
     - turbobytes-cdn.com
@@ -335,13 +457,64 @@
   domains:
     - bluehatnetwork.com
 
-- name: EdgeCast
+- name: EdgeCast # operated by Parler Cloud Technologies. See: https://www.cdnhandbook.com/providers/edgecast/
   domains:
     - systemcdn.net
     - edgecastcdn.net
     - .adn.
     - .wac.
     - .wpc.
+  asns:
+    - 797
+    - 2386
+    - 2685
+    - 2686
+    - 2687
+    - 2688
+    - 3423
+    - 3555
+    - 4185
+    - 4186
+    - 4466
+    - 4468
+    - 4473
+    - 5623
+    - 5671
+    - 5672
+    - 5728
+    - 6269
+    - 6290
+    - 6389
+    - 6431
+    - 6686
+    - 6688
+    - 6742
+    - 6748
+    - 6904
+    - 7018
+    - 7287
+    - 7291
+    - 8030
+    - 8238
+    - 11712
+    - 12967
+    - 12980
+    - 13965
+    - 13979
+    - 14654
+    - 15840
+    - 18289
+    - 19957
+    - 20057
+    - 20492
+    - 21302
+    - 21326
+    - 21443
+    - 25497
+    - 25993
+    - 28469
+    - 28521
+
 
 - name: CDNify
   domains:
@@ -356,51 +529,64 @@
     - cdn30
     - qtlcdn
     - cdn20
+  asns:
+    - 17442
 
 - name: Hibernia
   domains:
     - hiberniacdn.com
+  asns:
+    - 51677
 
-- name: Highwinds
+- name: Highwinds # discontinued in 2023. See https://www.cdnhandbook.com/providers/highwinds/
   domains:
     - hwcdn.net
 
-- name: Instartlogic
+- name: Instartlogic # acquired by Akamai in 2020. See https://www.cdnhandbook.com/providers/instart-logic/
   domains:
     - inscname.net
     - insnw.net
 
-- name: Internap
+- name: Internap # now HorizonIQ. See: https://www.cdnhandbook.com/providers/internap/
+  asns:
+    - 14636
+    - 32475
   domains:
     - internapcdn.net
 
 - name: LeaseWeb CDN
+  asns:
+    - 60781
   domains:
     - lswcdn.net
 
-- name: Level3
+- name: Level3 # now part of Lumen Technologies, shutdown in 2023. See: https://www.cdnhandbook.com/providers/level3/
+  asns:
+    - 58682
   domains:
     - footprint.net
 
-- name: Limelight
+- name: Limelight # now defunct as Edgio. See: https://www.cdnhandbook.com/providers/limelight/
   domains:
     - llnwd.net
     - lldns.net
     - llnw
 
-- name: MaxCDN
+- name: MaxCDN # shutdown in 2023. See: https://www.cdnhandbook.com/providers/maxcdn/
   domains:
     - netdna-cdn.com
     - netdna-ssl.com
     - netdna.com
 
-- name: Mirror Image
+- name: Mirror Image # now defunct. See: https://www.cdnhandbook.com/providers/mirror-image/
   domains:
     - instacontent.net
     - mirror-image.net
     - cap-mii.net
 
 - name: Reflected Networks
+  asns:
+    - 29789
   domains:
     - rncdn1.com
 
@@ -417,14 +603,28 @@
     - swiftserve.com
 
 - name: Taobao
+  asns:
+    - 24429
   domains:
     - gslb.taobao.com
 
 - name: Tata communications
+  asns:
+    - 4755
+    - 6421
+    - 6453
+    - 10199
+    - 17908
+    - 28944
+    - 55756
+    - 61212
+    - 139309
+    - 140911
+    - 273732
   domains:
     - cdn.bitgravity.com
 
-- name: Telefonica
+- name: Telefonica # now defunct. See: https://www.cdnhandbook.com/providers/telefonica/
   domains:
     - cdn.telefonica.com
 
@@ -433,11 +633,15 @@
     - ay1.b.yahoo.com
     - .yimg.
 
-- name: Zenedge
+- name: Zenedge # maybe acquired by oracle. See: https://bizety.com/2018/02/15/oracle-acquires-zenedge-therefore-oracle-is-in-the-cdn-business/
+  asns:
+    - 31898
   domains:
     - zenedge.net
 
 - name: Kingsoft
+  asns:
+    - 59019
   domains:
     - .ksyuncdn.com
     - ksyun
@@ -449,6 +653,9 @@
     - bsgslb
 
 - name: baidu
+  asns:
+    - 38365
+    - 55967
   domains:
     - jomodns
     - zjsxlt
@@ -464,24 +671,31 @@
     - dnsv1
     - tdnsdp1
     - tcloudscdn
-
-- name: yunduncdn # Yandex Cloud
+  asns:
+    - 133478
+- name: YundunCDN # Yandex Cloud
   domains:
-    - yundun
-
+    - "**yunduncdn.com**"
 - name: Merlin CDN
   domains:
     - merlin
-
-- name: jingdong # JINGDONG CLoud
+- name: JINGDONG # JINGDONG Cloud
   domains:
     - jcloud-cdn
-
+  asns:
+    - 131486
+    - 137753
+    - 137787
 - name: Bilibili
   domains:
     - bilicdn
-
+  asns:
+    - 140633
 - name: Huawei
   domains:
     - cdnhwc
     - hwclouds
+  asns:
+    - 55990
+    - 63727
+    - 131444
