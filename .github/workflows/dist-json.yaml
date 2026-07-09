@@ -1,0 +1,25 @@
+name: Convert YAML to JSON
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'cdns.yaml'
+      - '.github/workflows/dist-json.yaml'
+
+concurrency:
+  group: dist-json
+  cancel-in-progress: true
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Convert to JSON
+        run: mkdir -p dist && yq -o=json "." cdns.yaml > dist/cdns.json
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v7
