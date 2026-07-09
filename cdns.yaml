@@ -109,7 +109,7 @@
   asns:
     - 54113
     - 14618
-- name: StackPath
+- name: StackPath # closure in 2024. See: https://www.cdnhandbook.com/providers/stackpath/
   domains:
     - stackpathdns.com
     - stackpath
@@ -163,7 +163,7 @@
       last_updated: 2026-06-05
   asns:
     - 30148
-- name: Imperva # Incapsula
+- name: Imperva # Incapsula is part of Imperva
   domains:
     - incapdns.net
     - impervadns
@@ -300,7 +300,7 @@
     - 395973
     - 396178
     - 396982
-- name: Verizon EdgeCast # apparently shut down in 2025
+- name: Verizon EdgeCast # apparently shut down in 2025. sold to Parler. See: https://www.cdnhandbook.com/providers/verizon-media-vmds/
   domains:
     - edgecastcdn
     - alphacdn
@@ -365,7 +365,7 @@
     - Server: BelugaCDN
   asns:
     - 23393
-- name: ChinaCache # seems to have been sold (website redirects)
+- name: ChinaCache # seems to have been sold (website redirects). acquired by EdgeNext in 2023. See: https://www.cdnhandbook.com/providers/chinacache/
   domains:
     - ccgslb.com
     - ccgslb.net
@@ -457,7 +457,7 @@
   domains:
     - bluehatnetwork.com
 
-- name: EdgeCast
+- name: EdgeCast # operated by Parler Cloud Technologies. See: https://www.cdnhandbook.com/providers/edgecast/
   domains:
     - systemcdn.net
     - edgecastcdn.net
@@ -538,46 +538,55 @@
   asns:
     - 51677
 
-- name: Highwinds
+- name: Highwinds # discontinued in 2023. See https://www.cdnhandbook.com/providers/highwinds/
   domains:
     - hwcdn.net
 
-- name: Instartlogic
+- name: Instartlogic # acquired by Akamai in 2020. See https://www.cdnhandbook.com/providers/instart-logic/
   domains:
     - inscname.net
     - insnw.net
 
-- name: Internap
+- name: Internap # now HorizonIQ. See: https://www.cdnhandbook.com/providers/internap/
+  asns:
+    - 14636
+    - 32475
   domains:
     - internapcdn.net
 
 - name: LeaseWeb CDN
+  asns:
+    - 60781
   domains:
     - lswcdn.net
 
-- name: Level3
+- name: Level3 # now part of Lumen Technologies, shutdown in 2023. See: https://www.cdnhandbook.com/providers/level3/
+  asns:
+    - 58682
   domains:
     - footprint.net
 
-- name: Limelight
+- name: Limelight # now defunct as Edgio. See: https://www.cdnhandbook.com/providers/limelight/
   domains:
     - llnwd.net
     - lldns.net
     - llnw
 
-- name: MaxCDN
+- name: MaxCDN # shutdown in 2023. See: https://www.cdnhandbook.com/providers/maxcdn/
   domains:
     - netdna-cdn.com
     - netdna-ssl.com
     - netdna.com
 
-- name: Mirror Image
+- name: Mirror Image # now defunct. See: https://www.cdnhandbook.com/providers/mirror-image/
   domains:
     - instacontent.net
     - mirror-image.net
     - cap-mii.net
 
 - name: Reflected Networks
+  asns:
+    - 29789
   domains:
     - rncdn1.com
 
@@ -594,14 +603,28 @@
     - swiftserve.com
 
 - name: Taobao
+  asns:
+    - 24429
   domains:
     - gslb.taobao.com
 
 - name: Tata communications
+  asns:
+    - 4755
+    - 6421
+    - 6453
+    - 10199
+    - 17908
+    - 28944
+    - 55756
+    - 61212
+    - 139309
+    - 140911
+    - 273732
   domains:
     - cdn.bitgravity.com
 
-- name: Telefonica
+- name: Telefonica # now defunct. See: https://www.cdnhandbook.com/providers/telefonica/
   domains:
     - cdn.telefonica.com
 
@@ -610,11 +633,15 @@
     - ay1.b.yahoo.com
     - .yimg.
 
-- name: Zenedge
+- name: Zenedge # maybe acquired by oracle. See: https://bizety.com/2018/02/15/oracle-acquires-zenedge-therefore-oracle-is-in-the-cdn-business/
+  asns:
+    - 31898
   domains:
     - zenedge.net
 
 - name: Kingsoft
+  asns:
+    - 59019
   domains:
     - .ksyuncdn.com
     - ksyun
@@ -626,12 +653,16 @@
     - bsgslb
 
 - name: baidu
+  asns:
+    - 38365
+    - 55967
   domains:
     - jomodns
     - zjsxlt
     - yunjiasu
     - yjs-cdn
     - shifen
+
 - name: Tencent Cloud
   domains:
     - dayugslb
