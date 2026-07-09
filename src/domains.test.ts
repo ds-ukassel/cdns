@@ -44,8 +44,8 @@ describe('compileDomain', () => {
 
     it('matches wildcard with literal asterisk strings', () => {
         const pattern = compileDomain('**.example.com');
-        // ** at start gets partially processed: ** → .* then * in .* also replaced
-        // Result pattern is ^.[^.]+\.example\.com$ which matches literal "**" chars
+        // `**` at start becomes `.*`, so the final pattern is `^.*\.example\.com$`.
+        // `.*` can match literal `**`, so "**.example.com" matches as well.
         expect(pattern.test('**' + '.example.com')).toBe(true);
     });
 
