@@ -1,4 +1,4 @@
-name: Convert CDNS to JSON
+name: Convert YAML to JSON
 
 on:
   workflow_dispatch:
