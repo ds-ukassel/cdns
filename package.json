@@ -1,11 +1,19 @@
 {
   "name": "@ds-ukassel/cdns",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "A list of CDNs and ways to identify them.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ds-ukassel/cdns.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ds-ukassel/cdns/issues"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc && yq -o=json . cdns.yaml > dist/cdns.json",
+    "prepublish": "pnpm build",
     "test": "vitest"
   },
   "keywords": [],
