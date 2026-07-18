@@ -3,6 +3,9 @@
   domains:
     - "**.cloudflare.*"
     - "*.cloudflare.net.in"
+    - "*.cloudflarestorage.com"
+    - "*.workers.dev"
+    - "*.pages.dev"
   headers:
     - CF-Cache-Status:
     - CF-RAY:
@@ -34,6 +37,12 @@
     - "**akamaitechnologies.com"
     - "**.edgekey.net"
     - "*.edgesuite.net"
+    - "*.akamaitech.net"
+    - "*.akam.net"
+    - "*.akagtm.org"
+    - "*.akamaistream.net"
+    - "*.akamaized.net"
+    - "*.akamaihd.net"
   headers:
     - X-Akamai-Request-ID:
     - X-Akamai-Transformed:
@@ -90,6 +99,8 @@
     - 62785
     - 401395
 - name: Amazon AWS
+  domains:
+    - "*.amazonaws.com"
   ranges:
     - range_type: 'combined'
       url: 'https://ip-ranges.amazonaws.com/ip-ranges.json'
@@ -230,6 +241,9 @@
     - "*.vo.msecnd.net"
     - "*.trafficmanager.net"
     - "**msedge**"
+    - "*.azureedge.net"
+    - "*.mschcdn.com"
+    - "*.v0cdn.net"
   headers:
     - X-Azure-Ref:
     - Server: Azure Front Door
@@ -365,6 +379,7 @@
 - name: ChinaCache # seems to have been sold (website redirects). acquired by EdgeNext in 2023. See: https://www.cdnhandbook.com/providers/chinacache/
   domains:
     - "**ccgslb.com"
+    - "**ccgslb.com.cn"
     - "**ccgslb.net"
     - "**c3cache.net"
     - "**chinacache.net"
@@ -517,7 +532,7 @@
   domains:
     - "**.cdnify.io"
 
-- name: ChinaNetCenter
+- name: ChinaNetCenter # Wangsu CDN
   domains:
     - "**lxdns.com"
     - "**wscdns**"
@@ -526,6 +541,16 @@
     - "**cdn30**"
     - "**qtlcdn**"
     - "**cdn20**"
+    - "*.chinanetcenter.com"
+    - "*.customcdn.com.cn"
+    - "*.customcdn.cn"
+    - "*.51cdn.com"
+    - "*.wsdvs.com"
+    - "*.wsglb0.com"
+    - "*.speedcdns.com"
+    - "*.wtxcdn.com"
+    - "*.wsssec.com"
+    - "*.wcdnga.com"
   asns:
     - 17442
 
@@ -695,3 +720,22 @@
     - 55990
     - 63727
     - 131444
+
+- name: NetEase
+  domains:
+    - "*.126.net"
+    - "*.127.net"
+    - "*.nease.net"
+
+- name: Wangsu CDN
+  domains:
+    - "*.wswebcdn.com"
+    - "*.lxdns.com"
+    - "*.8686c.com"
+    - "*.wswebpic.com"
+    - "*.qtlglb.com"
+
+- name: Quantil
+  domains:
+    - "*.mwcloudcdn.com"
+    - "*.mwcname.com"
