@@ -3,7 +3,10 @@
     "name": "Cloudflare",
     "domains": [
       "**.cloudflare.*",
-      "*.cloudflare.net.in"
+      "*.cloudflare.net.in",
+      "*.cloudflarestorage.com",
+      "*.workers.dev",
+      "*.pages.dev"
     ],
     "headers": [
       {
@@ -56,7 +59,13 @@
       "*.akadns.net",
       "**akamaitechnologies.com",
       "**.edgekey.net",
-      "*.edgesuite.net"
+      "*.edgesuite.net",
+      "*.akamaitech.net",
+      "*.akam.net",
+      "*.akagtm.org",
+      "*.akamaistream.net",
+      "*.akamaized.net",
+      "*.akamaihd.net"
     ],
     "headers": [
       {
@@ -158,6 +167,9 @@
   },
   {
     "name": "Amazon AWS",
+    "domains": [
+      "*.amazonaws.com"
+    ],
     "ranges": [
       {
         "range_type": "combined",
@@ -459,7 +471,10 @@
     "domains": [
       "*.vo.msecnd.net",
       "*.trafficmanager.net",
-      "**msedge**"
+      "**msedge**",
+      "*.azureedge.net",
+      "*.mschcdn.com",
+      "*.v0cdn.net"
     ],
     "headers": [
       {
@@ -675,6 +690,7 @@
     "name": "ChinaCache",
     "domains": [
       "**ccgslb.com",
+      "**ccgslb.com.cn",
       "**ccgslb.net",
       "**c3cache.net",
       "**chinacache.net",
@@ -924,7 +940,17 @@
       "**tl88**",
       "**cdn30**",
       "**qtlcdn**",
-      "**cdn20**"
+      "**cdn20**",
+      "*.chinanetcenter.com",
+      "*.customcdn.com.cn",
+      "*.customcdn.cn",
+      "*.51cdn.com",
+      "*.wsdvs.com",
+      "*.wsglb0.com",
+      "*.speedcdns.com",
+      "*.wtxcdn.com",
+      "*.wsssec.com",
+      "*.wcdnga.com"
     ],
     "asns": [
       17442
@@ -1168,6 +1194,31 @@
       55990,
       63727,
       131444
+    ]
+  },
+  {
+    "name": "NetEase",
+    "domains": [
+      "*.126.net",
+      "*.127.net",
+      "*.nease.net"
+    ]
+  },
+  {
+    "name": "Wangsu CDN",
+    "domains": [
+      "*.wswebcdn.com",
+      "*.lxdns.com",
+      "*.8686c.com",
+      "*.wswebpic.com",
+      "*.qtlglb.com"
+    ]
+  },
+  {
+    "name": "Quantil",
+    "domains": [
+      "*.mwcloudcdn.com",
+      "*.mwcname.com"
     ]
   }
 ]
