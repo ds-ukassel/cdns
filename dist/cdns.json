@@ -1,51 +1,8 @@
 [
   {
-    "name": "Cloudflare",
+    "name": "afxcdn.net",
     "domains": [
-      "**.cloudflare.*",
-      "*.cloudflare.net.in"
-    ],
-    "headers": [
-      {
-        "CF-Cache-Status": null
-      },
-      {
-        "CF-RAY": null
-      },
-      {
-        "Server": "cloudflare"
-      },
-      {
-        "CF-Connecting-IP": null
-      },
-      {
-        "CF-Request-ID": null
-      },
-      {
-        "CF-WORKER": null
-      }
-    ],
-    "ranges": [
-      {
-        "range_type": "ipv4",
-        "url": "https://www.cloudflare.com/ips-v4/"
-      },
-      {
-        "range_type": "ipv6",
-        "url": "https://www.cloudflare.com/ips-v6/"
-      }
-    ],
-    "asns": [
-      13335,
-      14789,
-      132892,
-      139242,
-      202623,
-      203898,
-      209242,
-      394536,
-      395747,
-      400095
+      "**afxcdn.net"
     ]
   },
   {
@@ -110,6 +67,33 @@
     ]
   },
   {
+    "name": "Alibaba Cloud CDN",
+    "domains": [
+      "**kunlun**",
+      "**cdngslb**"
+    ],
+    "headers": [
+      {
+        "Via": "Alibaba Cloud CDN"
+      },
+      {
+        "Ali-CDN-Cache": null
+      },
+      {
+        "X-Alibaba-Edge": null
+      },
+      {
+        "Server": "Alibaba"
+      }
+    ]
+  },
+  {
+    "name": "Alimama",
+    "domains": [
+      "**gslb.tbcache.com"
+    ]
+  },
+  {
     "name": "Amazon CloudFront",
     "domains": [
       "*.cloudfront.net"
@@ -166,80 +150,115 @@
     ]
   },
   {
-    "name": "Fastly",
+    "name": "Ananke",
     "domains": [
-      "**.fastly.**",
-      "**fastlylb.net"
-    ],
+      "**anankecdn.com.br"
+    ]
+  },
+  {
+    "name": "ArvanCloud",
     "headers": [
       {
-        "Server": "Varnish"
+        "Server": "ArvanCloud"
       },
       {
-        "X-Varnish": null
-      },
-      {
-        "X-Fastly-Request-ID": null
-      },
-      {
-        "X-Timer": null
-      },
-      {
-        "X-Served-By": null
-      }
-    ],
-    "ranges": [
-      {
-        "range_type": "combined",
-        "url": "https://api.fastly.com/public-ip-list"
+        "AR-PoweredBy": null
       }
     ],
     "asns": [
-      54113,
-      14618
+      57568,
+      208006
     ]
   },
   {
-    "name": "StackPath",
+    "name": "AT&T",
     "domains": [
-      "**stackpath**",
-      "**netdna**",
-      "*.hwcdn.*"
-    ],
-    "headers": [
-      {
-        "Server": "StackPath"
-      },
-      {
-        "X-Powered-By": "StackPath"
-      },
-      {
-        "X-StackPath-Request-ID": null
-      },
-      {
-        "X-SP-Edge-Cache": null
-      },
-      {
-        "X-CDN": "StackPath"
-      }
+      "**att-dsa.net"
     ]
   },
   {
-    "name": "KeyCDN",
+    "name": "Azion",
     "domains": [
-      "*.kxcdn.com"
+      "**.azioncdn.net",
+      "*.azion.*"
     ],
     "headers": [
       {
-        "Server": "KeyCDN"
+        "X-Azion-Cache": null
       },
       {
-        "X-CDN": "KeyCDN"
-      },
-      {
-        "X-Edge-Location": null
+        "Server": "AzionCDN"
       }
+    ],
+    "asns": [
+      52580
     ]
+  },
+  {
+    "name": "Baidu",
+    "asns": [
+      38365,
+      55967
+    ],
+    "domains": [
+      "**jomodns**",
+      "**zjsxlt**",
+      "**yunjiasu**",
+      "**yjs-cdn**",
+      "**shifen**"
+    ]
+  },
+  {
+    "name": "Baishan Cloud",
+    "domains": [
+      "**baishan**",
+      "**bsccdn**",
+      "**bsgslb**"
+    ]
+  },
+  {
+    "name": "BelugaCDN",
+    "domains": [
+      "**belugacdn.com"
+    ],
+    "headers": [
+      {
+        "X-Beluga-Cache": null
+      },
+      {
+        "Server": "BelugaCDN"
+      }
+    ],
+    "asns": [
+      23393
+    ]
+  },
+  {
+    "name": "Bharti Airtel"
+  },
+  {
+    "name": "Bilibili",
+    "domains": [
+      "**bilicdn**"
+    ],
+    "asns": [
+      140633
+    ]
+  },
+  {
+    "name": "Blue Hat Network",
+    "domains": [
+      "**bluehatnetwork.com"
+    ]
+  },
+  {
+    "name": "BootCSS"
+  },
+  {
+    "name": "BootstrapCDN"
+  },
+  {
+    "name": "BT Group"
   },
   {
     "name": "BunnyCDN",
@@ -271,85 +290,6 @@
     ]
   },
   {
-    "name": "Sucuri",
-    "headers": [
-      {
-        "Server": "Sucuri/Cloudproxy"
-      },
-      {
-        "Server": "Sucuri"
-      },
-      {
-        "X-Sucuri-ID": null
-      },
-      {
-        "X-Sucuri-Cache": null
-      },
-      {
-        "X-Sucuri-Block": null
-      },
-      {
-        "X-Sucuri-Cloudproxy-Cache": null
-      }
-    ],
-    "ranges": [
-      {
-        "range_type": "ipv4",
-        "ranges": [
-          "192.88.134.0/23",
-          "185.93.228.0/22",
-          "66.248.200.0/22",
-          "208.109.0.0/22"
-        ],
-        "last_updated": "2026-06-05"
-      },
-      {
-        "range_type": "ipv6",
-        "ranges": [
-          "2a02:fe80::/29"
-        ],
-        "last_updated": "2026-06-05"
-      }
-    ],
-    "asns": [
-      30148
-    ]
-  },
-  {
-    "name": "Imperva",
-    "domains": [
-      "**incapdns.net",
-      "**impervadns**"
-    ],
-    "headers": [
-      {
-        "Server": "Imperva"
-      },
-      {
-        "X-CDN": "Incapsula"
-      },
-      {
-        "X-Info": null
-      },
-      {
-        "X-CDN-Request-ID": null
-      },
-      {
-        "X-Cdn-Provider": "Incapsula"
-      }
-    ],
-    "ranges": [
-      {
-        "range_type": "combined",
-        "url": "https://my.imperva.com/api/integration/v1/ips"
-      }
-    ],
-    "asns": [
-      62571,
-      19551
-    ]
-  },
-  {
     "name": "CacheFly",
     "domains": [
       "*.cachefly.net"
@@ -370,253 +310,6 @@
     ]
   },
   {
-    "name": "QUIC.cloud",
-    "headers": [
-      {
-        "Server": "LiteSpeed"
-      },
-      {
-        "X-QC-Cache": null
-      }
-    ],
-    "ranges": [
-      {
-        "range_type": "combined",
-        "url": "https://quic.cloud/ips"
-      }
-    ],
-    "asns": [
-      26116
-    ]
-  },
-  {
-    "name": "ArvanCloud",
-    "headers": [
-      {
-        "Server": "ArvanCloud"
-      },
-      {
-        "AR-PoweredBy": null
-      }
-    ],
-    "asns": [
-      57568,
-      208006
-    ]
-  },
-  {
-    "name": "G-Core Labs",
-    "domains": [
-      "**.gcdn.co"
-    ],
-    "headers": [
-      {
-        "Server": "GCL"
-      },
-      {
-        "Server": "G-Core Labs"
-      },
-      {
-        "X-GCL-Cache": null
-      },
-      {
-        "X-GCL-Pop": null
-      },
-      {
-        "X-GCL-Request-ID": null
-      },
-      {
-        "X-GCL-Region": null
-      },
-      {
-        "X-GCL-Server": null
-      },
-      {
-        "X-GCL-Status": null
-      },
-      {
-        "X-GCL-Storage-Zone": null
-      },
-      {
-        "X-GCL-User": null
-      },
-      {
-        "X-GCL-User-Request-ID": null
-      },
-      {
-        "X-GCL-User-Status": null
-      }
-    ],
-    "asns": [
-      59245,
-      199524,
-      202422,
-      210559
-    ]
-  },
-  {
-    "name": "Microsoft Azure CDN",
-    "domains": [
-      "*.vo.msecnd.net",
-      "*.trafficmanager.net",
-      "**msedge**"
-    ],
-    "headers": [
-      {
-        "X-Azure-Ref": null
-      },
-      {
-        "Server": "Azure Front Door"
-      },
-      {
-        "X-Ms-Cdn-Ref": null
-      },
-      {
-        "X-Ms-Cdn-Request-Id": null
-      }
-    ],
-    "ranges": [
-      {
-        "range_type": "combined",
-        "url": "https://www.microsoft.com/en-us/download/details.aspx?id=56519"
-      }
-    ],
-    "asns": [
-      3598,
-      5761,
-      6584,
-      8068,
-      8069,
-      8070,
-      8075,
-      12076,
-      17144,
-      30520,
-      35106,
-      45139,
-      46182,
-      54396,
-      58862,
-      59067,
-      63314
-    ]
-  },
-  {
-    "name": "Google Cloud CDN",
-    "domains": [
-      "**.google.**",
-      "**.googlesyndication.com",
-      "**.youtube.*",
-      "*.googleusercontent.com",
-      "**.doubleclick.net"
-    ],
-    "headers": [
-      {
-        "Server": "Google Cloud CDN"
-      },
-      {
-        "X-Google-Cache-Status": null
-      },
-      {
-        "Via": "Google"
-      },
-      {
-        "X-Edge-Location": null
-      }
-    ],
-    "ranges": [
-      {
-        "range_type": "combined",
-        "url": "https://www.gstatic.com/ipranges/cloud.json"
-      },
-      {
-        "range_type": "combined",
-        "url": "https://www.gstatic.com/ipranges/goog.json"
-      }
-    ],
-    "asns": [
-      15169,
-      16550,
-      16591,
-      19527,
-      32381,
-      33715,
-      36040,
-      36383,
-      36384,
-      36385,
-      36411,
-      36492,
-      41264,
-      43515,
-      45566,
-      139070,
-      139190,
-      151231,
-      214609,
-      214611,
-      394089,
-      395973,
-      396178,
-      396982
-    ]
-  },
-  {
-    "name": "Verizon EdgeCast",
-    "domains": [
-      "**edgecastcdn**",
-      "**alphacdn**",
-      "**betacdn**",
-      "**chicdn**",
-      "**deltacdn**",
-      "**.gammacdn.com",
-      "**iotacdn**",
-      "**kappacdn**",
-      "**lambdacdn**",
-      "**mucdn**",
-      "**nucdn**",
-      "**omegacdn**",
-      "**omicroncdn**",
-      "**phicdn**",
-      "**psicdn**",
-      "**rhocdn**",
-      "**sigmacdn**",
-      "**systemcdn**",
-      "**taucdn**",
-      "**thetacdn**",
-      "**upsiloncdn**",
-      "*.xicdn.cc",
-      "**zetacdn**",
-      "**transactcdn**"
-    ],
-    "headers": [
-      {
-        "Server": "ECS"
-      }
-    ]
-  },
-  {
-    "name": "Alibaba Cloud CDN",
-    "domains": [
-      "**kunlun**",
-      "**cdngslb**"
-    ],
-    "headers": [
-      {
-        "Via": "Alibaba Cloud CDN"
-      },
-      {
-        "Ali-CDN-Cache": null
-      },
-      {
-        "X-Alibaba-Edge": null
-      },
-      {
-        "Server": "Alibaba"
-      }
-    ]
-  },
-  {
     "name": "CDN77",
     "domains": [
       "**.cdn77.*"
@@ -634,59 +327,6 @@
     ],
     "asns": [
       60068
-    ]
-  },
-  {
-    "name": "OVH CDN",
-    "headers": [
-      {
-        "Server": "OVHcdn"
-      }
-    ],
-    "ranges": [
-      {
-        "range_type": "ipv4",
-        "url": "https://docs.ovhcloud.com/en/guides/network/content-delivery-network-infrastructure/cdn-infrastructure-ip-range"
-      }
-    ],
-    "asns": [
-      16276,
-      35540
-    ]
-  },
-  {
-    "name": "BelugaCDN",
-    "domains": [
-      "**belugacdn.com"
-    ],
-    "headers": [
-      {
-        "X-Beluga-Cache": null
-      },
-      {
-        "Server": "BelugaCDN"
-      }
-    ],
-    "asns": [
-      23393
-    ]
-  },
-  {
-    "name": "ChinaCache",
-    "domains": [
-      "**ccgslb.com",
-      "**ccgslb.net",
-      "**c3cache.net",
-      "**chinacache.net",
-      "**c3cdn.net"
-    ],
-    "headers": [
-      {
-        "Server": "ChinaCache"
-      }
-    ],
-    "asns": [
-      18216
     ]
   },
   {
@@ -713,139 +353,155 @@
     ]
   },
   {
-    "name": "Medianova",
+    "name": "CDNify",
     "domains": [
-      "**.mncdn.com"
+      "**.cdnify.io"
+    ]
+  },
+  {
+    "name": "CDNJS"
+  },
+  {
+    "name": "CDNLion"
+  },
+  {
+    "name": "CDNsun"
+  },
+  {
+    "name": "CDNvideo"
+  },
+  {
+    "name": "ChinaCache",
+    "domains": [
+      "**ccgslb.com",
+      "**ccgslb.net",
+      "**c3cache.net",
+      "**chinacache.net",
+      "**c3cdn.net"
     ],
     "headers": [
       {
-        "X-Medianova-Cache": null
+        "Server": "ChinaCache"
+      }
+    ],
+    "asns": [
+      18216
+    ]
+  },
+  {
+    "name": "ChinaNetCenter",
+    "domains": [
+      "**lxdns.com",
+      "**wscdns**",
+      "**wswebpic**",
+      "**tl88**",
+      "**cdn30**",
+      "**qtlcdn**",
+      "**cdn20**"
+    ],
+    "asns": [
+      17442
+    ]
+  },
+  {
+    "name": "CloudCache"
+  },
+  {
+    "name": "Cloudflare",
+    "domains": [
+      "**.cloudflare.*",
+      "*.cloudflare.net.in"
+    ],
+    "headers": [
+      {
+        "CF-Cache-Status": null
+      },
+      {
+        "CF-RAY": null
+      },
+      {
+        "Server": "cloudflare"
+      },
+      {
+        "CF-Connecting-IP": null
+      },
+      {
+        "CF-Request-ID": null
+      },
+      {
+        "CF-WORKER": null
+      }
+    ],
+    "ranges": [
+      {
+        "range_type": "ipv4",
+        "url": "https://www.cloudflare.com/ips-v4/"
+      },
+      {
+        "range_type": "ipv6",
+        "url": "https://www.cloudflare.com/ips-v6/"
+      }
+    ],
+    "asns": [
+      13335,
+      14789,
+      132892,
+      139242,
+      202623,
+      203898,
+      209242,
+      394536,
+      395747,
+      400095
+    ]
+  },
+  {
+    "name": "CloudLayer"
+  },
+  {
+    "name": "CloudOYE"
+  },
+  {
+    "name": "Coral"
+  },
+  {
+    "name": "Cotendo"
+  },
+  {
+    "name": "Distil"
+  },
+  {
+    "name": "Fastly",
+    "domains": [
+      "**.fastly.**",
+      "**fastlylb.net"
+    ],
+    "headers": [
+      {
+        "Server": "Varnish"
+      },
+      {
+        "X-Varnish": null
+      },
+      {
+        "X-Fastly-Request-ID": null
+      },
+      {
+        "X-Timer": null
+      },
+      {
+        "X-Served-By": null
       }
     ],
     "ranges": [
       {
         "range_type": "combined",
-        "url": "https://cloud.medianova.com/api/v1/ip/addresses-txt"
+        "url": "https://api.fastly.com/public-ip-list"
       }
     ],
     "asns": [
-      21245
-    ]
-  },
-  {
-    "name": "Azion",
-    "domains": [
-      "**.azioncdn.net",
-      "*.azion.*"
-    ],
-    "headers": [
-      {
-        "X-Azion-Cache": null
-      },
-      {
-        "Server": "AzionCDN"
-      }
-    ],
-    "asns": [
-      52580
-    ]
-  },
-  {
-    "name": "Netlify",
-    "headers": [
-      {
-        "Server": "Netlify"
-      },
-      {
-        "X-NF-Cache-Status": null
-      }
-    ]
-  },
-  {
-    "name": "Vercel",
-    "headers": [
-      {
-        "Server": "Vercel"
-      }
-    ]
-  },
-  {
-    "name": "RocketCDN",
-    "headers": [
-      {
-        "X-Rocket-CDN": null
-      },
-      {
-        "Server": "RocketCDN"
-      }
-    ]
-  },
-  {
-    "name": "Reblaze",
-    "headers": [
-      {
-        "X-Reblaze-Cache": null
-      },
-      {
-        "Server": "Reblaze"
-      }
-    ]
-  },
-  {
-    "name": "Express CDN",
-    "headers": [
-      {
-        "X-Express-CDN": null
-      },
-      {
-        "Express-CDN-Cache": null
-      },
-      {
-        "Express-CDN-Cache-Status": null
-      },
-      {
-        "Express-CDN-Cache-Control": null
-      },
-      {
-        "Express-CDN-Request-ID": null
-      }
-    ]
-  },
-  {
-    "name": "TurboBytes",
-    "domains": [
-      "**clients.turbobytes.net",
-      "**turbobytes-cdn.com"
-    ]
-  },
-  {
-    "name": "afxcdn.net",
-    "domains": [
-      "**afxcdn.net"
-    ]
-  },
-  {
-    "name": "Alimama",
-    "domains": [
-      "**gslb.tbcache.com"
-    ]
-  },
-  {
-    "name": "Ananke",
-    "domains": [
-      "**anankecdn.com.br"
-    ]
-  },
-  {
-    "name": "AT&T",
-    "domains": [
-      "**att-dsa.net"
-    ]
-  },
-  {
-    "name": "Blue Hat Network",
-    "domains": [
-      "**bluehatnetwork.com"
+      54113,
+      14618
     ]
   },
   {
@@ -910,24 +566,136 @@
     ]
   },
   {
-    "name": "CDNify",
-    "domains": [
-      "**.cdnify.io"
+    "name": "Express CDN",
+    "headers": [
+      {
+        "X-Express-CDN": null
+      },
+      {
+        "Express-CDN-Cache": null
+      },
+      {
+        "Express-CDN-Cache-Status": null
+      },
+      {
+        "Express-CDN-Cache-Control": null
+      },
+      {
+        "Express-CDN-Request-ID": null
+      }
     ]
   },
   {
-    "name": "ChinaNetCenter",
+    "name": "Facebook"
+  },
+  {
+    "name": "G-Core Labs",
     "domains": [
-      "**lxdns.com",
-      "**wscdns**",
-      "**wswebpic**",
-      "**tl88**",
-      "**cdn30**",
-      "**qtlcdn**",
-      "**cdn20**"
+      "**.gcdn.co"
+    ],
+    "headers": [
+      {
+        "Server": "GCL"
+      },
+      {
+        "Server": "G-Core Labs"
+      },
+      {
+        "X-GCL-Cache": null
+      },
+      {
+        "X-GCL-Pop": null
+      },
+      {
+        "X-GCL-Request-ID": null
+      },
+      {
+        "X-GCL-Region": null
+      },
+      {
+        "X-GCL-Server": null
+      },
+      {
+        "X-GCL-Status": null
+      },
+      {
+        "X-GCL-Storage-Zone": null
+      },
+      {
+        "X-GCL-User": null
+      },
+      {
+        "X-GCL-User-Request-ID": null
+      },
+      {
+        "X-GCL-User-Status": null
+      }
     ],
     "asns": [
-      17442
+      59245,
+      199524,
+      202422,
+      210559
+    ]
+  },
+  {
+    "name": "Google Cloud CDN",
+    "domains": [
+      "**.google.**",
+      "**.googlesyndication.com",
+      "**.youtube.*",
+      "*.googleusercontent.com",
+      "**.doubleclick.net"
+    ],
+    "headers": [
+      {
+        "Server": "Google Cloud CDN"
+      },
+      {
+        "X-Google-Cache-Status": null
+      },
+      {
+        "Via": "Google"
+      },
+      {
+        "X-Edge-Location": null
+      }
+    ],
+    "ranges": [
+      {
+        "range_type": "combined",
+        "url": "https://www.gstatic.com/ipranges/cloud.json"
+      },
+      {
+        "range_type": "combined",
+        "url": "https://www.gstatic.com/ipranges/goog.json"
+      }
+    ],
+    "asns": [
+      15169,
+      16550,
+      16591,
+      19527,
+      32381,
+      33715,
+      36040,
+      36383,
+      36384,
+      36385,
+      36411,
+      36492,
+      41264,
+      43515,
+      45566,
+      139070,
+      139190,
+      151231,
+      214609,
+      214611,
+      394089,
+      395973,
+      396178,
+      396982
     ]
   },
   {
@@ -946,6 +714,58 @@
     ]
   },
   {
+    "name": "HiberniaCDN"
+  },
+  {
+    "name": "HP Cloud Services"
+  },
+  {
+    "name": "Huawei",
+    "domains": [
+      "**cdnhwc**",
+      "**hwclouds**"
+    ],
+    "asns": [
+      55990,
+      63727,
+      131444
+    ]
+  },
+  {
+    "name": "Imperva",
+    "domains": [
+      "**incapdns.net",
+      "**impervadns**"
+    ],
+    "headers": [
+      {
+        "Server": "Imperva"
+      },
+      {
+        "X-CDN": "Incapsula"
+      },
+      {
+        "X-Info": null
+      },
+      {
+        "X-CDN-Request-ID": null
+      },
+      {
+        "X-Cdn-Provider": "Incapsula"
+      }
+    ],
+    "ranges": [
+      {
+        "range_type": "combined",
+        "url": "https://my.imperva.com/api/integration/v1/ips"
+      }
+    ],
+    "asns": [
+      62571,
+      19551
+    ]
+  },
+  {
     "name": "Instartlogic",
     "domains": [
       "**inscname.net",
@@ -960,6 +780,50 @@
     ],
     "domains": [
       "**internapcdn.net"
+    ]
+  },
+  {
+    "name": "JINGDONG",
+    "domains": [
+      "**jcloud-cdn**",
+      "*.jcloud.kz"
+    ],
+    "asns": [
+      131486,
+      137753,
+      137787
+    ]
+  },
+  {
+    "name": "JQuery"
+  },
+  {
+    "name": "JsDelivr"
+  },
+  {
+    "name": "KeyCDN",
+    "domains": [
+      "*.kxcdn.com"
+    ],
+    "headers": [
+      {
+        "Server": "KeyCDN"
+      },
+      {
+        "X-CDN": "KeyCDN"
+      },
+      {
+        "X-Edge-Location": null
+      }
+    ]
+  },
+  {
+    "name": "Kingsoft",
+    "asns": [
+      59019
+    ],
+    "domains": [
+      "**ksyun**"
     ]
   },
   {
@@ -988,6 +852,9 @@
     ]
   },
   {
+    "name": "LinkedIn"
+  },
+  {
     "name": "MaxCDN",
     "domains": [
       "**netdna-cdn.com",
@@ -996,11 +863,171 @@
     ]
   },
   {
+    "name": "Medianova",
+    "domains": [
+      "**.mncdn.com"
+    ],
+    "headers": [
+      {
+        "X-Medianova-Cache": null
+      }
+    ],
+    "ranges": [
+      {
+        "range_type": "combined",
+        "url": "https://cloud.medianova.com/api/v1/ip/addresses-txt"
+      }
+    ],
+    "asns": [
+      21245
+    ]
+  },
+  {
+    "name": "MegaFon"
+  },
+  {
+    "name": "Merlin CDN",
+    "domains": [
+      "**merlin**"
+    ]
+  },
+  {
+    "name": "MetaCDN"
+  },
+  {
+    "name": "Microsoft Azure CDN",
+    "domains": [
+      "*.vo.msecnd.net",
+      "*.trafficmanager.net",
+      "**msedge**"
+    ],
+    "headers": [
+      {
+        "X-Azure-Ref": null
+      },
+      {
+        "Server": "Azure Front Door"
+      },
+      {
+        "X-Ms-Cdn-Ref": null
+      },
+      {
+        "X-Ms-Cdn-Request-Id": null
+      }
+    ],
+    "ranges": [
+      {
+        "range_type": "combined",
+        "url": "https://www.microsoft.com/en-us/download/details.aspx?id=56519"
+      }
+    ],
+    "asns": [
+      3598,
+      5761,
+      6584,
+      8068,
+      8069,
+      8070,
+      8075,
+      12076,
+      17144,
+      30520,
+      35106,
+      45139,
+      46182,
+      54396,
+      58862,
+      59067,
+      63314
+    ]
+  },
+  {
     "name": "Mirror Image",
     "domains": [
       "**instacontent.net",
       "**mirror-image.net",
       "**cap-mii.net"
+    ]
+  },
+  {
+    "name": "NACEVI"
+  },
+  {
+    "name": "NetDNA"
+  },
+  {
+    "name": "Netlify",
+    "headers": [
+      {
+        "Server": "Netlify"
+      },
+      {
+        "X-NF-Cache-Status": null
+      }
+    ]
+  },
+  {
+    "name": "Octoshape"
+  },
+  {
+    "name": "OnApp"
+  },
+  {
+    "name": "OVH CDN",
+    "headers": [
+      {
+        "Server": "OVHcdn"
+      }
+    ],
+    "ranges": [
+      {
+        "range_type": "ipv4",
+        "url": "https://docs.ovhcloud.com/en/guides/network/content-delivery-network-infrastructure/cdn-infrastructure-ip-range"
+      }
+    ],
+    "asns": [
+      16276,
+      35540
+    ]
+  },
+  {
+    "name": "PCCW"
+  },
+  {
+    "name": "Pacnet"
+  },
+  {
+    "name": "QUIC.cloud",
+    "headers": [
+      {
+        "Server": "LiteSpeed"
+      },
+      {
+        "X-QC-Cache": null
+      }
+    ],
+    "ranges": [
+      {
+        "range_type": "combined",
+        "url": "https://quic.cloud/ips"
+      }
+    ],
+    "asns": [
+      26116
+    ]
+  },
+  {
+    "name": "Rackspace"
+  },
+  {
+    "name": "Reblaze",
+    "headers": [
+      {
+        "X-Reblaze-Cache": null
+      },
+      {
+        "Server": "Reblaze"
+      }
     ]
   },
   {
@@ -1013,9 +1040,108 @@
     ]
   },
   {
+    "name": "RocketCDN",
+    "headers": [
+      {
+        "X-Rocket-CDN": null
+      },
+      {
+        "Server": "RocketCDN"
+      }
+    ]
+  },
+  {
     "name": "Simple CDN",
     "domains": [
       "**simplecdn.net"
+    ]
+  },
+  {
+    "name": "Sina"
+  },
+  {
+    "name": "SingTel"
+  },
+  {
+    "name": "SK Broadband"
+  },
+  {
+    "name": "SoftLayer"
+  },
+  {
+    "name": "Speedera"
+  },
+  {
+    "name": "StaticFile"
+  },
+  {
+    "name": "StackPath",
+    "domains": [
+      "**stackpath**",
+      "**netdna**",
+      "*.hwcdn.*"
+    ],
+    "headers": [
+      {
+        "Server": "StackPath"
+      },
+      {
+        "X-Powered-By": "StackPath"
+      },
+      {
+        "X-StackPath-Request-ID": null
+      },
+      {
+        "X-SP-Edge-Cache": null
+      },
+      {
+        "X-CDN": "StackPath"
+      }
+    ]
+  },
+  {
+    "name": "Sucuri",
+    "headers": [
+      {
+        "Server": "Sucuri/Cloudproxy"
+      },
+      {
+        "Server": "Sucuri"
+      },
+      {
+        "X-Sucuri-ID": null
+      },
+      {
+        "X-Sucuri-Cache": null
+      },
+      {
+        "X-Sucuri-Block": null
+      },
+      {
+        "X-Sucuri-Cloudproxy-Cache": null
+      }
+    ],
+    "ranges": [
+      {
+        "range_type": "ipv4",
+        "ranges": [
+          "192.88.134.0/23",
+          "185.93.228.0/22",
+          "66.248.200.0/22",
+          "208.109.0.0/22"
+        ],
+        "last_updated": "2026-06-05"
+      },
+      {
+        "range_type": "ipv6",
+        "ranges": [
+          "2a02:fe80::/29"
+        ],
+        "last_updated": "2026-06-05"
+      }
+    ],
+    "asns": [
+      30148
     ]
   },
   {
@@ -1065,51 +1191,16 @@
     ]
   },
   {
-    "name": "Yahoo",
-    "domains": [
-      "**ay1.b.yahoo.com",
-      "**.yimg.*"
-    ]
+    "name": "Telenor"
   },
   {
-    "name": "Zenedge",
-    "asns": [
-      31898
-    ],
-    "domains": [
-      "**zenedge.net"
-    ]
+    "name": "TeliaSonera"
   },
   {
-    "name": "Kingsoft",
-    "asns": [
-      59019
-    ],
-    "domains": [
-      "**ksyun**"
-    ]
+    "name": "Telstra"
   },
   {
-    "name": "Baishan Cloud",
-    "domains": [
-      "**baishan**",
-      "**bsccdn**",
-      "**bsgslb**"
-    ]
-  },
-  {
-    "name": "baidu",
-    "asns": [
-      38365,
-      55967
-    ],
-    "domains": [
-      "**jomodns**",
-      "**zjsxlt**",
-      "**yunjiasu**",
-      "**yjs-cdn**",
-      "**shifen**"
-    ]
+    "name": "Telus"
   },
   {
     "name": "Tencent Cloud",
@@ -1126,48 +1217,83 @@
     ]
   },
   {
+    "name": "TinyCDN"
+  },
+  {
+    "name": "TurboBytes",
+    "domains": [
+      "**clients.turbobytes.net",
+      "**turbobytes-cdn.com"
+    ]
+  },
+  {
+    "name": "UCloud"
+  },
+  {
+    "name": "Vercel",
+    "headers": [
+      {
+        "Server": "Vercel"
+      }
+    ]
+  },
+  {
+    "name": "Verizon EdgeCast",
+    "domains": [
+      "**edgecastcdn**",
+      "**alphacdn**",
+      "**betacdn**",
+      "**chicdn**",
+      "**deltacdn**",
+      "**.gammacdn.com",
+      "**iotacdn**",
+      "**kappacdn**",
+      "**lambdacdn**",
+      "**mucdn**",
+      "**nucdn**",
+      "**omegacdn**",
+      "**omicroncdn**",
+      "**phicdn**",
+      "**psicdn**",
+      "**rhocdn**",
+      "**sigmacdn**",
+      "**systemcdn**",
+      "**taucdn**",
+      "**thetacdn**",
+      "**upsiloncdn**",
+      "*.xicdn.cc",
+      "**zetacdn**",
+      "**transactcdn**"
+    ],
+    "headers": [
+      {
+        "Server": "ECS"
+      }
+    ]
+  },
+  {
+    "name": "WebMoi"
+  },
+  {
+    "name": "Yahoo",
+    "domains": [
+      "**ay1.b.yahoo.com",
+      "**.yimg.*"
+    ]
+  },
+  {
     "name": "YundunCDN",
     "domains": [
       "**yunduncdn.com**"
     ]
   },
   {
-    "name": "Merlin CDN",
-    "domains": [
-      "**merlin**"
-    ]
-  },
-  {
-    "name": "JINGDONG",
-    "domains": [
-      "**jcloud-cdn**",
-      "*.jcloud.kz"
-    ],
+    "name": "Zenedge",
     "asns": [
-      131486,
-      137753,
-      137787
-    ]
-  },
-  {
-    "name": "Bilibili",
-    "domains": [
-      "**bilicdn**"
+      31898
     ],
-    "asns": [
-      140633
-    ]
-  },
-  {
-    "name": "Huawei",
     "domains": [
-      "**cdnhwc**",
-      "**hwclouds**"
-    ],
-    "asns": [
-      55990,
-      63727,
-      131444
+      "**zenedge.net"
     ]
   }
 ]
