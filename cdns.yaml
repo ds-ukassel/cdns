@@ -671,6 +671,40 @@
     - "**baishan**"
     - "**bsccdn**"
     - "**bsgslb**"
+    - "**.baishancdnx.*"
+    - "**.aishandnsx.cn"
+    - "**.baishandnsx.*"
+    - "**.baishangeek.*"
+    - "**.bscstorage.*"
+    - "**.bsgslb.*"
+    - "**.qingcdn.com"
+    - "**.bsclink.*"
+    - "**.trpcdn.*"
+    - "**.bsccdn.*"
+    - "**.eccdnx.com"
+    - "**.crazyrtc.com"
+    - "**.baishan-cloud.*"
+    - "**.baicdnx.com"
+    - "*+.scdncloud.com"
+    - "**.scdntop.com"
+    - "**.zzcdnx.com"
+    - "**.dolfincdnx.*"
+    - "**.dolfindnsx.*"
+    - "**.saxyit.com"
+    - "**.bsydns.*"
+    - "**.5gcdnx.com"
+    - "**.bscdns.com"
+    - "**.bscedge.com"
+    - "**.baishan-gateway.com"
+    - "**.edgefn.net"
+    - "**.fnedge.net"
+    - "**.ldgslb.com"
+    - "**.bscgslb.com"
+    - "**.ccedge.cn"
+    - "**.whitecdnx.cn"
+    - "**.baishancloud.net"
+    - "**.revivalark.com"
+    - "**.wanwang.space"
 
 - name: baidu
   asns:
@@ -716,6 +750,13 @@
   domains:
     - "**cdnhwc**"
     - "**hwclouds**"
+    - "**.myhuaweicloud.com"
+    - "**.huaweicloud.com"
+    - "**.myhwcdn.cn"
+    - "**.cdnhwc1.com"
+    - "**.cdnhwc2.com"
+    - "**.cdnhwc3.com"
+    - "**.cdnhwcprh113.com"
   asns:
     - 55990
     - 63727
@@ -723,19 +764,29 @@
 
 - name: NetEase
   domains:
-    - "*.126.net"
-    - "*.127.net"
-    - "*.nease.net"
+    - "**.126.net"
+    - "**.127.net"
+    - "**.nease.net"
 
 - name: Wangsu CDN
   domains:
-    - "*.wswebcdn.com"
-    - "*.lxdns.com"
-    - "*.8686c.com"
-    - "*.wswebpic.com"
-    - "*.qtlglb.com"
+    - "**.wswebcdn.com"
+    - "**.lxdns.com"
+    - "**.8686c.com"
+    - "**.wswebpic.com"
+    - "**.qtlglb.com"
 
 - name: Quantil
   domains:
-    - "*.mwcloudcdn.com"
-    - "*.mwcname.com"
+    - "**.mwcloudcdn.com"
+    - "**.mwcname.com"
+
+- name: Dnion
+  domains:
+    - "**.dnion.com"
+    - "**.ewcache.com"
+    - "**.globalcdn.cn"
+    - "**.tlgslb.com"
+    - "**.fastcdn.com"
+    - "**.flxdns.com"
+    - "**.dlgslb.cn"
