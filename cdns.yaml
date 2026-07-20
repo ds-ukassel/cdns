@@ -647,7 +647,7 @@
     - "**bsccdn**"
     - "**bsgslb**"
 
-- name: baidu
+- name: Baidu
   asns:
     - 38365
     - 55967
@@ -695,3 +695,45 @@
     - 55990
     - 63727
     - 131444
+- name: BT Group
+- name: Bharti Airtel
+- name: BootCSS
+- name: BootstrapCDN
+- name: CDNJS
+- name: CDNLion
+- name: CDNsun
+- name: CDNvideo
+- name: CloudCache
+- name: CloudLayer
+- name: CloudOYE
+- name: Coral
+- name: Cotendo
+- name: Distil
+- name: Facebook
+- name: HP Cloud Services
+- name: HiberniaCDN
+- name: JQuery
+- name: JsDelivr
+- name: LinkedIn
+- name: MegaFon
+- name: MetaCDN
+- name: NACEVI
+- name: NetDNA
+- name: Octoshape
+- name: OnApp
+- name: PCCW
+- name: Pacnet
+- name: Rackspace
+- name: SK Broadband
+- name: Sina
+- name: SingTel
+- name: SoftLayer
+- name: Speedera
+- name: StaticFile
+- name: Telenor
+- name: TeliaSonera
+- name: Telstra
+- name: Telus
+- name: TinyCDN
+- name: UCloud
+- name: WebMoi
