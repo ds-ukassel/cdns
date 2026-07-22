@@ -2,7 +2,7 @@ name: Fetch ranges
 
 on:
   schedule:
-    # every monday at 8:00 AM
+    # every monday at 8:00 AM UTC
     - cron: "0 8 * * 1"
   workflow_dispatch: {}
 
@@ -17,7 +17,7 @@ jobs:
         uses: astral-sh/setup-uv@v8.2.0
 
       - name: Install dependencies
-        run: uv sync --all-extras
+        run: uv sync --frozen --all-extras
 
       - name: Run fetch script
         env:
