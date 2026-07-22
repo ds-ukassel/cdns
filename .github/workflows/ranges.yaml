@@ -27,4 +27,5 @@ jobs:
           CLICKHOUSE_PASSWORD: ${{ secrets.CLICKHOUSE_PASSWORD }}
           CLICKHOUSE_DATABASE: ${{ secrets.CLICKHOUSE_DATABASE }}
           CLICKHOUSE_TABLE: ${{ secrets.CLICKHOUSE_TABLE }}
+          CLICKHOUSE_SECURE: ${{ secrets.CLICKHOUSE_SECURE }}
         run: uv run ranges
