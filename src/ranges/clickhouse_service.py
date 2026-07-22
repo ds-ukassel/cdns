@@ -14,7 +14,7 @@ class ClickhouseService:
             user=user,
             password=password,
             database=database,
-            secure=secure
+            secure=secure,
         )
 
         self.table = table
