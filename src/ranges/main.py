@@ -24,7 +24,8 @@ def main():
             user=config.CLICKHOUSE_USER,
             password=config.CLICKHOUSE_PASSWORD,
             database=config.CLICKHOUSE_DATABASE,
-            table=config.CLICKHOUSE_TABLE
+            table=config.CLICKHOUSE_TABLE,
+            secure=config.CLICKHOUSE_SECURE
         ) as clickhouse
     ):
         for cdn in cdns:
