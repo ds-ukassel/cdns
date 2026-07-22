@@ -125,6 +125,10 @@
     - "**stackpath**" # stackpathdns.com
     - "**netdna**"
     - "*.hwcdn.*"
+    - "**.netdna-cdn.com"
+    - "**.netdna-ssl.com"
+    - "**.stackpathdns.com"
+    - "**.stackpathcdn.com"
   headers:
     - Server: StackPath
     - X-Powered-By: StackPath
@@ -200,6 +204,8 @@
   asns:
     - 30081
 - name: QUIC.cloud
+  domains:
+    - "**.quic.cloud"
   headers:
     - Server: LiteSpeed
     - X-QC-Cache:
@@ -339,12 +345,54 @@
     - "*.xicdn.cc"
     - "**zetacdn**"
     - "**transactcdn**"
+    - "**.comcast.net"
   headers:
     - Server: ECS
 - name: Alibaba Cloud CDN
   domains:
     - "**kunlun**"
     - "**cdngslb**"
+    - "**.aliapp.com"
+    - "**.alicdn.*"
+    - "**.alivecdn.com"
+    - "**.tbcache.com"
+    - "**+.edu-aliyun.com"
+    - "**.alyns.cn"
+    - "**.alysm.cn"
+    - "**.aliyunga.com"
+    - "**.aliyunedu.net"
+    - "**.aliyuncdn.*"
+    - "**.aliiotapp.com"
+    - "**.aliyunnest.com"
+    - "**.aliyunvcs.cn"
+    - "**.aliyunrtc.com"
+    - "**.aliappcdn.com"
+    - "**.aliplus.com"
+    - "**.alirtc.com"
+    - "**.alisoft.*"
+    - "**.alisoft.com.cn"
+    - "**.alibabacloudsso.com"
+    - "**.aliyuncds.com"
+    - "**.kunlundns.cn"
+    - "**.h5video.cn"
+    - "**.scdncxtn.com"
+    - "**.sfdcfd.cn"
+    - "**.aliyunvpc.com"
+    - "**.danuoyidns.*"
+    - "**.cloudsecsase.com"
+    - "**.scdndns.*"
+    - "**.myalicdn.*"
+    - "**.ialicdn.cn"
+    - "**.aliyun-inc.com"
+    - "**.aliyuncs.com"
+    - "**.alikunlun.*"
+    - "**.aligaofang.com"
+    - "**.yundunddos.com"
+    - "**.queniucdn.com.cn"
+    - "**.queniugslb.com.cn"
+    - "**.edgegslb.cn"
+    - "**.alidns.*"
+    - "**:queniujq.cn"
   headers:
     - Via: Alibaba Cloud CDN
     - Ali-CDN-Cache:
@@ -422,6 +470,8 @@
   asns:
     - 52580
 - name: Netlify
+  domains:
+    - "**.netlify.app"
   headers:
     - Server: Netlify
     - X-NF-Cache-Status:
@@ -448,6 +498,7 @@
   domains:
     - "**clients.turbobytes.net"
     - "**turbobytes-cdn.com"
+    - "**.turbobytes.net"
 
 - name: afxcdn.net
   domains:
@@ -551,6 +602,7 @@
     - "*.wtxcdn.com"
     - "*.wsssec.com"
     - "*.wcdnga.com"
+    - "**.cdngtm.*"
   asns:
     - 17442
 
@@ -592,6 +644,10 @@
   domains:
     - "**lldns.net"
     - "**llnw**" # llnwd.net
+    - "**.llnwi.net"
+    - "**.llnwd.net"
+    - "**.unud.net"
+    - "**.lldns.net"
 
 - name: MaxCDN # shutdown in 2023. See: https://www.cdnhandbook.com/providers/maxcdn/
   domains:
@@ -610,6 +666,7 @@
     - 29789
   domains:
     - "**rncdn1.com"
+    - "**.simplecdn.net"
 
 - name: Simple CDN
   domains:
@@ -716,6 +773,7 @@
     - "**yunjiasu**"
     - "**yjs-cdn**"
     - "**shifen**"
+    - "**.yunjiasu-cdn.net"
 
 - name: Tencent Cloud
   domains:
@@ -725,6 +783,249 @@
     - "**dnsv1**"
     - "**tdnsdp1**"
     - "**tcloudscdn**"
+    - "**.cdntip.com"
+    - "**.dnsv1.com"
+    - "**.dnsv1.com.cn"
+    - "**.tencdns.net"
+    - "**.dayugslb.com"
+    - "**.tcdnvod.com"
+    - "**tdnsv1.com"
+    - "**tdnsv2.com"
+    - "**tdnsv3.com"
+    - "**tdnsv4.com"
+    - "**tdnsv5.com"
+    - "**tdnsv6.com"
+    - "**tdnsv7.com"
+    - "**tdnsv8.com"
+    - "**tdnsv9.com"
+    - "**.cq-tencentclb.*"
+    - "**.csec-tencentclb.*"
+    - "**.cunistatic.cn"
+    - "**.de-tencentclb.*"
+    - "**.dothework.cn"
+    - "**.eo-edgefunctions.*"
+    - "**.eo-preview.com"
+    - "**.eo-shieldspace.com"
+    - "**.eo-vpcgw.com"
+    - "**.fspstc.com"
+    - "**.fzec-tencentclb.*"
+    - "**.gaapqcloud.com"
+    - "**.gdzmjs.com"
+    - "**.geekpwn.com"
+    - "**.govtcloud.cn"
+    - "**.gsadds.com"
+    - "**.gtm.pub"
+    - "**.gzopen-tencentclb.*"
+    - "**.gz-tencentclb.*"
+    - "**.gzwxzf-tencentclb.*"
+    - "**.haoyunbase.cn"
+    - "**.hfeec-tencentclb.*"
+    - "**.hk-tencentclb.*"
+    - "**.hotwon.*"
+    - "**.hotwoncdn.cn"
+    - "**.hr-welink.com"
+    - "**.hy-clouds.cn"
+    - "**.hzec-tencentclb.*"
+    - "**.igtm.pub"
+    - "**.igtm-meeting-tencent.*"
+    - "**.in-tencentclb.*"
+    - "**.isd.com"
+    - "**.jkt-tencentclb.*"
+    - "**.jnec-tencentclb.*"
+    - "**.jp-tencentclb.*"
+    - "**.jrzk.net.cn"
+    - "**.kbrfyw.cn"
+    - "**.kgsmpj.cn"
+    - "**.kr-tencentclb.*"
+    - "**.lwtsdr.cn"
+    - "**.manyou.com"
+    - "**.max-fame.com"
+    - "**.mps.live"
+    - "**.myelasticsearch.com"
+    - "**.newglaw.com"
+    - "**.nj-tencentclb.*"
+    - "**.nkfmsp.cn"
+    - "**.nkwjag.cn"
+    - "**.nrshog.cn"
+    - "**.paicang.com.cn"
+    - "**.phyto-ceuticals.com.cn"
+    - "**.plusrtc.com"
+    - "**qcdnlog.com"
+    - "**.qcloudcdnsrc.com"
+    - "**.qcloudcdntest.cn"
+    - "**.qcloudcjgj.com"
+    - "**.qcloudclass.com"
+    - "**.qcloud-edumall.com"
+    - "**.qcloudmarket.com"
+    - "**.qcloudocdn.com"
+    - "**.qcloudtcic.com"
+    - "**.qcloudwaf.com"
+    - "**.qcloudwzgj.com"
+    - "**.qcloudzygj.com"
+    - "**.qeodns.*"
+    - "**.qlivertc.*"
+    - "**.qlivertc2.*"
+    - "**.qlivewebrtc.*"
+    - "**.qlivewebrtc2.*"
+    - "**.qqmra."
+    - "**.qtmhcj119.com"
+    - "**.qy-tencentclb.*"
+    - "**.qyxa-tencentclb.*"
+    - "**.rwph.cn"
+    - "**.sao-tencentclb.*"
+    - "**.sg-tencentclb.*"
+    - "**.shadc-tencentclb.*"
+    - "**.sheec-tencentclb.*"
+    - "**.shjr-tencentclb.*"
+    - "**.sh-tencentclb.*"
+    - "**.shwxzf-tencentclb.*"
+    - "**.sjwec-tencentclb.*"
+    - "**.srccdn.com"
+    - "**.srccdn2.com"
+    - "**.szjr-tencentclb.*"
+    - "**.szjxcft-tencentclb.*"
+    - "**.szsycft-tencentclb.*"
+    - "**.szx-tencentclb.*"
+    - "**.taihu.net"
+    - "**.tcloudbh.com"
+    - "**.tclouddrive."
+    - "**.tcloudlive.*"
+    - "**.tcloudscdn.*"
+    - "**.tdnsx1.com"
+    - "**.tenant-zone-dev.com"
+    - "**.tencentapigw.*"
+    - "**.tencentapigw.com.cn"
+    - "**.tencentbyod.com"
+    - "**.tencentcdb.*"
+    - "**.tencentcdb.com.cn"
+    - "**.tencentclb.*"
+    - "**.tencentclb.*.cn"
+    - "**.tencentcloud-aiot.com"
+    - "**.tencentcloudcore.*"
+    - "**.tencentcloudcr.com"
+    - "**.tencentcloudlive.*"
+    - "**.tencentcloudmarket.com"
+    - "**.tencentcloudsso.*"
+    - "**.tencentdb.com"
+    - "**.tencentelasticsearch.*"
+    - "**.tencentelasticsearch.com.cn"
+    - "**.tencentes.*"
+    - "**.tencentes.com.cn"
+    - "**.tencenticp.*"
+    - "**.tencenticp.com.cn"
+    - "**.tencentiotcloud.com"
+    - "**.tencentiotmedia.com"
+    - "**.tencentproxy.com"
+    - "**.tencentscf.*"
+    - "**.tencentscf.com.cn"
+    - "**.tencentsmhuc.*"
+    - "**.tencentsmhuc.com.cn"
+    - "**.tencenttcr.*"
+    - "**:tencenttcr.com.cn"
+    - "**.tencenttione.com"
+    - "**.tencentvpc.*"
+    - "**.tencentvpc.com.cn"
+    - "**.testjrzk.net.cn"
+    - "**.testmeet.cn"
+    - "**.testwaf.com"
+    - "**.tez-tencentclb.*"
+    - "**.th-tencentclb.*"
+    - "**.timatrix.com.cn"
+    - "**.timmerse.com"
+    - "**.tlive*.*"
+    - "**.tmcyx.cn"
+    - "**.tourismshow.cn"
+    - "**.tourismuser.cn"
+    - "**.tpe-tencentclb.*"
+    - "**.trtcrecover.com"
+    - "**.tsn-tencentclb.*"
+    - "**.tsparkling.com"
+    - "**.tvodapi.com"
+    - "**.tvodapibk.com"
+    - "**.txbyod.com"
+    - "**.txcloudlive.*"
+    - "**.txelive.*"
+    - "**.txelvb.*"
+    - "**.txlivecdn2.com"
+    - "**.txmdru.cn"
+    - "**.txtyxg.com"
+    - "**.txyscdn.*"
+    - "**.univod.cn"
+    - "**.use-tencentclb.*"
+    - "**.usw-tencentclb.*"
+    - "**.vigtm-meeting-tencent.*"
+    - "**.vodapis.com"
+    - "**.vodapisbk.com"
+    - "**.vod-bk-qcloud.com"
+    - "**.vodeoapi.com"
+    - "**.vodeoapibk.com"
+    - "**.vodeointernal.com"
+    - "**.vodinternal.com"
+    - "**.vodinternalbk.com"
+    - "**.vodxl-qcloud.com"
+    - "**.voovmeeting.com"
+    - "**.wework-pro.com"
+    - "**.wework-studio.com"
+    - "**.whec-tencentclb.*"
+    - "**.whyrtc.com"
+    - "**.winner.hn.cn"
+    - "**.wxlagame.com"
+    - "**.xbec-tencentclb.*"
+    - "**.xiyec-tencentclb.*"
+    - "**.xrgaui.cn"
+    - "**.yeswan.com"
+    - "**.ylgyljr.com"
+    - "**.yufuid.com.cn"
+    - "**.yufuid.*"
+    - "**.yunjitele.com"
+    - "**.zjjj1.com"
+    - "**.zxlkbw.com"
+    - "**.qpic.cn"
+    - "**.xek.tech"
+    - "**.tdnsv10.com"
+    - "**.tdnsv11.com"
+    - "**.tdnsv12.com"
+    - "**.tdnsv13.com"
+    - "**.tdnsv14.com"
+    - "**.tdnsv15.com"
+    - "**.tdnsstic1.*"
+    - "**.tdnsstic2.*"
+    - "**.tdnsstic3.*"
+    - "**.tdnsstic4.*"
+    - "**.cdn-go.cn"
+    - "**.spcdntip.com"
+    - "**.tcdnlive.com"
+    - "**.myqcloud.com"
+    - "**.gaapqcloud.com"
+    - "**.gaapqcloud.com.cn"
+    - "**.gsadds.com"
+    - "**.tencentcs.com"
+    - "**.ho-wan.cn"
+    - "**.qcloudcdn.com"
+    - "**.dnse0.*"
+    - "**.dnse1.*"
+    - "**.dnse2.*"
+    - "**.dnse3.*"
+    - "**.dnse4.*"
+    - "**.dnse5.*"
+    - "**.dnse6.*"
+    - "**.dnse7.*"
+    - "**.dnse8.*"
+    - "**.dnse9.*"
+    - "**.eo-edgefunctions.com"
+    - "**.eo-edgefunctions1.com"
+    - "**.eo-edgefunctions2.com"
+    - "**.eo-edgefunctions3.com"
+    - "**.eo-edgefunctions4.com"
+    - "**.eo-edgefunctions5.com"
+    - "**.eo-edgefunctions6.com"
+    - "**.eo-edgefunctions7.com"
+    - "**.eo-edgefunctions8.com"
+    - "**.eo-edgefunctions9.com"
+    - "**.gaapqcloudbackup01.com.cn"
+    - "**.gaapqcloudbackup02.com.cn"
+    - "**.gaapqcloudbackup03.com.cn"
+    - "**.tencent-cloud.net"
   asns:
     - 133478
 - name: YundunCDN # Yandex Cloud
@@ -744,6 +1045,11 @@
 - name: Bilibili
   domains:
     - "**bilicdn**"
+    - "**.biliapi.*"
+    - "**.bilicdn1.com"
+    - "**.hdslb.*"
+    - "**.bilivideo.*"
+    - "**.szbdyd.com"
   asns:
     - 140633
 - name: Huawei
@@ -790,3 +1096,250 @@
     - "**.fastcdn.com"
     - "**.flxdns.com"
     - "**.dlgslb.cn"
+
+- name: Kuaiwang CDN
+  domains:
+    - "**.cloudglb.com"
+    - "**.fastweb.com"
+    - "**.fastwebcdn.com"
+    - "**.cloudcdn.net"
+    - "**.fwcdn.com"
+    - "**.fwdns.net"
+    - "**.hadns.net"
+    - "**.hacdn.net"
+    - "**.cachecn.com"
+
+- name: Qingyun CDN
+  domains:
+    - "**.qingcache.com"
+    - "**.qingcloud.com"
+    - "**.frontwize.com"
+
+- name: MoMen Cloud CDN
+  domains:
+    - "**.momentcdn.com"
+
+- name: Qiniu Cloud
+  domains:
+    - "**.qbox.me"
+    - "**.qiniu.com"
+    - "**.qiniudns.com"
+    - "**.qiniupic.com"
+    - "**.clouddn.com"
+    - "**.qiniucdn.com"
+    - "**.qiniudn.com"
+    - "**.qnssl.com"
+    - "**.qnydns.com"
+    - "**.qnqcdn.net"
+    - "**.hiecheimaetu.com"
+
+- name: iQIYI CDN
+  domains:
+    - "**:71edge.com"
+
+- name: JD Cloud
+  domains:
+    - "**.jcloudcs.com"
+    - "**.jdcdn.com"
+    - "**.qianxun.com"
+    - "**.jcloudlb.com"
+    - "**.jcloud-cdn.com"
+
+- name: Maoyun Converged CDN
+  domains:
+    - "**.maoyun.tv"
+    - "**.maoyundns.com"
+
+- name: UCloud CDN
+  domains:
+    - "**.ucloud.cn"
+    - "**.ucloud.com.cn"
+    - "**.cdndo.com"
+    - "**.ucloudgda.com"
+
+- name: Zenlayer CDN
+  domains:
+    - "**.zengslb.com"
+    - "**.zenlogic.net"
+    - "**.ogslb.com"
+    - "**.uxengine.net"
+
+- name: TAN14 CDN
+  domains:
+    - "**.tan14.net"
+
+- name: VeryCloud CDN
+  domains:
+    - "**.verycloud.cn"
+    - "**.verycdn.net"
+    - "**.verygslb.com"
+
+- name: SpeedyCloud CDN
+  domains:
+    - "**.xundayun.*"
+    - "**.speedycloud.cc"
+
+- name: Coding Pages
+  domains:
+    - "**.coding.*"
+
+- name: GitLab Pages
+  domains:
+    - "**.gitlab.io"
+
+- name: GitHub CDN
+  domains:
+    - "**.githubusercontent.com"
+
+- name: Heroku SaaS
+  domains:
+    - "**.herokuapp.com"
+
+- name: Google Cloud Storage
+  domains:
+    - "**.googleapis.com"
+
+- name: Jinshan Cloud CDN
+  domains:
+    - "**.ksyuncdn.com"
+    - "**.ks-cdn.com"
+    - "**.kcdnvip.com"
+    - "**.ksyuncdn-k1.com"
+
+- name: ZEIT Now Smart CDN
+  domains:
+    - "**.zeit.co"
+    - "**.zeit-cdn.net"
+
+- name: G - Core Labs
+  domains:
+    - "**.gcdn.co"
+
+- name: Sina Cloud CDN
+  domains:
+    - "**.sinajs.cn"
+    - "**.sinaedge.com"
+    - "**.sina.com.cn"
+    - "**.sinacdn.com"
+    - "**.sinasws.com"
+    - "**.saebbs.com"
+
+- name: Sukka Lab
+  domains:
+    - "**.elemecdn.com"
+
+- name: Sitestar
+  domains:
+    - "**.websitecname.cn"
+
+- name: Western Digital
+  domains:
+    - "**.800cdn.com"
+    - "**.vhostgo.com"
+    - "**.gotoip55.com"
+
+- name: TX Networks
+  domains:
+    - "**.cdnetworks.net"
+    - "**.txnetworks.cn"
+    - "**.cdnnetworks.com"
+    - "**.txcdn.cn"
+
+- name: CDN Union
+  domains:
+    - "**.cdnunion.*"
+
+- name: Vangen CDN # YaoCDN
+  domains:
+    - "**.mygslb.com"
+    - "**.cdnudns.com"
+    - "**.sprycdn.com"
+
+- name: Chuangshi Cloud Converged CDN
+  domains:
+    - "**.chuangcdn.com"
+    - "**.aocde.com"
+
+- name: Tianyi Cloud CDN # China Telekom ?
+  domains:
+    - "**.ctcdn.cn"
+    - "**.ctxcdn.cn"
+    - "**.ctdns.cn"
+    - "**.ctyunapi.cn"
+
+- name: Yunfan Acceleration CDN
+  domains:
+    - "**.yfcdn.net"
+
+- name: Chinamaincloud
+  domains:
+    - "**.mmycdn.cn"
+    - "**.chinamaincloud.com"
+
+- name: Zhonglian Data Group
+  domains:
+    - "**.cnispgroup.com"
+
+- name: LeCloud
+  domains:
+    - "**.cdnle.com"
+
+- name: GoSun
+  domains:
+    - "**.gosuncdn.com"
+
+- name: NGAA
+  domains:
+    - "**.ngaagslb.cn"
+    - "**.ngaagslb.net"
+    - "**.clngaa.com"
+
+- name: Star Cloud # XYCloud
+  domains:
+    - "**.p2cdn.com"
+    - "**.00cdn.com"
+
+- name: Linking Cloud
+  domains:
+    - "**.lccdn.org"
+
+- name: T-One Cloud
+  domains:
+    - "**.nscloudwaf.com"
+
+- name: DDoS
+  domains:
+    - "**.2cname.com"
+
+- name: NodeCache
+  domains:
+    - "**.ncname.com"
+
+- name: SteamCDN
+  domains:
+    - "**.steamstatic.com"
+    - "**.steamserver.net"
+    - "**.steamcontent.com"
+    - "**.valvesoftware.com"
+    - "**.pphimalayanrt.com"
+    - "**.steamchina.com"
+
+- name: Alipay
+  domains:
+    - "**.alipaydns.com"
+    - "**.alipayobjects.com"
+
+- name: Ruisuiun
+  domains:
+    - "**.pcwaf.com"
+    - "**.nbwaf.com"
+
+- name: Yisu Cloud CDN
+  domains:
+    - "**.yisuddoscdn.com"
+
+- name: Shanghai Yundun
+  domains:
+    - "**.yunduns.com"
+    - "**.hwwsdns.cn"
+    - "**.yunduncdn.com"
