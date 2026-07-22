@@ -34,7 +34,7 @@ All CDNs are listed in [`cdns.yaml`](cdns.yaml) in this repository, and [`dist/c
       X-Whatever:           # AND 'X-Whatever' header must be present
 ```
 
-## Domain Patterns
+## Wildcard Syntax
 When implementing the wildcard syntax, the following rules apply:
 - `*` matches a single domain level
   - `*.example.com` matches `abc.example.com` 
@@ -90,8 +90,12 @@ function matchHeaders(headers: Record<string, string>, patterns: Record<string, 
 Match response headers against the patterns according to the [Header Pattern rules](#header-patterns).
 
 ## References
-- [TurboBytes CDN List](https://github.com/turbobytes/cdnfinder/blob/master/assets/cnamechain.json) ([MIT](https://github.com/turbobytes/cdnfinder/blob/master/LICENSE))
-- [CDNProbe 'cname cache'](https://github.com/njuzmy/CDNProbe/blob/main/assets/static/cdn/cname_cache.json) ([Apache 2.0](https://github.com/njuzmy/CDNProbe/blob/main/LICENSE))
-  - Parts of their CNAME substring list was used to expand our own list.
+- [TurboBytes CDN Finder](https://github.com/turbobytes/cdnfinder) ([MIT](https://github.com/turbobytes/cdnfinder/blob/master/LICENSE))
+  - [CNAME Chain](https://github.com/turbobytes/cdnfinder/blob/master/assets/cnamechain.json)
+- [CDNProbe](https://github.com/njuzmy/CDNProbe) ([Apache 2.0](https://github.com/njuzmy/CDNProbe/blob/main/LICENSE))
+  - [cname_cache](https://github.com/njuzmy/CDNProbe/blob/main/assets/static/cdn/cname_cache.json): Parts of the substring list were used to extend our own list
+  - [cdnlist](https://github.com/njuzmy/CDNProbe/blob/main/assets/static/cdn/cdnlist.txt): Some CDNs from the cdn list were used to extend our own list
 - [CDN Handbook](https://www.cdnhandbook.com/)
   - Information about some CDNs
+- [IPInfo](https://ipinfo.io/)
+  - Information about ASNs used by CDNs

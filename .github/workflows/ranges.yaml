@@ -1,0 +1,35 @@
+name: Fetch ranges
+
+on:
+  schedule:
+    # every monday at 8:00 AM UTC
+    - cron: "0 8 * * 1"
+  workflow_dispatch: {}
+
+concurrency:
+  group: ranges
+  cancel-in-progress: true
+
+jobs:
+  fetch-and-write:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8.2.0
+
+      - name: Install dependencies
+        run: uv sync --frozen --all-extras
+
+      - name: Run fetch script
+        env:
+          CLICKHOUSE_HOST: ${{ secrets.CLICKHOUSE_HOST }}
+          CLICKHOUSE_PORT: ${{ secrets.CLICKHOUSE_PORT }}
+          CLICKHOUSE_USER: ${{ secrets.CLICKHOUSE_USER }}
+          CLICKHOUSE_PASSWORD: ${{ secrets.CLICKHOUSE_PASSWORD }}
+          CLICKHOUSE_DATABASE: ${{ vars.CLICKHOUSE_DATABASE }}
+          CLICKHOUSE_TABLE: ${{ vars.CLICKHOUSE_TABLE }}
+          CLICKHOUSE_SECURE: ${{ vars.CLICKHOUSE_SECURE }}
+        run: uv run ranges
