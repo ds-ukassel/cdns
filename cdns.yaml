@@ -1,31 +1,9 @@
 # yaml-language-server: $schema=schemas/cdns.schema.json
-- name: Cloudflare
+
+- name: afxcdn.net
   domains:
-    - "**.cloudflare.*"
-    - "*.cloudflare.net.in"
-  headers:
-    - CF-Cache-Status:
-    - CF-RAY:
-    - Server: cloudflare
-    - CF-Connecting-IP:
-    - CF-Request-ID:
-    - CF-WORKER:
-  ranges:
-    - range_type: 'ipv4'
-      url: 'https://www.cloudflare.com/ips-v4/'
-    - range_type: 'ipv6'
-      url: 'https://www.cloudflare.com/ips-v6/'
-  asns:
-    - 13335
-    - 14789
-    - 132892
-    - 139242
-    - 202623
-    - 203898
-    - 209242
-    - 394536
-    - 395747
-    - 400095
+    - "**afxcdn.net"
+
 - name: Akamai
   domains:
     - "**.akamai.**"
@@ -64,6 +42,21 @@
     - 213120
     - 393234
     - 393560
+
+- name: Alibaba Cloud CDN
+  domains:
+    - "**kunlun**"
+    - "**cdngslb**"
+  headers:
+    - Via: Alibaba Cloud CDN
+    - Ali-CDN-Cache:
+    - X-Alibaba-Edge:
+    - Server: Alibaba
+
+- name: Alimama
+  domains:
+    - "**gslb.tbcache.com"
+
 - name: Amazon CloudFront
   domains:
     - "*.cloudfront.net"
@@ -89,10 +82,208 @@
     - 36263
     - 62785
     - 401395
+
 - name: Amazon AWS
   ranges:
     - range_type: 'combined'
       url: 'https://ip-ranges.amazonaws.com/ip-ranges.json'
+
+- name: Ananke
+  domains:
+    - "**anankecdn.com.br"
+
+- name: ArvanCloud
+  headers:
+    - Server: ArvanCloud
+    - AR-PoweredBy:
+  asns:
+    - 57568
+    - 208006
+
+- name: AT&T
+  domains:
+    - "**att-dsa.net"
+
+- name: Azion
+  domains:
+    - "**.azioncdn.net"
+    - "*.azion.*"
+  headers:
+    - X-Azion-Cache:
+    - Server: AzionCDN
+  asns:
+    - 52580
+
+- name: Baidu
+  asns:
+    - 38365
+    - 55967
+  domains:
+    - "**jomodns**"
+    - "**zjsxlt**"
+    - "**yunjiasu**"
+    - "**yjs-cdn**"
+    - "**shifen**"
+
+- name: Baishan Cloud
+  domains:
+    - "**baishan**"
+    - "**bsccdn**"
+    - "**bsgslb**"
+
+- name: BelugaCDN # Maybe also NuCDN? See https://www.peeringdb.com/asn/23393
+  domains:
+    - "**belugacdn.com"
+  headers:
+    - X-Beluga-Cache:
+    - Server: BelugaCDN
+  asns:
+    - 23393
+
+- name: Bharti Airtel
+
+- name: Bilibili
+  domains:
+    - "**bilicdn**"
+  asns:
+    - 140633
+
+- name: Blue Hat Network
+  domains:
+    - "**bluehatnetwork.com"
+
+- name: BootCSS
+
+- name: BootstrapCDN
+
+- name: BT Group
+
+- name: BunnyCDN
+  domains:
+    - "*.b-cdn.net"
+  headers:
+    - Server: BunnyCDN
+    - Bunny-Cache:
+    - Bunny-Region:
+    - Bunny-Storage-Zone:
+  ranges:
+    - range_type: 'ipv4'
+      url: 'https://api.bunny.net/mc/nodes/plain'
+  asns:
+    - 200325
+
+- name: CacheFly
+  domains:
+    - "*.cachefly.net"
+  headers:
+    - Server: CacheFly
+  ranges:
+    - range_type: 'combined'
+      url: 'https://cachefly.cachefly.net/ips/cdn.txt'
+  asns:
+    - 30081
+
+- name: CDN77
+  domains:
+    - "**.cdn77.*"
+  headers:
+    - Server: CDN77
+    - CDN77: # TODO: Check if this is supposed to be a value or or a key
+    - X-CDN: CDN77
+  asns:
+    - 60068
+
+- name: CDNetworks
+  domains:
+    - "**panthercdn.com"
+    - "**cdngc.net"
+    - "**gccdn.net"
+    - "**gccdn.cn"
+    - "**cdnga**"
+    - "*.cdnetworks.*"
+  headers:
+    - X-CDN: CDNetworks
+    - Server: CDNetworks
+  asns:
+    - 36408
+    - 38107
+
+- name: CDNify
+  domains:
+    - "**.cdnify.io"
+
+- name: CDNJS
+
+- name: CDNLion
+
+- name: CDNsun
+
+- name: CDNvideo
+
+- name: ChinaCache # seems to have been sold (website redirects). acquired by EdgeNext in 2023. See: https://www.cdnhandbook.com/providers/chinacache/
+  domains:
+    - "**ccgslb.com"
+    - "**ccgslb.net"
+    - "**c3cache.net"
+    - "**chinacache.net"
+    - "**c3cdn.net"
+  headers:
+    - Server: ChinaCache
+  asns:
+    - 18216
+
+- name: ChinaNetCenter
+  domains:
+    - "**lxdns.com"
+    - "**wscdns**"
+    - "**wswebpic**"
+    - "**tl88**"
+    - "**cdn30**"
+    - "**qtlcdn**"
+    - "**cdn20**"
+  asns:
+    - 17442
+
+- name: CloudCache
+
+- name: Cloudflare
+  domains:
+    - "**.cloudflare.*"
+    - "*.cloudflare.net.in"
+  headers:
+    - CF-Cache-Status:
+    - CF-RAY:
+    - Server: cloudflare
+    - CF-Connecting-IP:
+    - CF-Request-ID:
+    - CF-WORKER:
+  ranges:
+    - range_type: 'ipv4'
+      url: 'https://www.cloudflare.com/ips-v4/'
+    - range_type: 'ipv6'
+      url: 'https://www.cloudflare.com/ips-v6/'
+  asns:
+    - 13335
+    - 14789
+    - 132892
+    - 139242
+    - 202623
+    - 203898
+    - 209242
+    - 394536
+    - 395747
+    - 400095
+
+- name: CloudLayer
+
+- name: CloudOYE
+
+- name: Coral
+
+- name: Cotendo
+
+- name: Distil
+
 - name: Fastly
   domains:
     - "**.fastly.**"
@@ -109,350 +300,6 @@
   asns:
     - 54113
     - 14618
-- name: StackPath # closure in 2024. See: https://www.cdnhandbook.com/providers/stackpath/
-  domains:
-    - "**stackpath**" # stackpathdns.com
-    - "**netdna**"
-    - "*.hwcdn.*"
-  headers:
-    - Server: StackPath
-    - X-Powered-By: StackPath
-    - X-StackPath-Request-ID:
-    - X-SP-Edge-Cache:
-    - X-CDN: StackPath
-- name: KeyCDN
-  domains:
-    - "*.kxcdn.com"
-  headers:
-    - Server: KeyCDN
-    - X-CDN: KeyCDN
-    - X-Edge-Location: # also an identifier of Google Cloud CDN
-- name: BunnyCDN
-  domains:
-    - "*.b-cdn.net"
-  headers:
-    - Server: BunnyCDN
-    - Bunny-Cache:
-    - Bunny-Region:
-    - Bunny-Storage-Zone:
-  ranges:
-    - range_type: 'ipv4'
-      url: 'https://api.bunny.net/mc/nodes/plain'
-  asns:
-    - 200325
-- name: Sucuri
-  headers:
-    - Server: Sucuri/Cloudproxy
-    - Server: Sucuri
-    - X-Sucuri-ID:
-    - X-Sucuri-Cache:
-    - X-Sucuri-Block:
-    - X-Sucuri-Cloudproxy-Cache:
-  ranges: # https://docs.sucuri.net/website-firewall/sucuri-firewall-troubleshooting-guide/ (parser exists, but website 503s)
-    - range_type: 'ipv4'
-      ranges:
-        - 192.88.134.0/23
-        - 185.93.228.0/22
-        - 66.248.200.0/22
-        - 208.109.0.0/22
-      last_updated: 2026-06-05
-    - range_type: 'ipv6'
-      ranges:
-        - 2a02:fe80::/29
-      last_updated: 2026-06-05
-  asns:
-    - 30148
-- name: Imperva # Incapsula is part of Imperva
-  domains:
-    - "**incapdns.net"
-    - "**impervadns**"
-  headers:
-    - Server: Imperva
-    - X-CDN: Incapsula
-    - X-Info:
-    - X-CDN-Request-ID:
-    - X-Cdn-Provider: Incapsula
-  ranges:
-    - range_type: 'combined'
-      url: 'https://my.imperva.com/api/integration/v1/ips'
-  asns:
-    - 62571
-    - 19551
-- name: CacheFly
-  domains:
-    - "*.cachefly.net"
-  headers:
-    - Server: CacheFly
-  ranges:
-    - range_type: 'combined'
-      url: 'https://cachefly.cachefly.net/ips/cdn.txt'
-  asns:
-    - 30081
-- name: QUIC.cloud
-  headers:
-    - Server: LiteSpeed
-    - X-QC-Cache:
-  ranges:
-    - range_type: 'combined'
-      url: 'https://quic.cloud/ips'
-  asns:
-    - 26116
-- name: ArvanCloud
-  headers:
-    - Server: ArvanCloud
-    - AR-PoweredBy:
-  asns:
-    - 57568
-    - 208006
-- name: G-Core Labs
-  domains:
-    - "**.gcdn.co"
-  headers:
-    - Server: GCL
-    - Server: G-Core Labs
-    - X-GCL-Cache:
-    - X-GCL-Pop:
-    - X-GCL-Request-ID:
-    - X-GCL-Region:
-    - X-GCL-Server:
-    - X-GCL-Status:
-    - X-GCL-Storage-Zone:
-    - X-GCL-User:
-    - X-GCL-User-Request-ID:
-    - X-GCL-User-Status:
-  asns:
-    - 59245
-    - 199524
-    - 202422
-    - 210559
-- name: Microsoft Azure CDN
-  domains:
-    - "*.vo.msecnd.net"
-    - "*.trafficmanager.net"
-    - "**msedge**"
-  headers:
-    - X-Azure-Ref:
-    - Server: Azure Front Door
-    - X-Ms-Cdn-Ref:
-    - X-Ms-Cdn-Request-Id:
-  ranges:
-    - range_type: combined
-      url: 'https://www.microsoft.com/en-us/download/details.aspx?id=56519'
-  asns:
-    - 3598
-    - 5761
-    - 6584
-    - 8068
-    - 8069
-    - 8070
-    - 8075
-    - 12076
-    - 17144
-    - 30520
-    - 35106
-    - 45139
-    - 46182
-    - 54396
-    - 58862
-    - 59067
-    - 63314
-- name: Google Cloud CDN
-  domains:
-    - "**.google.**"
-    - "**.googlesyndication.com"
-    - "**.youtube.*"
-    - "*.googleusercontent.com"
-    - "**.doubleclick.net"
-  headers:
-    # - Server: Google Frontend
-    - Server: Google Cloud CDN
-    - X-Google-Cache-Status:
-    - Via: Google
-    - X-Edge-Location: # also an identifier of KeyCDN
-  ranges:
-    - range_type: 'combined'
-      url: 'https://www.gstatic.com/ipranges/cloud.json'
-    - range_type: 'combined'
-      url: 'https://www.gstatic.com/ipranges/goog.json'
-  asns:
-    - 15169
-    - 16550
-    - 16591
-    - 19527
-    - 32381
-    - 33715
-    - 36040
-    - 36383
-    - 36384
-    - 36385
-    - 36411
-    - 36492
-    - 41264
-    - 43515
-    - 45566
-    - 139070
-    - 139190
-    - 151231
-    - 214609
-    - 214611
-    - 394089
-    - 395973
-    - 396178
-    - 396982
-- name: Verizon EdgeCast # apparently shut down in 2025. sold to Parler. See: https://www.cdnhandbook.com/providers/verizon-media-vmds/
-  domains:
-    - "**edgecastcdn**"
-    - "**alphacdn**"
-    - "**betacdn**"
-    - "**chicdn**"
-    - "**deltacdn**"
-    - "**.gammacdn.com"
-    - "**iotacdn**"
-    - "**kappacdn**"
-    - "**lambdacdn**"
-    - "**mucdn**"
-    - "**nucdn**"
-    - "**omegacdn**"
-    - "**omicroncdn**"
-    - "**phicdn**"
-    - "**psicdn**"
-    - "**rhocdn**"
-    - "**sigmacdn**"
-    - "**systemcdn**"
-    - "**taucdn**"
-    - "**thetacdn**"
-    - "**upsiloncdn**"
-    - "*.xicdn.cc"
-    - "**zetacdn**"
-    - "**transactcdn**"
-  headers:
-    - Server: ECS
-- name: Alibaba Cloud CDN
-  domains:
-    - "**kunlun**"
-    - "**cdngslb**"
-  headers:
-    - Via: Alibaba Cloud CDN
-    - Ali-CDN-Cache:
-    - X-Alibaba-Edge:
-    - Server: Alibaba
-- name: CDN77
-  domains:
-    - "**.cdn77.*"
-  headers:
-    - Server: CDN77
-    - CDN77: # TODO: Check if this is supposed to be a value or or a key
-    - X-CDN: CDN77
-  asns:
-    - 60068
-- name: OVH CDN
-  headers:
-    - Server: OVHcdn
-  ranges:
-    - range_type: ipv4
-      url: 'https://docs.ovhcloud.com/en/guides/network/content-delivery-network-infrastructure/cdn-infrastructure-ip-range'
-  asns:
-    - 16276
-    - 35540
-- name: BelugaCDN # Maybe also NuCDN? See https://www.peeringdb.com/asn/23393
-  domains:
-    - "**belugacdn.com"
-  headers:
-    - X-Beluga-Cache:
-    - Server: BelugaCDN
-  asns:
-    - 23393
-- name: ChinaCache # seems to have been sold (website redirects). acquired by EdgeNext in 2023. See: https://www.cdnhandbook.com/providers/chinacache/
-  domains:
-    - "**ccgslb.com"
-    - "**ccgslb.net"
-    - "**c3cache.net"
-    - "**chinacache.net"
-    - "**c3cdn.net"
-  headers:
-    - Server: ChinaCache
-  asns:
-    - 18216
-- name: CDNetworks
-  domains:
-    - "**panthercdn.com"
-    - "**cdngc.net"
-    - "**gccdn.net"
-    - "**gccdn.cn"
-    - "**cdnga**"
-    - "*.cdnetworks.*"
-  headers:
-    - X-CDN: CDNetworks
-    - Server: CDNetworks
-  asns:
-    - 36408
-    - 38107
-- name: Medianova
-  domains:
-    - "**.mncdn.com"
-  headers:
-    - X-Medianova-Cache:
-  ranges:
-    - range_type: 'combined'
-      url: 'https://cloud.medianova.com/api/v1/ip/addresses-txt'
-  asns:
-    - 21245
-- name: Azion
-  domains:
-    - "**.azioncdn.net"
-    - "*.azion.*"
-  headers:
-    - X-Azion-Cache:
-    - Server: AzionCDN
-  asns:
-    - 52580
-- name: Netlify
-  headers:
-    - Server: Netlify
-    - X-NF-Cache-Status:
-- name: Vercel
-  headers:
-    - Server: Vercel
-- name: RocketCDN
-  headers:
-    - X-Rocket-CDN:
-    - Server: RocketCDN
-- name: Reblaze
-  headers:
-    - X-Reblaze-Cache:
-    - Server: Reblaze
-- name: Express CDN # dont know if it exists.
-  headers:
-    - X-Express-CDN:
-    - Express-CDN-Cache:
-    - Express-CDN-Cache-Status:
-    - Express-CDN-Cache-Control:
-    - Express-CDN-Request-ID:
-
-- name: TurboBytes # out of business. See https://www.cdnplanet.com/blog/turbobytes-multi-cdn-made-easy/
-  domains:
-    - "**clients.turbobytes.net"
-    - "**turbobytes-cdn.com"
-
-- name: afxcdn.net
-  domains:
-    - "**afxcdn.net"
-
-- name: Alimama
-  domains:
-    - "**gslb.tbcache.com"
-
-- name: Ananke
-  domains:
-    - "**anankecdn.com.br"
-
-- name: AT&T
-  domains:
-    - "**att-dsa.net"
-
-- name: Blue Hat Network
-  domains:
-    - "**bluehatnetwork.com"
 
 - name: EdgeCast # operated by Parler Cloud Technologies. See: https://www.cdnhandbook.com/providers/edgecast/
   domains:
@@ -512,22 +359,81 @@
     - 28469
     - 28521
 
+- name: Express CDN # dont know if it exists.
+  headers:
+    - X-Express-CDN:
+    - Express-CDN-Cache:
+    - Express-CDN-Cache-Status:
+    - Express-CDN-Cache-Control:
+    - Express-CDN-Request-ID:
 
-- name: CDNify
-  domains:
-    - "**.cdnify.io"
+- name: Facebook
 
-- name: ChinaNetCenter
+- name: G-Core Labs
   domains:
-    - "**lxdns.com"
-    - "**wscdns**"
-    - "**wswebpic**"
-    - "**tl88**"
-    - "**cdn30**"
-    - "**qtlcdn**"
-    - "**cdn20**"
+    - "**.gcdn.co"
+  headers:
+    - Server: GCL
+    - Server: G-Core Labs
+    - X-GCL-Cache:
+    - X-GCL-Pop:
+    - X-GCL-Request-ID:
+    - X-GCL-Region:
+    - X-GCL-Server:
+    - X-GCL-Status:
+    - X-GCL-Storage-Zone:
+    - X-GCL-User:
+    - X-GCL-User-Request-ID:
+    - X-GCL-User-Status:
   asns:
-    - 17442
+    - 59245
+    - 199524
+    - 202422
+    - 210559
+
+- name: Google Cloud CDN
+  domains:
+    - "**.google.**"
+    - "**.googlesyndication.com"
+    - "**.youtube.*"
+    - "*.googleusercontent.com"
+    - "**.doubleclick.net"
+  headers:
+    # - Server: Google Frontend
+    - Server: Google Cloud CDN
+    - X-Google-Cache-Status:
+    - Via: Google
+    - X-Edge-Location: # also an identifier of KeyCDN
+  ranges:
+    - range_type: 'combined'
+      url: 'https://www.gstatic.com/ipranges/cloud.json'
+    - range_type: 'combined'
+      url: 'https://www.gstatic.com/ipranges/goog.json'
+  asns:
+    - 15169
+    - 16550
+    - 16591
+    - 19527
+    - 32381
+    - 33715
+    - 36040
+    - 36383
+    - 36384
+    - 36385
+    - 36411
+    - 36492
+    - 41264
+    - 43515
+    - 45566
+    - 139070
+    - 139190
+    - 151231
+    - 214609
+    - 214611
+    - 394089
+    - 395973
+    - 396178
+    - 396982
 
 - name: Hibernia
   domains:
@@ -538,6 +444,36 @@
 - name: Highwinds # discontinued in 2023. See https://www.cdnhandbook.com/providers/highwinds/
   domains:
     - "*.hwcdn.*"
+
+- name: HiberniaCDN
+
+- name: HP Cloud Services
+
+- name: Huawei
+  domains:
+    - "**cdnhwc**"
+    - "**hwclouds**"
+  asns:
+    - 55990
+    - 63727
+    - 131444
+
+- name: Imperva # Incapsula is part of Imperva
+  domains:
+    - "**incapdns.net"
+    - "**impervadns**"
+  headers:
+    - Server: Imperva
+    - X-CDN: Incapsula
+    - X-Info:
+    - X-CDN-Request-ID:
+    - X-Cdn-Provider: Incapsula
+  ranges:
+    - range_type: 'combined'
+      url: 'https://my.imperva.com/api/integration/v1/ips'
+  asns:
+    - 62571
+    - 19551
 
 - name: Instartlogic # acquired by Akamai in 2020. See https://www.cdnhandbook.com/providers/instart-logic/
   domains:
@@ -550,6 +486,33 @@
     - 32475
   domains:
     - "**internapcdn.net"
+
+- name: JINGDONG # JINGDONG Cloud
+  domains:
+    - "**jcloud-cdn**"
+    - "*.jcloud.kz"
+  asns:
+    - 131486
+    - 137753
+    - 137787
+
+- name: JQuery
+
+- name: JsDelivr
+
+- name: KeyCDN
+  domains:
+    - "*.kxcdn.com"
+  headers:
+    - Server: KeyCDN
+    - X-CDN: KeyCDN
+    - X-Edge-Location: # also an identifier of Google Cloud CDN
+
+- name: Kingsoft
+  asns:
+    - 59019
+  domains:
+    - "**ksyun**" # ksyuncdn.com
 
 - name: LeaseWeb CDN
   asns:
@@ -568,11 +531,64 @@
     - "**lldns.net"
     - "**llnw**" # llnwd.net
 
+- name: LinkedIn
+
 - name: MaxCDN # shutdown in 2023. See: https://www.cdnhandbook.com/providers/maxcdn/
   domains:
     - "**netdna-cdn.com"
     - "*.netdna-ssl.com"
     - "**netdna.com"
+
+- name: Medianova
+  domains:
+    - "**.mncdn.com"
+  headers:
+    - X-Medianova-Cache:
+  ranges:
+    - range_type: 'combined'
+      url: 'https://cloud.medianova.com/api/v1/ip/addresses-txt'
+  asns:
+    - 21245
+
+- name: MegaFon
+
+- name: Merlin CDN
+  domains:
+    - "**merlin**"
+
+- name: MetaCDN
+
+- name: Microsoft Azure CDN
+  domains:
+    - "*.vo.msecnd.net"
+    - "*.trafficmanager.net"
+    - "**msedge**"
+  headers:
+    - X-Azure-Ref:
+    - Server: Azure Front Door
+    - X-Ms-Cdn-Ref:
+    - X-Ms-Cdn-Request-Id:
+  ranges:
+    - range_type: combined
+      url: 'https://www.microsoft.com/en-us/download/details.aspx?id=56519'
+  asns:
+    - 3598
+    - 5761
+    - 6584
+    - 8068
+    - 8069
+    - 8070
+    - 8075
+    - 12076
+    - 17144
+    - 30520
+    - 35106
+    - 45139
+    - 46182
+    - 54396
+    - 58862
+    - 59067
+    - 63314
 
 - name: Mirror Image # now defunct. See: https://www.cdnhandbook.com/providers/mirror-image/
   domains:
@@ -580,15 +596,111 @@
     - "**mirror-image.net"
     - "**cap-mii.net"
 
+- name: NACEVI
+
+- name: NetDNA
+
+- name: Netlify
+  headers:
+    - Server: Netlify
+    - X-NF-Cache-Status:
+
+- name: Octoshape
+
+- name: OnApp
+
+- name: OVH CDN
+  headers:
+    - Server: OVHcdn
+  ranges:
+    - range_type: ipv4
+      url: 'https://docs.ovhcloud.com/en/guides/network/content-delivery-network-infrastructure/cdn-infrastructure-ip-range'
+  asns:
+    - 16276
+    - 35540
+
+- name: PCCW
+
+- name: Pacnet
+
+- name: QUIC.cloud
+  headers:
+    - Server: LiteSpeed
+    - X-QC-Cache:
+  ranges:
+    - range_type: 'combined'
+      url: 'https://quic.cloud/ips'
+  asns:
+    - 26116
+
+- name: Rackspace
+
+- name: Reblaze
+  headers:
+    - X-Reblaze-Cache:
+    - Server: Reblaze
+
 - name: Reflected Networks
   asns:
     - 29789
   domains:
     - "**rncdn1.com"
 
+- name: RocketCDN
+  headers:
+    - X-Rocket-CDN:
+    - Server: RocketCDN
+
 - name: Simple CDN
   domains:
     - "**simplecdn.net"
+
+- name: Sina
+
+- name: SingTel
+
+- name: SK Broadband
+
+- name: SoftLayer
+
+- name: Speedera
+
+- name: StaticFile
+
+- name: StackPath # closure in 2024. See: https://www.cdnhandbook.com/providers/stackpath/
+  domains:
+    - "**stackpath**" # stackpathdns.com
+    - "**netdna**"
+    - "*.hwcdn.*"
+  headers:
+    - Server: StackPath
+    - X-Powered-By: StackPath
+    - X-StackPath-Request-ID:
+    - X-SP-Edge-Cache:
+    - X-CDN: StackPath
+
+- name: Sucuri
+  headers:
+    - Server: Sucuri/Cloudproxy
+    - Server: Sucuri
+    - X-Sucuri-ID:
+    - X-Sucuri-Cache:
+    - X-Sucuri-Block:
+    - X-Sucuri-Cloudproxy-Cache:
+  ranges: # https://docs.sucuri.net/website-firewall/sucuri-firewall-troubleshooting-guide/ (parser exists, but website 503s)
+    - range_type: 'ipv4'
+      ranges:
+        - 192.88.134.0/23
+        - 185.93.228.0/22
+        - 66.248.200.0/22
+        - 208.109.0.0/22
+      last_updated: 2026-06-05
+    - range_type: 'ipv6'
+      ranges:
+        - 2a02:fe80::/29
+      last_updated: 2026-06-05
+  asns:
+    - 30148
 
 - name: SwiftCDN
   domains:
@@ -624,39 +736,13 @@
   domains:
     - "**.cdn.telefonica.com"
 
-- name: Yahoo
-  domains:
-    - "**ay1.b.yahoo.com"
-    - "**.yimg.*"
+- name: Telenor
 
-- name: Zenedge # maybe acquired by oracle. See: https://bizety.com/2018/02/15/oracle-acquires-zenedge-therefore-oracle-is-in-the-cdn-business/
-  asns:
-    - 31898
-  domains:
-    - "**zenedge.net"
+- name: TeliaSonera
 
-- name: Kingsoft
-  asns:
-    - 59019
-  domains:
-    - "**ksyun**" # ksyuncdn.com
+- name: Telstra
 
-- name: Baishan Cloud
-  domains:
-    - "**baishan**"
-    - "**bsccdn**"
-    - "**bsgslb**"
-
-- name: baidu
-  asns:
-    - 38365
-    - 55967
-  domains:
-    - "**jomodns**"
-    - "**zjsxlt**"
-    - "**yunjiasu**"
-    - "**yjs-cdn**"
-    - "**shifen**"
+- name: Telus
 
 - name: Tencent Cloud
   domains:
@@ -668,30 +754,62 @@
     - "**tcloudscdn**"
   asns:
     - 133478
+
+- name: TinyCDN
+
+- name: TurboBytes # out of business. See https://www.cdnplanet.com/blog/turbobytes-multi-cdn-made-easy/
+  domains:
+    - "**clients.turbobytes.net"
+    - "**turbobytes-cdn.com"
+
+- name: UCloud
+
+- name: Vercel
+  headers:
+    - Server: Vercel
+
+- name: Verizon EdgeCast # apparently shut down in 2025. sold to Parler. See: https://www.cdnhandbook.com/providers/verizon-media-vmds/
+  domains:
+    - "**edgecastcdn**"
+    - "**alphacdn**"
+    - "**betacdn**"
+    - "**chicdn**"
+    - "**deltacdn**"
+    - "**.gammacdn.com"
+    - "**iotacdn**"
+    - "**kappacdn**"
+    - "**lambdacdn**"
+    - "**mucdn**"
+    - "**nucdn**"
+    - "**omegacdn**"
+    - "**omicroncdn**"
+    - "**phicdn**"
+    - "**psicdn**"
+    - "**rhocdn**"
+    - "**sigmacdn**"
+    - "**systemcdn**"
+    - "**taucdn**"
+    - "**thetacdn**"
+    - "**upsiloncdn**"
+    - "*.xicdn.cc"
+    - "**zetacdn**"
+    - "**transactcdn**"
+  headers:
+    - Server: ECS
+
+- name: WebMoi
+
+- name: Yahoo
+  domains:
+    - "**ay1.b.yahoo.com"
+    - "**.yimg.*"
+
 - name: YundunCDN # Yandex Cloud
   domains:
     - "**yunduncdn.com**"
-- name: Merlin CDN
-  domains:
-    - "**merlin**"
-- name: JINGDONG # JINGDONG Cloud
-  domains:
-    - "**jcloud-cdn**"
-    - "*.jcloud.kz"
+
+- name: Zenedge # maybe acquired by oracle. See: https://bizety.com/2018/02/15/oracle-acquires-zenedge-therefore-oracle-is-in-the-cdn-business/
   asns:
-    - 131486
-    - 137753
-    - 137787
-- name: Bilibili
+    - 31898
   domains:
-    - "**bilicdn**"
-  asns:
-    - 140633
-- name: Huawei
-  domains:
-    - "**cdnhwc**"
-    - "**hwclouds**"
-  asns:
-    - 55990
-    - 63727
-    - 131444
+    - "**zenedge.net"
