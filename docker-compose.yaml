@@ -5,7 +5,7 @@ services:
   ranges:
     image: registry.uni-kassel.dev/scraper/cdn_ranges
     build:
-      dockerfile: ./src/ranges/Dockerfile
+      dockerfile: ./python/ranges/Dockerfile
       platforms: [ linux/amd64, linux/arm64 ]
     depends_on:
       - clickhouse-cdns

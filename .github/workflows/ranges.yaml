@@ -32,4 +32,4 @@ jobs:
           CLICKHOUSE_DATABASE: ${{ vars.CLICKHOUSE_DATABASE }}
           CLICKHOUSE_TABLE: ${{ vars.CLICKHOUSE_TABLE }}
           CLICKHOUSE_SECURE: ${{ vars.CLICKHOUSE_SECURE }}
-        run: uv run ranges
+        run: uv run python -m ranges.main
