@@ -25,7 +25,7 @@ jobs:
           CLICKHOUSE_PORT: ${{ secrets.CLICKHOUSE_PORT }}
           CLICKHOUSE_USER: ${{ secrets.CLICKHOUSE_USER }}
           CLICKHOUSE_PASSWORD: ${{ secrets.CLICKHOUSE_PASSWORD }}
-          CLICKHOUSE_DATABASE: ${{ secrets.CLICKHOUSE_DATABASE }}
-          CLICKHOUSE_TABLE: ${{ secrets.CLICKHOUSE_TABLE }}
-          CLICKHOUSE_SECURE: ${{ secrets.CLICKHOUSE_SECURE }}
+          CLICKHOUSE_DATABASE: ${{ variable.CLICKHOUSE_DATABASE }}
+          CLICKHOUSE_TABLE: ${{ variable.CLICKHOUSE_TABLE }}
+          CLICKHOUSE_SECURE: ${{ variable.CLICKHOUSE_SECURE }}
         run: uv run ranges
