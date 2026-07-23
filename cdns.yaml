@@ -101,6 +101,13 @@
 - name: Amazon AWS
   domains:
     - "*.amazonaws.com"
+    - "**.awswaf.com"
+    - "**.awsglobalaccelerator.com"
+    - "**.awsstatic.com"
+    - "**.aws.dev"
+    - "**.omtrdc.net"
+    - "**.a2z.com"
+    - "**.amazonaws.com.cn"
   ranges:
     - range_type: 'combined'
       url: 'https://ip-ranges.amazonaws.com/ip-ranges.json'
@@ -1343,3 +1350,86 @@
     - "**.yunduns.com"
     - "**.hwwsdns.cn"
     - "**.yunduncdn.com"
+
+- name: Yunaq CDN
+  domains:
+    - "**.aqyun.com"
+
+- name: Volcano Engine
+  domains:
+    - "**.volccdn.com"
+    - "**.vedcdnlb.com"
+    - "**.volc**.com"
+    - "**.cdnbuild.net"
+    - "**.byte**.com"
+    - "**.feishu.net"
+    - "**.larkoffice.com"
+    - "**.feishucdn.com"
+    - "**.zjurl.cn"
+    - "**.snssdk.com"
+    - "**.pstatp.com"
+    - "**.feishu-3rd-party-services.com"
+    - "**.ttwebview.com"
+    - "**.kundou.cn"
+    - "**.bytetos.com"
+    - "**.zijieapi.com"
+    - "**.feishuimg.com"
+    - "**.feishuapp.cn"
+    - "**.getfeishu.cn"
+    - "**.feishupkg.com"
+    - "**.feelgood.cn"
+    - "**.baseopendev.com"
+    - "**.douyinvod.com"
+    - "**.douyinstatic.com"
+    - "**.yhgfb-cn-static.com"
+    - "**.douyinpic.com"
+    - "**.zijieapi.com"
+    - "**.larksuitecdn.com"
+    - "**.ibytedtos.com"
+    - "**.douyincdn.com"
+    - "**.tiktokcdn.com"
+
+- name: Anheng Cloud WAF
+  domains:
+    - "**.saaswaf.com"
+
+- name: CCTVCDN
+  domains:
+    - "**.cctvcdn.*"
+
+- name: MingFu Cloud
+  domains:
+    - "**.mingfucdn.com"
+    - "**.cjjd01.com"
+    - "**.cjjd02.com"
+    - "**.cjjd03.com"
+    - "**.cjjd04.com"
+    - "**.cjjd05.com"
+    - "**.cjjd06.com"
+    - "**.cjjd07.com"
+    - "**.cjjd08.com"
+    - "**.cjjd09.com"
+    - "**.cjjd10.com"
+    - "**.cjjd11.com"
+    - "**.cjjd12.com"
+    - "**.cjjd13.com"
+    - "**.cjjd14.com"
+    - "**.cjjd15.com"
+    - "**.cjjd16.com"
+    - "**.cjjd17.com"
+    - "**.cjjd18.com"
+    - "**.cjjd19.com"
+    - "**.cjjd20.com"
+
+- name: China Mobile
+  domains:
+    - "**.cmvideo.cn"
+    - "**.cmecloud.cn"
+
+- name: YunCDN
+  domains:
+    - "**.raincdn.cn"
+
+- name: Blackblaze
+  domains:
+    - "**.backblazeb2.com"
