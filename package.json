@@ -1,7 +1,8 @@
 {
   "name": "@ds-ukassel/cdns",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A list of CDNs and ways to identify them.",
+  "homepage": "https://github.com/ds-ukassel/cdns",
   "repository": {
     "type": "git",
     "url": "https://github.com/ds-ukassel/cdns.git"

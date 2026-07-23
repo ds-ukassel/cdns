@@ -1,13 +1,16 @@
 # CDN Mapping
 
-## Example Format
+Provides a JS library [`@ds-ukassel/cdns`](https://www.npmjs.com/package/@ds-ukassel/cdns) to identify CDNs.
+All CDNs are listed in [`cdns.yaml`](cdns.yaml) in this repository, and [`dist/cdns.json`](dist/cdns.json) in the package.
+
+## YAML Format
 
 ```yaml
 - name: AwesomeCDN
   homepage: https://www.awesomecdn.com
-  domains:
-    - 'awesomecdn.com'      # 'awesomecdn.com' is a full match of the CNAME (e.g. 'awesomecdn.com')
-    - '**awesomecdn**'      # 'awesomecdn' is a substring of the CNAME (e.g. 'a.awessomecdn.com')
+  domains: # See "Domain patterns" below
+    - 'awesomecdn.com'      # 'awesomecdn.com' is a full match of the domain (e.g. 'awesomecdn.com')
+    - '**awesomecdn**'      # 'awesomecdn' is a substring of the domain (e.g. 'a.awessomecdn.com')
     - '*.cdn.awesome.com'   # '*' is a wildcard for a single domain level (e.g. 'a.cdn.awesome.com' or 'b.cdn.awesome.com')
     - '**.awesomecdn.*'     # '**' is a wildcard for one or more domain levels (e.g. 'a.b.awesomecdn.de' or 'c.d.e.awesomecdn.com')
   ranges:
@@ -24,19 +27,12 @@
   asns:
     - 12345
     - 67890
-  headers:
+  headers: # See "Header Patterns" below
     - X-AwesomeCDN:         # 'X-AwesomeCDN' header must be present
     - Server: AwesomeCDN    # 'Server' header must contain 'AwesomeCDN'
-    - X-Cache: HIT          # 'X-Cache' header must contain 'HIT' and 'X-Whatever' header must be present
-      X-Whatever:           
+    - X-Cache: HIT          # 'X-Cache' header must contain 'HIT'
+      X-Whatever:           # AND 'X-Whatever' header must be present
 ```
-
-## References
-- [TurboBytes CDN List](https://github.com/turbobytes/cdnfinder/blob/master/assets/cnamechain.json) ([MIT](https://github.com/turbobytes/cdnfinder/blob/master/LICENSE))
-- [CDNProbe 'cname cache'](https://github.com/njuzmy/CDNProbe/blob/main/assets/static/cdn/cname_cache.json) ([Apache 2.0](https://github.com/njuzmy/CDNProbe/blob/main/LICENSE))
-  - Parts of their CNAME substring list was used to expand our own list.
-- [CDN Handbook](https://www.cdnhandbook.com/)
-  - Information about some CDNs
 
 ## Wildcard Syntax
 When implementing the wildcard syntax, the following rules apply:
@@ -62,3 +58,44 @@ When implementing the wildcard syntax, the following rules apply:
 
 - `**example.com` -> `^.*example\.com$`
 - `*.example.com` -> `^[^.]+\.example\.com$`
+
+## Header Patterns
+
+Header patterns have a few rules:
+- `Header:` (JSON: `{"Header": null}`) means the header must be present, but can have any value.
+- `Header: foo` (JSON: `{"Header": "foo"}`) means the header must be present and equal the value.
+- Multiple patterns in the same entry, e.g.
+  ```yaml
+  Header-1:
+  Header-2: bar
+  ```
+  or JSON: `{"Header-1": null, "Header-2": "bar"}`
+  Means ALL header patterns must match.
+- Header keys are case-insensitive, but values are case-sensitive.
+
+
+## API
+
+```ts
+function compileDomains(domains: string[]): RegExp
+function compileDomain(domain: string): RegExp
+```
+([source](src/domains.ts)):
+Compile domain patterns to a RegExp according to the [Domain Pattern rules](#domain-patterns).
+
+```ts
+function matchHeaders(headers: Record<string, string>, patterns: Record<string, string | null>[]
+```
+([source](src/headers.ts)):
+Match response headers against the patterns according to the [Header Pattern rules](#header-patterns).
+
+## References
+- [TurboBytes CDN Finder](https://github.com/turbobytes/cdnfinder) ([MIT](https://github.com/turbobytes/cdnfinder/blob/master/LICENSE))
+  - [CNAME Chain](https://github.com/turbobytes/cdnfinder/blob/master/assets/cnamechain.json)
+- [CDNProbe](https://github.com/njuzmy/CDNProbe) ([Apache 2.0](https://github.com/njuzmy/CDNProbe/blob/main/LICENSE))
+  - [cname_cache](https://github.com/njuzmy/CDNProbe/blob/main/assets/static/cdn/cname_cache.json): Parts of the substring list were used to extend our own list
+  - [cdnlist](https://github.com/njuzmy/CDNProbe/blob/main/assets/static/cdn/cdnlist.txt): Some CDNs from the cdn list were used to extend our own list
+- [CDN Handbook](https://www.cdnhandbook.com/)
+  - Information about some CDNs
+- [IPInfo](https://ipinfo.io/)
+  - Information about ASNs used by CDNs

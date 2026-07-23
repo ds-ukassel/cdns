@@ -240,6 +240,8 @@
   asns:
     - 23393
 
+- name: Bharti Airtel
+
 - name: Bilibili
   domains:
     - "**bilicdn**"
@@ -258,6 +260,12 @@
 - name: Blue Hat Network
   domains:
     - "**bluehatnetwork.com"
+
+- name: BootCSS
+
+- name: BootstrapCDN
+
+- name: BT Group
 
 - name: BunnyCDN
   domains:
@@ -317,6 +325,14 @@
   domains:
     - "**.cdnify.io"
 
+- name: CDNJS
+
+- name: CDNLion
+
+- name: CDNsun
+
+- name: CDNvideo
+
 - name: CDN Union
   domains:
     - "**.cdnunion.*"
@@ -372,6 +388,8 @@
     - "**.chuangcdn.com"
     - "**.aocde.com"
 
+- name: CloudCache
+
 - name: Cloudflare
   domains:
     - "**.cloudflare.*"
@@ -403,13 +421,23 @@
     - 395747
     - 400095
 
+- name: CloudLayer
+
+- name: CloudOYE
+
 - name: Coding Pages
   domains:
     - "**.coding.*"
 
+- name: Coral
+
+- name: Cotendo
+
 - name: DDoS
   domains:
     - "**.2cname.com"
+
+- name: Distil
 
 - name: Dnion
   domains:
@@ -486,6 +514,8 @@
     - Express-CDN-Cache-Status:
     - Express-CDN-Cache-Control:
     - Express-CDN-Request-ID:
+
+- name: Facebook
 
 - name: Fastly
   domains:
@@ -590,7 +620,7 @@
   domains:
     - "**.herokuapp.com"
 
-- name: Hibernia
+- name: HiberniaCDN
   domains:
     - "**hiberniacdn.com"
   asns:
@@ -599,6 +629,8 @@
 - name: Highwinds # discontinued in 2023. See https://www.cdnhandbook.com/providers/highwinds/
   domains:
     - "*.hwcdn.*"
+
+- name: HP Cloud Services
 
 - name: Huawei
   domains:
@@ -673,6 +705,10 @@
     - "**.kcdnvip.com"
     - "**.ksyuncdn-k1.com"
 
+- name: JQuery
+
+- name: JsDelivr
+
 - name: KeyCDN
   domains:
     - "*.kxcdn.com"
@@ -724,6 +760,8 @@
     - "**.unud.net"
     - "**.lldns.net"
 
+- name: LinkedIn
+
 - name: Linking Cloud
   domains:
     - "**.lccdn.org"
@@ -750,9 +788,13 @@
   asns:
     - 21245
 
+- name: MegaFon
+
 - name: Merlin CDN
   domains:
     - "**merlin**"
+
+- name: MetaCDN
 
 - name: Microsoft Azure CDN
   domains:
@@ -823,6 +865,10 @@
   domains:
     - "**.momentcdn.com"
 
+- name: NACEVI
+
+- name: NetDNA
+
 - name: NetEase
   domains:
     - "**.126.net"
@@ -846,6 +892,10 @@
   domains:
     - "**.ncname.com"
 
+- name: Octoshape
+
+- name: OnApp
+
 - name: OVH CDN
   headers:
     - Server: OVHcdn
@@ -855,6 +905,10 @@
   asns:
     - 16276
     - 35540
+
+- name: PCCW
+
+- name: Pacnet
 
 - name: QUIC.cloud
   domains:
@@ -887,6 +941,8 @@
     - "**.qnydns.com"
     - "**.qnqcdn.net"
     - "**.hiecheimaetu.com"
+
+- name: Rackspace
 
 - name: Quantil
   domains:
@@ -934,9 +990,17 @@
     - "**.sinasws.com"
     - "**.saebbs.com"
 
+- name: SingTel
+
 - name: Sitestar
   domains:
     - "**.websitecname.cn"
+
+- name: SK Broadband
+
+- name: SoftLayer
+
+- name: Speedera
 
 - name: SpeedyCloud CDN
   domains:
@@ -963,6 +1027,8 @@
   domains:
     - "**.p2cdn.com"
     - "**.00cdn.com"
+
+- name: StaticFile
 
 - name: SteamCDN
   domains:
@@ -1041,6 +1107,14 @@
 - name: Telefonica # now defunct. See: https://www.cdnhandbook.com/providers/telefonica/
   domains:
     - "**.cdn.telefonica.com"
+
+- name: Telenor
+
+- name: TeliaSonera
+
+- name: Telstra
+
+- name: Telus
 
 - name: Tencent Cloud
   domains:
@@ -1303,6 +1377,8 @@
     - "**.ctdns.cn"
     - "**.ctyunapi.cn"
 
+- name: TinyCDN
+
 - name: TurboBytes # out of business. See https://www.cdnplanet.com/blog/turbobytes-multi-cdn-made-easy/
   domains:
     - "**clients.turbobytes.net"
@@ -1402,6 +1478,8 @@
     - "**.ibytedtos.com"
     - "**.douyincdn.com"
     - "**.tiktokcdn.com"
+
+- name: WebMoi
 
 - name: Western Digital
   domains:
