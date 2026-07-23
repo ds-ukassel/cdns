@@ -117,7 +117,7 @@
       "**.queniugslb.com.cn",
       "**.edgegslb.cn",
       "**.alidns.*",
-      "**:queniujq.cn"
+      "**.queniujq.cn"
     ],
     "headers": [
       {
@@ -202,7 +202,6 @@
       "**.awsglobalaccelerator.com",
       "**.awsstatic.com",
       "**.aws.dev",
-      "**.omtrdc.net",
       "**.a2z.com",
       "**.amazonaws.com.cn"
     ],
@@ -1007,7 +1006,7 @@
   {
     "name": "iQIYI CDN",
     "domains": [
-      "**:71edge.com"
+      "**.71edge.com"
     ]
   },
   {
@@ -1804,7 +1803,7 @@
       "**.tencentsmhuc.*",
       "**.tencentsmhuc.com.cn",
       "**.tencenttcr.*",
-      "**:tencenttcr.com.cn",
+      "**.tencenttcr.com.cn",
       "**.tencenttione.com",
       "**.tencentvpc.*",
       "**.tencentvpc.com.cn",
