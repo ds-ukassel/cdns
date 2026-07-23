@@ -339,6 +339,9 @@
     ]
   },
   {
+    "name": "Bharti Airtel"
+  },
+  {
     "name": "Bilibili",
     "domains": [
       "**bilicdn**",
@@ -363,6 +366,15 @@
     "domains": [
       "**bluehatnetwork.com"
     ]
+  },
+  {
+    "name": "BootCSS"
+  },
+  {
+    "name": "BootstrapCDN"
+  },
+  {
+    "name": "BT Group"
   },
   {
     "name": "BunnyCDN",
@@ -469,6 +481,18 @@
     ]
   },
   {
+    "name": "CDNJS"
+  },
+  {
+    "name": "CDNLion"
+  },
+  {
+    "name": "CDNsun"
+  },
+  {
+    "name": "CDNvideo"
+  },
+  {
     "name": "CDN Union",
     "domains": [
       "**.cdnunion.*"
@@ -541,6 +565,9 @@
     ]
   },
   {
+    "name": "CloudCache"
+  },
+  {
     "name": "Cloudflare",
     "domains": [
       "**.cloudflare.*",
@@ -593,16 +620,31 @@
     ]
   },
   {
+    "name": "CloudLayer"
+  },
+  {
+    "name": "CloudOYE"
+  },
+  {
     "name": "Coding Pages",
     "domains": [
       "**.coding.*"
     ]
   },
   {
+    "name": "Coral"
+  },
+  {
+    "name": "Cotendo"
+  },
+  {
     "name": "DDoS",
     "domains": [
       "**.2cname.com"
     ]
+  },
+  {
+    "name": "Distil"
   },
   {
     "name": "Dnion",
@@ -696,6 +738,9 @@
         "Express-CDN-Request-ID": null
       }
     ]
+  },
+  {
+    "name": "Facebook"
   },
   {
     "name": "Fastly",
@@ -872,7 +917,7 @@
     ]
   },
   {
-    "name": "Hibernia",
+    "name": "HiberniaCDN",
     "domains": [
       "**hiberniacdn.com"
     ],
@@ -885,6 +930,9 @@
     "domains": [
       "*.hwcdn.*"
     ]
+  },
+  {
+    "name": "HP Cloud Services"
   },
   {
     "name": "Huawei",
@@ -994,6 +1042,12 @@
     ]
   },
   {
+    "name": "JQuery"
+  },
+  {
+    "name": "JsDelivr"
+  },
+  {
     "name": "KeyCDN",
     "domains": [
       "*.kxcdn.com"
@@ -1069,6 +1123,9 @@
     ]
   },
   {
+    "name": "LinkedIn"
+  },
+  {
     "name": "Linking Cloud",
     "domains": [
       "**.lccdn.org"
@@ -1110,10 +1167,16 @@
     ]
   },
   {
+    "name": "MegaFon"
+  },
+  {
     "name": "Merlin CDN",
     "domains": [
       "**merlin**"
     ]
+  },
+  {
+    "name": "MetaCDN"
   },
   {
     "name": "Microsoft Azure CDN",
@@ -1206,6 +1269,12 @@
     ]
   },
   {
+    "name": "NACEVI"
+  },
+  {
+    "name": "NetDNA"
+  },
+  {
     "name": "NetEase",
     "domains": [
       "**.126.net",
@@ -1242,6 +1311,12 @@
     ]
   },
   {
+    "name": "Octoshape"
+  },
+  {
+    "name": "OnApp"
+  },
+  {
     "name": "OVH CDN",
     "headers": [
       {
@@ -1258,6 +1333,12 @@
       16276,
       35540
     ]
+  },
+  {
+    "name": "PCCW"
+  },
+  {
+    "name": "Pacnet"
   },
   {
     "name": "QUIC.cloud",
@@ -1305,6 +1386,9 @@
       "**.qnqcdn.net",
       "**.hiecheimaetu.com"
     ]
+  },
+  {
+    "name": "Rackspace"
   },
   {
     "name": "Quantil",
@@ -1378,10 +1462,22 @@
     ]
   },
   {
+    "name": "SingTel"
+  },
+  {
     "name": "Sitestar",
     "domains": [
       "**.websitecname.cn"
     ]
+  },
+  {
+    "name": "SK Broadband"
+  },
+  {
+    "name": "SoftLayer"
+  },
+  {
+    "name": "Speedera"
   },
   {
     "name": "SpeedyCloud CDN",
@@ -1425,6 +1521,9 @@
       "**.p2cdn.com",
       "**.00cdn.com"
     ]
+  },
+  {
+    "name": "StaticFile"
   },
   {
     "name": "SteamCDN",
@@ -1545,6 +1644,18 @@
     "domains": [
       "**.cdn.telefonica.com"
     ]
+  },
+  {
+    "name": "Telenor"
+  },
+  {
+    "name": "TeliaSonera"
+  },
+  {
+    "name": "Telstra"
+  },
+  {
+    "name": "Telus"
   },
   {
     "name": "Tencent Cloud",
@@ -1813,6 +1924,9 @@
     ]
   },
   {
+    "name": "TinyCDN"
+  },
+  {
     "name": "TurboBytes",
     "domains": [
       "**clients.turbobytes.net",
@@ -1932,6 +2046,9 @@
       "**.douyincdn.com",
       "**.tiktokcdn.com"
     ]
+  },
+  {
+    "name": "WebMoi"
   },
   {
     "name": "Western Digital",
