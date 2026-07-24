@@ -99,3 +99,4 @@ Match response headers against the patterns according to the [Header Pattern rul
   - Information about some CDNs
 - [IPInfo](https://ipinfo.io/)
   - Information about ASNs used by CDNs
+- [CDN-CNAME-Domain](https://github.com/u9sky/cdn-cname-domain/blob/main/cdn.yml)
