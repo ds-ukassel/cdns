@@ -25,6 +25,9 @@ include = [
   "dist/cdns.json",
 ]
 
+[project.scripts]
+ranges = "ranges.main:main"
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
