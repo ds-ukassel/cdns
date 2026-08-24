@@ -1387,7 +1387,10 @@
     ]
   },
   {
-    "name": "Rackspace"
+    "name": "Rackspace",
+    "domains": [
+      "**.raxcdn.com"
+    ]
   },
   {
     "name": "Quantil",
