@@ -160,19 +160,19 @@ class OVHParser(Parser):
                     ipv4.add(cell_text)
         return ipv4, ipv6
 
-
 PARSERS = {
-    "Cloudflare": SplitLinesParser,
-    "Amazon CloudFront": AmazonCFParser,
     "Amazon AWS": AmazonAWSParser,
-    "Fastly": FastlyParser,
+    "Amazon CloudFront": AmazonCFParser,
     "BunnyCDN": SplitLinesParser,
-    "Imperva": ImpervaParser,
     "CacheFly": SplitLinesParser,
-    "QuicCloud": QuicCloudParser,
+    "Cloudflare": SplitLinesParser,
+    "Fastly": FastlyParser,
     "Google Cloud": GoogleCloudParser,
+    "Imperva": ImpervaParser,
     "Medianova": SplitLinesParser,
     "Microsoft Azure CDN": MicrosoftParser,
-    "Sucuri": SucuriParser,  # Currently unused because of 503
     "OVH CDN": OVHParser,
+    "QuicCloud": QuicCloudParser,
+    "Sucuri": SucuriParser,  # Currently unused because of 503
 }
+
