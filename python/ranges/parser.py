@@ -58,9 +58,13 @@ class MicrosoftParser(Parser):
 class SplitLinesParser(Parser):
     @staticmethod
     def parse(content: str):
-        return (
+        ip4, ip6 = (
             {line for line in content.splitlines() if ":" not in line},
             {line for line in content.splitlines() if ":" in line},
+        )
+        return (
+            {ip if "/" in ip else f"{ip}/32" for ip in ip4},
+            {ip if "/" in ip else f"{ip}/128" for ip in ip6},
         )
 
 
