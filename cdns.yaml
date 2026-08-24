@@ -1,5 +1,7 @@
 # yaml-language-server: $schema=schemas/cdns.schema.json
 
+- name: AdvancedHosting
+
 - name: afxcdn.net
   domains:
     - "**afxcdn.net"
@@ -309,6 +311,8 @@
       url: 'https://api.bunny.net/mc/nodes/plain'
   asns:
     - 200325
+
+- name: BytePlus
 
 - name: CacheFly
   domains:
