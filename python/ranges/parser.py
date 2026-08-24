@@ -164,6 +164,20 @@ class OVHParser(Parser):
                     ipv4.add(cell_text)
         return ipv4, ipv6
 
+class F5Parser(Parser):
+    @staticmethod
+    def parse(content: str):
+        data, _ = content.split("### Public IPv4 addresses for F5 secondary DNS zone transfer", maxsplit=1)
+        ips = set()
+        for line in data.splitlines():
+            if line and line[0].isdigit():
+                ips.add(line.strip())
+
+        ipv4 = {ip for ip in ips if ":" not in ip}
+        ipv6 = {ip for ip in ips if ":" in ip}
+        return ipv4, ipv6
+
+
 PARSERS = {
     "Akamai": SplitLinesParser,
     "Amazon AWS": AmazonAWSParser,
@@ -171,6 +185,7 @@ PARSERS = {
     "BunnyCDN": SplitLinesParser,
     "CacheFly": SplitLinesParser,
     "Cloudflare": SplitLinesParser,
+    "F5": F5Parser,
     "Fastly": FastlyParser,
     "Google Cloud": GoogleCloudParser,
     "Imperva": ImpervaParser,

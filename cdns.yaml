@@ -569,7 +569,7 @@
 - name: F5
   ranges:
     - range_type: combined
-      url: 'https://docs.cloud.f5.com/docs-v2/platform/reference/network-cloud-ref'
+      url: 'https://docs.cloud.f5.com/docs-v2/downloads/platform/reference/network-cloud-ref/ips-domains.txt'
 
 - name: Facebook
 
