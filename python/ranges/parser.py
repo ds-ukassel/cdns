@@ -185,6 +185,14 @@ class GCoreParser(Parser):
         ipv6 = set(data.get("addresses_v6", []))
         return ipv4, ipv6
 
+class MedianovaParser(Parser):
+    @staticmethod
+    def parse(content: str):
+        data = json.loads(content).get("result", {})
+        ipv4 = set(data.get("ipv4_cidrs", []))
+        ipv6 = set(data.get("ipv6_cidrs", []))
+        return ipv4, ipv6
+
 PARSERS = {
     "Akamai": SplitLinesParser,
     "Amazon AWS": AmazonAWSParser,
@@ -197,7 +205,7 @@ PARSERS = {
     "G-Core Labs": GCoreParser,
     "Google Cloud": GoogleCloudParser,
     "Imperva": ImpervaParser,
-    "Medianova": SplitLinesParser,
+    "Medianova": MedianovaParser,
     "Microsoft Azure CDN": MicrosoftParser,
     "OVH CDN": OVHParser,
     "QuicCloud": QuicCloudParser,

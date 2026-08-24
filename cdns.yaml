@@ -849,10 +849,8 @@
   headers:
     - X-Medianova-Cache:
   ranges:
-    - range_type: 'combined'
-      url: 'https://cloud.medianova.com/api/v1/ip/addresses-txt'
     - range_type: combined
-      url: 'https://cloud.medianova.com/api/v1/ip/blocks-list' # potentially more accurate than the txt file
+      url: 'https://cloud.medianova.com/api/v1/ip/blocks-list' # alt: https://cloud.medianova.com/api/v1/ip/addresses-txt
   asns:
     - 21245
 
