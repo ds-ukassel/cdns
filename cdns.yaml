@@ -942,6 +942,8 @@
     - "**.hiecheimaetu.com"
 
 - name: Rackspace
+  domains:
+    - "**.raxcdn.com"
 
 - name: Quantil
   domains:
