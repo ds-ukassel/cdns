@@ -74,14 +74,36 @@ Header patterns have a few rules:
 - Header keys are case-insensitive, but values are case-sensitive.
 
 
-## API
+## Python API
+
+```python
+def compile_domains(domains: list[str]) -> Pattern:
+    ...
+def compile_domain(domain: str) -> Pattern:
+    ...
+```
+
+([source](python/cdns/domains.py)):
+Compile domain patterns to a RegExp according to the [Domain Pattern rules](#regex-equivalents).
+
+```python
+def matches(headers: Dict[str, str], matcher: Dict[str, Optional[str]]) -> bool:
+    ...
+def match_headers(headers: Dict[str, str], matchers: List[Dict[str, Optional[str]]]) -> Dict[str, str]:
+    ...
+```
+
+([source](python/cdns/headers.py)):
+Match response headers against the patterns according to the [Header Pattern rules](#header-patterns).
+
+## TS API
 
 ```ts
 function compileDomains(domains: string[]): RegExp
 function compileDomain(domain: string): RegExp
 ```
 ([source](src/domains.ts)):
-Compile domain patterns to a RegExp according to the [Domain Pattern rules](#domain-patterns).
+Compile domain patterns to a RegExp according to the [Domain Pattern rules](#regex-equivalents).
 
 ```ts
 function matchHeaders(headers: Record<string, string>, patterns: Record<string, string | null>[]
