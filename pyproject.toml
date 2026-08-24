@@ -25,6 +25,13 @@ include = [
   "dist/cdns.json",
 ]
 
+[project.optional-dependencies]
+ranges = [
+  "requests~=2.34.2",
+  "clickhouse-connect>=1.3.0",
+  "beautifulsoup4>=4.15.0",
+]
+
 [project.scripts]
 ranges = "ranges.main:main"
 
@@ -45,11 +52,6 @@ lint = [
 dev = [
   { include-group = "test" },
   { include-group = "lint" },
-
-  # Ranges
-  "requests~=2.34.2",
-  "clickhouse-connect>=1.3.0",
-  "beautifulsoup4>=4.15.0",
 
   "black>=26.5.1",
 ]
