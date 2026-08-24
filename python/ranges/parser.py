@@ -177,6 +177,13 @@ class F5Parser(Parser):
         ipv6 = {ip for ip in ips if ":" in ip}
         return ipv4, ipv6
 
+class GCoreParser(Parser):
+    @staticmethod
+    def parse(content: str):
+        data = json.loads(content)
+        ipv4 = set(data.get("addresses", []))
+        ipv6 = set(data.get("addresses_v6", []))
+        return ipv4, ipv6
 
 PARSERS = {
     "Akamai": SplitLinesParser,
@@ -187,6 +194,7 @@ PARSERS = {
     "Cloudflare": SplitLinesParser,
     "F5": F5Parser,
     "Fastly": FastlyParser,
+    "G-Core Labs": GCoreParser,
     "Google Cloud": GoogleCloudParser,
     "Imperva": ImpervaParser,
     "Medianova": SplitLinesParser,
