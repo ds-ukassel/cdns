@@ -165,6 +165,7 @@ class OVHParser(Parser):
         return ipv4, ipv6
 
 PARSERS = {
+    "Akamai": SplitLinesParser,
     "Amazon AWS": AmazonAWSParser,
     "Amazon CloudFront": AmazonCFParser,
     "BunnyCDN": SplitLinesParser,
