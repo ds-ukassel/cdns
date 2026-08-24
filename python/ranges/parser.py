@@ -208,6 +208,7 @@ PARSERS = {
     "Medianova": MedianovaParser,
     "Microsoft Azure CDN": MicrosoftParser,
     "OVH CDN": OVHParser,
+    "ParsPack": SplitLinesParser,
     "QuicCloud": QuicCloudParser,
     "Sucuri": SucuriParser,  # Currently unused because of 503
 }
