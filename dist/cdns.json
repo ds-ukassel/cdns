@@ -1,5 +1,8 @@
 [
   {
+    "name": "AdvancedHosting"
+  },
+  {
     "name": "afxcdn.net",
     "domains": [
       "**afxcdn.net"
@@ -19,7 +22,9 @@
       "*.akagtm.org",
       "*.akamaistream.net",
       "*.akamaized.net",
-      "*.akamaihd.net"
+      "*.akamaihd.net",
+      "**srip.net",
+      "**edgefcs.net"
     ],
     "headers": [
       {
@@ -440,6 +445,9 @@
     ]
   },
   {
+    "name": "BytePlus"
+  },
+  {
     "name": "CacheFly",
     "domains": [
       "*.cachefly.net"
@@ -819,7 +827,10 @@
     ]
   },
   {
-    "name": "Facebook"
+    "name": "Facebook",
+    "domains": [
+      "**fbcdn.net"
+    ]
   },
   {
     "name": "Fastly",
@@ -930,7 +941,9 @@
       "**.googlesyndication.com",
       "**.youtube.*",
       "*.googleusercontent.com",
-      "**.doubleclick.net"
+      "**.doubleclick.net",
+      "**.gstatic.com",
+      "**.googleapis.com"
     ],
     "headers": [
       {
@@ -1283,7 +1296,9 @@
       "**msedge**",
       "*.azureedge.net",
       "*.mschcdn.com",
-      "*.v0cdn.net"
+      "*.v0cdn.net",
+      "**azurewebsites.net",
+      "**windows.net"
     ],
     "headers": [
       {

@@ -20,6 +20,8 @@
     - "*.akamaistream.net"
     - "*.akamaized.net"
     - "*.akamaihd.net"
+    - "**srip.net"
+    - "**edgefcs.net"
   headers:
     - X-Akamai-Request-ID:
     - X-Akamai-Transformed:
@@ -576,6 +578,8 @@
       url: 'https://docs.cloud.f5.com/docs-v2/downloads/platform/reference/network-cloud-ref/ips-domains.txt'
 
 - name: Facebook
+  domains:
+    - "**fbcdn.net"
 
 - name: Fastly
   domains:
@@ -634,6 +638,8 @@
     - "**.youtube.*"
     - "*.googleusercontent.com"
     - "**.doubleclick.net"
+    - "**.gstatic.com"
+    - "**.googleapis.com"
   headers:
     # - Server: Google Frontend
     - Server: Google Cloud CDN
@@ -874,6 +880,8 @@
     - "*.azureedge.net"
     - "*.mschcdn.com"
     - "*.v0cdn.net"
+    - "**azurewebsites.net"
+    - "**windows.net"
   headers:
     - X-Azure-Ref:
     - Server: Azure Front Door
