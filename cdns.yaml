@@ -1085,9 +1085,9 @@
 
 - name: SK Broadband
 
-- name: SoftLayer
+- name: SoftLayer # Apparently bought by IBM in 2013 https://www.ibm.com/cloud-computing/SoftLayer_Acquisition_Announcement_FAQs.pdf
 
-- name: Speedera
+- name: Speedera # Apparently bought by Akamai in 2005 https://www.networkworld.com/article/862386/software-buyout-ends-akamai-speedera-feud.html
 
 - name: SpeedyCloud CDN
   domains:
@@ -1200,12 +1200,16 @@
     - "**.cdn.telefonica.com"
 
 - name: Telenor
+  website: https://www.telenor.com/
 
-- name: TeliaSonera
+- name: TeliaSonera # seems to use Akamai
+  website: https://www.telia.fi/operators/palveluratkaisut/sisallonjakopalvelu
 
-- name: Telstra
+- name: Telstra # Maybe not even a CDN
+  website: https://www.telstra.com.au
 
-- name: Telus
+- name: Telus # Maybe not even a CDN itself but using CloudFlare? https://www.cloudflare.com/case-studies/telus/
+  website: https://www.telus.com/en
 
 - name: Tencent Cloud
   domains:
@@ -1469,6 +1473,9 @@
     - "**.ctyunapi.cn"
 
 - name: TinyCDN
+  website: https://tinycdn.cloud/en/
+  domains:
+    - "tinycdn.cloud"
 
 - name: TurboBytes # out of business. See https://www.cdnplanet.com/blog/turbobytes-multi-cdn-made-easy/
   domains:
@@ -1484,11 +1491,15 @@
     - "**.txcdn.cn"
 
 - name: UCloud CDN
+  website: https://www.ucloud-global.com/en/docs/ucdn
   domains:
     - "**.ucloud.cn"
     - "**.ucloud.com.cn"
     - "**.cdndo.com"
     - "**.ucloudgda.com"
+  asns:
+    - 59077
+    - 135377
 
 - name: Vangen CDN # YaoCDN
   domains:
