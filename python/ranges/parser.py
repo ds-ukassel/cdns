@@ -58,9 +58,13 @@ class MicrosoftParser(Parser):
 class SplitLinesParser(Parser):
     @staticmethod
     def parse(content: str):
-        return (
+        ip4, ip6 = (
             {line for line in content.splitlines() if ":" not in line},
             {line for line in content.splitlines() if ":" in line},
+        )
+        return (
+            {ip if "/" in ip else f"{ip}/32" for ip in ip4},
+            {ip if "/" in ip else f"{ip}/128" for ip in ip6},
         )
 
 
@@ -160,19 +164,52 @@ class OVHParser(Parser):
                     ipv4.add(cell_text)
         return ipv4, ipv6
 
+class F5Parser(Parser):
+    @staticmethod
+    def parse(content: str):
+        data, _ = content.split("### Public IPv4 addresses for F5 secondary DNS zone transfer", maxsplit=1)
+        ips = set()
+        for line in data.splitlines():
+            if line and line[0].isdigit():
+                ips.add(line.strip())
+
+        ipv4 = {ip for ip in ips if ":" not in ip}
+        ipv6 = {ip for ip in ips if ":" in ip}
+        return ipv4, ipv6
+
+class GCoreParser(Parser):
+    @staticmethod
+    def parse(content: str):
+        data = json.loads(content)
+        ipv4 = set(data.get("addresses", []))
+        ipv6 = set(data.get("addresses_v6", []))
+        return ipv4, ipv6
+
+class MedianovaParser(Parser):
+    @staticmethod
+    def parse(content: str):
+        data = json.loads(content).get("result", {})
+        ipv4 = set(data.get("ipv4_cidrs", []))
+        ipv6 = set(data.get("ipv6_cidrs", []))
+        return ipv4, ipv6
 
 PARSERS = {
-    "Cloudflare": SplitLinesParser,
-    "Amazon CloudFront": AmazonCFParser,
+    "Akamai": SplitLinesParser,
     "Amazon AWS": AmazonAWSParser,
-    "Fastly": FastlyParser,
+    "Amazon CloudFront": AmazonCFParser,
     "BunnyCDN": SplitLinesParser,
-    "Imperva": ImpervaParser,
     "CacheFly": SplitLinesParser,
-    "QuicCloud": QuicCloudParser,
+    "Cloudflare": SplitLinesParser,
+    "F5": F5Parser,
+    "Fastly": FastlyParser,
+    "G-Core Labs": GCoreParser,
     "Google Cloud": GoogleCloudParser,
-    "Medianova": SplitLinesParser,
+    "Imperva": ImpervaParser,
+    "Medianova": MedianovaParser,
     "Microsoft Azure CDN": MicrosoftParser,
-    "Sucuri": SucuriParser,  # Currently unused because of 503
     "OVH CDN": OVHParser,
+    "ParsPack": SplitLinesParser,
+    "QuicCloud": QuicCloudParser,
+    "Sucuri": SucuriParser,  # Currently unused because of 503
 }
+

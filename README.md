@@ -122,4 +122,8 @@ Match response headers against the patterns according to the [Header Pattern rul
 - [IPInfo](https://ipinfo.io/)
   - Information about ASNs used by CDNs
 - [CDN-CNAME-Domain](https://github.com/u9sky/cdn-cname-domain/blob/main/cdn.yml)
+- [cdn-ip-database](https://github.com/mansourjabin/cdn-ip-database) ([MIT](https://github.com/mansourjabin/cdn-ip-database/blob/main/LICENSE))
+  - [sources.json](https://github.com/mansourjabin/cdn-ip-database/blob/main/data/sources.json)
+- [Third Party Web](https://github.com/patrickhulce/third-party-web) ([MIT](https://github.com/patrickhulce/third-party-web/blob/master/LICENSE))
+  - [entities.json](https://github.com/patrickhulce/third-party-web/blob/master/data/entities.js)
 - [Netify](https://www.netify.ai/resources/cdn)
