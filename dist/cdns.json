@@ -65,6 +65,7 @@
       34164,
       35994,
       36183,
+      43639,
       49846,
       63949,
       200005,
@@ -486,7 +487,8 @@
     ],
     "asns": [
       36408,
-      38107
+      38107,
+      43303
     ]
   },
   {
@@ -506,7 +508,11 @@
   },
   {
     "name": "CDNvideo",
-    "website": "https://www.cdnvideo.com/"
+    "website": "https://www.cdnvideo.com/",
+    "asns": [
+      57363,
+      204720
+    ]
   },
   {
     "name": "CDN Union",
@@ -729,7 +735,10 @@
       12980,
       13965,
       13979,
+      14153,
+      14210,
       14654,
+      15133,
       15840,
       18289,
       19957,
@@ -806,8 +815,10 @@
       }
     ],
     "asns": [
+      895,
+      14618,
       54113,
-      14618
+      394192
     ]
   },
   {
@@ -987,7 +998,8 @@
     "asns": [
       55990,
       63727,
-      131444
+      131444,
+      149640
     ]
   },
   {
@@ -1159,6 +1171,10 @@
       "**.llnwd.net",
       "**.unud.net",
       "**.lldns.net"
+    ],
+    "asns": [
+      22822,
+      26506
     ]
   },
   {
@@ -1452,7 +1468,10 @@
   },
   {
     "name": "Qwilt",
-    "website": "https://qwilt.com/"
+    "website": "https://qwilt.com/",
+    "asns": [
+      20253
+    ]
   },
   {
     "name": "Reblaze",
@@ -1988,7 +2007,10 @@
   },
   {
     "name": "Transparent Edge",
-    "website": "https://www.transparentedge.eu/en/"
+    "website": "https://www.transparentedge.eu/en/",
+    "asns": [
+      214080
+    ]
   },
   {
     "name": "TurboBytes",
