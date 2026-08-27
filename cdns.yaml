@@ -239,7 +239,7 @@
   asns:
     - 23393
 
-- name: Bharti Airtel
+- name: Bharti Airtel # cooparate with Qwilt? See https://telecom.economictimes.indiatimes.com/news/airtel-enters-rs-7000-crore-cdn-service-market-ahead-of-5g-launch/93908314
 
 - name: Bilibili
   domains:
