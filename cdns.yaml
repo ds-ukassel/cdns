@@ -588,8 +588,8 @@
 - name: EdgeNext
   website: https://www.edgenext.com/
   asns:
-    - 149981
     - 139057
+    - 149981
 
 - name: Edgio # Only for completeness, see limelight below
 
