@@ -43,6 +43,7 @@
     - 34164
     - 35994
     - 36183
+    - 43639
     - 49846
     - 63949
     - 200005
@@ -319,7 +320,7 @@
   asns:
     - 60068
 
-- name: CDNetworks
+- name: CDNetworks # belongs to wangsu? see https://www.netify.ai/resources/cdn/wangsu
   domains:
     - "**panthercdn.com"
     - "**cdngc.net"
@@ -333,6 +334,7 @@
   asns:
     - 36408
     - 38107
+    - 43303
 
 - name: CDNify
   domains:
@@ -346,6 +348,9 @@
 
 - name: CDNvideo
   website: https://www.cdnvideo.com/
+  asns:
+    - 57363
+    - 204720
 
 - name: CDN Union
   domains:
@@ -514,7 +519,10 @@
     - 12980
     - 13965
     - 13979
+    - 14153
+    - 14210
     - 14654
+    - 15133
     - 15840
     - 18289
     - 19957
@@ -559,8 +567,10 @@
     - range_type: 'combined'
       url: 'https://api.fastly.com/public-ip-list'
   asns:
-    - 54113
+    - 895
     - 14618
+    - 54113
+    - 394192
 
 - name: G-Core Labs
   website: https://gcore.com/cdn
@@ -678,6 +688,7 @@
     - 55990
     - 63727
     - 131444
+    - 149640
 
 - name: Imperva # Incapsula is part of Imperva
   domains:
@@ -792,6 +803,9 @@
     - "**.llnwd.net"
     - "**.unud.net"
     - "**.lldns.net"
+  asns:
+    - 22822
+    - 26506
 
 - name: LinkedIn
 
@@ -988,13 +1002,15 @@
 
 - name: Rackspace
 
-- name: Quantil
+- name: Quantil # belongs to wangsu? see https://www.netify.ai/resources/cdn/wangsu
   domains:
     - "**.mwcloudcdn.com"
     - "**.mwcname.com"
 
 - name: Qwilt
   website: https://qwilt.com/
+  asns:
+    - 20253
 
 - name: Reblaze
   headers:
@@ -1431,6 +1447,8 @@
 
 - name: Transparent Edge
   website: https://www.transparentedge.eu/en/
+  asns:
+    - 214080
 
 - name: TurboBytes # out of business. See https://www.cdnplanet.com/blog/turbobytes-multi-cdn-made-easy/
   domains:
