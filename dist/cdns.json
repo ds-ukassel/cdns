@@ -10,6 +10,7 @@
   },
   {
     "name": "Akamai",
+    "website": "https://www.akamai.com",
     "domains": [
       "**.akamai.**",
       "**akamaiedge.net",
@@ -114,6 +115,7 @@
   },
   {
     "name": "Alibaba Cloud CDN",
+    "website": "https://www.alibabacloud.com/de/product/content-delivery-network",
     "domains": [
       "**kunlun**",
       "**cdngslb**",
@@ -121,7 +123,7 @@
       "**.alicdn.*",
       "**.alivecdn.com",
       "**.tbcache.com",
-      "**+.edu-aliyun.com",
+      "**.edu-aliyun.com",
       "**.alyns.cn",
       "**.alysm.cn",
       "**.aliyunga.com",
@@ -189,6 +191,7 @@
   },
   {
     "name": "Amazon CloudFront",
+    "website": "https://aws.amazon.com/de/cloudfront/",
     "domains": [
       "*.cloudfront.net"
     ],
@@ -265,6 +268,10 @@
     ]
   },
   {
+    "name": "Apple CDN",
+    "website": "https://cache.edge.apple/"
+  },
+  {
     "name": "ArvanCloud",
     "headers": [
       {
@@ -305,6 +312,7 @@
   },
   {
     "name": "Baidu",
+    "website": "https://cloud.baidu.com/en/product/cdn.html",
     "asns": [
       38365,
       55967
@@ -320,6 +328,7 @@
   },
   {
     "name": "Baishan Cloud",
+    "website": "https://en.baishan.com/",
     "domains": [
       "**baishan**",
       "**bsccdn**",
@@ -338,7 +347,7 @@
       "**.crazyrtc.com",
       "**.baishan-cloud.*",
       "**.baicdnx.com",
-      "*+.scdncloud.com",
+      "*.scdncloud.com",
       "**.scdntop.com",
       "**.zzcdnx.com",
       "**.dolfincdnx.*",
@@ -417,6 +426,7 @@
   },
   {
     "name": "BunnyCDN",
+    "website": "https://bunny.net/cdn/",
     "domains": [
       "*.b-cdn.net"
     ],
@@ -445,10 +455,15 @@
     ]
   },
   {
+    "name": "Bytedance CDN",
+    "website": "https://www.bytedance.com/"
+  },
+  {
     "name": "BytePlus"
   },
   {
     "name": "CacheFly",
+    "website": "https://www.cachefly.com/",
     "domains": [
       "*.cachefly.net"
     ],
@@ -475,6 +490,7 @@
   },
   {
     "name": "CDN77",
+    "website": "https://www.cdn77.com/",
     "domains": [
       "**.cdn77.*"
     ],
@@ -519,7 +535,8 @@
     ],
     "asns": [
       36408,
-      38107
+      38107,
+      43303
     ]
   },
   {
@@ -538,7 +555,12 @@
     "name": "CDNsun"
   },
   {
-    "name": "CDNvideo"
+    "name": "CDNvideo",
+    "website": "https://www.cdnvideo.com/",
+    "asns": [
+      57363,
+      204720
+    ]
   },
   {
     "name": "CDN Union",
@@ -617,6 +639,7 @@
   },
   {
     "name": "Cloudflare",
+    "website": "https://www.cloudflare.com/products/cdn/",
     "domains": [
       "**.cloudflare.*",
       "*.cloudflare.net.in",
@@ -680,6 +703,13 @@
     ]
   },
   {
+    "name": "Conversant",
+    "website": "https://www.conversant.tv/",
+    "asns": [
+      132546
+    ]
+  },
+  {
     "name": "Coral"
   },
   {
@@ -727,6 +757,7 @@
   },
   {
     "name": "EdgeCast",
+    "website": "https://www.edgecast.io/",
     "domains": [
       "**systemcdn.net",
       "**edgecastcdn.net",
@@ -771,6 +802,8 @@
       12980,
       13965,
       13979,
+      14153,
+      14210,
       14654,
       15133,
       15840,
@@ -789,6 +822,7 @@
   },
   {
     "name": "EdgeNext",
+    "website": "https://www.edgenext.com/",
     "asns": [
       139057,
       149981
@@ -834,6 +868,7 @@
   },
   {
     "name": "Fastly",
+    "website": "https://www.fastly.com/products/cdn",
     "domains": [
       "**.fastly.**",
       "**fastlylb.net"
@@ -862,12 +897,15 @@
       }
     ],
     "asns": [
+      895,
+      14618,
       54113,
-      14618
+      394192
     ]
   },
   {
     "name": "G-Core Labs",
+    "website": "https://gcore.com/cdn",
     "domains": [
       "**.gcdn.co"
     ],
@@ -936,6 +974,7 @@
   },
   {
     "name": "Google Cloud CDN",
+    "website": "https://cloud.google.com/cdn",
     "domains": [
       "**.google.**",
       "**.googlesyndication.com",
@@ -1034,6 +1073,7 @@
   },
   {
     "name": "Huawei",
+    "website": "https://www.huaweicloud.com/eu/product/cdn.html",
     "domains": [
       "**cdnhwc**",
       "**hwclouds**",
@@ -1048,7 +1088,8 @@
     "asns": [
       55990,
       63727,
-      131444
+      131444,
+      149640
     ]
   },
   {
@@ -1156,6 +1197,7 @@
   },
   {
     "name": "KeyCDN",
+    "website": "https://www.keycdn.com/",
     "domains": [
       "*.kxcdn.com"
     ],
@@ -1173,6 +1215,7 @@
   },
   {
     "name": "Kingsoft",
+    "website": "https://en.ksyun.com/nv/product/CDN.html",
     "asns": [
       59019
     ],
@@ -1229,7 +1272,8 @@
       "**.lldns.net"
     ],
     "asns": [
-      22822
+      22822,
+      26506
     ]
   },
   {
@@ -1258,6 +1302,7 @@
   },
   {
     "name": "Medianova",
+    "website": "https://www.medianova.com/product/content-delivery-network/",
     "domains": [
       "**.mncdn.com"
     ],
@@ -1280,16 +1325,25 @@
     "name": "MegaFon"
   },
   {
+    "name": "Melbicom CDN",
+    "website": "https://www.melbicom.net/cdn/"
+  },
+  {
     "name": "Merlin CDN",
     "domains": [
       "**merlin**"
     ]
   },
   {
-    "name": "MetaCDN"
+    "name": "MetaCDN",
+    "website": "https://www.meta.com",
+    "domains": [
+      "**.fbcdn.net"
+    ]
   },
   {
     "name": "Microsoft Azure CDN",
+    "website": "https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview",
     "domains": [
       "*.vo.msecnd.net",
       "*.trafficmanager.net",
@@ -1393,6 +1447,10 @@
       "**.127.net",
       "**.nease.net"
     ]
+  },
+  {
+    "name": "Netflix CDN",
+    "website": "https://openconnect.netflix.com/en/"
   },
   {
     "name": "Netlify",
@@ -1519,6 +1577,13 @@
     "name": "Qrator Labs",
     "asns": [
       200449
+    ]
+  },
+  {
+    "name": "Qwilt",
+    "website": "https://qwilt.com/",
+    "asns": [
+      20253
     ]
   },
   {
@@ -1755,6 +1820,7 @@
   },
   {
     "name": "Tata communications",
+    "website": "https://cdn.tatacommunications.com/",
     "asns": [
       4755,
       6421,
@@ -1792,6 +1858,7 @@
   },
   {
     "name": "Tencent Cloud",
+    "website": "https://www.tencentcloud.com/products/cdn",
     "domains": [
       "**dayugslb**",
       "**tdnsv8**",
@@ -2049,6 +2116,7 @@
   },
   {
     "name": "Tianyi Cloud CDN",
+    "website": "https://www.chinatelecomglobal.com/",
     "domains": [
       "**.ctcdn.cn",
       "**.ctxcdn.cn",
@@ -2058,6 +2126,13 @@
   },
   {
     "name": "TinyCDN"
+  },
+  {
+    "name": "Transparent Edge",
+    "website": "https://www.transparentedge.eu/en/",
+    "asns": [
+      214080
+    ]
   },
   {
     "name": "TurboBytes",
@@ -2181,6 +2256,10 @@
     ]
   },
   {
+    "name": "Wangsu",
+    "website": "https://www.wangsu.com/"
+  },
+  {
     "name": "WebMoi"
   },
   {
@@ -2203,6 +2282,10 @@
       "**ay1.b.yahoo.com",
       "**.yimg.*"
     ]
+  },
+  {
+    "name": "Yandex CDN",
+    "website": "https://yandex.cloud/en/services/cdn"
   },
   {
     "name": "Yisu Cloud CDN",

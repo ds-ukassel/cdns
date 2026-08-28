@@ -126,3 +126,4 @@ Match response headers against the patterns according to the [Header Pattern rul
   - [sources.json](https://github.com/mansourjabin/cdn-ip-database/blob/main/data/sources.json)
 - [Third Party Web](https://github.com/patrickhulce/third-party-web) ([MIT](https://github.com/patrickhulce/third-party-web/blob/master/LICENSE))
   - [entities.json](https://github.com/patrickhulce/third-party-web/blob/master/data/entities.js)
+- [Netify](https://www.netify.ai/resources/cdn)
