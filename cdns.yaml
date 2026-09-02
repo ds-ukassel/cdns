@@ -260,9 +260,11 @@
   domains:
     - "**bluehatnetwork.com"
 
-- name: BootCSS
+- name: BootCSS # malicious links. See https://rdi.berkeley.edu/blog/polyfill/
 
 - name: BootstrapCDN
+  domains:
+    - "**.jsdelivr.net"
 
 - name: BT Group
 
@@ -325,12 +327,22 @@
     - "**.cdnify.io"
 
 - name: CDNJS
+  website: https://cdnjs.com/
+  domains:
+    - "**.cdnjs.cloudflare.com"
 
-- name: CDNLion
+- name: CDNLion # part of launchCDN
 
 - name: CDNsun
+  website: https://cdnsun.com/
+  domains:
+    - "**.cdnsun.org"
 
 - name: CDNvideo
+  website: https://www.cdnvideo.com/
+  domains:
+    - "**.cdnvideo.com"
+
 
 - name: CDN Union
   domains:
@@ -421,8 +433,12 @@
     - 400095
 
 - name: CloudLayer
+  website: https://cloudlayer.io/
+  domains:
+    - "**.cloudlayer.io"
 
 - name: CloudOYE
+  website: https://www.cloudoye.com/cloud/cdn
 
 - name: Coding Pages
   domains:
@@ -733,6 +749,9 @@
     - "**.hadns.net"
     - "**.hacdn.net"
     - "**.cachecn.com"
+
+- name: LaunchCDN
+  website: https://launchcdn.com/
 
 - name: LeaseWeb CDN
   asns:
