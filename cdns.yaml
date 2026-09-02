@@ -444,15 +444,15 @@
   domains:
     - "**.coding.*"
 
-- name: Coral
+- name: Coral # doesn't exist anymore. See: https://www.reddit.com/r/answers/comments/tkuudw/what_happened_to_coralcdn/?tl=de
 
-- name: Cotendo
+- name: Cotendo # acquired by akamai. See: https://en.wikipedia.org/wiki/Cotendo
 
 - name: DDoS
   domains:
     - "**.2cname.com"
 
-- name: Distil
+- name: Distil # acquired by imperva. See: https://www.distilnetworks.com
 
 - name: Dnion
   domains:
