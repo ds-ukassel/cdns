@@ -796,9 +796,12 @@
     - "**.kcdnvip.com"
     - "**.ksyuncdn-k1.com"
 
-- name: JQuery
+- name: JQuery # powered by fastly. See: https://releases.jquery.com/
 
 - name: JsDelivr
+  website: https://www.jsdelivr.com/
+  domains:
+    - "**.cdn.jsdelivr.net"
 
 - name: KeyCDN
   domains:
@@ -857,6 +860,9 @@
     - 22822
 
 - name: LinkedIn
+  website: https://www.linkedin.com/
+  domains:
+    - "**.licdn.com"
 
 - name: Linking Cloud
   domains:
