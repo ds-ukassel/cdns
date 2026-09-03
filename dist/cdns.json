@@ -1,5 +1,8 @@
 [
   {
+    "name": "AdvancedHosting"
+  },
+  {
     "name": "afxcdn.net",
     "domains": [
       "**afxcdn.net"
@@ -19,7 +22,9 @@
       "*.akagtm.org",
       "*.akamaistream.net",
       "*.akamaized.net",
-      "*.akamaihd.net"
+      "*.akamaihd.net",
+      "**srip.net",
+      "**edgefcs.net"
     ],
     "headers": [
       {
@@ -50,22 +55,57 @@
         "X-Akamai-Device-Characteristics": null
       }
     ],
+    "ranges": [
+      {
+        "range_type": "ipv4",
+        "url": "https://techdocs.akamai.com/property-manager/pdfs/akamai_ipv4_CIDRs.txt"
+      },
+      {
+        "range_type": "ipv6",
+        "url": "https://techdocs.akamai.com/property-manager/pdfs/akamai_ipv6_CIDRs.txt"
+      }
+    ],
     "asns": [
       12222,
       16625,
+      16702,
       17204,
+      18680,
+      18717,
+      20189,
       20940,
       21342,
+      21357,
+      21399,
+      22207,
+      22452,
+      23454,
+      23455,
+      23903,
       24319,
       26008,
+      30675,
+      31107,
       31108,
+      31109,
+      31110,
+      31377,
       32787,
+      33047,
       33905,
+      34850,
+      35204,
+      35993,
+      39836,
       34164,
       35994,
       36183,
+      43639,
       49846,
+      55409,
+      55770,
       63949,
+      133103,
       200005,
       213120,
       393234,
@@ -408,6 +448,9 @@
     ]
   },
   {
+    "name": "BytePlus"
+  },
+  {
     "name": "CacheFly",
     "domains": [
       "*.cachefly.net"
@@ -447,6 +490,12 @@
       },
       {
         "X-CDN": "CDN77"
+      }
+    ],
+    "ranges": [
+      {
+        "range_type": "combined",
+        "url": "https://prefixlists.tools.cdn77.com/public_lmax_prefixes.json"
       }
     ],
     "asns": [
@@ -663,6 +712,25 @@
     ]
   },
   {
+    "name": "DDoS-Guard",
+    "asns": [
+      57724
+    ]
+  },
+  {
+    "name": "Derak Cloud",
+    "ranges": [
+      {
+        "range_type": "ipv4",
+        "url": "https://api.derak.cloud/public/ipv4"
+      },
+      {
+        "range_type": "ipv6",
+        "url": "https://api.derak.cloud/public/ipv6"
+      }
+    ]
+  },
+  {
     "name": "Distil"
   },
   {
@@ -724,6 +792,7 @@
       13965,
       13979,
       14654,
+      15133,
       15840,
       18289,
       19957,
@@ -737,6 +806,16 @@
       28469,
       28521
     ]
+  },
+  {
+    "name": "EdgeNext",
+    "asns": [
+      139057,
+      149981
+    ]
+  },
+  {
+    "name": "Edgio"
   },
   {
     "name": "Express CDN",
@@ -759,7 +838,19 @@
     ]
   },
   {
-    "name": "Facebook"
+    "name": "F5",
+    "ranges": [
+      {
+        "range_type": "combined",
+        "url": "https://docs.cloud.f5.com/docs-v2/downloads/platform/reference/network-cloud-ref/ips-domains.txt"
+      }
+    ]
+  },
+  {
+    "name": "Facebook",
+    "domains": [
+      "**fbcdn.net"
+    ]
   },
   {
     "name": "Fastly",
@@ -838,6 +929,12 @@
         "X-GCL-User-Status": null
       }
     ],
+    "ranges": [
+      {
+        "range_type": "combined",
+        "url": "https://api.gcore.com/cdn/public-ip-list"
+      }
+    ],
     "asns": [
       59245,
       199524,
@@ -864,7 +961,9 @@
       "**.googlesyndication.com",
       "**.youtube.*",
       "*.googleusercontent.com",
-      "**.doubleclick.net"
+      "**.doubleclick.net",
+      "**.gstatic.com",
+      "**.googleapis.com"
     ],
     "headers": [
       {
@@ -1030,6 +1129,15 @@
     ]
   },
   {
+    "name": "IranServer",
+    "ranges": [
+      {
+        "range_type": "combined",
+        "url": "https://ips.f95.com/ip.txt"
+      }
+    ]
+  },
+  {
     "name": "JD Cloud",
     "domains": [
       "**.jcloudcs.com",
@@ -1143,6 +1251,9 @@
       "**.llnwd.net",
       "**.unud.net",
       "**.lldns.net"
+    ],
+    "asns": [
+      22822
     ]
   },
   {
@@ -1182,7 +1293,7 @@
     "ranges": [
       {
         "range_type": "combined",
-        "url": "https://cloud.medianova.com/api/v1/ip/addresses-txt"
+        "url": "https://cloud.medianova.com/api/v1/ip/blocks-list"
       }
     ],
     "asns": [
@@ -1209,7 +1320,9 @@
       "**msedge**",
       "*.azureedge.net",
       "*.mschcdn.com",
-      "*.v0cdn.net"
+      "*.v0cdn.net",
+      "**azurewebsites.net",
+      "**windows.net"
     ],
     "headers": [
       {
@@ -1364,6 +1477,15 @@
     "name": "Pacnet"
   },
   {
+    "name": "ParsPack",
+    "ranges": [
+      {
+        "range_type": "combined",
+        "url": "https://parspack.com/cdnips.txt"
+      }
+    ]
+  },
+  {
     "name": "QUIC.cloud",
     "domains": [
       "**.quic.cloud"
@@ -1422,6 +1544,15 @@
       "**.mwcloudcdn.com",
       "**.mwcname.com"
     ]
+  },
+  {
+    "name": "Qrator Labs",
+    "asns": [
+      200449
+    ]
+  },
+  {
+    "name": "Rackspace"
   },
   {
     "name": "Reblaze",
@@ -1563,6 +1694,12 @@
     ]
   },
   {
+    "name": "StormWall",
+    "asns": [
+      59796
+    ]
+  },
+  {
     "name": "Sucuri",
     "headers": [
       {
@@ -1672,16 +1809,20 @@
     ]
   },
   {
-    "name": "Telenor"
+    "name": "Telenor",
+    "website": "https://www.telenor.com/"
   },
   {
-    "name": "TeliaSonera"
+    "name": "TeliaSonera",
+    "website": "https://www.telia.fi/operators/palveluratkaisut/sisallonjakopalvelu"
   },
   {
-    "name": "Telstra"
+    "name": "Telstra",
+    "website": "https://www.telstra.com.au"
   },
   {
-    "name": "Telus"
+    "name": "Telus",
+    "website": "https://www.telus.com/en"
   },
   {
     "name": "Tencent Cloud",
@@ -1950,7 +2091,11 @@
     ]
   },
   {
-    "name": "TinyCDN"
+    "name": "TinyCDN",
+    "website": "https://tinycdn.cloud/en/",
+    "domains": [
+      "tinycdn.cloud"
+    ]
   },
   {
     "name": "TurboBytes",
@@ -1971,11 +2116,16 @@
   },
   {
     "name": "UCloud CDN",
+    "website": "https://www.ucloud-global.com/en/docs/ucdn",
     "domains": [
       "**.ucloud.cn",
       "**.ucloud.com.cn",
       "**.cdndo.com",
       "**.ucloudgda.com"
+    ],
+    "asns": [
+      59077,
+      135377
     ]
   },
   {
@@ -2082,6 +2232,12 @@
       "**.800cdn.com",
       "**.vhostgo.com",
       "**.gotoip55.com"
+    ]
+  },
+  {
+    "name": "X4B",
+    "asns": [
+      136165
     ]
   },
   {

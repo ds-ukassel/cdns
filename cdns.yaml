@@ -1,5 +1,7 @@
 # yaml-language-server: $schema=schemas/cdns.schema.json
 
+- name: AdvancedHosting
+
 - name: afxcdn.net
   domains:
     - "**afxcdn.net"
@@ -18,6 +20,8 @@
     - "*.akamaistream.net"
     - "*.akamaized.net"
     - "*.akamaihd.net"
+    - "**srip.net"
+    - "**edgefcs.net"
   headers:
     - X-Akamai-Request-ID:
     - X-Akamai-Transformed:
@@ -28,22 +32,52 @@
     - Edge-Control:
     - X-True-Cache-Key:
     - X-Akamai-Device-Characteristics:
+  ranges:
+    - range_type: ipv4
+      url: 'https://techdocs.akamai.com/property-manager/pdfs/akamai_ipv4_CIDRs.txt'
+    - range_type: ipv6
+      url: 'https://techdocs.akamai.com/property-manager/pdfs/akamai_ipv6_CIDRs.txt'
   asns:
     - 12222
     - 16625
+    - 16702
     - 17204
+    - 18680
+    - 18717
+    - 20189
     - 20940
     - 21342
+    - 21357
+    - 21399
+    - 22207
+    - 22452
+    - 23454
+    - 23455
+    - 23903
     - 24319
     - 26008
+    - 30675
+    - 31107
     - 31108
+    - 31109
+    - 31110
+    - 31377
     - 32787
+    - 33047
     - 33905
+    - 34850
+    - 35204
+    - 35993
+    - 39836
     - 34164
     - 35994
     - 36183
+    - 43639
     - 49846
+    - 55409
+    - 55770
     - 63949
+    - 133103
     - 200005
     - 213120
     - 393234
@@ -282,6 +316,8 @@
   asns:
     - 200325
 
+- name: BytePlus
+
 - name: CacheFly
   domains:
     - "*.cachefly.net"
@@ -304,6 +340,9 @@
     - Server: CDN77
     - CDN77: # TODO: Check if this is supposed to be a value or or a key
     - X-CDN: CDN77
+  ranges:
+    - range_type: 'combined'
+      url: 'https://prefixlists.tools.cdn77.com/public_lmax_prefixes.json'
   asns:
     - 60068
 
@@ -452,6 +491,17 @@
   domains:
     - "**.2cname.com"
 
+- name: DDoS-Guard
+  asns:
+    - 57724
+
+- name: Derak Cloud
+  ranges: # Seems like the ranges don't actually load
+    - range_type: ipv4
+      url: 'https://api.derak.cloud/public/ipv4'
+    - range_type: ipv6
+      url: 'https://api.derak.cloud/public/ipv6'
+
 - name: Distil # acquired by imperva. See: https://www.distilnetworks.com
 
 - name: Dnion
@@ -509,6 +559,7 @@
     - 13965
     - 13979
     - 14654
+    - 15133
     - 15840
     - 18289
     - 19957
@@ -522,6 +573,13 @@
     - 28469
     - 28521
 
+- name: EdgeNext
+  asns:
+    - 139057
+    - 149981
+
+- name: Edgio # Only for completeness, see limelight below
+
 - name: Express CDN # dont know if it exists.
   headers:
     - X-Express-CDN:
@@ -530,7 +588,14 @@
     - Express-CDN-Cache-Control:
     - Express-CDN-Request-ID:
 
+- name: F5
+  ranges:
+    - range_type: combined
+      url: 'https://docs.cloud.f5.com/docs-v2/downloads/platform/reference/network-cloud-ref/ips-domains.txt'
+
 - name: Facebook
+  domains:
+    - "**fbcdn.net"
 
 - name: Fastly
   domains:
@@ -565,6 +630,9 @@
     - X-GCL-User:
     - X-GCL-User-Request-ID:
     - X-GCL-User-Status:
+  ranges:
+    - range_type: combined
+      url: 'https://api.gcore.com/cdn/public-ip-list'
   asns:
     - 59245
     - 199524
@@ -586,6 +654,8 @@
     - "**.youtube.*"
     - "*.googleusercontent.com"
     - "**.doubleclick.net"
+    - "**.gstatic.com"
+    - "**.googleapis.com"
   headers:
     # - Server: Google Frontend
     - Server: Google Cloud CDN
@@ -697,6 +767,11 @@
   domains:
     - "**.71edge.com"
 
+- name: IranServer # Cannot confirm information and IP ranges
+  ranges:
+    - range_type: combined
+      url: 'https://ips.f95.com/ip.txt'
+
 - name: JD Cloud
   domains:
     - "**.jcloudcs.com"
@@ -778,6 +853,8 @@
     - "**.llnwd.net"
     - "**.unud.net"
     - "**.lldns.net"
+  asns:
+    - 22822
 
 - name: LinkedIn
 
@@ -802,8 +879,8 @@
   headers:
     - X-Medianova-Cache:
   ranges:
-    - range_type: 'combined'
-      url: 'https://cloud.medianova.com/api/v1/ip/addresses-txt'
+    - range_type: combined
+      url: 'https://cloud.medianova.com/api/v1/ip/blocks-list' # alt: https://cloud.medianova.com/api/v1/ip/addresses-txt
   asns:
     - 21245
 
@@ -823,6 +900,8 @@
     - "*.azureedge.net"
     - "*.mschcdn.com"
     - "*.v0cdn.net"
+    - "**azurewebsites.net"
+    - "**windows.net"
   headers:
     - X-Azure-Ref:
     - Server: Azure Front Door
@@ -929,6 +1008,11 @@
 
 - name: Pacnet
 
+- name: ParsPack
+  ranges:
+    - range_type: 'combined'
+      url: 'https://parspack.com/cdnips.txt'
+
 - name: QUIC.cloud
   domains:
     - "**.quic.cloud"
@@ -969,6 +1053,12 @@
   domains:
     - "**.mwcloudcdn.com"
     - "**.mwcname.com"
+
+- name: Qrator Labs
+  asns:
+    - 200449
+
+- name: Rackspace
 
 - name: Reblaze
   headers:
@@ -1019,9 +1109,9 @@
 
 - name: SK Broadband
 
-- name: SoftLayer
+- name: SoftLayer # Apparently bought by IBM in 2013 https://www.ibm.com/cloud-computing/SoftLayer_Acquisition_Announcement_FAQs.pdf
 
-- name: Speedera
+- name: Speedera # Apparently bought by Akamai in 2005 https://www.networkworld.com/article/862386/software-buyout-ends-akamai-speedera-feud.html
 
 - name: SpeedyCloud CDN
   domains:
@@ -1059,6 +1149,10 @@
     - "**.valvesoftware.com"
     - "**.pphimalayanrt.com"
     - "**.steamchina.com"
+
+- name: StormWall
+  asns:
+    - 59796
 
 - name: Sucuri
   headers:
@@ -1130,12 +1224,16 @@
     - "**.cdn.telefonica.com"
 
 - name: Telenor
+  website: https://www.telenor.com/
 
-- name: TeliaSonera
+- name: TeliaSonera # seems to use Akamai
+  website: https://www.telia.fi/operators/palveluratkaisut/sisallonjakopalvelu
 
-- name: Telstra
+- name: Telstra # Maybe not even a CDN
+  website: https://www.telstra.com.au
 
-- name: Telus
+- name: Telus # Maybe not even a CDN itself but using CloudFlare? https://www.cloudflare.com/case-studies/telus/
+  website: https://www.telus.com/en
 
 - name: Tencent Cloud
   domains:
@@ -1399,6 +1497,9 @@
     - "**.ctyunapi.cn"
 
 - name: TinyCDN
+  website: https://tinycdn.cloud/en/
+  domains:
+    - "tinycdn.cloud"
 
 - name: TurboBytes # out of business. See https://www.cdnplanet.com/blog/turbobytes-multi-cdn-made-easy/
   domains:
@@ -1414,11 +1515,15 @@
     - "**.txcdn.cn"
 
 - name: UCloud CDN
+  website: https://www.ucloud-global.com/en/docs/ucdn
   domains:
     - "**.ucloud.cn"
     - "**.ucloud.com.cn"
     - "**.cdndo.com"
     - "**.ucloudgda.com"
+  asns:
+    - 59077
+    - 135377
 
 - name: Vangen CDN # YaoCDN
   domains:
@@ -1507,6 +1612,10 @@
     - "**.800cdn.com"
     - "**.vhostgo.com"
     - "**.gotoip55.com"
+
+- name: X4B
+  asns:
+    - 136165
 
 - name: Yahoo
   domains:
