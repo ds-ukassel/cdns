@@ -273,7 +273,7 @@
   asns:
     - 23393
 
-- name: Bharti Airtel
+- name: Bharti Airtel # cooparate with Qwilt? See https://telecom.economictimes.indiatimes.com/news/airtel-enters-rs-7000-crore-cdn-service-market-ahead-of-5g-launch/93908314
 
 - name: Bilibili
   domains:
@@ -294,9 +294,11 @@
   domains:
     - "**bluehatnetwork.com"
 
-- name: BootCSS
+- name: BootCSS # malicious links. See https://rdi.berkeley.edu/blog/polyfill/
 
 - name: BootstrapCDN
+  domains:
+    - "**.jsdelivr.net"
 
 - name: BT Group
 
@@ -364,12 +366,22 @@
     - "**.cdnify.io"
 
 - name: CDNJS
+  website: https://cdnjs.com/
+  domains:
+    - "**.cdnjs.cloudflare.com"
 
-- name: CDNLion
+- name: CDNLion # part of launchCDN
 
 - name: CDNsun
+  website: https://cdnsun.com/
+  domains:
+    - "**.cdnsun.org"
 
 - name: CDNvideo
+  website: https://www.cdnvideo.com/
+  domains:
+    - "**.cdnvideo.com"
+
 
 - name: CDN Union
   domains:
@@ -460,16 +472,20 @@
     - 400095
 
 - name: CloudLayer
+  website: https://cloudlayer.io/
+  domains:
+    - "**.cloudlayer.io"
 
 - name: CloudOYE
+  website: https://www.cloudoye.com/cloud/cdn
 
 - name: Coding Pages
   domains:
     - "**.coding.*"
 
-- name: Coral
+- name: Coral # doesn't exist anymore. See: https://www.reddit.com/r/answers/comments/tkuudw/what_happened_to_coralcdn/?tl=de
 
-- name: Cotendo
+- name: Cotendo # acquired by akamai. See: https://en.wikipedia.org/wiki/Cotendo
 
 - name: DDoS
   domains:
@@ -486,7 +502,7 @@
     - range_type: ipv6
       url: 'https://api.derak.cloud/public/ipv6'
 
-- name: Distil
+- name: Distil # acquired by imperva. See: https://www.distilnetworks.com
 
 - name: Dnion
   domains:
@@ -689,7 +705,7 @@
   domains:
     - "**.herokuapp.com"
 
-- name: HiberniaCDN
+- name: HiberniaCDN # acquired by GTT Communicatons. See: https://www.lightreading.com/broadband/gtt-grabs-hibernia-networks-for-590m
   domains:
     - "**hiberniacdn.com"
   asns:
@@ -699,7 +715,8 @@
   domains:
     - "*.hwcdn.*"
 
-- name: HP Cloud Services
+- name: HP Cloud Services # shut down in 2016. See: https://www.businessinsider.com/hp-shutting-down-hp-helion-public-cloud-2015-10
+                          # cloud services online again but withour CDN. See: https://www.amaryllogroup.com/post/amaryllo-introduces-hp-cloud-storageservice-through-a-trademark-licensingagreement-with-hp-inc
 
 - name: Huawei
   domains:
@@ -808,6 +825,9 @@
     - "**.hadns.net"
     - "**.hacdn.net"
     - "**.cachecn.com"
+
+- name: LaunchCDN
+  website: https://launchcdn.com/
 
 - name: LeaseWeb CDN
   asns:
@@ -1024,6 +1044,10 @@
     - "**.qnydns.com"
     - "**.qnqcdn.net"
     - "**.hiecheimaetu.com"
+
+- name: Rackspace
+  domains:
+    - "**.raxcdn.com"
 
 - name: Quantil
   domains:

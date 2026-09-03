@@ -410,7 +410,10 @@
     "name": "BootCSS"
   },
   {
-    "name": "BootstrapCDN"
+    "name": "BootstrapCDN",
+    "domains": [
+      "**.jsdelivr.net"
+    ]
   },
   {
     "name": "BT Group"
@@ -529,16 +532,28 @@
     ]
   },
   {
-    "name": "CDNJS"
+    "name": "CDNJS",
+    "website": "https://cdnjs.com/",
+    "domains": [
+      "**.cdnjs.cloudflare.com"
+    ]
   },
   {
     "name": "CDNLion"
   },
   {
-    "name": "CDNsun"
+    "name": "CDNsun",
+    "website": "https://cdnsun.com/",
+    "domains": [
+      "**.cdnsun.org"
+    ]
   },
   {
-    "name": "CDNvideo"
+    "name": "CDNvideo",
+    "website": "https://www.cdnvideo.com/",
+    "domains": [
+      "**.cdnvideo.com"
+    ]
   },
   {
     "name": "CDN Union",
@@ -668,10 +683,15 @@
     ]
   },
   {
-    "name": "CloudLayer"
+    "name": "CloudLayer",
+    "website": "https://cloudlayer.io/",
+    "domains": [
+      "**.cloudlayer.io"
+    ]
   },
   {
-    "name": "CloudOYE"
+    "name": "CloudOYE",
+    "website": "https://www.cloudoye.com/cloud/cdn"
   },
   {
     "name": "Coding Pages",
@@ -1195,6 +1215,10 @@
     ]
   },
   {
+    "name": "LaunchCDN",
+    "website": "https://launchcdn.com/"
+  },
+  {
     "name": "LeaseWeb CDN",
     "asns": [
       60781
@@ -1506,6 +1530,12 @@
       "**.qnydns.com",
       "**.qnqcdn.net",
       "**.hiecheimaetu.com"
+    ]
+  },
+  {
+    "name": "Rackspace",
+    "domains": [
+      "**.raxcdn.com"
     ]
   },
   {
