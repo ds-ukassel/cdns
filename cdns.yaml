@@ -635,7 +635,7 @@
   domains:
     - "**.herokuapp.com"
 
-- name: HiberniaCDN
+- name: HiberniaCDN # acquired by GTT Communicatons. See: https://www.lightreading.com/broadband/gtt-grabs-hibernia-networks-for-590m
   domains:
     - "**hiberniacdn.com"
   asns:
@@ -645,7 +645,8 @@
   domains:
     - "*.hwcdn.*"
 
-- name: HP Cloud Services
+- name: HP Cloud Services # shut down in 2016. See: https://www.businessinsider.com/hp-shutting-down-hp-helion-public-cloud-2015-10
+                          # cloud services online again but withour CDN. See: https://www.amaryllogroup.com/post/amaryllo-introduces-hp-cloud-storageservice-through-a-trademark-licensingagreement-with-hp-inc
 
 - name: Huawei
   domains:
