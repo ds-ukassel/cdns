@@ -1172,7 +1172,11 @@
     "name": "JQuery"
   },
   {
-    "name": "JsDelivr"
+    "name": "JsDelivr",
+    "website": "https://www.jsdelivr.com/",
+    "domains": [
+      "**.cdn.jsdelivr.net"
+    ]
   },
   {
     "name": "KeyCDN",
@@ -1257,7 +1261,11 @@
     ]
   },
   {
-    "name": "LinkedIn"
+    "name": "LinkedIn",
+    "website": "https://www.linkedin.com/",
+    "domains": [
+      "**.licdn.com"
+    ]
   },
   {
     "name": "Linking Cloud",
