@@ -196,6 +196,9 @@
     - X-Amz-Request-Id:
     - X-Amz-Version-Id:
     - X-Amzn-Waf-Challenge-Id:
+    - X-Amz-Replication-Status:
+    - X-Amz-apigw-Id:
+    - X-Amzn-Requestid:
 
 - name: Ananke
   domains:
