@@ -1227,6 +1227,7 @@
     - "**.00cdn.com"
 
 - name: StaticFile # bad cert domain
+  website: https://www.staticfile.org/
 
 - name: SteamCDN
   domains:
