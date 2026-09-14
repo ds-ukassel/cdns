@@ -614,6 +614,9 @@
     - 54113
     - 14618
 
+- name: FontCDN
+  website: https://fontcdn.org/
+
 - name: G-Core Labs
   domains:
     - "**.gcdn.co"
