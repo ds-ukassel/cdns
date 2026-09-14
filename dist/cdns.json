@@ -887,6 +887,10 @@
     ]
   },
   {
+    "name": "FontCDN",
+    "website": "https://fontcdn.org/"
+  },
+  {
     "name": "G-Core Labs",
     "domains": [
       "**.gcdn.co"
@@ -1021,6 +1025,10 @@
     "domains": [
       "**.googleapis.com"
     ]
+  },
+  {
+    "name": "Google Hosted Library",
+    "website": "https://developers.google.com/speed/libraries?hl=de"
   },
   {
     "name": "GoSun",
@@ -1324,6 +1332,10 @@
     "domains": [
       "**.metacdn.com"
     ]
+  },
+  {
+    "name": "Microsoft Ajax CDN",
+    "website": "https://learn.microsoft.com/en-us/aspnet/ajax/cdn/"
   },
   {
     "name": "Microsoft Azure CDN",
@@ -2151,6 +2163,13 @@
     "asns": [
       59077,
       135377
+    ]
+  },
+  {
+    "name": "UNPKG",
+    "website": "https://unpkg.com/",
+    "domains": [
+      "**.unpkg.com"
     ]
   },
   {
