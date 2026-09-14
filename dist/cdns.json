@@ -1785,7 +1785,8 @@
     ]
   },
   {
-    "name": "StaticFile"
+    "name": "StaticFile",
+    "website": "https://www.staticfile.org/"
   },
   {
     "name": "SteamCDN",
