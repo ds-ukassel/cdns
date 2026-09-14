@@ -1159,7 +1159,7 @@
     - "**.p2cdn.com"
     - "**.00cdn.com"
 
-- name: StaticFile
+- name: StaticFile # bad cert domain
 
 - name: SteamCDN
   domains:
@@ -1625,7 +1625,7 @@
     - "**.douyincdn.com"
     - "**.tiktokcdn.com"
 
-- name: WebMoi
+- name: WebMoi # not found
 
 - name: Western Digital
   domains:
