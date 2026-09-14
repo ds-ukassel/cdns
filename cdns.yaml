@@ -891,12 +891,16 @@
     - 21245
 
 - name: MegaFon
+  website: https://moscow.megafon.ru/corporate/services/content_delivery_network_cdn
 
 - name: Merlin CDN
   domains:
     - "**merlin**"
 
 - name: MetaCDN
+  website: https://www.metacdn.com/cdn
+  domains:
+    - "**.metacdn.com"
 
 - name: Microsoft Azure CDN
   domains:
@@ -969,9 +973,10 @@
   domains:
     - "**.momentcdn.com"
 
-- name: NACEVI
+- name: NACEVI # not sure if this is a CDN
+  website: https://www.nacevi.cz/
 
-- name: NetDNA
+- name: NetDNA # acquired by StackPath. See: https://scotthelme.co.uk/a-dead-cdn-a-wildcard-and-an-attack-waiting-to-happen-the-netdna-ssl-com-takeover/
 
 - name: NetEase
   domains:
@@ -996,9 +1001,12 @@
   domains:
     - "**.ncname.com"
 
-- name: Octoshape
+- name: Octoshape # acquired by akamai. See: https://www.streamingmediaglobal.com/Articles/News/Featured-News/Akamai-Acquires-Octoshape-in-an-All-Cash-Transaction-103140.aspx
 
 - name: OnApp
+  website: https://iaas-onapp-support.virtuozzo.com/hc/en-us/categories/203125008-OnApp-CDN
+  domains:
+    - "**.cdn.onappcdn.com"
 
 - name: OVH CDN
   headers:
@@ -1011,8 +1019,12 @@
     - 35540
 
 - name: PCCW
+  website: https://www.pccwglobal.com/services/media-solutions/
 
 - name: Pacnet
+  website: https://www.pacnetcdn.com/
+  domains:
+    - "**.pacnetcdn.com"
 
 - name: ParsPack
   ranges:
@@ -1052,6 +1064,7 @@
     - "**.hiecheimaetu.com"
 
 - name: Rackspace
+  website: https://docs.rackspace.com/docs/rackspace-cdn
   domains:
     - "**.raxcdn.com"
 
@@ -1114,6 +1127,7 @@
     - "**.websitecname.cn"
 
 - name: SK Broadband
+  website: https://en.broadbandidc.com/company/?doc=company
 
 - name: SoftLayer # Apparently bought by IBM in 2013 https://www.ibm.com/cloud-computing/SoftLayer_Acquisition_Announcement_FAQs.pdf
 
