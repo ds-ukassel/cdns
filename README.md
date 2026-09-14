@@ -8,6 +8,7 @@ All CDNs are listed in [`cdns.yaml`](cdns.yaml) in this repository, and [`dist/c
 ```yaml
 - name: AwesomeCDN
   homepage: https://www.awesomecdn.com
+  type: commercial
   domains: # See "Domain patterns" below
     - 'awesomecdn.com'      # 'awesomecdn.com' is a full match of the domain (e.g. 'awesomecdn.com')
     - '**awesomecdn**'      # 'awesomecdn' is a substring of the domain (e.g. 'a.awessomecdn.com')
@@ -73,6 +74,17 @@ Header patterns have a few rules:
   Means ALL header patterns must match.
 - Header keys are case-insensitive, but values are case-sensitive.
 
+## Types
+
+Each CDN can have a designated `type` field.
+The type can either be `commercial`, `private`, `public_assets` or `other`.
+
+- `commercial`: CDNs used by different customers (e.g. Akamai, Fastly, ...)
+- `private`: CDNs used internally by a single company (e.g. Meta, Instagram, ...)
+- `public_assets`: CDNs providing public assets not uploaded by customers (e.g. BootstrapCDN)
+- `other`: CDNs with an entirely different model
+
+The field is optional as this information isn't always available/clear.
 
 ## Python API
 
