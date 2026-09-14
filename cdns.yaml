@@ -230,6 +230,7 @@
   headers:
     - X-Azion-Cache:
     - Server: AzionCDN
+    - Server: azion webserver
     - X-Azion-Edge-Location:
     - X-Azion-Request-Id:
   asns:
