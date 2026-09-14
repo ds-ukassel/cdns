@@ -143,10 +143,16 @@
   domains:
     - "**gslb.tbcache.com"
 
-- name: Alipay
+- name: Alipay # Seems to be part of Alibaba or at least use the CDN: https://www.netify.ai/resources/hostnames/mdn.alipayobjects.com
   domains:
     - "**.alipaydns.com"
     - "**.alipayobjects.com"
+
+- name: Alipay+
+  website: https://docs.alipayplus.com/alipayplus/alipayplus/integration_cashier_acq_unified/cdn_json
+  domains:
+    - "resource.alipayplus.com"
+    - "developers.alipayplus.com"
 
 - name: Amazon CloudFront
   website: https://aws.amazon.com/de/cloudfront/
@@ -1110,9 +1116,10 @@
   domains:
     - "**.momentcdn.com"
 
-- name: NACEVI
+- name: NACEVI # Apparently a czech CDN but website doesn't look like a CDN: https://en.wikipedia.org/wiki/NACEVI
+  website: http://www.nacevi.cz/
 
-- name: NetDNA
+- name: NetDNA # Apparently previous version of MaxCDN: https://scotthelme.co.uk/a-dead-cdn-a-wildcard-and-an-attack-waiting-to-happen-the-netdna-ssl-com-takeover/
 
 - name: NetEase
   domains:
@@ -1122,8 +1129,14 @@
 
 - name: Netflix CDN # not sure if this is really a CDN
   website: https://openconnect.netflix.com/en/
+  type: private
+  domains:
+    - "**.nflximg.net"
+    - "**.nflxext.com"
 
 - name: Netlify
+  website: https://www.netlify.com/
+  type: commercial
   domains:
     - "**.netlify.app"
   headers:
@@ -1140,11 +1153,16 @@
   domains:
     - "**.ncname.com"
 
-- name: Octoshape
+- name: Octoshape # Apparently bought by Akamai around 2015: https://www.prnewswire.com/news-releases/akamai-acquires-octoshape-300061210.html
+  type: commercial
+  website: http://www.octoshape.com/ # Seems to be down
 
-- name: OnApp
+- name: OnApp # Some information can be found here: https://iaas-onapp-support.virtuozzo.com/hc/en-us/categories/203125008-OnApp-CDN
+  website: https://onapp.com # Redirects to https://www.virtuozzo.com/
 
 - name: OVH CDN
+  website: https://docs.ovhcloud.com/en/
+  type: commercial
   headers:
     - Server: OVHcdn
   ranges:
@@ -1156,14 +1174,20 @@
 
 - name: PCCW
 
-- name: Pacnet
+- name: Pacnet # Apparently defunct now: https://en.wikipedia.org/wiki/Pacnet
+  website: http://www.pacnet.com/
+  type: commercial
 
-- name: ParsPack
+- name: ParsPack # Not sure if CDN or cloud provider
+  website: https://parspack.com/
+  type: commercial
   ranges:
     - range_type: 'combined'
       url: 'https://parspack.com/cdnips.txt'
 
 - name: QUIC.cloud
+  website: https://www.quic.cloud/
+  type: commercial
   domains:
     - "**.quic.cloud"
   headers:
@@ -1200,7 +1224,7 @@
     - "**.mwcloudcdn.com"
     - "**.mwcname.com"
 
-- name: Qrator Labs
+- name: Qrator Labs # Not sure if this is actually a CDN
   asns:
     - 200449
 
@@ -1210,6 +1234,7 @@
     - 20253
 
 - name: Rackspace
+  type: commercial
 
 - name: Reblaze
   headers:
@@ -1217,6 +1242,8 @@
     - Server: Reblaze
 
 - name: Reflected Networks
+  website: https://reflected.net/globalcdn
+  type: commercial
   asns:
     - 29789
   domains:
@@ -1224,6 +1251,8 @@
     - "**.simplecdn.net"
 
 - name: RocketCDN
+  website: https://rocketcdn.me/
+  type: commercial
   headers:
     - X-Rocket-CDN:
     - Server: RocketCDN
@@ -1239,11 +1268,12 @@
     - "**.hwwsdns.cn"
     - "**.yunduncdn.com"
 
-- name: Simple CDN
+- name: Simple CDN # Some information can be found here: https://www.drupal.org/project/simplecdn
   domains:
     - "**simplecdn.net"
 
 - name: Sina Cloud CDN
+  type: commercial
   domains:
     - "**.sinajs.cn"
     - "**.sinaedge.com"
@@ -1253,6 +1283,10 @@
     - "**.saebbs.com"
 
 - name: SingTel
+  website: https://singtel.com
+  type: private # Seems to only be used for publishing reports
+  domains:
+    - "cdn.aws.singtel.com"
 
 - name: Sitestar
   domains:
@@ -1261,15 +1295,18 @@
 - name: SK Broadband
 
 - name: SoftLayer
+  type: commercial # Information about prices found here: https://www.lightreading.com/cdn/softlayer-launches-cdn
 
-- name: Speedera
+- name: Speedera # Bought by Akamai in 2005. See: https://en.wikipedia.org/wiki/Speedera_Networks
 
 - name: SpeedyCloud CDN
+  type: commercial
   domains:
     - "**.xundayun.*"
     - "**.speedycloud.cc"
 
 - name: StackPath # closure in 2024. See: https://www.cdnhandbook.com/providers/stackpath/
+  type: commercial
   domains:
     - "**stackpath**" # stackpathdns.com
     - "**netdna**"
@@ -1291,8 +1328,12 @@
     - "**.00cdn.com"
 
 - name: StaticFile
+  website: https://www.staticfile.org/ # uBlock warning
+  type: public_asset # Seems to host some public libraries
 
-- name: SteamCDN
+- name: Steam
+  website: https://steampowered.com/
+  type: private
   domains:
     - "**.steamstatic.com"
     - "**.steamserver.net"
@@ -1300,12 +1341,17 @@
     - "**.valvesoftware.com"
     - "**.pphimalayanrt.com"
     - "**.steamchina.com"
+  asns:
+    - 32590 # Valve
 
 - name: StormWall
+  website: https://stormwall.network
   asns:
     - 59796
 
 - name: Sucuri
+  website: https://sucuri.net/
+  type: commercial
   headers:
     - Server: Sucuri/Cloudproxy
     - Server: Sucuri
@@ -1333,6 +1379,7 @@
     - "**.elemecdn.com"
 
 - name: SwiftCDN
+  website: https://swiftcdn.io/
   domains:
     - "**swiftcdn1.com"
 
@@ -1355,6 +1402,7 @@
     - "**gslb.taobao.com"
 
 - name: Tata communications
+  type: commercial
   website: https://cdn.tatacommunications.com/
   asns:
     - 4755
@@ -1378,6 +1426,7 @@
 - name: Telenor
 
 - name: TeliaSonera
+  type: commercial
 
 - name: Telstra
 
@@ -1385,6 +1434,7 @@
 
 - name: Tencent Cloud
   website: https://www.tencentcloud.com/products/cdn
+  type: commercial
   domains:
     - "**dayugslb**"
     - "**tdnsv8**"
@@ -1647,13 +1697,16 @@
     - "**.ctyunapi.cn"
 
 - name: TinyCDN
+  type: commercial
 
 - name: Transparent Edge
   website: https://www.transparentedge.eu/en/
+  type: commercial
   asns:
     - 214080
 
 - name: TurboBytes # out of business. See https://www.cdnplanet.com/blog/turbobytes-multi-cdn-made-easy/
+  type: commercial
   domains:
     - "**clients.turbobytes.net"
     - "**turbobytes-cdn.com"
@@ -1667,6 +1720,8 @@
     - "**.txcdn.cn"
 
 - name: UCloud CDN
+  type: commercial
+  website: https://www.ucloud-global.com/en/docs/ucdn/intro
   domains:
     - "**.ucloud.cn"
     - "**.ucloud.com.cn"
@@ -1680,10 +1735,12 @@
     - "**.sprycdn.com"
 
 - name: Vercel
+  type: commercial
   headers:
     - Server: Vercel
 
 - name: Verizon EdgeCast # apparently shut down in 2025. sold to Parler. See: https://www.cdnhandbook.com/providers/verizon-media-vmds/
+  type: commercial
   domains:
     - "**edgecastcdn**"
     - "**alphacdn**"
@@ -1754,6 +1811,7 @@
     - "**.tiktokcdn.com"
 
 - name: Wangsu
+  type: commercial
   website: https://www.wangsu.com/
 
 - name: WebMoi
@@ -1775,8 +1833,11 @@
 
 - name: Yandex CDN
   website: https://yandex.cloud/en/services/cdn
+  type: commercial
 
 - name: Yisu Cloud CDN
+  website: https://www.yisu.com
+  type: commercial
   domains:
     - "**.yisuddoscdn.com"
 
@@ -1789,6 +1850,8 @@
     - "**.raincdn.cn"
 
 - name: YundunCDN # Yandex Cloud
+  website: https://www.yundun.com/
+  type: commercial
   domains:
     - "**yunduncdn.com**"
 
@@ -1797,6 +1860,7 @@
     - "**.yfcdn.net"
 
 - name: ZEIT Now Smart CDN
+  type: commercial
   domains:
     - "**.zeit.co"
     - "**.zeit-cdn.net"
@@ -1808,6 +1872,8 @@
     - "**zenedge.net"
 
 - name: Zenlayer CDN
+  website: https://www.zenlayer.com/cdn/
+  type: commercial
   domains:
     - "**.zengslb.com"
     - "**.zenlogic.net"
