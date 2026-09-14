@@ -41,6 +41,18 @@
         "X-Akamai-Edge-Cache": null
       },
       {
+        "Server": "Akamai\\/Time Server"
+      },
+      {
+        "Server": "AkamaiNetStorage"
+      },
+      {
+        "Server": "Akamai Image Manager"
+      },
+      {
+        "Server": "Akamai Resource Optimizer"
+      },
+      {
         "Server": "AkamaiGHost"
       },
       {
@@ -169,10 +181,16 @@
         "Ali-CDN-Cache": null
       },
       {
+        "ali-swift-global-savetime": null
+      },
+      {
         "X-Alibaba-Edge": null
       },
       {
         "Server": "Alibaba"
+      },
+      {
+        "Server": "Tengine"
       }
     ]
   },
@@ -204,6 +222,9 @@
       },
       {
         "Server": "CloudFront"
+      },
+      {
+        "Server": "AmazonS3"
       },
       {
         "X-Amz-Cf-Pop": null
@@ -252,6 +273,29 @@
       {
         "range_type": "combined",
         "url": "https://ip-ranges.amazonaws.com/ip-ranges.json"
+      }
+    ],
+    "headers": [
+      {
+        "Server": "AmazonS3"
+      },
+      {
+        "X-Amz-Request-Id": null
+      },
+      {
+        "X-Amz-Version-Id": null
+      },
+      {
+        "X-Amzn-Waf-Challenge-Id": null
+      },
+      {
+        "X-Amz-Replication-Status": null
+      },
+      {
+        "X-Amz-apigw-Id": null
+      },
+      {
+        "X-Amzn-Requestid": null
       }
     ]
   },
@@ -304,6 +348,15 @@
       },
       {
         "Server": "AzionCDN"
+      },
+      {
+        "Server": "azion webserver"
+      },
+      {
+        "X-Azion-Edge-Location": null
+      },
+      {
+        "X-Azion-Request-Id": null
       }
     ],
     "asns": [
