@@ -1545,6 +1545,12 @@
     - 59077
     - 135377
 
+- name: UNPKG
+  website: https://unpkg.com/
+  domains:
+    - "**.unpkg.com"
+
+
 - name: Vangen CDN # YaoCDN
   domains:
     - "**.mygslb.com"
