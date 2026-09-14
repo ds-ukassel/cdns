@@ -419,7 +419,10 @@
     "name": "BootCSS"
   },
   {
-    "name": "BootstrapCDN"
+    "name": "BootstrapCDN",
+    "domains": [
+      "**.jsdelivr.net"
+    ]
   },
   {
     "name": "BT Group"
@@ -546,16 +549,32 @@
     ]
   },
   {
-    "name": "CDNJS"
+    "name": "CDNJS",
+    "website": "https://cdnjs.com/",
+    "domains": [
+      "**.cdnjs.cloudflare.com"
+    ]
   },
   {
     "name": "CDNLion"
   },
   {
-    "name": "CDNsun"
+    "name": "CDNsun",
+    "website": "https://cdnsun.com/",
+    "domains": [
+      "**.cdnsun.org"
+    ]
   },
   {
     "name": "CDNvideo",
+    "website": "https://www.cdnvideo.com/",
+    "domains": [
+      "**.cdnvideo.com"
+    ],
+    "asns": [
+      57363,
+      204720
+    ],
     "website": "https://www.cdnvideo.com/",
     "asns": [
       57363,
@@ -691,10 +710,15 @@
     ]
   },
   {
-    "name": "CloudLayer"
+    "name": "CloudLayer",
+    "website": "https://cloudlayer.io/",
+    "domains": [
+      "**.cloudlayer.io"
+    ]
   },
   {
-    "name": "CloudOYE"
+    "name": "CloudOYE",
+    "website": "https://www.cloudoye.com/cloud/cdn"
   },
   {
     "name": "Coding Pages",
@@ -904,6 +928,10 @@
     ]
   },
   {
+    "name": "FontCDN",
+    "website": "https://fontcdn.org/"
+  },
+  {
     "name": "G-Core Labs",
     "website": "https://gcore.com/cdn",
     "domains": [
@@ -1040,6 +1068,10 @@
     "domains": [
       "**.googleapis.com"
     ]
+  },
+  {
+    "name": "Google Hosted Library",
+    "website": "https://developers.google.com/speed/libraries?hl=de"
   },
   {
     "name": "GoSun",
@@ -1193,7 +1225,11 @@
     "name": "JQuery"
   },
   {
-    "name": "JsDelivr"
+    "name": "JsDelivr",
+    "website": "https://www.jsdelivr.com/",
+    "domains": [
+      "**.cdn.jsdelivr.net"
+    ]
   },
   {
     "name": "KeyCDN",
@@ -1238,6 +1274,10 @@
     ]
   },
   {
+    "name": "LaunchCDN",
+    "website": "https://launchcdn.com/"
+  },
+  {
     "name": "LeaseWeb CDN",
     "asns": [
       60781
@@ -1277,7 +1317,11 @@
     ]
   },
   {
-    "name": "LinkedIn"
+    "name": "LinkedIn",
+    "website": "https://www.linkedin.com/",
+    "domains": [
+      "**.licdn.com"
+    ]
   },
   {
     "name": "Linking Cloud",
@@ -1322,7 +1366,8 @@
     ]
   },
   {
-    "name": "MegaFon"
+    "name": "MegaFon",
+    "website": "https://moscow.megafon.ru/corporate/services/content_delivery_network_cdn"
   },
   {
     "name": "Melbicom CDN",
@@ -1338,7 +1383,8 @@
     "name": "MetaCDN",
     "website": "https://www.meta.com",
     "domains": [
-      "**.fbcdn.net"
+      "**.fbcdn.net",
+      "**.metacdn.com"
     ]
   },
   {
@@ -1435,7 +1481,8 @@
     ]
   },
   {
-    "name": "NACEVI"
+    "name": "NACEVI",
+    "website": "https://www.nacevi.cz/"
   },
   {
     "name": "NetDNA"
@@ -1484,7 +1531,11 @@
     "name": "Octoshape"
   },
   {
-    "name": "OnApp"
+    "name": "OnApp",
+    "website": "https://iaas-onapp-support.virtuozzo.com/hc/en-us/categories/203125008-OnApp-CDN",
+    "domains": [
+      "**.cdn.onappcdn.com"
+    ]
   },
   {
     "name": "OVH CDN",
@@ -1505,10 +1556,24 @@
     ]
   },
   {
-    "name": "PCCW"
+    "name": "PCCW",
+    "website": "https://www.pccwglobal.com/services/media-solutions/"
   },
   {
-    "name": "Pacnet"
+    "name": "Pacnet",
+    "website": "https://www.pacnetcdn.com/",
+    "domains": [
+      "**.pacnetcdn.com"
+    ]
+  },
+  {
+    "name": "ParsPack",
+    "ranges": [
+      {
+        "range_type": "combined",
+        "url": "https://parspack.com/cdnips.txt"
+      }
+    ]
   },
   {
     "name": "ParsPack",
@@ -1587,7 +1652,11 @@
     ]
   },
   {
-    "name": "Rackspace"
+    "name": "Rackspace",
+    "website": "https://docs.rackspace.com/docs/rackspace-cdn",
+    "domains": [
+      "**.raxcdn.com"
+    ]
   },
   {
     "name": "Reblaze",
@@ -1663,7 +1732,8 @@
     ]
   },
   {
-    "name": "SK Broadband"
+    "name": "SK Broadband",
+    "website": "https://en.broadbandidc.com/company/?doc=company"
   },
   {
     "name": "SoftLayer"
@@ -1845,16 +1915,20 @@
     ]
   },
   {
-    "name": "Telenor"
+    "name": "Telenor",
+    "website": "https://www.telenor.com/"
   },
   {
-    "name": "TeliaSonera"
+    "name": "TeliaSonera",
+    "website": "https://www.telia.fi/operators/palveluratkaisut/sisallonjakopalvelu"
   },
   {
-    "name": "Telstra"
+    "name": "Telstra",
+    "website": "https://www.telstra.com.au"
   },
   {
-    "name": "Telus"
+    "name": "Telus",
+    "website": "https://www.telus.com/en"
   },
   {
     "name": "Tencent Cloud",
@@ -2125,7 +2199,11 @@
     ]
   },
   {
-    "name": "TinyCDN"
+    "name": "TinyCDN",
+    "website": "https://tinycdn.cloud/en/",
+    "domains": [
+      "tinycdn.cloud"
+    ]
   },
   {
     "name": "Transparent Edge",
@@ -2153,11 +2231,23 @@
   },
   {
     "name": "UCloud CDN",
+    "website": "https://www.ucloud-global.com/en/docs/ucdn",
     "domains": [
       "**.ucloud.cn",
       "**.ucloud.com.cn",
       "**.cdndo.com",
       "**.ucloudgda.com"
+    ],
+    "asns": [
+      59077,
+      135377
+    ]
+  },
+  {
+    "name": "UNPKG",
+    "website": "https://unpkg.com/",
+    "domains": [
+      "**.unpkg.com"
     ]
   },
   {
