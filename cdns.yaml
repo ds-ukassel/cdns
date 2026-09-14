@@ -24,6 +24,7 @@
     - "**srip.net"
     - "**edgefcs.net"
   headers:
+    - server: Akamai\/Time Server, AkamaiNetStorage, nginx, AmazonS3, Akamai Image Manager, UploadServer, Microsoft-IIS, Akamai Resource Optimizer, AkamaiGHost, Apache
     - X-Akamai-Request-ID:
     - X-Akamai-Transformed:
     - X-Akamai-SSL:
