@@ -193,6 +193,14 @@
     ]
   },
   {
+    "name": "Alipay+",
+    "website": "https://docs.alipayplus.com/alipayplus/alipayplus/integration_cashier_acq_unified/cdn_json",
+    "domains": [
+      "resource.alipayplus.com",
+      "developers.alipayplus.com"
+    ]
+  },
+  {
     "name": "Amazon CloudFront",
     "website": "https://aws.amazon.com/de/cloudfront/",
     "type": "commercial",
@@ -1562,7 +1570,8 @@
     ]
   },
   {
-    "name": "NACEVI"
+    "name": "NACEVI",
+    "website": "http://www.nacevi.cz/"
   },
   {
     "name": "NetDNA"
@@ -1577,10 +1586,17 @@
   },
   {
     "name": "Netflix CDN",
-    "website": "https://openconnect.netflix.com/en/"
+    "website": "https://openconnect.netflix.com/en/",
+    "type": "private",
+    "domains": [
+      "**.nflximg.net",
+      "**.nflxext.com"
+    ]
   },
   {
     "name": "Netlify",
+    "website": "https://www.netlify.com/",
+    "type": "commercial",
     "domains": [
       "**.netlify.app"
     ],
@@ -1608,13 +1624,18 @@
     ]
   },
   {
-    "name": "Octoshape"
+    "name": "Octoshape",
+    "type": "commercial",
+    "website": "http://www.octoshape.com/"
   },
   {
-    "name": "OnApp"
+    "name": "OnApp",
+    "website": "https://onapp.com"
   },
   {
     "name": "OVH CDN",
+    "website": "https://docs.ovhcloud.com/en/",
+    "type": "commercial",
     "headers": [
       {
         "Server": "OVHcdn"
@@ -1635,10 +1656,14 @@
     "name": "PCCW"
   },
   {
-    "name": "Pacnet"
+    "name": "Pacnet",
+    "website": "http://www.pacnet.com/",
+    "type": "commercial"
   },
   {
     "name": "ParsPack",
+    "website": "https://parspack.com/",
+    "type": "commercial",
     "ranges": [
       {
         "range_type": "combined",
@@ -1648,6 +1673,8 @@
   },
   {
     "name": "QUIC.cloud",
+    "website": "https://www.quic.cloud/",
+    "type": "commercial",
     "domains": [
       "**.quic.cloud"
     ],
@@ -1714,7 +1741,8 @@
     ]
   },
   {
-    "name": "Rackspace"
+    "name": "Rackspace",
+    "type": "commercial"
   },
   {
     "name": "Reblaze",
@@ -1729,6 +1757,8 @@
   },
   {
     "name": "Reflected Networks",
+    "website": "https://reflected.net/globalcdn",
+    "type": "commercial",
     "asns": [
       29789
     ],
@@ -1739,6 +1769,8 @@
   },
   {
     "name": "RocketCDN",
+    "website": "https://rocketcdn.me/",
+    "type": "commercial",
     "headers": [
       {
         "X-Rocket-CDN": null
@@ -1771,6 +1803,7 @@
   },
   {
     "name": "Sina Cloud CDN",
+    "type": "commercial",
     "domains": [
       "**.sinajs.cn",
       "**.sinaedge.com",
@@ -1781,7 +1814,12 @@
     ]
   },
   {
-    "name": "SingTel"
+    "name": "SingTel",
+    "website": "https://singtel.com",
+    "type": "private",
+    "domains": [
+      "cdn.aws.singtel.com"
+    ]
   },
   {
     "name": "Sitestar",
@@ -1793,13 +1831,15 @@
     "name": "SK Broadband"
   },
   {
-    "name": "SoftLayer"
+    "name": "SoftLayer",
+    "type": "commercial"
   },
   {
     "name": "Speedera"
   },
   {
     "name": "SpeedyCloud CDN",
+    "type": "commercial",
     "domains": [
       "**.xundayun.*",
       "**.speedycloud.cc"
@@ -1807,6 +1847,7 @@
   },
   {
     "name": "StackPath",
+    "type": "commercial",
     "domains": [
       "**stackpath**",
       "**netdna**",
@@ -1842,10 +1883,14 @@
     ]
   },
   {
-    "name": "StaticFile"
+    "name": "StaticFile",
+    "website": "https://www.staticfile.org/",
+    "type": "public_asset"
   },
   {
-    "name": "SteamCDN",
+    "name": "Steam",
+    "website": "https://steampowered.com/",
+    "type": "private",
     "domains": [
       "**.steamstatic.com",
       "**.steamserver.net",
@@ -1853,16 +1898,22 @@
       "**.valvesoftware.com",
       "**.pphimalayanrt.com",
       "**.steamchina.com"
+    ],
+    "asns": [
+      32590
     ]
   },
   {
     "name": "StormWall",
+    "website": "https://stormwall.network",
     "asns": [
       59796
     ]
   },
   {
     "name": "Sucuri",
+    "website": "https://sucuri.net/",
+    "type": "commercial",
     "headers": [
       {
         "Server": "Sucuri/Cloudproxy"
@@ -1914,6 +1965,7 @@
   },
   {
     "name": "SwiftCDN",
+    "website": "https://swiftcdn.io/",
     "domains": [
       "**swiftcdn1.com"
     ]
@@ -1947,6 +1999,7 @@
   },
   {
     "name": "Tata communications",
+    "type": "commercial",
     "website": "https://cdn.tatacommunications.com/",
     "asns": [
       4755,
@@ -1975,7 +2028,8 @@
     "name": "Telenor"
   },
   {
-    "name": "TeliaSonera"
+    "name": "TeliaSonera",
+    "type": "commercial"
   },
   {
     "name": "Telstra"
@@ -1986,6 +2040,7 @@
   {
     "name": "Tencent Cloud",
     "website": "https://www.tencentcloud.com/products/cdn",
+    "type": "commercial",
     "domains": [
       "**dayugslb**",
       "**tdnsv8**",
@@ -2252,17 +2307,20 @@
     ]
   },
   {
-    "name": "TinyCDN"
+    "name": "TinyCDN",
+    "type": "commercial"
   },
   {
     "name": "Transparent Edge",
     "website": "https://www.transparentedge.eu/en/",
+    "type": "commercial",
     "asns": [
       214080
     ]
   },
   {
     "name": "TurboBytes",
+    "type": "commercial",
     "domains": [
       "**clients.turbobytes.net",
       "**turbobytes-cdn.com",
@@ -2280,6 +2338,8 @@
   },
   {
     "name": "UCloud CDN",
+    "type": "commercial",
+    "website": "https://www.ucloud-global.com/en/docs/ucdn/intro",
     "domains": [
       "**.ucloud.cn",
       "**.ucloud.com.cn",
@@ -2297,6 +2357,7 @@
   },
   {
     "name": "Vercel",
+    "type": "commercial",
     "headers": [
       {
         "Server": "Vercel"
@@ -2305,6 +2366,7 @@
   },
   {
     "name": "Verizon EdgeCast",
+    "type": "commercial",
     "domains": [
       "**edgecastcdn**",
       "**alphacdn**",
@@ -2384,6 +2446,7 @@
   },
   {
     "name": "Wangsu",
+    "type": "commercial",
     "website": "https://www.wangsu.com/"
   },
   {
@@ -2412,10 +2475,13 @@
   },
   {
     "name": "Yandex CDN",
-    "website": "https://yandex.cloud/en/services/cdn"
+    "website": "https://yandex.cloud/en/services/cdn",
+    "type": "commercial"
   },
   {
     "name": "Yisu Cloud CDN",
+    "website": "https://www.yisu.com",
+    "type": "commercial",
     "domains": [
       "**.yisuddoscdn.com"
     ]
@@ -2434,6 +2500,8 @@
   },
   {
     "name": "YundunCDN",
+    "website": "https://www.yundun.com/",
+    "type": "commercial",
     "domains": [
       "**yunduncdn.com**"
     ]
@@ -2446,6 +2514,7 @@
   },
   {
     "name": "ZEIT Now Smart CDN",
+    "type": "commercial",
     "domains": [
       "**.zeit.co",
       "**.zeit-cdn.net"
@@ -2462,6 +2531,8 @@
   },
   {
     "name": "Zenlayer CDN",
+    "website": "https://www.zenlayer.com/cdn/",
+    "type": "commercial",
     "domains": [
       "**.zengslb.com",
       "**.zenlogic.net",
