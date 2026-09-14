@@ -697,6 +697,9 @@
   domains:
     - "**.googleapis.com"
 
+- name: Google Hosted Library
+  website: https://developers.google.com/speed/libraries?hl=de
+
 - name: GoSun
   domains:
     - "**.gosuncdn.com"
@@ -901,6 +904,9 @@
   website: https://www.metacdn.com/cdn
   domains:
     - "**.metacdn.com"
+
+- name: Microsoft Ajax CDN
+  website: https://learn.microsoft.com/en-us/aspnet/ajax/cdn/
 
 - name: Microsoft Azure CDN
   domains:
