@@ -24,11 +24,14 @@
     - "**srip.net"
     - "**edgefcs.net"
   headers:
-    - server: Akamai\/Time Server, AkamaiNetStorage, nginx, AmazonS3, Akamai Image Manager, UploadServer, Microsoft-IIS, Akamai Resource Optimizer, AkamaiGHost, Apache
     - X-Akamai-Request-ID:
     - X-Akamai-Transformed:
     - X-Akamai-SSL:
     - X-Akamai-Edge-Cache:
+    - Server: Akamai\/Time Server
+    - Server: AkamaiNetStorage
+    - Server: Akamai Image Manager
+    - Server: Akamai Resource Optimizer
     - Server: AkamaiGHost
     - X-Akamai-Staging:
     - Edge-Control:
@@ -134,8 +137,10 @@
   headers:
     - Via: Alibaba Cloud CDN
     - Ali-CDN-Cache:
+    - ali-swift-global-savetime:
     - X-Alibaba-Edge:
     - Server: Alibaba
+    - Server: Tengine
 
 - name: Alimama
   domains:
@@ -154,6 +159,7 @@
     - X-Amz-Cf-Id:
     - X-Cache: Hit from cloudfront
     - Server: CloudFront
+    - Server: AmazonS3
     - X-Amz-Cf-Pop:
     - Via: CloudFront
     - X-Amz-Acl:
