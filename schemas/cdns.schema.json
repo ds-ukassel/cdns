@@ -12,6 +12,11 @@
         "type": "string",
         "minLength": 1
       },
+      "website": {
+        "description": "The website of the CDN",
+        "type": "string",
+        "minLength": 1
+      },
       "homepage": {
         "description": "The homepage URL of the CDN",
         "type": "string",

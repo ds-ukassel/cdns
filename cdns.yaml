@@ -7,6 +7,7 @@
     - "**afxcdn.net"
 
 - name: Akamai
+  website: https://www.akamai.com
   domains:
     - "**.akamai.**"
     - "**akamaiedge.net"
@@ -84,6 +85,7 @@
     - 393560
 
 - name: Alibaba Cloud CDN
+  website: https://www.alibabacloud.com/de/product/content-delivery-network
   domains:
     - "**kunlun**"
     - "**cdngslb**"
@@ -91,7 +93,7 @@
     - "**.alicdn.*"
     - "**.alivecdn.com"
     - "**.tbcache.com"
-    - "**+.edu-aliyun.com"
+    - "**.edu-aliyun.com"
     - "**.alyns.cn"
     - "**.alysm.cn"
     - "**.aliyunga.com"
@@ -144,6 +146,7 @@
     - "**.alipayobjects.com"
 
 - name: Amazon CloudFront
+  website: https://aws.amazon.com/de/cloudfront/
   domains:
     - "*.cloudfront.net"
   headers:
@@ -190,6 +193,9 @@
   domains:
     - "**.saaswaf.com"
 
+- name: Apple CDN
+  website: https://cache.edge.apple/
+
 - name: ArvanCloud
   headers:
     - Server: ArvanCloud
@@ -213,6 +219,7 @@
     - 52580
 
 - name: Baidu
+  website: https://cloud.baidu.com/en/product/cdn.html
   asns:
     - 38365
     - 55967
@@ -225,6 +232,7 @@
     - "**.yunjiasu-cdn.net"
 
 - name: Baishan Cloud
+  website: https://en.baishan.com/
   domains:
     - "**baishan**"
     - "**bsccdn**"
@@ -243,7 +251,7 @@
     - "**.crazyrtc.com"
     - "**.baishan-cloud.*"
     - "**.baicdnx.com"
-    - "*+.scdncloud.com"
+    - "*.scdncloud.com"
     - "**.scdntop.com"
     - "**.zzcdnx.com"
     - "**.dolfincdnx.*"
@@ -303,6 +311,7 @@
 - name: BT Group
 
 - name: BunnyCDN
+  website: https://bunny.net/cdn/
   domains:
     - "*.b-cdn.net"
   headers:
@@ -316,9 +325,13 @@
   asns:
     - 200325
 
+- name: Bytedance CDN # not sure if this really a CDN
+  website: https://www.bytedance.com/
+
 - name: BytePlus
 
 - name: CacheFly
+  website: https://www.cachefly.com/
   domains:
     - "*.cachefly.net"
   headers:
@@ -334,6 +347,7 @@
     - "**.cctvcdn.*"
 
 - name: CDN77
+  website: https://www.cdn77.com/
   domains:
     - "**.cdn77.*"
   headers:
@@ -346,7 +360,7 @@
   asns:
     - 60068
 
-- name: CDNetworks
+- name: CDNetworks # belongs to wangsu? see https://www.netify.ai/resources/cdn/wangsu
   domains:
     - "**panthercdn.com"
     - "**cdngc.net"
@@ -360,6 +374,7 @@
   asns:
     - 36408
     - 38107
+    - 43303
 
 - name: CDNify
   domains:
@@ -381,7 +396,14 @@
   website: https://www.cdnvideo.com/
   domains:
     - "**.cdnvideo.com"
+  asns:
+    - 57363
+    - 204720
 
+  website: https://www.cdnvideo.com/
+  asns:
+    - 57363
+    - 204720
 
 - name: CDN Union
   domains:
@@ -441,6 +463,7 @@
 - name: CloudCache
 
 - name: Cloudflare
+  website: https://www.cloudflare.com/products/cdn/
   domains:
     - "**.cloudflare.*"
     - "*.cloudflare.net.in"
@@ -483,6 +506,11 @@
   domains:
     - "**.coding.*"
 
+- name: Conversant
+  website: https://www.conversant.tv/ # maybe down
+  asns:
+    - 132546
+
 - name: Coral # doesn't exist anymore. See: https://www.reddit.com/r/answers/comments/tkuudw/what_happened_to_coralcdn/?tl=de
 
 - name: Cotendo # acquired by akamai. See: https://en.wikipedia.org/wiki/Cotendo
@@ -515,6 +543,7 @@
     - "**.dlgslb.cn"
 
 - name: EdgeCast # operated by Parler Cloud Technologies. See: https://www.cdnhandbook.com/providers/edgecast/
+  website: https://www.edgecast.io/
   domains:
     - "**systemcdn.net"
     - "**edgecastcdn.net"
@@ -558,6 +587,8 @@
     - 12980
     - 13965
     - 13979
+    - 14153
+    - 14210
     - 14654
     - 15133
     - 15840
@@ -574,6 +605,7 @@
     - 28521
 
 - name: EdgeNext
+  website: https://www.edgenext.com/
   asns:
     - 139057
     - 149981
@@ -598,6 +630,7 @@
     - "**fbcdn.net"
 
 - name: Fastly
+  website: https://www.fastly.com/products/cdn
   domains:
     - "**.fastly.**"
     - "**fastlylb.net"
@@ -611,13 +644,16 @@
     - range_type: 'combined'
       url: 'https://api.fastly.com/public-ip-list'
   asns:
-    - 54113
+    - 895
     - 14618
+    - 54113
+    - 394192
 
 - name: FontCDN
   website: https://fontcdn.org/
 
 - name: G-Core Labs
+  website: https://gcore.com/cdn
   domains:
     - "**.gcdn.co"
   headers:
@@ -651,6 +687,7 @@
     - "**.gitlab.io"
 
 - name: Google Cloud CDN
+  website: https://cloud.google.com/cdn
   domains:
     - "**.google.**"
     - "**.googlesyndication.com"
@@ -725,6 +762,7 @@
                           # cloud services online again but withour CDN. See: https://www.amaryllogroup.com/post/amaryllo-introduces-hp-cloud-storageservice-through-a-trademark-licensingagreement-with-hp-inc
 
 - name: Huawei
+  website: https://www.huaweicloud.com/eu/product/cdn.html
   domains:
     - "**cdnhwc**"
     - "**hwclouds**"
@@ -739,6 +777,7 @@
     - 55990
     - 63727
     - 131444
+    - 149640
 
 - name: Imperva # Incapsula is part of Imperva
   domains:
@@ -810,6 +849,7 @@
     - "**.cdn.jsdelivr.net"
 
 - name: KeyCDN
+  website: https://www.keycdn.com/
   domains:
     - "*.kxcdn.com"
   headers:
@@ -818,6 +858,7 @@
     - X-Edge-Location: # also an identifier of Google Cloud CDN
 
 - name: Kingsoft
+  website: https://en.ksyun.com/nv/product/CDN.html
   asns:
     - 59019
   domains:
@@ -848,13 +889,13 @@
   domains:
     - "**.cdnle.com"
 
-- name: Level3 # now part of Lumen Technologies, shutdown in 2023. See: https://www.cdnhandbook.com/providers/level3/
+- name: Level3 # now part of Lumen Technologies, shutdown in 2023. See: https://www.cdnhandbook.com/providers/level3/; Lumen CDN down, see https://www.netify.ai/resources/cdn/lumen-cdn
   asns:
     - 58682
   domains:
     - "*.footprint.*"
 
-- name: Limelight # now defunct as Edgio. See: https://www.cdnhandbook.com/providers/limelight/
+- name: Limelight # now defunct as Edgio. See: https://www.cdnhandbook.com/providers/limelight/; acquired by akamai. See https://www.edg.io/
   domains:
     - "**lldns.net"
     - "**llnw**" # llnwd.net
@@ -864,6 +905,7 @@
     - "**.lldns.net"
   asns:
     - 22822
+    - 26506
 
 - name: LinkedIn
   website: https://www.linkedin.com/
@@ -886,6 +928,7 @@
     - "**.maoyundns.com"
 
 - name: Medianova
+  website: https://www.medianova.com/product/content-delivery-network/
   domains:
     - "**.mncdn.com"
   headers:
@@ -899,19 +942,21 @@
 - name: MegaFon
   website: https://moscow.megafon.ru/corporate/services/content_delivery_network_cdn
 
+- name: Melbicom CDN
+  website: https://www.melbicom.net/cdn/
+
 - name: Merlin CDN
   domains:
     - "**merlin**"
 
 - name: MetaCDN
-  website: https://www.metacdn.com/cdn
+  website: https://www.meta.com
   domains:
+    - "**.fbcdn.net"
     - "**.metacdn.com"
 
-- name: Microsoft Ajax CDN
-  website: https://learn.microsoft.com/en-us/aspnet/ajax/cdn/
-
 - name: Microsoft Azure CDN
+  website: https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview
   domains:
     - "*.vo.msecnd.net"
     - "*.trafficmanager.net"
@@ -993,6 +1038,9 @@
     - "**.127.net"
     - "**.nease.net"
 
+- name: Netflix CDN # not sure if this is really a CDN
+  website: https://openconnect.netflix.com/en/
+
 - name: Netlify
   domains:
     - "**.netlify.app"
@@ -1040,6 +1088,11 @@
     - range_type: 'combined'
       url: 'https://parspack.com/cdnips.txt'
 
+- name: ParsPack
+  ranges:
+    - range_type: 'combined'
+      url: 'https://parspack.com/cdnips.txt'
+
 - name: QUIC.cloud
   domains:
     - "**.quic.cloud"
@@ -1072,12 +1125,9 @@
     - "**.qnqcdn.net"
     - "**.hiecheimaetu.com"
 
-- name: Rackspace
-  website: https://docs.rackspace.com/docs/rackspace-cdn
-  domains:
-    - "**.raxcdn.com"
 
-- name: Quantil
+
+- name: Quantil # belongs to wangsu? see https://www.netify.ai/resources/cdn/wangsu
   domains:
     - "**.mwcloudcdn.com"
     - "**.mwcname.com"
@@ -1086,7 +1136,15 @@
   asns:
     - 200449
 
+- name: Qwilt
+  website: https://qwilt.com/
+  asns:
+    - 20253
+
 - name: Rackspace
+  website: https://docs.rackspace.com/docs/rackspace-cdn
+  domains:
+    - "**.raxcdn.com"
 
 - name: Reblaze
   headers:
@@ -1233,6 +1291,7 @@
     - "**gslb.taobao.com"
 
 - name: Tata communications
+  website: https://cdn.tatacommunications.com/
   asns:
     - 4755
     - 6421
@@ -1265,6 +1324,7 @@
   website: https://www.telus.com/en
 
 - name: Tencent Cloud
+  website: https://www.tencentcloud.com/products/cdn
   domains:
     - "**dayugslb**"
     - "**tdnsv8**"
@@ -1519,6 +1579,7 @@
     - 133478
 
 - name: Tianyi Cloud CDN # China Telekom ?
+  website: https://www.chinatelecomglobal.com/
   domains:
     - "**.ctcdn.cn"
     - "**.ctxcdn.cn"
@@ -1529,6 +1590,11 @@
   website: https://tinycdn.cloud/en/
   domains:
     - "tinycdn.cloud"
+
+- name: Transparent Edge
+  website: https://www.transparentedge.eu/en/
+  asns:
+    - 214080
 
 - name: TurboBytes # out of business. See https://www.cdnplanet.com/blog/turbobytes-multi-cdn-made-easy/
   domains:
@@ -1640,6 +1706,9 @@
     - "**.douyincdn.com"
     - "**.tiktokcdn.com"
 
+- name: Wangsu
+  website: https://www.wangsu.com/
+
 - name: WebMoi # not found
 
 - name: Western Digital
@@ -1656,6 +1725,9 @@
   domains:
     - "**ay1.b.yahoo.com"
     - "**.yimg.*"
+
+- name: Yandex CDN
+  website: https://yandex.cloud/en/services/cdn
 
 - name: Yisu Cloud CDN
   domains:
