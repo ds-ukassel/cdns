@@ -191,6 +191,11 @@
   ranges:
     - range_type: 'combined'
       url: 'https://ip-ranges.amazonaws.com/ip-ranges.json'
+  headers:
+    - Server: AmazonS3
+    - X-Amz-Request-Id:
+    - X-Amz-Version-Id:
+    - X-Amzn-Waf-Challenge-Id:
 
 - name: Ananke
   domains:
