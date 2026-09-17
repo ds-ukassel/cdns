@@ -305,7 +305,7 @@
   asns:
     - 23393
 
-- name: Bharti Airtel
+- name: Bharti Airtel # cooparate with Qwilt? See https://telecom.economictimes.indiatimes.com/news/airtel-enters-rs-7000-crore-cdn-service-market-ahead-of-5g-launch/93908314
   website: https://www.airtel.in/b2b/edge-cdn/
   type: commercial
 
@@ -421,21 +421,25 @@
   domains:
     - "**.cdnify.io"
 
-- name: cdnjs # Powered by CloudFlare
+- name: CDNJS # Powered by CloudFlare
   website: https://cdnjs.com/
   type: public_asset
   domains:
-    - "cdnjs.cloudflare.com"
+    - "**.cdnjs.cloudflare.com"
 
 - name: CDNLion # Apparently now a part of LaunchCDN https://launchcdn.com/cdnlion/
 
 - name: CDNsun
   website: https://cdnsun.com
   type: commercial
+  domains:
+    - "**.cdnsun.org"
 
 - name: CDNvideo
   website: https://www.cdnvideo.com/
   type: commercial
+  domains:
+    - "**.cdnvideo.com"
   asns:
     - 57363
     - 204720
@@ -535,7 +539,10 @@
     - 395747
     - 400095
 
-- name: CloudLayer # Today a PDF tool, maybe a CDN before?
+- name: CloudLayer
+  website: https://cloudlayer.io/
+  domains:
+    - "**.cloudlayer.io"
 
 - name: CloudOYE
   website: https://www.cloudoye.com/cloud/cdn
@@ -571,7 +578,7 @@
     - range_type: ipv6
       url: 'https://api.derak.cloud/public/ipv6'
 
-- name: Distil
+- name: Distil # acquired by imperva. See: https://www.distilnetworks.com
 
 - name: Dnion
   domains:
@@ -695,6 +702,9 @@
     - 54113
     - 394192
 
+- name: FontCDN
+  website: https://fontcdn.org/
+
 - name: Gcore # Formerly G-Core Labs
   website: https://gcore.com/cdn
   type: commercial
@@ -787,6 +797,9 @@
   domains:
     - "**.googleapis.com"
 
+- name: Google Hosted Library
+  website: https://developers.google.com/speed/libraries?hl=de
+
 - name: GoSun
   domains:
     - "**.gosuncdn.com"
@@ -806,7 +819,8 @@
   domains:
     - "*.hwcdn.*"
 
-- name: HP Cloud Services
+- name: HP Cloud Services # shut down in 2016. See: https://www.businessinsider.com/hp-shutting-down-hp-helion-public-cloud-2015-10
+                          # cloud services online again but withour CDN. See: https://www.amaryllogroup.com/post/amaryllo-introduces-hp-cloud-storageservice-through-a-trademark-licensingagreement-with-hp-inc
 
 - name: Huawei
   website: https://www.huaweicloud.com/eu/product/cdn.html
@@ -891,17 +905,17 @@
     - "**.kcdnvip.com"
     - "**.ksyuncdn-k1.com"
 
-- name: JQuery
+- name: JQuery # powered by fastly. See: https://releases.jquery.com/
   website: https://jquery.com/
   type: public_asset
   domains:
     - "code.jquery.com"
 
-- name: JsDelivr # Powering BootstrapCDN, therefore they have the same domains
+- name: JsDelivr# Powering BootstrapCDN, therefore they have the same domains
   website: https://www.jsdelivr.com/
   type: public_asset
   domains:
-    - "cdn.jsdelivr.net"
+    - "**.cdn.jsdelivr.net"
 
 - name: KeyCDN
   website: https://www.keycdn.com/
@@ -932,6 +946,9 @@
     - "**.hadns.net"
     - "**.hacdn.net"
     - "**.cachecn.com"
+
+- name: LaunchCDN
+  website: https://launchcdn.com/
 
 - name: LeaseWeb CDN
   website: https://www.leaseweb.com/en/products-services/cdn
@@ -1041,6 +1058,12 @@
   type: commercial
   domains:
     - "**merlin**"
+
+- name: MetaCDN
+  website: https://www.meta.com
+  domains:
+    - "**.fbcdn.net"
+    - "**.metacdn.com"
 
 - name: Microsoft Azure CDN
   website: https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview
@@ -1157,8 +1180,10 @@
   type: commercial
   website: http://www.octoshape.com/ # Seems to be down
 
-- name: OnApp # Some information can be found here: https://iaas-onapp-support.virtuozzo.com/hc/en-us/categories/203125008-OnApp-CDN
+- name: OnApp
   website: https://onapp.com # Redirects to https://www.virtuozzo.com/
+  domains:
+    - "**.cdn.onappcdn.com"
 
 - name: OVH CDN
   website: https://docs.ovhcloud.com/en/
@@ -1173,10 +1198,13 @@
     - 35540
 
 - name: PCCW
+  website: https://www.pccwglobal.com/services/media-solutions/
 
 - name: Pacnet # Apparently defunct now: https://en.wikipedia.org/wiki/Pacnet
-  website: http://www.pacnet.com/
+  website: https://www.pacnetcdn.com/
   type: commercial
+  domains:
+    - "**.pacnetcdn.com"
 
 - name: ParsPack # Not sure if CDN or cloud provider
   website: https://parspack.com/
@@ -1219,6 +1247,8 @@
     - "**.qnqcdn.net"
     - "**.hiecheimaetu.com"
 
+
+
 - name: Quantil # belongs to wangsu? see https://www.netify.ai/resources/cdn/wangsu
   domains:
     - "**.mwcloudcdn.com"
@@ -1233,8 +1263,11 @@
   asns:
     - 20253
 
-- name: Rackspace
+- name: Rackspace # https://docs.rackspace.com/docs/add-and-manage-domains-in-rackspace-cdn
   type: commercial
+  website: https://docs.rackspace.com/docs/rackspace-cdn
+  domains:
+    - "**.raxcdn.com"
 
 - name: Reblaze
   headers:
@@ -1293,8 +1326,9 @@
     - "**.websitecname.cn"
 
 - name: SK Broadband
+  website: https://en.broadbandidc.com/company/?doc=company
 
-- name: SoftLayer
+- name: SoftLayer # Apparently bought by IBM in 2013 https://www.ibm.com/cloud-computing/SoftLayer_Acquisition_Announcement_FAQs.pdf
   type: commercial # Information about prices found here: https://www.lightreading.com/cdn/softlayer-launches-cdn
 
 - name: Speedera # Bought by Akamai in 2005. See: https://en.wikipedia.org/wiki/Speedera_Networks
@@ -1424,13 +1458,17 @@
     - "**.cdn.telefonica.com"
 
 - name: Telenor
+  website: https://www.telenor.com/
 
-- name: TeliaSonera
+- name: TeliaSonera # seems to use Akamai
   type: commercial
+  website: https://www.telia.fi/operators/palveluratkaisut/sisallonjakopalvelu
 
-- name: Telstra
+- name: Telstra # Maybe not even a CDN
+  website: https://www.telstra.com.au
 
-- name: Telus
+- name: Telus # Maybe not even a CDN itself but using CloudFlare? https://www.cloudflare.com/case-studies/telus/
+  website: https://www.telus.com/en
 
 - name: Tencent Cloud
   website: https://www.tencentcloud.com/products/cdn
@@ -1697,7 +1735,10 @@
     - "**.ctyunapi.cn"
 
 - name: TinyCDN
+  website: https://tinycdn.cloud/en/
   type: commercial
+  domains:
+    - "tinycdn.cloud"
 
 - name: Transparent Edge
   website: https://www.transparentedge.eu/en/
@@ -1727,6 +1768,15 @@
     - "**.ucloud.com.cn"
     - "**.cdndo.com"
     - "**.ucloudgda.com"
+  asns:
+    - 59077
+    - 135377
+
+- name: UNPKG
+  website: https://unpkg.com/
+  domains:
+    - "**.unpkg.com"
+
 
 - name: Vangen CDN # YaoCDN
   domains:
@@ -1814,7 +1864,7 @@
   type: commercial
   website: https://www.wangsu.com/
 
-- name: WebMoi
+- name: WebMoi # not found
 
 - name: Western Digital
   domains:

@@ -594,11 +594,11 @@
     ]
   },
   {
-    "name": "cdnjs",
+    "name": "CDNJS",
     "website": "https://cdnjs.com/",
     "type": "public_asset",
     "domains": [
-      "cdnjs.cloudflare.com"
+      "**.cdnjs.cloudflare.com"
     ]
   },
   {
@@ -607,12 +607,18 @@
   {
     "name": "CDNsun",
     "website": "https://cdnsun.com",
-    "type": "commercial"
+    "type": "commercial",
+    "domains": [
+      "**.cdnsun.org"
+    ]
   },
   {
     "name": "CDNvideo",
     "website": "https://www.cdnvideo.com/",
     "type": "commercial",
+    "domains": [
+      "**.cdnvideo.com"
+    ],
     "asns": [
       57363,
       204720
@@ -753,7 +759,11 @@
     ]
   },
   {
-    "name": "CloudLayer"
+    "name": "CloudLayer",
+    "website": "https://cloudlayer.io/",
+    "domains": [
+      "**.cloudlayer.io"
+    ]
   },
   {
     "name": "CloudOYE",
@@ -975,6 +985,10 @@
     ]
   },
   {
+    "name": "FontCDN",
+    "website": "https://fontcdn.org/"
+  },
+  {
     "name": "Gcore",
     "website": "https://gcore.com/cdn",
     "type": "commercial",
@@ -1118,6 +1132,10 @@
     "domains": [
       "**.googleapis.com"
     ]
+  },
+  {
+    "name": "Google Hosted Library",
+    "website": "https://developers.google.com/speed/libraries?hl=de"
   },
   {
     "name": "GoSun",
@@ -1280,11 +1298,11 @@
     ]
   },
   {
-    "name": "JsDelivr",
+    "name": "JsDelivr# Powering BootstrapCDN, therefore they have the same domains",
     "website": "https://www.jsdelivr.com/",
     "type": "public_asset",
     "domains": [
-      "cdn.jsdelivr.net"
+      "**.cdn.jsdelivr.net"
     ]
   },
   {
@@ -1330,6 +1348,10 @@
       "**.hacdn.net",
       "**.cachecn.com"
     ]
+  },
+  {
+    "name": "LaunchCDN",
+    "website": "https://launchcdn.com/"
   },
   {
     "name": "LeaseWeb CDN",
@@ -1472,6 +1494,14 @@
     "type": "commercial",
     "domains": [
       "**merlin**"
+    ]
+  },
+  {
+    "name": "MetaCDN",
+    "website": "https://www.meta.com",
+    "domains": [
+      "**.fbcdn.net",
+      "**.metacdn.com"
     ]
   },
   {
@@ -1630,7 +1660,10 @@
   },
   {
     "name": "OnApp",
-    "website": "https://onapp.com"
+    "website": "https://onapp.com",
+    "domains": [
+      "**.cdn.onappcdn.com"
+    ]
   },
   {
     "name": "OVH CDN",
@@ -1653,12 +1686,16 @@
     ]
   },
   {
-    "name": "PCCW"
+    "name": "PCCW",
+    "website": "https://www.pccwglobal.com/services/media-solutions/"
   },
   {
     "name": "Pacnet",
-    "website": "http://www.pacnet.com/",
-    "type": "commercial"
+    "website": "https://www.pacnetcdn.com/",
+    "type": "commercial",
+    "domains": [
+      "**.pacnetcdn.com"
+    ]
   },
   {
     "name": "ParsPack",
@@ -1742,7 +1779,11 @@
   },
   {
     "name": "Rackspace",
-    "type": "commercial"
+    "type": "commercial",
+    "website": "https://docs.rackspace.com/docs/rackspace-cdn",
+    "domains": [
+      "**.raxcdn.com"
+    ]
   },
   {
     "name": "Reblaze",
@@ -1828,7 +1869,8 @@
     ]
   },
   {
-    "name": "SK Broadband"
+    "name": "SK Broadband",
+    "website": "https://en.broadbandidc.com/company/?doc=company"
   },
   {
     "name": "SoftLayer",
@@ -2025,17 +2067,21 @@
     ]
   },
   {
-    "name": "Telenor"
+    "name": "Telenor",
+    "website": "https://www.telenor.com/"
   },
   {
     "name": "TeliaSonera",
-    "type": "commercial"
+    "type": "commercial",
+    "website": "https://www.telia.fi/operators/palveluratkaisut/sisallonjakopalvelu"
   },
   {
-    "name": "Telstra"
+    "name": "Telstra",
+    "website": "https://www.telstra.com.au"
   },
   {
-    "name": "Telus"
+    "name": "Telus",
+    "website": "https://www.telus.com/en"
   },
   {
     "name": "Tencent Cloud",
@@ -2308,7 +2354,11 @@
   },
   {
     "name": "TinyCDN",
-    "type": "commercial"
+    "website": "https://tinycdn.cloud/en/",
+    "type": "commercial",
+    "domains": [
+      "tinycdn.cloud"
+    ]
   },
   {
     "name": "Transparent Edge",
@@ -2345,6 +2395,17 @@
       "**.ucloud.com.cn",
       "**.cdndo.com",
       "**.ucloudgda.com"
+    ],
+    "asns": [
+      59077,
+      135377
+    ]
+  },
+  {
+    "name": "UNPKG",
+    "website": "https://unpkg.com/",
+    "domains": [
+      "**.unpkg.com"
     ]
   },
   {
