@@ -4,7 +4,7 @@ from ranges.parser import IPResult
 
 
 class ClickhouseService:
-    def __init__(self, host: str, port: int, user: str, password: str, database: str, table: str, secure: bool = False):
+    def __init__(self, host: str, port: int, user: str, password: str, database: str, secure: bool = False):
         self.client = clickhouse_connect.get_client(
             host=host,
             port=port,
