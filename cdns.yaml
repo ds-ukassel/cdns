@@ -1139,7 +1139,7 @@
   asns:
     - 20253
 
-- name: Rackspace
+- name: Rackspace # https://docs.rackspace.com/docs/add-and-manage-domains-in-rackspace-cdn
   website: https://docs.rackspace.com/docs/rackspace-cdn
   domains:
     - "**.raxcdn.com"
