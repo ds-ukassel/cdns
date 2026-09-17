@@ -615,15 +615,10 @@
   {
     "name": "CDNvideo",
     "website": "https://www.cdnvideo.com/",
+    "type": "commercial",
     "domains": [
       "**.cdnvideo.com"
     ],
-    "asns": [
-      57363,
-      204720
-    ],
-    "website": "https://www.cdnvideo.com/",
-    "type": "commercial",
     "asns": [
       57363,
       204720
@@ -1303,7 +1298,7 @@
     ]
   },
   {
-    "name": "JsDelivr",
+    "name": "JsDelivr# Powering BootstrapCDN, therefore they have the same domains",
     "website": "https://www.jsdelivr.com/",
     "type": "public_asset",
     "domains": [
@@ -1606,7 +1601,7 @@
   },
   {
     "name": "NACEVI",
-    "website": "https://www.nacevi.cz/"
+    "website": "http://www.nacevi.cz/"
   },
   {
     "name": "NetDNA"
@@ -1697,14 +1692,10 @@
   {
     "name": "Pacnet",
     "website": "https://www.pacnetcdn.com/",
+    "type": "commercial",
     "domains": [
       "**.pacnetcdn.com"
     ]
-  },
-  {
-    "name": "Pacnet",
-    "website": "http://www.pacnet.com/",
-    "type": "commercial"
   },
   {
     "name": "ParsPack",
@@ -1788,8 +1779,8 @@
   },
   {
     "name": "Rackspace",
-    "website": "https://docs.rackspace.com/docs/rackspace-cdn",
     "type": "commercial",
+    "website": "https://docs.rackspace.com/docs/rackspace-cdn",
     "domains": [
       "**.raxcdn.com"
     ]
@@ -2081,8 +2072,8 @@
   },
   {
     "name": "TeliaSonera",
-    "website": "https://www.telia.fi/operators/palveluratkaisut/sisallonjakopalvelu",
-    "type": "commercial"
+    "type": "commercial",
+    "website": "https://www.telia.fi/operators/palveluratkaisut/sisallonjakopalvelu"
   },
   {
     "name": "Telstra",
@@ -2397,8 +2388,8 @@
   },
   {
     "name": "UCloud CDN",
-    "website": "https://www.ucloud-global.com/en/docs/ucdn",
     "type": "commercial",
+    "website": "https://www.ucloud-global.com/en/docs/ucdn/intro",
     "domains": [
       "**.ucloud.cn",
       "**.ucloud.com.cn",
