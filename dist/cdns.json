@@ -419,10 +419,7 @@
     "name": "BootCSS"
   },
   {
-    "name": "BootstrapCDN",
-    "domains": [
-      "**.jsdelivr.net"
-    ]
+    "name": "BootstrapCDN"
   },
   {
     "name": "BT Group"
