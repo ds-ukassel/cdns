@@ -1,6 +1,3 @@
-import datetime
-import re
-
 import clickhouse_connect
 
 from ranges.parser import IPResult
@@ -17,29 +14,11 @@ class ClickhouseService:
             secure=secure,
         )
 
-        self.table = table
-        self.create_table()
+    def execute_query(self, query: str, parameters: str) -> None:
+        self.client.command(query, parameters=parameters)
 
-    def create_table(self) -> None:
-        if not re.match(r"^[a-zA-Z_][a-zA-Z0-9_]*$", self.table):
-            raise ValueError(f"Invalid table name: {self.table}")
-
-        query = f"""
-            CREATE TABLE IF NOT EXISTS {self.table} (
-                cdn_name String,
-                timestamp DateTime64 DEFAULT now(),
-                ip_range String,
-                ip_version UInt8
-            ) ENGINE = ReplacingMergeTree()
-            ORDER BY (cdn_name, toYYYYMMDD(timestamp), ip_range)
-            PARTITION BY toYYYYMM(timestamp)
-            """
-        self.client.command(query)
-
-    def insert_data(self, timestamp: datetime.datetime, cdn: str, data: IPResult) -> None:
-        ipv4_rows = [(cdn, timestamp, ip_range, 4) for ip_range in data[0]]
-        ipv6_rows = [(cdn, timestamp, ip_range, 6) for ip_range in data[1]]
-        self.client.insert(self.table, ipv4_rows + ipv6_rows)
+    def insert_data(self, table: str, data):
+        self.client.insert(table, data)
 
     def close(self) -> None:
         self.client.close()
