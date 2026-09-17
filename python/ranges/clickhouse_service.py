@@ -1,10 +1,11 @@
 import clickhouse_connect
+from clickhouse_connect.driver.binding import finalize_query
 
 from ranges.parser import IPResult
 
 
 class ClickhouseService:
-    def __init__(self, host: str, port: int, user: str, password: str, database: str, secure: bool = False):
+    def __init__(self, host: str, port: int, user: str, password: str, database: str, table: str, secure: bool = False):
         self.client = clickhouse_connect.get_client(
             host=host,
             port=port,
@@ -13,12 +14,14 @@ class ClickhouseService:
             database=database,
             secure=secure,
         )
+        self.table = table
 
-    def execute_query(self, query: str, parameters: str) -> None:
-        self.client.command(query, parameters=parameters)
+    def execute_query(self, query: str, parameters: dict = None) -> None:
+        final_query = query.replace('{table', self.table)
+        self.client.command(final_query, parameters=parameters)
 
-    def insert_data(self, table: str, data, column_names=None):
-        self.client.insert(table, data, column_names=column_names)
+    def insert_data(self, data, column_names=None):
+        self.client.insert(self.table, data, column_names=column_names)
 
     def close(self) -> None:
         self.client.close()
