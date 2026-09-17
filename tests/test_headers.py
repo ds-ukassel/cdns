@@ -57,6 +57,26 @@ class TestMatches:
         matcher = {'content-type': 'text/html'}
         assert matches(headers, matcher) is False
 
+    def test_handles_wildcard(self):
+        headers= {'x-header-a': 'value-a'}
+        matcher = {'x-header-a': 'value-*'}
+        assert matches(headers, matcher) is True
+
+    def test_handles_wildcards(self):
+        headers= {'x-header-a': 'value-a-b-c'}
+        matcher = {'x-header-a': 'value-*-*-c'}
+        assert matches(headers, matcher) is True
+
+    def test_handles_escaped_asterix(self):
+        headers= {'x-header-a': 'value-*'}
+        matcher = {'x-header-a': 'value-\\*'}
+        assert matches(headers, matcher) is True
+
+    def test_handles_escaped_asterix_with_incorrect_header(self):
+        headers= {'x-header-a': 'value-a'}
+        matcher = {'x-header-a': 'value-\\*'}
+        assert matches(headers, matcher) is False
+
 
 class TestMatchHeaders:
     def test_returns_matching_headers_for_a_single_matching_matcher(self):

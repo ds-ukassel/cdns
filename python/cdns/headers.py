@@ -1,3 +1,4 @@
+import re
 from typing import Dict, List, Optional
 
 
@@ -35,6 +36,12 @@ def matches(headers: Dict[str, str], matcher: Dict[str, Optional[str]]) -> bool:
         if expected_value is None:  # any value is acceptable
             if header_value is None:
                 return False
-        elif header_value != expected_value:
+        elif header_value is None or not re.fullmatch(header2pattern(expected_value), header_value):
             return False
     return True
+
+def header2pattern(header: str) -> str:
+    def replace(match: re.Match) -> str:
+        token = match.group(0)
+        return '.*' if token == '*' else token
+    return '^' + re.sub(r'\\\*|\*|\.|\+|\?|\^|\$|\||\\', replace, header) + '$'

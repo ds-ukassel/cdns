@@ -34,9 +34,15 @@ export function matches(headers: Record<string, string>, matcher: Record<string,
       if (headerValue === undefined) {
         return false;
       }
-    } else if (headerValue !== expectedValue) {
+    } else if (headerValue === undefined || new RegExp(header2pattern(expectedValue), 'i').test(headerValue) === false) {
       return false;
     }
   }
   return true;
+}
+
+function header2pattern(header: string): string {
+  return '^' + header.replace(/\\\*|\*|\.|\+|\?|\^|\$|\||\\/g, (token) => {
+    return token === '*' ? '.*' : token
+  }) + '$';
 }

@@ -67,6 +67,30 @@ describe('matches', () => {
     const matcher = {'content-type': 'text/html'};
     expect(matches(headers, matcher)).toBe(false);
   });
+
+  it('returns true if a wildcard is used', () => {
+    const headers = {'x-header-a': 'value-a'};
+    const matcher = {'x-header-a': 'value-*'};
+    expect(matches(headers, matcher)).toBe(true);
+  });
+
+  it('returns true if multiple wildcards are used', () => {
+    const headers = {'x-header-a': 'value-a-b-c'};
+    const matcher = {'x-header-a': 'value-*-*-c'};
+    expect(matches(headers, matcher)).toBe(true);
+  });
+
+  it('returns true if an escaped asterix is used', () => {
+    const headers = {'x-header-a': 'value-*'};
+    const matcher = {'x-header-a': 'value-\\*'};
+    expect(matches(headers, matcher)).toBe(true);
+  });
+
+  it('returns false if an escaped asterix is used with an incorrect value', () => {
+    const headers = {'x-header-a': 'value-a'};
+    const matcher = {'x-header-a': 'value-\\*'};
+    expect(matches(headers, matcher)).toBe(false);
+  });
 });
 
 describe('matchHeaders', () => {
