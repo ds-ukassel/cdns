@@ -17,8 +17,8 @@ class ClickhouseService:
     def execute_query(self, query: str, parameters: str) -> None:
         self.client.command(query, parameters=parameters)
 
-    def insert_data(self, table: str, data):
-        self.client.insert(table, data)
+    def insert_data(self, table: str, data, column_names=None):
+        self.client.insert(table, data, column_names=column_names)
 
     def close(self) -> None:
         self.client.close()
