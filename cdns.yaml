@@ -305,8 +305,6 @@
 - name: BootCSS # malicious links. See https://rdi.berkeley.edu/blog/polyfill/
 
 - name: BootstrapCDN
-  domains:
-    - "**.jsdelivr.net"
 
 - name: BT Group
 
