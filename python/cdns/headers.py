@@ -36,9 +36,19 @@ def matches(headers: Dict[str, str], matcher: Dict[str, Optional[str]]) -> bool:
         if expected_value is None:  # any value is acceptable
             if header_value is None:
                 return False
-        elif header_value is None or not re.fullmatch(header2pattern(expected_value), header_value):
+        elif not value_matches(header_value, expected_value):
             return False
     return True
+
+
+def value_matches(header_value: Optional[str], expected_value: str) -> bool:
+    if header_value is None:
+        return False
+    if "*" in expected_value:
+        pattern = header2pattern(expected_value)
+        return re.fullmatch(pattern, header_value) is not None
+    return header_value == expected_value
+
 
 def header2pattern(header: str) -> str:
     def replace(match: re.Match) -> str:

@@ -34,11 +34,22 @@ export function matches(headers: Record<string, string>, matcher: Record<string,
       if (headerValue === undefined) {
         return false;
       }
-    } else if (headerValue === undefined || new RegExp(header2pattern(expectedValue), 'i').test(headerValue) === false) {
+    } else if (!valueMatches(headerValue, expectedValue)) {
       return false;
     }
   }
   return true;
+}
+
+function valueMatches(headerValue: string | undefined, expectedValue: string): boolean {
+  if (headerValue === undefined) {
+    return false;
+  } else if (expectedValue.includes('*')) {
+    const pattern = new RegExp(header2pattern(expectedValue), 'i');
+    return pattern.test(headerValue);
+  } else {
+    return headerValue === expectedValue;
+  }
 }
 
 function header2pattern(header: string): string {
