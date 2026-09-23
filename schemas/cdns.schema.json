@@ -12,6 +12,11 @@
         "type": "string",
         "minLength": 1
       },
+      "type": {
+        "description": "The type of the CDN",
+        "enum": ["private", "commercial", "public_asset", "other"],
+        "minLength": 1
+      },
       "website": {
         "description": "The website of the CDN",
         "type": "string",
