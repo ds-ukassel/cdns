@@ -10,7 +10,7 @@ from common.utils import read_yaml
 from ranges.clickhouse_service import ClickhouseService
 from ranges.parser import PARSERS, Parser
 
-from python.ranges.utils import get_networks, detect_range_type, insert_ranges
+from ranges.utils import get_networks, detect_range_type, insert_ranges
 
 
 def main():
@@ -94,7 +94,7 @@ def main():
                     except Exception:
                         LOGGER.exception(f"Error detecting network type for CDN '{cdn_name}' and ASN '{asn}'.")
                     data = (cdn_name, timestamp, range, range_type, "ipinfo") # TODO: adapt table format to source
-                    insert_ranges(clickhouse_cdn, data)
+                    clickhouse_cdn.insert_data(data)
 
         LOGGER.info("Done.")
 
