@@ -93,7 +93,7 @@ def main():
                         range_type = detect_range_type(ip_range)
                     except Exception:
                         LOGGER.exception(f"Error detecting network type for CDN '{cdn_name}' and ASN '{asn}'.")
-                    data = (cdn_name, timestamp, range, range_type, "ipinfo") # TODO: adapt table format to source
+                    data = (cdn_name, timestamp, range, range_type, "ipinfo")
                     clickhouse_cdn.insert_data(data)
 
         LOGGER.info("Done.")
