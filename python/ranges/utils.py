@@ -1,7 +1,7 @@
 import requests
 from requests import Session
 
-from ranges.clickhouse_service import ClickhouseService
+from python.ranges.clickhouse_service import ClickhouseService
 
 
 def fetch(url: str, session: Session | None = None) -> str:

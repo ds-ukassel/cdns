@@ -3,14 +3,14 @@ from pathlib import Path
 
 from requests import Session
 
-from common import config
-from common.config import CDN_YAML
-from common.logger import LOGGER
-from common.utils import read_yaml
-from ranges.clickhouse_service import ClickhouseService
-from ranges.parser import PARSERS, Parser
+from python.common import config
+from python.common.config import CDN_YAML
+from python.common.logger import LOGGER
+from python.common.utils import read_yaml
+from python.ranges.clickhouse_service import ClickhouseService
+from python.ranges.parser import PARSERS, Parser
 
-from ranges.utils import get_networks, detect_range_type, insert_ranges
+from utils import get_networks, detect_range_type
 
 
 def main():
@@ -88,7 +88,7 @@ def main():
             for asn in cdn.asns:
                 LOGGER.info("Start fetching ranges from ipinfo ...")
                 ip_ranges = get_networks(clickhouse_ipinfo, asn)
-                for ip_range in ip_ranges:
+                for ip_range in ip_ranges.result_rows:
                     try:
                         range_type = detect_range_type(ip_range)
                     except Exception:

@@ -1,6 +1,5 @@
 import clickhouse_connect
-
-from ranges.parser import IPResult
+from clickhouse_connect.driver.query import QueryResult
 
 
 class ClickhouseService:
@@ -15,9 +14,9 @@ class ClickhouseService:
         )
         self.table = table
 
-    def execute_query(self, query: str, parameters: dict = None) -> None:
+    def execute_query(self, query: str, parameters: dict = None) -> QueryResult:
         final_query = query.replace('{table}', self.table)
-        self.client.command(final_query, parameters=parameters)
+        return self.client.query(final_query, parameters=parameters)
 
     def insert_data(self, data, column_names=None):
         self.client.insert(self.table, data, column_names=column_names)
