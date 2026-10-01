@@ -1,7 +1,7 @@
 import requests
 from requests import Session
 
-from python.ranges.clickhouse_service import ClickhouseService
+from ranges.clickhouse_service import ClickhouseService
 
 
 def fetch(url: str, session: Session | None = None) -> str:
@@ -13,15 +13,15 @@ def fetch(url: str, session: Session | None = None) -> str:
     response.raise_for_status()
     return response.text
 
-def get_networks(service: ClickhouseService, asn: int):
-    query = "SELECT network FROM {{table}} WHERE asn={{asn:UInt32}}"
-    return service.execute_query(query, parameters={"asn": asn})
 
-def detect_range_type(range: str):
-    if "." in range:
+def get_networks(service: ClickhouseService, asn: int) -> list[str]:
+    result = service.execute_query("SELECT network FROM {table} WHERE asn={asn:UInt32}", parameters={"asn": asn})
+    return [row[0] for row in result.result_rows]
+
+def detect_range_type(ip_range: str):
+    if "." in ip_range:
         return 4
-    elif ":" in range:
+    elif ":" in ip_range:
         return 6
     else:
         raise ValueError("Unexpected network type")
-

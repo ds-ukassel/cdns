@@ -5,7 +5,7 @@ from typing import TypeAlias
 
 from requests import Session
 from bs4 import BeautifulSoup
-import utils
+from ranges import utils
 
 IPResult: TypeAlias = tuple[set[str], set[str]]
 

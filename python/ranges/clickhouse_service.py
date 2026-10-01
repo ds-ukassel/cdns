@@ -1,3 +1,5 @@
+from typing import Iterable, Any
+
 import clickhouse_connect
 from clickhouse_connect.driver.query import QueryResult
 
@@ -14,11 +16,11 @@ class ClickhouseService:
         )
         self.table = table
 
-    def execute_query(self, query: str, parameters: dict = None) -> QueryResult:
+    def execute_query(self, query: str, parameters: dict[str, Any] | None = None) -> QueryResult:
         final_query = query.replace('{table}', self.table)
         return self.client.query(final_query, parameters=parameters)
 
-    def insert_data(self, data, column_names=None):
+    def insert_data(self, data, column_names: str | Iterable[str] = "*"):
         self.client.insert(self.table, data, column_names=column_names)
 
     def close(self) -> None:
