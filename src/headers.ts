@@ -45,15 +45,15 @@ function valueMatches(headerValue: string | undefined, expectedValue: string): b
   if (headerValue === undefined) {
     return false;
   } else if (expectedValue.includes('*')) {
-    const pattern = new RegExp(header2pattern(expectedValue), 'i');
+    const pattern = header2pattern(expectedValue);
     return pattern.test(headerValue);
   } else {
     return headerValue === expectedValue;
   }
 }
 
-function header2pattern(header: string): string {
-  return '^' + header.replace(/\\\*|\*|\.|\+|\?|\^|\$|\||\\/g, (token) => {
+function header2pattern(header: string): RegExp {
+  return new RegExp('^' + header.replace(/\\\*|\*|\.|\+|\?|\^|\$|\||\\/g, (token) => {
     return token === '*' ? '.*' : token
-  }) + '$';
+  }) + '$');
 }

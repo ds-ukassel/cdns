@@ -54,4 +54,4 @@ def header2pattern(header: str) -> str:
     def replace(match: re.Match) -> str:
         token = match.group(0)
         return '.*' if token == '*' else token
-    return '^' + re.sub(r'\\\*|\*|\.|\+|\?|\^|\$|\||\\', replace, header) + '$'
+    return "^" + re.sub(r'\\\*|\*|\.|\+|\?|\^|\$|\||\\', replace, header) + "$"
