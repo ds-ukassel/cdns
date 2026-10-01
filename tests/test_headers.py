@@ -77,6 +77,11 @@ class TestMatches:
         matcher = {'x-header-a': 'value-\\*'}
         assert matches(headers, matcher) is False
 
+    def test_handles_incorrect_case(self):
+        headers= {'x-header-a': 'value-a'}
+        matcher = {'x-header-a': 'value-A'}
+        assert matches(headers, matcher) is False
+
 
 class TestMatchHeaders:
     def test_returns_matching_headers_for_a_single_matching_matcher(self):

@@ -91,6 +91,12 @@ describe('matches', () => {
     const matcher = {'x-header-a': 'value-\\*'};
     expect(matches(headers, matcher)).toBe(false);
   });
+
+  it('returns false if the case is incorrect', () => {
+    const headers = {'x-header-a': 'value-a'};
+    const matcher = {'x-header-a': 'value-A'};
+    expect(matches(headers, matcher)).toBe(false);
+  });
 });
 
 describe('matchHeaders', () => {
