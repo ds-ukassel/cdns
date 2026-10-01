@@ -15,7 +15,7 @@ services:
       - 8.8.8.8
     environment:
       - CLICKHOUSE_CDN_HOST=clickhouse-cdns
-      - CLICKHOUSE_IPINFO_HOST=clickhouse-ipinfo
+      - CLICKHOUSE_IPINFO_HOST=clickhouse-cdns
 
   clickhouse-cdns:
     image: clickhouse/clickhouse-server:latest
@@ -35,23 +35,6 @@ services:
         soft: 262144
         hard: 262144
 
-  clickhouse-ipinfo:
-    image: clickhouse/clickhouse-server:latest
-    container_name: clickhouse-ipinfo
-    ports:
-      - "9000:9000"
-      - "8123:8123"
-    volumes:
-      - clickhouse_data:/var/lib/clickhouse
-    environment:
-      - CLICKHOUSE_DB=default
-      - CLICKHOUSE_USER=default
-      - CLICKHOUSE_PASSWORD=default
-      - CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1
-    ulimits:
-      nofile:
-        soft: 262144
-        hard: 262144
 
 volumes:
   clickhouse_data:
