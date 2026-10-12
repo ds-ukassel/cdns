@@ -43,7 +43,7 @@
         "X-Akamai-Edge-Cache": null
       },
       {
-        "Server": "AkamaiGHost"
+        "Server": "Akamai*"
       },
       {
         "X-Akamai-Staging": null
@@ -56,6 +56,96 @@
       },
       {
         "X-Akamai-Device-Characteristics": null
+      },
+      {
+        "X-CDN": "Served-By-Akamai"
+      },
+      {
+        "X-Akamai-Transformed": null
+      },
+      {
+        "X-Akamai-Live-Origin-QOS": null
+      },
+      {
+        "X-Akamai-Server": null
+      },
+      {
+        "X-Akamai-CC": null
+      },
+      {
+        "X-Akamai-TD-Map": null
+      },
+      {
+        "X-Akamai-Note": null
+      },
+      {
+        "X-FD-Akamai-Image-Manager": null
+      },
+      {
+        "Akamai-Path-Timestamp": null
+      },
+      {
+        "Akamai-Cache-Status": null
+      },
+      {
+        "Akamai-Mon-Iucid-ING": null
+      },
+      {
+        "Akamai-Mon-Iucid-DEL": null
+      },
+      {
+        "Akamai-Manifest-Personalization": null
+      },
+      {
+        "Akamai-Manifest-Personalization-Config-Source": null
+      },
+      {
+        "Akamai-Request-BC": null
+      },
+      {
+        "X-Akamai-Edgsuite-CC": null
+      },
+      {
+        "Akamai-Loopback-Request": null
+      },
+      {
+        "X-Akamai-IM-Skip-DLR": null
+      },
+      {
+        "Akam-Ref": null
+      },
+      {
+        "X-Akamai-Cache": null
+      },
+      {
+        "X-Akamai-Failover-TD-Map": null
+      },
+      {
+        "Akamai-GRN": null
+      },
+      {
+        "X-Akam-SW-Version": null
+      },
+      {
+        "X-CDN": "akamai"
+      },
+      {
+        "CDN-Type": "Akamai"
+      },
+      {
+        "X-Provider": "akamai*"
+      },
+      {
+        "Delivery-Via": "Akamai"
+      },
+      {
+        "DL-From": "akamai"
+      },
+      {
+        "X-CDN": "AKAM"
+      },
+      {
+        "X-Akamai-Request-GRN": null
       }
     ],
     "ranges": [
@@ -172,10 +262,25 @@
         "Ali-CDN-Cache": null
       },
       {
+        "ali-swift-global-savetime": null
+      },
+      {
         "X-Alibaba-Edge": null
       },
       {
         "Server": "Alibaba"
+      },
+      {
+        "Server": "Tengine"
+      },
+      {
+        "Server": "AliyunOSS"
+      },
+      {
+        "Ali-Swift-Global-Savetime": null
+      },
+      {
+        "X-AliCDN-DA-UPS-Status": null
       }
     ]
   },
@@ -190,6 +295,11 @@
     "domains": [
       "**.alipaydns.com",
       "**.alipayobjects.com"
+    ],
+    "headers": [
+      {
+        "Ali-Swift-Global-Savetime": null
+      }
     ]
   },
   {
@@ -218,16 +328,40 @@
         "Server": "CloudFront"
       },
       {
+        "Server": "AmazonS3"
+      },
+      {
         "X-Amz-Cf-Pop": null
       },
       {
-        "Via": "CloudFront"
+        "Via": "*CloudFront*"
       },
       {
         "X-Amz-Acl": null
       },
       {
         "X-Amz-Cf-Request-Id": null
+      },
+      {
+        "X-Amz-Cf-ID": null
+      },
+      {
+        "X-Amz-Cf-POP": null
+      },
+      {
+        "X-Amz-Expiration": null
+      },
+      {
+        "X-Amz-Version-ID": null
+      },
+      {
+        "X-Cache": "* from cloudfront"
+      },
+      {
+        "X-Amz-Server-Side-Encryption": null
+      },
+      {
+        "X-Amz-Replication-Status": null
       }
     ],
     "ranges": [
@@ -265,6 +399,98 @@
       {
         "range_type": "combined",
         "url": "https://ip-ranges.amazonaws.com/ip-ranges.json"
+      }
+    ],
+    "headers": [
+      {
+        "Server": "AmazonS3"
+      },
+      {
+        "X-Amz-Request-Id": null
+      },
+      {
+        "X-Amz-Version-Id": null
+      },
+      {
+        "X-Amzn-Waf-Challenge-Id": null
+      },
+      {
+        "X-Amz-Replication-Status": null
+      },
+      {
+        "X-Amz-apigw-Id": null
+      },
+      {
+        "X-Amzn-Requestid": null
+      },
+      {
+        "X-Amz-Server-Side-Encryption": null
+      },
+      {
+        "X-Amz-Replication-Status": null
+      },
+      {
+        "X-Amz-Cf-Request-Id": null
+      },
+      {
+        "X-Amz-Id-2": null
+      },
+      {
+        "X-Amz-Bucket-Region": null
+      },
+      {
+        "X-Amz-Meta-MTime": null
+      },
+      {
+        "X-Amzn-RequestId": null
+      },
+      {
+        "X-Amz-Meta-CB-ModifiedTime": null
+      },
+      {
+        "X-Amz-CF-Id": null
+      },
+      {
+        "X-Amz-CF-POP": null
+      },
+      {
+        "X-Amzn-WAF-Challenge-Id": null
+      },
+      {
+        "X-Amzn-WAF-Captcha-Id": null
+      },
+      {
+        "X-Amz-Meta-SHA1": null
+      },
+      {
+        "X-Amz-Server-Side-Encryption-AWS-KMS-Key-Id": null
+      },
+      {
+        "X-Amz-Meta-Version": null
+      },
+      {
+        "X-Amz-Meta-JCR-PrimaryType": null
+      },
+      {
+        "X-Amz-Meta-JCR-Created": null
+      },
+      {
+        "X-Amz-Meta-JCR-CreatedBy": null
+      },
+      {
+        "X-Amz-Meta-JCR-UUID": null
+      },
+      {
+        "X-Amz-Apigw-Id": null
+      },
+      {
+        "X-Amzn-Trace-Id": null
+      },
+      {
+        "X-Amz-Storage-class": null
+      },
+      {
+        "x-reserved": "*amazon, aws and amazon web services*"
       }
     ]
   },
@@ -327,6 +553,18 @@
       },
       {
         "Server": "AzionCDN"
+      },
+      {
+        "Server": "azion webserver"
+      },
+      {
+        "X-Azion-Edge-Location": null
+      },
+      {
+        "X-Azion-Request-Id": null
+      },
+      {
+        "X-Azion-Edge-POP": null
       }
     ],
     "asns": [
@@ -348,6 +586,11 @@
       "**yjs-cdn**",
       "**shifen**",
       "**.yunjiasu-cdn.net"
+    ],
+    "headers": [
+      {
+        "X-BDCdn-Cache-Status": null
+      }
     ]
   },
   {
@@ -430,6 +673,23 @@
     ],
     "asns": [
       140633
+    ],
+    "headers": [
+      {
+        "X-Bili-Trace-Id": null
+      },
+      {
+        "Bili-Trace-Id": null
+      },
+      {
+        "vary": "*X1-Bilispy-Color"
+      },
+      {
+        "access-control-allow-headers": "*Bilispy*"
+      },
+      {
+        "access-control-expose-headers": "*Bilispy*"
+      }
     ]
   },
   {
@@ -438,6 +698,23 @@
     "type": "commercial",
     "domains": [
       "**.backblazeb2.com"
+    ],
+    "headers": [
+      {
+        "X-Bz-Content-SHA1": null
+      },
+      {
+        "X-Bz-File-Id": null
+      },
+      {
+        "X-Bz-File-Name": null
+      },
+      {
+        "X-Bz-Upload-Timestamp": null
+      },
+      {
+        "X-Bz-Info-SRC_Last_Modified_Millis": null
+      }
     ]
   },
   {
@@ -513,6 +790,39 @@
     "headers": [
       {
         "Server": "CacheFly"
+      },
+      {
+        "CF4Age": null
+      },
+      {
+        "CF4Ttl": null
+      },
+      {
+        "X-CF-ReqId": null
+      },
+      {
+        "X-CF-Tsc": null
+      },
+      {
+        "X-CF1": null
+      },
+      {
+        "X-CF2": null
+      },
+      {
+        "X-CF3": null
+      },
+      {
+        "X-CFF": null
+      },
+      {
+        "X-CFHash": null
+      },
+      {
+        "X-CF-ForceTr": null
+      },
+      {
+        "CacheFly-Control": null
       }
     ],
     "ranges": [
@@ -540,13 +850,28 @@
     ],
     "headers": [
       {
-        "Server": "CDN77"
+        "Server": "CDN77*"
       },
       {
         "CDN77": null
       },
       {
         "X-CDN": "CDN77"
+      },
+      {
+        "X-77-Age": null
+      },
+      {
+        "X-77-Cache": null
+      },
+      {
+        "X-77-NZT": null
+      },
+      {
+        "X-77-NZT-Ray": null
+      },
+      {
+        "X-77-POP": null
       }
     ],
     "ranges": [
@@ -591,6 +916,11 @@
     "type": "commercial",
     "domains": [
       "**.cdnify.io"
+    ],
+    "headers": [
+      {
+        "Server": "*Cdnify*"
+      }
     ]
   },
   {
@@ -599,6 +929,14 @@
     "type": "public_asset",
     "domains": [
       "**.cdnjs.cloudflare.com"
+    ],
+    "headers": [
+      {
+        "cf-cdnjs-via": null
+      },
+      {
+        "x-cdnjs-cache": null
+      }
     ]
   },
   {
@@ -733,6 +1071,21 @@
       },
       {
         "CF-WORKER": null
+      },
+      {
+        "NEL": "*cf-nel*"
+      },
+      {
+        "report-to": "*cf-nel*"
+      },
+      {
+        "CF-Placement": null
+      },
+      {
+        "CF-Polyfill-Version": null
+      },
+      {
+        "X-CDN": "CFLR"
       }
     ],
     "ranges": [
@@ -944,6 +1297,17 @@
     "type": "private",
     "domains": [
       "**.fbcdn.net"
+    ],
+    "headers": [
+      {
+        "X-FB-Connection-Quality": null
+      },
+      {
+        "X-FB-Debug": null
+      },
+      {
+        "X-FB-Optimizer": null
+      }
     ]
   },
   {
@@ -969,6 +1333,21 @@
       },
       {
         "X-Served-By": null
+      },
+      {
+        "Fastly-Restarts": null
+      },
+      {
+        "Fastly-IO-Info": null
+      },
+      {
+        "Fastly-IO-Served-By": null
+      },
+      {
+        "Fastly-IO-Transform-Stats": null
+      },
+      {
+        "Fastly-Stats": null
       }
     ],
     "ranges": [
@@ -1031,6 +1410,9 @@
       },
       {
         "X-GCL-User-Status": null
+      },
+      {
+        "X-CDN": "Gcore"
       }
     ],
     "ranges": [
@@ -1052,6 +1434,20 @@
     "type": "private",
     "domains": [
       "**.githubusercontent.com"
+    ],
+    "headers": [
+      {
+        "X-GitHub-Request-Id": null
+      },
+      {
+        "Server": "GitHub Cloud"
+      },
+      {
+        "X-GitHub-Tenant": null
+      },
+      {
+        "X-GitHub-Edge-Region": null
+      }
     ]
   },
   {
@@ -1087,6 +1483,18 @@
       },
       {
         "X-Edge-Location": null
+      },
+      {
+        "Google-Creative-Id": null
+      },
+      {
+        "Google-Lineitem-Id": null
+      },
+      {
+        "Google-MediationGroup-Id": null
+      },
+      {
+        "Google-MediationTag-Id": null
       }
     ],
     "ranges": [
@@ -1147,6 +1555,23 @@
     "name": "Heroku SaaS",
     "domains": [
       "**.herokuapp.com"
+    ],
+    "headers": [
+      {
+        "Server": "Heroku"
+      },
+      {
+        "Server": "heroku-router"
+      },
+      {
+        "VIA": "*heroku*"
+      },
+      {
+        "NEL": "*heroku-nel*"
+      },
+      {
+        "Report-To": "*heroku-nel*"
+      }
     ]
   },
   {
@@ -1163,6 +1588,11 @@
     "type": "commercial",
     "domains": [
       "*.hwcdn.*"
+    ],
+    "headers": [
+      {
+        "DL-From": "HWCDN"
+      }
     ]
   },
   {
@@ -1247,6 +1677,11 @@
     "name": "iQIYI CDN",
     "domains": [
       "**.71edge.com"
+    ],
+    "headers": [
+      {
+        "Server": "QWS"
+      }
     ]
   },
   {
@@ -1266,6 +1701,14 @@
       "**.qianxun.com",
       "**.jcloudlb.com",
       "**.jcloud-cdn.com"
+    ],
+    "headers": [
+      {
+        "X-Jss-Storage-Class": null
+      },
+      {
+        "X-Jss-Request-Id": null
+      }
     ]
   },
   {
@@ -1400,6 +1843,26 @@
     "type": "private",
     "domains": [
       "**.licdn.com"
+    ],
+    "headers": [
+      {
+        "X-Li-Fabric": null
+      },
+      {
+        "X-Li-POP": null
+      },
+      {
+        "X-Li-Proto": null
+      },
+      {
+        "X-Li-Uuid": null
+      },
+      {
+        "X-Li-Source-Fabric": null
+      },
+      {
+        "report-to": "*linkedin*"
+      }
     ]
   },
   {
@@ -1433,6 +1896,15 @@
     "headers": [
       {
         "X-Medianova-Cache": null
+      },
+      {
+        "x-MnRequest-id": null
+      },
+      {
+        "x-MServer": null
+      },
+      {
+        "Server": "MCDN-*"
       }
     ],
     "ranges": [
@@ -1502,6 +1974,23 @@
     "domains": [
       "**.fbcdn.net",
       "**.metacdn.com"
+    ],
+    "headers": [
+      {
+        "X-fb-connection-quality": null
+      },
+      {
+        "X-FB-Debug": null
+      },
+      {
+        "X-FB-Optimizer": null
+      },
+      {
+        "X-FB-PTM-Uuid": null
+      },
+      {
+        "X-FB-Edge-Debug": null
+      }
     ]
   },
   {
@@ -1530,6 +2019,69 @@
       },
       {
         "X-Ms-Cdn-Request-Id": null
+      },
+      {
+        "X-Ms-Lease-State": null
+      },
+      {
+        "X-Ms-Server-Encrypted": null
+      },
+      {
+        "X-Ms-Blob-Content-MD5": null
+      },
+      {
+        "X-Ms-Copy-Source": null
+      },
+      {
+        "X-Ms-Creation-Time": null
+      },
+      {
+        "X-Ms-Is-Current-Version": null
+      },
+      {
+        "X-Ms-OR-Policy-Id": null
+      },
+      {
+        "X-Ms-Version-Id": null
+      },
+      {
+        "X-Ms-Access-Tier": null
+      },
+      {
+        "X-Ms-Access-Tier-Inferred": null
+      },
+      {
+        "X-Ms-Meta-AIJsSDKSrc": null
+      },
+      {
+        "X-Ms-Meta-AIJsSDKVer": null
+      },
+      {
+        "Server": "Windows-Azure-Web/*"
+      },
+      {
+        "X-Ms-Middleware-Request-Id": null
+      },
+      {
+        "X-Ms-Copy-Completion-Time": null
+      },
+      {
+        "X-Ms-Copy-Id": null
+      },
+      {
+        "X-Ms-Copy-Progress": null
+      },
+      {
+        "X-Ms-Copy-Status": null
+      },
+      {
+        "X-Ms-Meta-Created": null
+      },
+      {
+        "X-Ms-Meta-CreatedBy": null
+      },
+      {
+        "X-Ms-Meta-CBModifiedTime": null
       }
     ],
     "ranges": [
@@ -1636,6 +2188,9 @@
       },
       {
         "X-NF-Cache-Status": null
+      },
+      {
+        "X-NF-Request-Id": null
       }
     ]
   },
@@ -1721,6 +2276,9 @@
       },
       {
         "X-QC-Cache": null
+      },
+      {
+        "X-QC-POP": null
       }
     ],
     "ranges": [
@@ -1739,6 +2297,17 @@
       "**.qingcache.com",
       "**.qingcloud.com",
       "**.frontwize.com"
+    ],
+    "headers": [
+      {
+        "X-QS-Request-Id": null
+      },
+      {
+        "X-QS-Storage-Class": null
+      },
+      {
+        "X-QS-Version-Id": null
+      }
     ]
   },
   {
@@ -1755,6 +2324,14 @@
       "**.qnydns.com",
       "**.qnqcdn.net",
       "**.hiecheimaetu.com"
+    ],
+    "headers": [
+      {
+        "X-QNM-Cache": null
+      },
+      {
+        "X-M-Log": "*QNM*"
+      }
     ]
   },
   {
@@ -1943,6 +2520,11 @@
     ],
     "asns": [
       32590
+    ],
+    "headers": [
+      {
+        "Set-Cookie": "*steamCountry*"
+      }
     ]
   },
   {
@@ -2058,12 +2640,25 @@
     ],
     "domains": [
       "**.cdn.bitgravity.com"
+    ],
+    "headers": [
+      {
+        "X-Tata-Request-Id": null
+      }
     ]
   },
   {
     "name": "Telefonica",
     "domains": [
       "**.cdn.telefonica.com"
+    ],
+    "headers": [
+      {
+        "X-TCDN": null
+      },
+      {
+        "Server": "TelCdn/*"
+      }
     ]
   },
   {
@@ -2340,6 +2935,14 @@
     ],
     "asns": [
       133478
+    ],
+    "headers": [
+      {
+        "Server": "TencentEdgeOne"
+      },
+      {
+        "X-Server": "tcic"
+      }
     ]
   },
   {
@@ -2350,6 +2953,20 @@
       "**.ctxcdn.cn",
       "**.ctdns.cn",
       "**.ctyunapi.cn"
+    ],
+    "headers": [
+      {
+        "X-Ctyun-Data-Location": null
+      },
+      {
+        "X-Ctyun-Metadata-Location": null
+      },
+      {
+        "Server": "CTYUN"
+      },
+      {
+        "Ctyun-Origin": null
+      }
     ]
   },
   {
@@ -2399,6 +3016,11 @@
     "asns": [
       59077,
       135377
+    ],
+    "headers": [
+      {
+        "X-UCloud-Request-Uuid": null
+      }
     ]
   },
   {
@@ -2422,6 +3044,12 @@
     "headers": [
       {
         "Server": "Vercel"
+      },
+      {
+        "X-Vercel-Id": null
+      },
+      {
+        "X-Vercel-Cache": null
       }
     ]
   },
