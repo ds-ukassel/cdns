@@ -18,6 +18,7 @@ def get_networks(service: ClickhouseService, asn: int) -> list[str]:
     result = service.execute_query("SELECT network FROM {table} WHERE asn={asn:UInt32}", parameters={"asn": asn})
     return [row[0] for row in result.result_rows]
 
+
 def detect_range_type(ip_range: str):
     if "." in ip_range:
         return 4

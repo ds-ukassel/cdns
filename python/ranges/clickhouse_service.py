@@ -1,3 +1,4 @@
+import re
 from typing import Iterable, Any
 
 import clickhouse_connect
@@ -17,6 +18,8 @@ class ClickhouseService:
         self.table = table
 
     def execute_query(self, query: str, parameters: dict[str, Any] | None = None) -> QueryResult:
+        if not re.match(r"^[a-zA-Z_][a-zA-Z0-9_]*$", self.table):
+            raise ValueError(f"Invalid table name: {self.table}")
         final_query = query.replace('{table}', self.table)
         return self.client.query(final_query, parameters=parameters)
 

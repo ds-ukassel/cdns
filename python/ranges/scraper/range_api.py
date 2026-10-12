@@ -33,7 +33,7 @@ def get_ranges(session: Session, timestamp: datetime.datetime, cdn: dict[str, An
                 ipv6_rows = [(cdn_name, timestamp, ip_range, 6, RANGE_SOURCE_API) for ip_range in ipv6_ranges]
                 LOGGER.info(f"Successfully parsed {len(ipv4_ranges)} IPv4 and {len(ipv6_ranges)} IPv6 ranges for CDN '{cdn_name}'.")
                 rows += (ipv4_rows + ipv6_rows)
-                LOGGER.info(f"Successfully added ranges for CDN '{cdn_name}' into ClickHouse.")
+                LOGGER.info(f"Successfully found ranges for CDN '{cdn_name}' into ClickHouse.")
             except Exception:
                 LOGGER.exception(f"Error processing URL source for CDN '{cdn_name}'. Skipping...")
         elif "ranges" in source:
