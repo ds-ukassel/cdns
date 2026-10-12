@@ -30,11 +30,41 @@
     - X-Akamai-Transformed:
     - X-Akamai-SSL:
     - X-Akamai-Edge-Cache:
-    - Server: AkamaiGHost
+    - Server: Akamai* # Akamai\/Time Server, AkamaiNetStorage, Akamai Image Manager, Akamai Resource Optimizer, AkamaiGHost
     - X-Akamai-Staging:
     - Edge-Control:
     - X-True-Cache-Key:
     - X-Akamai-Device-Characteristics:
+    - X-CDN: Served-By-Akamai
+    - X-Akamai-Transformed:
+    - X-Akamai-Live-Origin-QOS:
+    - X-Akamai-Server:
+    - X-Akamai-CC:
+    - X-Akamai-TD-Map:
+    - X-Akamai-Note:
+    - X-FD-Akamai-Image-Manager:
+    - Akamai-Path-Timestamp:
+    - Akamai-Cache-Status:
+    - Akamai-Mon-Iucid-ING:
+    - Akamai-Mon-Iucid-DEL:
+    - Akamai-Manifest-Personalization:
+    - Akamai-Manifest-Personalization-Config-Source:
+    - Akamai-Request-BC:
+    - X-Akamai-Edgsuite-CC:
+    - Akamai-Loopback-Request:
+    - X-Akamai-IM-Skip-DLR:
+    - Akam-Ref:
+    - X-Akamai-Cache:
+    - X-Akamai-Failover-TD-Map:
+    - Akamai-GRN:
+    - X-Akam-SW-Version:
+    - X-CDN: akamai
+    - CDN-Type: Akamai
+    - X-Provider: akamai*
+    - Delivery-Via: Akamai
+    - DL-From: akamai
+    - X-CDN: AKAM
+    - X-Akamai-Request-GRN:
   ranges:
     - range_type: ipv4
       url: 'https://techdocs.akamai.com/property-manager/pdfs/akamai_ipv4_CIDRs.txt'
@@ -136,8 +166,13 @@
   headers:
     - Via: Alibaba Cloud CDN
     - Ali-CDN-Cache:
+    - ali-swift-global-savetime:
     - X-Alibaba-Edge:
     - Server: Alibaba
+    - Server: Tengine
+    - Server: AliyunOSS
+    - Ali-Swift-Global-Savetime:
+    - X-AliCDN-DA-UPS-Status:
 
 - name: Alimama
   domains:
@@ -147,6 +182,8 @@
   domains:
     - "**.alipaydns.com"
     - "**.alipayobjects.com"
+  headers:
+    - Ali-Swift-Global-Savetime:
 
 - name: Alipay+
   website: https://docs.alipayplus.com/alipayplus/alipayplus/integration_cashier_acq_unified/cdn_json
@@ -163,10 +200,18 @@
     - X-Amz-Cf-Id:
     - X-Cache: Hit from cloudfront
     - Server: CloudFront
+    - Server: AmazonS3
     - X-Amz-Cf-Pop:
-    - Via: CloudFront
+    - Via: "*CloudFront*"
     - X-Amz-Acl:
     - X-Amz-Cf-Request-Id:
+    - X-Amz-Cf-ID:
+    - X-Amz-Cf-POP:
+    - X-Amz-Expiration:
+    - X-Amz-Version-ID:
+    - X-Cache: "* from cloudfront"
+    - X-Amz-Server-Side-Encryption:
+    - X-Amz-Replication-Status:
   ranges:
     - range_type: 'ipv4'
       url: 'https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips'
@@ -195,6 +240,37 @@
   ranges:
     - range_type: 'combined'
       url: 'https://ip-ranges.amazonaws.com/ip-ranges.json'
+  headers:
+    - Server: AmazonS3
+    - X-Amz-Request-Id:
+    - X-Amz-Version-Id:
+    - X-Amzn-Waf-Challenge-Id:
+    - X-Amz-Replication-Status:
+    - X-Amz-apigw-Id:
+    - X-Amzn-Requestid:
+    - X-Amz-Server-Side-Encryption:
+    - X-Amz-Replication-Status:
+    - X-Amz-Cf-Request-Id:
+    - X-Amz-Id-2:
+    - X-Amz-Bucket-Region:
+    - X-Amz-Meta-MTime:
+    - X-Amzn-RequestId:
+    - X-Amz-Meta-CB-ModifiedTime:
+    - X-Amz-CF-Id:
+    - X-Amz-CF-POP:
+    - X-Amzn-WAF-Challenge-Id:
+    - X-Amzn-WAF-Captcha-Id:
+    - X-Amz-Meta-SHA1:
+    - X-Amz-Server-Side-Encryption-AWS-KMS-Key-Id:
+    - X-Amz-Meta-Version:
+    - X-Amz-Meta-JCR-PrimaryType:
+    - X-Amz-Meta-JCR-Created:
+    - X-Amz-Meta-JCR-CreatedBy:
+    - X-Amz-Meta-JCR-UUID:
+    - X-Amz-Apigw-Id:
+    - X-Amzn-Trace-Id:
+    - X-Amz-Storage-class:
+    - x-reserved: "*amazon, aws and amazon web services*"
 
 - name: Ananke
   domains:
@@ -235,6 +311,10 @@
   headers:
     - X-Azion-Cache:
     - Server: AzionCDN
+    - Server: azion webserver
+    - X-Azion-Edge-Location:
+    - X-Azion-Request-Id:
+    - X-Azion-Edge-POP:
   asns:
     - 52580
 
@@ -251,6 +331,8 @@
     - "**yjs-cdn**"
     - "**shifen**"
     - "**.yunjiasu-cdn.net"
+  headers:
+    - X-BDCdn-Cache-Status:
 
 - name: Baishan Cloud
   website: https://en.baishan.com/
@@ -319,12 +401,24 @@
     - "**.szbdyd.com"
   asns:
     - 140633
+  headers:
+    - X-Bili-Trace-Id:
+    - Bili-Trace-Id:
+    - vary: "*X1-Bilispy-Color"
+    - access-control-allow-headers: "*Bilispy*"
+    - access-control-expose-headers: "*Bilispy*"
 
 - name: Backblaze
   website: https://www.backblaze.com/cloud-storage/solutions/cdn
   type: commercial
   domains:
     - "**.backblazeb2.com"
+  headers:
+    - X-Bz-Content-SHA1:
+    - X-Bz-File-Id:
+    - X-Bz-File-Name:
+    - X-Bz-Upload-Timestamp:
+    - X-Bz-Info-SRC_Last_Modified_Millis:
 
 - name: Blue Hat Network # Apparently a wordpress plugin which went out of business long ago
   website: https://wordpress.org/plugins/blue-hat-cdn/
@@ -372,6 +466,17 @@
     - "*.cachefly.net"
   headers:
     - Server: CacheFly
+    - CF4Age:
+    - CF4Ttl:
+    - X-CF-ReqId:
+    - X-CF-Tsc:
+    - X-CF1:
+    - X-CF2:
+    - X-CF3:
+    - X-CFF:
+    - X-CFHash:
+    - X-CF-ForceTr:
+    - CacheFly-Control:
   ranges:
     - range_type: 'combined'
       url: 'https://cachefly.cachefly.net/ips/cdn.txt'
@@ -388,9 +493,14 @@
   domains:
     - "**.cdn77.*"
   headers:
-    - Server: CDN77
+    - Server: "CDN77*"
     - CDN77: # TODO: Check if this is supposed to be a value or or a key
     - X-CDN: CDN77
+    - X-77-Age:
+    - X-77-Cache:
+    - X-77-NZT:
+    - X-77-NZT-Ray:
+    - X-77-POP:
   ranges:
     - range_type: 'combined'
       url: 'https://prefixlists.tools.cdn77.com/public_lmax_prefixes.json'
@@ -420,12 +530,17 @@
   type: commercial
   domains:
     - "**.cdnify.io"
+  headers:
+    - Server: "*Cdnify*"
 
 - name: CDNJS # Powered by CloudFlare
   website: https://cdnjs.com/
   type: public_asset
   domains:
     - "**.cdnjs.cloudflare.com"
+  headers:
+    - cf-cdnjs-via:
+    - x-cdnjs-cache:
 
 - name: CDNLion # Apparently now a part of LaunchCDN https://launchcdn.com/cdnlion/
 
@@ -473,6 +588,7 @@
   domains:
     - "**.cmvideo.cn"
     - "**.cmecloud.cn"
+
 
 - name: ChinaNetCenter # Wangsu CDN
   website: https://en.wangsu.com/
@@ -522,6 +638,11 @@
     - CF-Connecting-IP:
     - CF-Request-ID:
     - CF-WORKER:
+    - NEL: "*cf-nel*"
+    - report-to: "*cf-nel*"
+    - CF-Placement:
+    - CF-Polyfill-Version:
+    - X-CDN: CFLR
   ranges:
     - range_type: 'ipv4'
       url: 'https://www.cloudflare.com/ips-v4/'
@@ -680,6 +801,10 @@
   type: private
   domains:
     - "**.fbcdn.net"
+  headers:
+    - X-FB-Connection-Quality:
+    - X-FB-Debug:
+    - X-FB-Optimizer:
 
 - name: Fastly
   website: https://www.fastly.com/products/cdn
@@ -693,6 +818,11 @@
     - X-Fastly-Request-ID:
     - X-Timer:
     - X-Served-By:
+    - Fastly-Restarts:
+    - Fastly-IO-Info:
+    - Fastly-IO-Served-By:
+    - Fastly-IO-Transform-Stats:
+    - Fastly-Stats:
   ranges:
     - range_type: 'combined'
       url: 'https://api.fastly.com/public-ip-list'
@@ -723,6 +853,7 @@
     - X-GCL-User:
     - X-GCL-User-Request-ID:
     - X-GCL-User-Status:
+    - X-CDN: Gcore
   ranges:
     - range_type: combined
       url: 'https://api.gcore.com/cdn/public-ip-list'
@@ -737,6 +868,11 @@
   type: private
   domains:
     - "**.githubusercontent.com"
+  headers:
+    - X-GitHub-Request-Id:
+    - Server: GitHub Cloud
+    - X-GitHub-Tenant:
+    - X-GitHub-Edge-Region:
 
 - name: GitLab Pages
   website: https://gitlab.com
@@ -761,6 +897,10 @@
     - X-Google-Cache-Status:
     - Via: Google
     - X-Edge-Location: # also an identifier of KeyCDN
+    - Google-Creative-Id:
+    - Google-Lineitem-Id:
+    - Google-MediationGroup-Id:
+    - Google-MediationTag-Id:
   ranges:
     - range_type: 'combined'
       url: 'https://www.gstatic.com/ipranges/cloud.json'
@@ -807,6 +947,12 @@
 - name: Heroku SaaS # Is this actually a CDN?
   domains:
     - "**.herokuapp.com"
+  headers:
+    - Server: Heroku
+    - Server: heroku-router
+    - VIA: "*heroku*"
+    - NEL: "*heroku-nel*"
+    - Report-To: "*heroku-nel*"
 
 - name: HiberniaCDN # Maybe bought by GTT. See https://www.submarinenetworks.com/en/systems/trans-atlantic/project-express/gtt-acquires-hibernia-express
   domains:
@@ -818,6 +964,8 @@
   type: commercial
   domains:
     - "*.hwcdn.*"
+  headers:
+    - DL-From: HWCDN
 
 - name: HP Cloud Services # shut down in 2016. See: https://www.businessinsider.com/hp-shutting-down-hp-helion-public-cloud-2015-10
                           # cloud services online again but withour CDN. See: https://www.amaryllogroup.com/post/amaryllo-introduces-hp-cloud-storageservice-through-a-trademark-licensingagreement-with-hp-inc
@@ -875,6 +1023,8 @@
 - name: iQIYI CDN
   domains:
     - "**.71edge.com"
+  headers:
+    - Server: QWS
 
 - name: IranServer # Cannot confirm information and IP ranges
   ranges:
@@ -888,6 +1038,9 @@
     - "**.qianxun.com"
     - "**.jcloudlb.com"
     - "**.jcloud-cdn.com"
+  headers:
+    - X-Jss-Storage-Class:
+    - X-Jss-Request-Id:
 
 - name: JINGDONG # JINGDONG Cloud
   domains:
@@ -985,6 +1138,13 @@
   type: private
   domains:
     - "**.licdn.com"
+  headers:
+    - X-Li-Fabric:
+    - X-Li-POP:
+    - X-Li-Proto:
+    - X-Li-Uuid:
+    - X-Li-Source-Fabric:
+    - report-to: "*linkedin*"
 
 - name: Linking Cloud
   domains:
@@ -1008,6 +1168,9 @@
     - "**.mncdn.com"
   headers:
     - X-Medianova-Cache:
+    - x-MnRequest-id:
+    - x-MServer:
+    - Server: "MCDN-*"
   ranges:
     - range_type: combined
       url: 'https://cloud.medianova.com/api/v1/ip/blocks-list' # alt: https://cloud.medianova.com/api/v1/ip/addresses-txt
@@ -1064,6 +1227,12 @@
   domains:
     - "**.fbcdn.net"
     - "**.metacdn.com"
+  headers:
+    - X-fb-connection-quality:
+    - X-FB-Debug:
+    - X-FB-Optimizer:
+    - X-FB-PTM-Uuid:
+    - X-FB-Edge-Debug:
 
 - name: Microsoft Azure CDN
   website: https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview
@@ -1082,6 +1251,27 @@
     - Server: Azure Front Door
     - X-Ms-Cdn-Ref:
     - X-Ms-Cdn-Request-Id:
+    - X-Ms-Lease-State:
+    - X-Ms-Server-Encrypted:
+    - X-Ms-Blob-Content-MD5:
+    - X-Ms-Copy-Source:
+    - X-Ms-Creation-Time:
+    - X-Ms-Is-Current-Version:
+    - X-Ms-OR-Policy-Id:
+    - X-Ms-Version-Id:
+    - X-Ms-Access-Tier:
+    - X-Ms-Access-Tier-Inferred:
+    - X-Ms-Meta-AIJsSDKSrc:
+    - X-Ms-Meta-AIJsSDKVer:
+    - Server: "Windows-Azure-Web/*"
+    - X-Ms-Middleware-Request-Id:
+    - X-Ms-Copy-Completion-Time:
+    - X-Ms-Copy-Id:
+    - X-Ms-Copy-Progress:
+    - X-Ms-Copy-Status:
+    - X-Ms-Meta-Created:
+    - X-Ms-Meta-CreatedBy:
+    - X-Ms-Meta-CBModifiedTime:
   ranges:
     - range_type: combined
       url: 'https://www.microsoft.com/en-us/download/details.aspx?id=56519'
@@ -1165,6 +1355,7 @@
   headers:
     - Server: Netlify
     - X-NF-Cache-Status:
+    - X-NF-Request-Id:
 
 - name: NGAA
   domains:
@@ -1221,6 +1412,7 @@
   headers:
     - Server: LiteSpeed
     - X-QC-Cache:
+    - X-QC-POP:
   ranges:
     - range_type: 'combined'
       url: 'https://quic.cloud/ips'
@@ -1232,6 +1424,10 @@
     - "**.qingcache.com"
     - "**.qingcloud.com"
     - "**.frontwize.com"
+  headers:
+    - X-QS-Request-Id:
+    - X-QS-Storage-Class:
+    - X-QS-Version-Id:
 
 - name: Qiniu Cloud
   domains:
@@ -1246,6 +1442,9 @@
     - "**.qnydns.com"
     - "**.qnqcdn.net"
     - "**.hiecheimaetu.com"
+  headers:
+    - X-QNM-Cache:
+    - X-M-Log: "*QNM*"
 
 
 
@@ -1377,6 +1576,8 @@
     - "**.steamchina.com"
   asns:
     - 32590 # Valve
+  headers:
+    - Set-Cookie: "*steamCountry*"
 
 - name: StormWall
   website: https://stormwall.network
@@ -1452,10 +1653,15 @@
     - 273732
   domains:
     - "**.cdn.bitgravity.com"
+  headers:
+    - X-Tata-Request-Id:
 
 - name: Telefonica # now defunct. See: https://www.cdnhandbook.com/providers/telefonica/
   domains:
     - "**.cdn.telefonica.com"
+  headers:
+    - X-TCDN:
+    - Server: "TelCdn/*"
 
 - name: Telenor
   website: https://www.telenor.com/
@@ -1725,6 +1931,9 @@
     - "**.tencent-cloud.net"
   asns:
     - 133478
+  headers:
+    - Server: TencentEdgeOne
+    - X-Server: tcic
 
 - name: Tianyi Cloud CDN # China Telekom ?
   website: https://www.chinatelecomglobal.com/
@@ -1733,6 +1942,11 @@
     - "**.ctxcdn.cn"
     - "**.ctdns.cn"
     - "**.ctyunapi.cn"
+  headers:
+    - X-Ctyun-Data-Location:
+    - X-Ctyun-Metadata-Location:
+    - Server: CTYUN
+    - Ctyun-Origin:
 
 - name: TinyCDN
   website: https://tinycdn.cloud/en/
@@ -1771,12 +1985,13 @@
   asns:
     - 59077
     - 135377
+  headers:
+    - X-UCloud-Request-Uuid:
 
 - name: UNPKG
   website: https://unpkg.com/
   domains:
     - "**.unpkg.com"
-
 
 - name: Vangen CDN # YaoCDN
   domains:
@@ -1788,6 +2003,8 @@
   type: commercial
   headers:
     - Server: Vercel
+    - X-Vercel-Id:
+    - X-Vercel-Cache:
 
 - name: Verizon EdgeCast # apparently shut down in 2025. sold to Parler. See: https://www.cdnhandbook.com/providers/verizon-media-vmds/
   type: commercial
