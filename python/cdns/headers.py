@@ -53,5 +53,10 @@ def value_matches(header_value: Optional[str], expected_value: str) -> bool:
 def header2pattern(header: str) -> str:
     def replace(match: re.Match) -> str:
         token = match.group(0)
-        return '.*' if token == '*' else token
+        if token == "*":
+            return ".*"
+        elif token == "\\*":
+            return token
+        else:
+            return "\\" + token
     return "^" + re.sub(r'\\\*|\*|\.|\+|\?|\^|\$|\||\\', replace, header) + "$"

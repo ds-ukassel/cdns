@@ -1,5 +1,5 @@
 import {describe, expect, it} from 'vitest';
-import {matches, matchHeaders} from './headers.js';
+import {matches, matchHeaders, header2pattern} from './headers.js';
 
 describe('matches', () => {
   it('returns true when all headers match exactly', () => {
@@ -242,4 +242,24 @@ describe('matchHeaders', () => {
     const result = matchHeaders(headers, matchers);
     expect(result).toEqual({'content-type': 'text/html'});
   });
+});
+
+describe('header2pattern', () => {
+  it('returns the correct value without any wildcards', () => {
+    expect(header2pattern("abc")).toEqual(RegExp("^abc$"))
+  })
+
+  it('returns the correct value with a wildcard', () => {
+    expect(header2pattern("a*c")).toEqual(RegExp("^a.*c$"))
+  })
+
+
+  it('returns the correct value with an escaped asterix', () => {
+    expect(header2pattern("a\\*c")).toEqual(RegExp("^a\\*c$"))
+  })
+
+
+  it('returns the correct value with regex characters', () => {
+    expect(header2pattern("a.+?^$|c")).toEqual(RegExp("^a\\.\\+\\?\\^\\$\\|c$"))
+  })
 });

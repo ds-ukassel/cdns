@@ -1,4 +1,4 @@
-from cdns import matches, match_headers
+from cdns import matches, match_headers, header2pattern
 
 
 class TestMatches:
@@ -209,3 +209,25 @@ class TestMatchHeaders:
         ]
         result = match_headers(headers, matchers)
         assert result == {'content-type': 'text/html'}
+
+class TestHeaderToPattern:
+
+    def test_value_without_wildcard(self):
+        header = "abc"
+        expected = "^abc$"
+        assert header2pattern(header) == expected
+
+    def test_value_with_wildcard(self):
+        header = "a*c"
+        expected = "^a.*c$"
+        assert header2pattern(header) == expected
+
+    def test_value_with_escaped_asterix(self):
+        header = "a\\*c"
+        expected = "^a\\*c$"
+        assert header2pattern(header) == expected
+
+    def test_value_with_regex_characters(self):
+        header = "a.+?^$|c"
+        expected = "^a\\.\\+\\?\\^\\$\\|c$"
+        assert header2pattern(header) == expected

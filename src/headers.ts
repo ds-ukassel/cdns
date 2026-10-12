@@ -52,8 +52,14 @@ function valueMatches(headerValue: string | undefined, expectedValue: string): b
   }
 }
 
-function header2pattern(header: string): RegExp {
+export function header2pattern(header: string): RegExp {
   return new RegExp('^' + header.replace(/\\\*|\*|\.|\+|\?|\^|\$|\||\\/g, (token) => {
-    return token === '*' ? '.*' : token
+    if (token === '*') {
+      return ".*"
+    } else if (token == "\\*") {
+      return token
+    } else {
+      return "\\" + token
+    }
   }) + '$');
 }
