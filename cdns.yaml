@@ -295,6 +295,9 @@
   asns:
     - 57568
     - 208006
+  ranges:
+    - url: https://www.arvancloud.ir/fa/ips.txt
+      range_type: combined
 
 - name: AT&T
   website: https://www.synaptic.att.com/clouduser/html/productdetail/ATT_CDN.htm
@@ -879,6 +882,15 @@
   type: private
   domains:
     - "**.gitlab.io"
+
+- name: GoCache
+  website: https://gocache.com.br/
+  type: commercial
+  ranges:
+    - url: https://gocache.com.br/ips
+      range_type: combined
+  asns:
+    - 266444
 
 - name: Google Cloud CDN
   website: https://cloud.google.com/cdn

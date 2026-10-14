@@ -138,4 +138,6 @@ Match response headers against the patterns according to the [Header Pattern rul
   - [sources.json](https://github.com/mansourjabin/cdn-ip-database/blob/main/data/sources.json)
 - [Third Party Web](https://github.com/patrickhulce/third-party-web) ([MIT](https://github.com/patrickhulce/third-party-web/blob/master/LICENSE))
   - [entities.json](https://github.com/patrickhulce/third-party-web/blob/master/data/entities.js)
+- [ProjectDiscovery cdncheck](https://github.com/projectdiscovery/cdncheck) ([MIT](https://github.com/projectdiscovery/cdncheck/blob/main/LICENSE.md))
+  - [provider.yaml](https://github.com/projectdiscovery/cdncheck/blob/main/cmd/generate-index/provider.yaml)
 - [Netify](https://www.netify.ai/resources/cdn)
