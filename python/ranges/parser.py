@@ -197,12 +197,14 @@ PARSERS = {
     "Akamai": SplitLinesParser,
     "Amazon AWS": AmazonAWSParser,
     "Amazon CloudFront": AmazonCFParser,
+    "ArvanCloud": SplitLinesParser,
     "BunnyCDN": SplitLinesParser,
     "CacheFly": SplitLinesParser,
     "Cloudflare": SplitLinesParser,
     "F5": F5Parser,
     "Fastly": FastlyParser,
     "G-Core Labs": GCoreParser,
+    "GoCache": SplitLinesParser,
     "Google Cloud": GoogleCloudParser,
     "Imperva": ImpervaParser,
     "Medianova": MedianovaParser,
@@ -212,4 +214,3 @@ PARSERS = {
     "QuicCloud": QuicCloudParser,
     "Sucuri": SucuriParser,  # Currently unused because of 503
 }
-
