@@ -1,4 +1,4 @@
-from cdns import matches, match_headers
+from cdns import matches, match_headers, header2pattern
 
 
 class TestMatches:
@@ -55,6 +55,31 @@ class TestMatches:
     def test_handles_missing_header_value_with_non_null_expected(self):
         headers = {}
         matcher = {'content-type': 'text/html'}
+        assert matches(headers, matcher) is False
+
+    def test_handles_wildcard(self):
+        headers= {'x-header-a': 'value-a'}
+        matcher = {'x-header-a': 'value-*'}
+        assert matches(headers, matcher) is True
+
+    def test_handles_wildcards(self):
+        headers= {'x-header-a': 'value-a-b-c'}
+        matcher = {'x-header-a': 'value-*-*-c'}
+        assert matches(headers, matcher) is True
+
+    def test_handles_escaped_asterisk(self):
+        headers= {'x-header-a': 'value-*'}
+        matcher = {'x-header-a': 'value-\\*'}
+        assert matches(headers, matcher) is True
+
+    def test_handles_escaped_asterisk_with_incorrect_header(self):
+        headers= {'x-header-a': 'value-a'}
+        matcher = {'x-header-a': 'value-\\*'}
+        assert matches(headers, matcher) is False
+
+    def test_handles_incorrect_case(self):
+        headers= {'x-header-a': 'value-a'}
+        matcher = {'x-header-a': 'value-A'}
         assert matches(headers, matcher) is False
 
 
@@ -184,3 +209,25 @@ class TestMatchHeaders:
         ]
         result = match_headers(headers, matchers)
         assert result == {'content-type': 'text/html'}
+
+class TestHeaderToPattern:
+
+    def test_value_without_wildcard(self):
+        header = "abc"
+        expected = "^abc$"
+        assert header2pattern(header) == expected
+
+    def test_value_with_wildcard(self):
+        header = "a*c"
+        expected = "^a.*c$"
+        assert header2pattern(header) == expected
+
+    def test_value_with_escaped_asterisk(self):
+        header = "a\\*c"
+        expected = "^a\\*c$"
+        assert header2pattern(header) == expected
+
+    def test_value_with_regex_characters(self):
+        header = "a.+?^$|()[]{}c"
+        expected = "^a\\.\\+\\?\\^\\$\\|\\(\\)\\[\\]\\{\\}c$"
+        assert header2pattern(header) == expected

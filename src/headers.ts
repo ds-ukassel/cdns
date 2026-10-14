@@ -34,9 +34,32 @@ export function matches(headers: Record<string, string>, matcher: Record<string,
       if (headerValue === undefined) {
         return false;
       }
-    } else if (headerValue !== expectedValue) {
+    } else if (!valueMatches(headerValue, expectedValue)) {
       return false;
     }
   }
   return true;
+}
+
+function valueMatches(headerValue: string | undefined, expectedValue: string): boolean {
+  if (headerValue === undefined) {
+    return false;
+  } else if (expectedValue.includes('*')) {
+    const pattern = header2pattern(expectedValue);
+    return pattern.test(headerValue);
+  } else {
+    return headerValue === expectedValue;
+  }
+}
+
+export function header2pattern(header: string): RegExp {
+  return new RegExp('^' + header.replace(/\\\*|\*|\.|\+|\?|\^|\$|\||\\|\(|\)|\[|\]|\{|\}/g, (token) => {
+    if (token === '*') {
+      return ".*"
+    } else if (token == "\\*") {
+      return token
+    } else {
+      return "\\" + token
+    }
+  }) + '$');
 }
