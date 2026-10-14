@@ -529,6 +529,12 @@
     "asns": [
       57568,
       208006
+    ],
+    "ranges": [
+      {
+        "url": "https://www.arvancloud.ir/fa/ips.txt",
+        "range_type": "combined"
+      }
     ]
   },
   {
@@ -1456,6 +1462,20 @@
     "type": "private",
     "domains": [
       "**.gitlab.io"
+    ]
+  },
+  {
+    "name": "GoCache",
+    "website": "https://gocache.com.br/",
+    "type": "commercial",
+    "ranges": [
+      {
+        "url": "https://gocache.com.br/ips",
+        "range_type": "combined"
+      }
+    ],
+    "asns": [
+      266444
     ]
   },
   {
