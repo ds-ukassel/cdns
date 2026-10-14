@@ -80,13 +80,13 @@ describe('matches', () => {
     expect(matches(headers, matcher)).toBe(true);
   });
 
-  it('returns true if an escaped asterix is used', () => {
+  it('returns true if an escaped asterisk is used', () => {
     const headers = {'x-header-a': 'value-*'};
     const matcher = {'x-header-a': 'value-\\*'};
     expect(matches(headers, matcher)).toBe(true);
   });
 
-  it('returns false if an escaped asterix is used with an incorrect value', () => {
+  it('returns false if an escaped asterisk is used with an incorrect value', () => {
     const headers = {'x-header-a': 'value-a'};
     const matcher = {'x-header-a': 'value-\\*'};
     expect(matches(headers, matcher)).toBe(false);
@@ -254,7 +254,7 @@ describe('header2pattern', () => {
   })
 
 
-  it('returns the correct value with an escaped asterix', () => {
+  it('returns the correct value with an escaped asterisk', () => {
     expect(header2pattern("a\\*c")).toEqual(RegExp("^a\\*c$"))
   })
 

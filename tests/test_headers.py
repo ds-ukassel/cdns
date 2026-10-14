@@ -67,12 +67,12 @@ class TestMatches:
         matcher = {'x-header-a': 'value-*-*-c'}
         assert matches(headers, matcher) is True
 
-    def test_handles_escaped_asterix(self):
+    def test_handles_escaped_asterisk(self):
         headers= {'x-header-a': 'value-*'}
         matcher = {'x-header-a': 'value-\\*'}
         assert matches(headers, matcher) is True
 
-    def test_handles_escaped_asterix_with_incorrect_header(self):
+    def test_handles_escaped_asterisk_with_incorrect_header(self):
         headers= {'x-header-a': 'value-a'}
         matcher = {'x-header-a': 'value-\\*'}
         assert matches(headers, matcher) is False
@@ -222,7 +222,7 @@ class TestHeaderToPattern:
         expected = "^a.*c$"
         assert header2pattern(header) == expected
 
-    def test_value_with_escaped_asterix(self):
+    def test_value_with_escaped_asterisk(self):
         header = "a\\*c"
         expected = "^a\\*c$"
         assert header2pattern(header) == expected
