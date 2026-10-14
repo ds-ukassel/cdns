@@ -53,7 +53,7 @@ function valueMatches(headerValue: string | undefined, expectedValue: string): b
 }
 
 export function header2pattern(header: string): RegExp {
-  return new RegExp('^' + header.replace(/\\\*|\*|\.|\+|\?|\^|\$|\||\\/g, (token) => {
+  return new RegExp('^' + header.replace(/\\\*|\*|\.|\+|\?|\^|\$|\||\\|\(|\)|\[|\]|\{|\}/g, (token) => {
     if (token === '*') {
       return ".*"
     } else if (token == "\\*") {

@@ -260,6 +260,6 @@ describe('header2pattern', () => {
 
 
   it('returns the correct value with regex characters', () => {
-    expect(header2pattern("a.+?^$|c")).toEqual(RegExp("^a\\.\\+\\?\\^\\$\\|c$"))
+    expect(header2pattern("a.+?^$|()[]{}c")).toEqual(RegExp("^a\\.\\+\\?\\^\\$\\|\\(\\)\\[\\]\\{\\}c$"))
   })
 });

@@ -59,4 +59,4 @@ def header2pattern(header: str) -> str:
             return token
         else:
             return "\\" + token
-    return "^" + re.sub(r'\\\*|\*|\.|\+|\?|\^|\$|\||\\', replace, header) + "$"
+    return "^" + re.sub(r'\\\*|\*|\.|\+|\?|\^|\$|\||\\|\(|\)|\[|\]|\{|\}', replace, header) + "$"

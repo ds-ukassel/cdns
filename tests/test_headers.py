@@ -228,6 +228,6 @@ class TestHeaderToPattern:
         assert header2pattern(header) == expected
 
     def test_value_with_regex_characters(self):
-        header = "a.+?^$|c"
-        expected = "^a\\.\\+\\?\\^\\$\\|c$"
+        header = "a.+?^$|()[]{}c"
+        expected = "^a\\.\\+\\?\\^\\$\\|\\(\\)\\[\\]\\{\\}c$"
         assert header2pattern(header) == expected
