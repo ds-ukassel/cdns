@@ -35,8 +35,8 @@ All CDNs are listed in [`cdns.yaml`](cdns.yaml) in this repository, and [`dist/c
       X-Whatever:           # AND 'X-Whatever' header must be present
 ```
 
-## Wildcard Syntax
-When implementing the wildcard syntax, the following rules apply:
+## Domain Wildcard Syntax
+When implementing the wildcard syntax for domains, the following rules apply:
 - `*` matches a single domain level
   - `*.example.com` matches `abc.example.com` 
   - `*.example.com` does **not** match `abc.def.example.com`
@@ -73,6 +73,11 @@ Header patterns have a few rules:
   or JSON: `{"Header-1": null, "Header-2": "bar"}`
   Means ALL header patterns must match.
 - Header keys are case-insensitive, but values are case-sensitive.
+
+The values can use `*` as a wildcard for any number of characters, e.g. `foo*` matches `foo`, `foobar`, and `foo123`.
+Any amount of `*` can be used at different positions.
+
+To use a literal `*`, escape it with a backslash: `\*`.
 
 ## Types
 
