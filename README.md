@@ -146,3 +146,4 @@ Match response headers against the patterns according to the [Header Pattern rul
 - [ProjectDiscovery cdncheck](https://github.com/projectdiscovery/cdncheck) ([MIT](https://github.com/projectdiscovery/cdncheck/blob/main/LICENSE.md))
   - [provider.yaml](https://github.com/projectdiscovery/cdncheck/blob/main/cmd/generate-index/provider.yaml)
 - [Netify](https://www.netify.ai/resources/cdn)
+- Behnam Shobiri, Mohammad Mannan, and Amr Youssef. 2023. CDNs’ Dark Side: Security Problems in CDN-to-Origin Connections. Digital Threats 4, 1, Article 3 (March 2023), 22 pages. https://doi.org/10.1145/3499428
