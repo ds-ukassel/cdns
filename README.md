@@ -146,3 +146,10 @@ Match response headers against the patterns according to the [Header Pattern rul
 - [ProjectDiscovery cdncheck](https://github.com/projectdiscovery/cdncheck) ([MIT](https://github.com/projectdiscovery/cdncheck/blob/main/LICENSE.md))
   - [provider.yaml](https://github.com/projectdiscovery/cdncheck/blob/main/cmd/generate-index/provider.yaml)
 - [Netify](https://www.netify.ai/resources/cdn)
+
+## License
+Original content created by members of the Distributed Systems Group is licensed under the  [MIT license](LICENSE).
+The information compiled in this repository has in part be collected from publicly available repositories and is intended for research purposes.
+Content created by third parties remains subject to its respective license.
+Please respect the original licensing terms and provide appropriate attribution when using or redistributing third party content.
+See our [references ](#references) for more information.
