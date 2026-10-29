@@ -252,7 +252,8 @@
       "**.queniugslb.com.cn",
       "**.edgegslb.cn",
       "**.alidns.*",
-      "**.queniujq.cn"
+      "**.queniujq.cn",
+      "**.alibaba.com"
     ],
     "headers": [
       {
@@ -281,6 +282,12 @@
       },
       {
         "X-AliCDN-DA-UPS-Status": null
+      },
+      {
+        "Alisite-Track": null
+      },
+      {
+        "eagleeye-traceid": null
       }
     ]
   },
@@ -518,6 +525,9 @@
     "name": "ArvanCloud",
     "website": "https://www.arvancloud.ir/",
     "type": "commercial",
+    "domains": [
+      "**.arvancdn.com"
+    ],
     "headers": [
       {
         "Server": "ArvanCloud"
@@ -596,6 +606,9 @@
     "headers": [
       {
         "X-BDCdn-Cache-Status": null
+      },
+      {
+        "Server": "yunjiasu-nginx"
       }
     ]
   },
@@ -639,8 +652,14 @@
       "**.ccedge.cn",
       "**.whitecdnx.cn",
       "**.baishancloud.net",
+      "**.baishancloud.com",
       "**.revivalark.com",
       "**.wanwang.space"
+    ],
+    "headers": [
+      {
+        "X-Ser": null
+      }
     ]
   },
   {
@@ -648,11 +667,15 @@
     "website": "https://www.belugacdn.com/",
     "type": "commercial",
     "domains": [
-      "**belugacdn.com"
+      "**belugacdn.com",
+      "**nucdn.net"
     ],
     "headers": [
       {
         "X-Beluga-Cache": null
+      },
+      {
+        "X-Beluga-Trace": null
       },
       {
         "Server": "BelugaCDN"
@@ -752,11 +775,12 @@
     "website": "https://bunny.net/cdn/",
     "type": "commercial",
     "domains": [
-      "*.b-cdn.net"
+      "*.b-cdn.net",
+      "**.bunnycdn.com"
     ],
     "headers": [
       {
-        "Server": "BunnyCDN"
+        "Server": "BunnyCDN*"
       },
       {
         "Bunny-Cache": null
@@ -983,11 +1007,16 @@
       "**ccgslb.net",
       "**c3cache.net",
       "**chinacache.net",
-      "**c3cdn.net"
+      "**chinacache.com",
+      "**c3cdn.net",
+      "**cnccgslb.net"
     ],
     "headers": [
       {
         "Server": "ChinaCache"
+      },
+      {
+        "Powered-By-ChinaCache": null
       }
     ],
     "asns": [
@@ -1187,7 +1216,8 @@
       "**.tlgslb.com",
       "**.fastcdn.com",
       "**.flxdns.com",
-      "**.dlgslb.cn"
+      "**.dlgslb.cn",
+      "**fastweb.com.cn"
     ]
   },
   {
@@ -1616,6 +1646,11 @@
     ]
   },
   {
+    "name": "Hostry",
+    "type": "commercial",
+    "website": "https://hostry.com/"
+  },
+  {
     "name": "HP Cloud Services"
   },
   {
@@ -1773,7 +1808,8 @@
     "website": "https://www.keycdn.com/",
     "type": "commercial",
     "domains": [
-      "*.kxcdn.com"
+      "*.kxcdn.com",
+      "**.kvcdn.com"
     ],
     "headers": [
       {
@@ -1925,6 +1961,9 @@
       },
       {
         "Server": "MCDN-*"
+      },
+      {
+        "Server": "MNCDN-*"
       }
     ],
     "ranges": [
@@ -2022,6 +2061,8 @@
       "*.trafficmanager.net",
       "**msedge**",
       "*.azureedge.net",
+      "*.azure.net",
+      "*.azurefd.net",
       "*.mschcdn.com",
       "*.v0cdn.net",
       "**azurewebsites.net",
@@ -2200,7 +2241,9 @@
     "website": "https://www.netlify.com/",
     "type": "commercial",
     "domains": [
-      "**.netlify.app"
+      "**.netlify.app",
+      "**netlify.com",
+      "**netlifyglobalcdn.com"
     ],
     "headers": [
       {
@@ -2511,6 +2554,9 @@
       },
       {
         "X-CDN": "StackPath"
+      },
+      {
+        "X-hw": null
       }
     ]
   },
