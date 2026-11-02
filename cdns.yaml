@@ -831,17 +831,29 @@
   domains:
     - "**.fastly.**"
     - "**fastlylb.net"
-  headers:
+  headers: # https://www.fastly.com/documentation/reference/http/http-headers/
     - Server: Varnish
     - X-Varnish:
     - X-Fastly-Request-ID:
-    - X-Timer:
-    - X-Served-By:
+    - X-Timer: S*,VS0,VE* # https://www.fastly.com/documentation/reference/http/http-headers/X-Timer/
+    - X-Served-By: cache-*-* # https://www.fastly.com/documentation/reference/http/http-headers/X-Served-By/
     - Fastly-Restarts:
     - Fastly-IO-Info:
     - Fastly-IO-Served-By:
     - Fastly-IO-Transform-Stats:
     - Fastly-Stats:
+    - Fastly-Cachetype:
+    - Fastly-Client:
+    - Fastly-Client-IP:
+    - Fastly-Cookie-Overflow:
+    - Fastly-Debug-Digest:
+    - Fastly-Debug-Path:
+    - Fastly-Debug-TTL:
+    - Fastly-FF:
+    - Fastly-Force-Shield:
+    - Fastly-SSL:
+    - Fastly-No-Shield:
+    - CDN-Loop: "*Fastly*"
   ranges:
     - range_type: 'combined'
       url: 'https://api.fastly.com/public-ip-list'
