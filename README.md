@@ -1,6 +1,6 @@
 # CDN Mapping
 
-Provides a JS library [`@ds-ukassel/cdns`](https://www.npmjs.com/package/@ds-ukassel/cdns) to identify CDNs.
+Provides a JS library [`@ds-ukassel/cdns`](https://www.npmjs.com/package/@ds-ukassel/cdns) and Python library [`cdns`](https://pypi.org/project/cdns/) to identify CDNs.
 All CDNs are listed in [`cdns.yaml`](cdns.yaml) in this repository, and [`dist/cdns.json`](dist/cdns.json) in the package.
 
 ## YAML Format
@@ -146,3 +146,11 @@ Match response headers against the patterns according to the [Header Pattern rul
 - [ProjectDiscovery cdncheck](https://github.com/projectdiscovery/cdncheck) ([MIT](https://github.com/projectdiscovery/cdncheck/blob/main/LICENSE.md))
   - [provider.yaml](https://github.com/projectdiscovery/cdncheck/blob/main/cmd/generate-index/provider.yaml)
 - [Netify](https://www.netify.ai/resources/cdn)
+- Behnam Shobiri, Mohammad Mannan, and Amr Youssef. 2023. CDNs’ Dark Side: Security Problems in CDN-to-Origin Connections. Digital Threats 4, 1, Article 3 (March 2023), 22 pages. https://doi.org/10.1145/3499428
+
+## License
+Original content created by members of the Distributed Systems Group is licensed under the  [MIT license](LICENSE).
+The information compiled in this repository has in part be collected from publicly available repositories and is intended for research purposes.
+Content created by third parties remains subject to its respective license.
+Please respect the original licensing terms and provide appropriate attribution when using or redistributing third party content.
+See our [references ](#references) for more information.

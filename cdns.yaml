@@ -163,6 +163,7 @@
     - "**.edgegslb.cn"
     - "**.alidns.*"
     - "**.queniujq.cn"
+    - "**.alibaba.com"
   headers:
     - Via: Alibaba Cloud CDN
     - Ali-CDN-Cache:
@@ -173,6 +174,8 @@
     - Server: AliyunOSS
     - Ali-Swift-Global-Savetime:
     - X-AliCDN-DA-UPS-Status:
+    - Alisite-Track:
+    - eagleeye-traceid:
 
 - name: Alimama
   domains:
@@ -289,6 +292,8 @@
 - name: ArvanCloud
   website: https://www.arvancloud.ir/
   type: commercial
+  domains:
+    - "**.arvancdn.com"
   headers:
     - Server: ArvanCloud
     - AR-PoweredBy:
@@ -336,6 +341,7 @@
     - "**.yunjiasu-cdn.net"
   headers:
     - X-BDCdn-Cache-Status:
+    - Server: yunjiasu-nginx
 
 - name: Baishan Cloud
   website: https://en.baishan.com/
@@ -376,16 +382,21 @@
     - "**.ccedge.cn"
     - "**.whitecdnx.cn"
     - "**.baishancloud.net"
+    - "**.baishancloud.com"
     - "**.revivalark.com"
     - "**.wanwang.space"
+  headers:
+    - X-Ser:
 
 - name: BelugaCDN # Maybe also NuCDN? See https://www.peeringdb.com/asn/23393
   website: https://www.belugacdn.com/
   type: commercial
   domains:
     - "**belugacdn.com"
+    - "**nucdn.net"
   headers:
     - X-Beluga-Cache:
+    - X-Beluga-Trace:
     - Server: BelugaCDN
   asns:
     - 23393
@@ -445,8 +456,9 @@
   type: commercial
   domains:
     - "*.b-cdn.net"
+    - "**.bunnycdn.com"
   headers:
-    - Server: BunnyCDN
+    - Server: BunnyCDN*
     - Bunny-Cache:
     - Bunny-Region:
     - Bunny-Storage-Zone:
@@ -574,9 +586,12 @@
     - "**ccgslb.net"
     - "**c3cache.net"
     - "**chinacache.net"
+    - "**chinacache.com"
     - "**c3cdn.net"
+    - "**cnccgslb.net"
   headers:
     - Server: ChinaCache
+    - Powered-By-ChinaCache:
   asns:
     - 18216
 
@@ -713,6 +728,7 @@
     - "**.fastcdn.com"
     - "**.flxdns.com"
     - "**.dlgslb.cn"
+    - "**fastweb.com.cn"
 
 - name: EdgeCast # operated by Parler Cloud Technologies. See: https://www.cdnhandbook.com/providers/edgecast/
   website: https://www.edgecast.io/
@@ -1008,6 +1024,10 @@
   headers:
     - DL-From: HWCDN
 
+- name: Hostry
+  type: commercial
+  website: https://hostry.com/
+
 - name: HP Cloud Services # shut down in 2016. See: https://www.businessinsider.com/hp-shutting-down-hp-helion-public-cloud-2015-10
                           # cloud services online again but withour CDN. See: https://www.amaryllogroup.com/post/amaryllo-introduces-hp-cloud-storageservice-through-a-trademark-licensingagreement-with-hp-inc
 
@@ -1116,6 +1136,7 @@
   type: commercial
   domains:
     - "*.kxcdn.com"
+    - "**.kvcdn.com"
   headers:
     - Server: KeyCDN
     - X-CDN: KeyCDN
@@ -1212,6 +1233,7 @@
     - x-MnRequest-id:
     - x-MServer:
     - Server: "MCDN-*"
+    - Server: "MNCDN-*"
   ranges:
     - range_type: combined
       url: 'https://cloud.medianova.com/api/v1/ip/blocks-list' # alt: https://cloud.medianova.com/api/v1/ip/addresses-txt
@@ -1283,6 +1305,8 @@
     - "*.trafficmanager.net"
     - "**msedge**"
     - "*.azureedge.net"
+    - "*.azure.net"
+    - "*.azurefd.net"
     - "*.mschcdn.com"
     - "*.v0cdn.net"
     - "**azurewebsites.net"
@@ -1393,6 +1417,8 @@
   type: commercial
   domains:
     - "**.netlify.app"
+    - "**netlify.com"
+    - "**netlifyglobalcdn.com"
   headers:
     - Server: Netlify
     - X-NF-Cache-Status:
@@ -1595,6 +1621,7 @@
     - X-StackPath-Request-ID:
     - X-SP-Edge-Cache:
     - X-CDN: StackPath
+    - X-hw:
 
 - name: Star Cloud # XYCloud
   domains:
