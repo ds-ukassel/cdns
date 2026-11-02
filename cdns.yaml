@@ -815,16 +815,6 @@
     - range_type: combined
       url: 'https://docs.cloud.f5.com/docs-v2/downloads/platform/reference/network-cloud-ref/ips-domains.txt'
 
-- name: Facebook
-  website: https://www.facebook.com
-  type: private
-  domains:
-    - "**.fbcdn.net"
-  headers:
-    - X-FB-Connection-Quality:
-    - X-FB-Debug:
-    - X-FB-Optimizer:
-
 - name: Fastly
   website: https://www.fastly.com/products/cdn
   type: commercial
@@ -1285,13 +1275,16 @@
   domains:
     - "**merlin**"
 
-- name: MetaCDN
-  website: https://www.meta.com
+- name: Meta CDN
+  website: https://www.meta.com/peering
   domains:
     - "**.fbcdn.net"
     - "**.metacdn.com"
+  asns:
+    - 32934
+    - 63293
   headers:
-    - X-fb-connection-quality:
+    - X-FB-Connection-Quality:
     - X-FB-Debug:
     - X-FB-Optimizer:
     - X-FB-PTM-Uuid:

@@ -1328,25 +1328,6 @@
     ]
   },
   {
-    "name": "Facebook",
-    "website": "https://www.facebook.com",
-    "type": "private",
-    "domains": [
-      "**.fbcdn.net"
-    ],
-    "headers": [
-      {
-        "X-FB-Connection-Quality": null
-      },
-      {
-        "X-FB-Debug": null
-      },
-      {
-        "X-FB-Optimizer": null
-      }
-    ]
-  },
-  {
     "name": "Fastly",
     "website": "https://www.fastly.com/products/cdn",
     "type": "commercial",
@@ -2059,15 +2040,19 @@
     ]
   },
   {
-    "name": "MetaCDN",
-    "website": "https://www.meta.com",
+    "name": "Meta CDN",
+    "website": "https://www.meta.com/peering",
     "domains": [
       "**.fbcdn.net",
       "**.metacdn.com"
     ],
+    "asns": [
+      32934,
+      63293
+    ],
     "headers": [
       {
-        "X-fb-connection-quality": null
+        "X-FB-Connection-Quality": null
       },
       {
         "X-FB-Debug": null
