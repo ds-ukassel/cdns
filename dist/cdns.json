@@ -1365,10 +1365,10 @@
         "X-Fastly-Request-ID": null
       },
       {
-        "X-Timer": null
+        "X-Timer": "S*,VS0,VE*"
       },
       {
-        "X-Served-By": null
+        "X-Served-By": "cache-*-*"
       },
       {
         "Fastly-Restarts": null
@@ -1384,6 +1384,42 @@
       },
       {
         "Fastly-Stats": null
+      },
+      {
+        "Fastly-Cachetype": null
+      },
+      {
+        "Fastly-Client": null
+      },
+      {
+        "Fastly-Client-IP": null
+      },
+      {
+        "Fastly-Cookie-Overflow": null
+      },
+      {
+        "Fastly-Debug-Digest": null
+      },
+      {
+        "Fastly-Debug-Path": null
+      },
+      {
+        "Fastly-Debug-TTL": null
+      },
+      {
+        "Fastly-FF": null
+      },
+      {
+        "Fastly-Force-Shield": null
+      },
+      {
+        "Fastly-SSL": null
+      },
+      {
+        "Fastly-No-Shield": null
+      },
+      {
+        "CDN-Loop": "*Fastly*"
       }
     ],
     "ranges": [
