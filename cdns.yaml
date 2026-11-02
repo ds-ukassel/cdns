@@ -1251,6 +1251,9 @@
   domains:
     - "**.fbcdn.net"
     - "**.metacdn.com"
+  asns:
+    - 32934
+    - 63293
   headers:
     - X-FB-Connection-Quality:
     - X-FB-Debug:
