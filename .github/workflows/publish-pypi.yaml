@@ -3,7 +3,7 @@ name: Publish to PyPi
 on:
   push:
     tags:
-      - "v*"
+      - "py/v*"
 
 jobs:
   build:
@@ -20,6 +20,9 @@ jobs:
 
       - name: Install dependencies
         run: uv sync --frozen --all-extras
+
+      - name: Build artifacts
+        run: uv build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7
@@ -42,6 +45,6 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: python-package-distributions
-          path: dist/cdns-*.*
+          path: dist/
       - name: Publish to PyPi
         uses: pypa/gh-action-pypi-publish@release/v1
