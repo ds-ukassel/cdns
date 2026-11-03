@@ -28,10 +28,11 @@ jobs:
         run: uv sync --frozen --all-extras
 
       - name: Build artifacts
-        run: uv build
+        run: uv build -o .target
 
       - name: Publish to PyPi
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
+          packages-dir: .target
           verbose: true
           print-hash: true
