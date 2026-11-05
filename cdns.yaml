@@ -851,7 +851,6 @@
       url: 'https://api.fastly.com/public-ip-list'
   asns:
     - 895
-    - 14618
     - 54113
     - 394192
 
