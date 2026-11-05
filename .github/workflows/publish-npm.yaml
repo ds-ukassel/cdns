@@ -15,6 +15,9 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment:
+      name: npm
+      url: https://www.npmjs.com/package/@ds-ukassel/cdns
     steps:
       - name: Checkout
         uses: actions/checkout@v7
