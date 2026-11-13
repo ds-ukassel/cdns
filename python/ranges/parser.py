@@ -58,8 +58,8 @@ class SplitLinesParser(Parser):
     @staticmethod
     def parse(content: str):
         ip4, ip6 = (
-            {line for line in content.splitlines() if ":" not in line},
-            {line for line in content.splitlines() if ":" in line},
+            {line.strip() for line in content.splitlines() if ":" not in line},
+            {line.strip() for line in content.splitlines() if ":" in line},
         )
         return (
             {ip if "/" in ip else f"{ip}/32" for ip in ip4},
