@@ -192,6 +192,16 @@ class MedianovaParser(Parser):
         ipv6 = set(data.get("ipv6_cidrs", []))
         return ipv4, ipv6
 
+class CDN77Parser(Parser):
+    @staticmethod
+    def parse(content: str):
+        data = json.loads(content).get("prefixes", [])
+        prefixes = {prefix["prefix"] for prefix in data}
+        ipv4 = {prefix for prefix in prefixes if ":" not in prefix}
+        ipv6 = {prefix for prefix in prefixes if ":" in prefix}
+        return ipv4, ipv6
+
+
 PARSERS = {
     "Akamai": SplitLinesParser,
     "Amazon AWS": AmazonAWSParser,
@@ -199,17 +209,18 @@ PARSERS = {
     "ArvanCloud": SplitLinesParser,
     "BunnyCDN": SplitLinesParser,
     "CacheFly": SplitLinesParser,
+    "CDN77": CDN77Parser,
     "Cloudflare": SplitLinesParser,
     "F5": F5Parser,
     "Fastly": FastlyParser,
     "G-Core Labs": GCoreParser,
     "GoCache": SplitLinesParser,
-    "Google Cloud": GoogleCloudParser,
+    "Google Cloud CDN": GoogleCloudParser,
     "Imperva": ImpervaParser,
     "Medianova": MedianovaParser,
     "Microsoft Azure CDN": MicrosoftParser,
     "OVH CDN": OVHParser,
     "ParsPack": SplitLinesParser,
-    "QuicCloud": QuicCloudParser,
+    "QUIC.cloud": QuicCloudParser,
     "Sucuri": SucuriParser,  # Currently unused because of 503
 }
