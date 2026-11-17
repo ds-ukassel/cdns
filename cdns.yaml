@@ -828,7 +828,6 @@
     - X-Varnish:
     - X-Fastly-Request-ID:
     - X-Timer: S*,VS0,VE* # https://www.fastly.com/documentation/reference/http/http-headers/X-Timer/
-    - X-Served-By: cache-*-* # https://www.fastly.com/documentation/reference/http/http-headers/X-Served-By/
     - Fastly-Restarts:
     - Fastly-IO-Info:
     - Fastly-IO-Served-By:
