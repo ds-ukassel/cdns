@@ -1352,9 +1352,6 @@
         "X-Timer": "S*,VS0,VE*"
       },
       {
-        "X-Served-By": "cache-*-*"
-      },
-      {
         "Fastly-Restarts": null
       },
       {
