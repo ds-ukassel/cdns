@@ -1286,7 +1286,7 @@
   website: https://support.merlincdn.com/hc/en-us
   type: commercial
   domains:
-    - "**merlin**"
+    - "**.merlincdn.net"
 
 - name: Meta CDN
   website: https://www.meta.com/peering
