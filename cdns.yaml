@@ -443,12 +443,6 @@
   domains:
     - "**.bootcss.com"
 
-- name: BootstrapCDN # Powered by jsDelivr
-  website: https://www.bootstrapcdn.com/
-  type: public_asset
-  domains:
-    - "cdn.jsdelivr.net"
-
 - name: BT Group
 
 - name: BunnyCDN
@@ -1127,11 +1121,11 @@
   domains:
     - "code.jquery.com"
 
-- name: JsDelivr# Powering BootstrapCDN, therefore they have the same domains
+- name: JsDelivr # Powering BootstrapCDN (https://www.bootstrapcdn.com/)
   website: https://www.jsdelivr.com/
   type: public_asset
   domains:
-    - "**.cdn.jsdelivr.net"
+    - "cdn.jsdelivr.net"
 
 - name: KeyCDN
   website: https://www.keycdn.com/
