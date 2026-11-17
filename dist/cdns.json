@@ -760,14 +760,6 @@
     ]
   },
   {
-    "name": "BootstrapCDN",
-    "website": "https://www.bootstrapcdn.com/",
-    "type": "public_asset",
-    "domains": [
-      "cdn.jsdelivr.net"
-    ]
-  },
-  {
     "name": "BT Group"
   },
   {
@@ -1843,11 +1835,11 @@
     ]
   },
   {
-    "name": "JsDelivr# Powering BootstrapCDN, therefore they have the same domains",
+    "name": "JsDelivr",
     "website": "https://www.jsdelivr.com/",
     "type": "public_asset",
     "domains": [
-      "**.cdn.jsdelivr.net"
+      "cdn.jsdelivr.net"
     ]
   },
   {
