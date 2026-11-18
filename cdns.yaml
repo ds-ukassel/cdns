@@ -934,7 +934,7 @@
     - 266444
 
 - name: Google Cloud CDN
-  website: https://cloud.google.com/cdn
+  website: https://cloud.google.com/cdn # https://developers.google.com/speed/libraries?hl=de
   type: commercial
   domains:
     - "**.google.**"
@@ -984,14 +984,6 @@
     - 395973
     - 396178
     - 396982
-
-- name: Google Cloud Storage
-  type: private
-  domains:
-    - "**.googleapis.com"
-
-- name: Google Hosted Library
-  website: https://developers.google.com/speed/libraries?hl=de
 
 - name: GoSun
   domains:
