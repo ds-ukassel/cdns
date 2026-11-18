@@ -950,7 +950,7 @@
     "website": "https://cdnjs.com/",
     "type": "public_asset",
     "domains": [
-      "**.cdnjs.cloudflare.com"
+      "cdnjs.cloudflare.com"
     ],
     "headers": [
       {

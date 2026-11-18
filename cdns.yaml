@@ -542,11 +542,11 @@
   headers:
     - Server: "*Cdnify*"
 
-- name: CDNJS # Powered by CloudFlare
+- name: CDNJS # Powered by Cloudflare
   website: https://cdnjs.com/
   type: public_asset
   domains:
-    - "**.cdnjs.cloudflare.com"
+    - "cdnjs.cloudflare.com"
   headers:
     - cf-cdnjs-via:
     - x-cdnjs-cache:
