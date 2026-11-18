@@ -11,7 +11,7 @@
   website: https://www.akamai.com
   type: commercial
   domains:
-    - "**.akamai.**"
+    - "**.akamai.*"
     - "**akamaiedge.net"
     - "*.akadns.net"
     - "**akamaitechnologies.com"
@@ -815,8 +815,8 @@
   website: https://www.fastly.com/products/cdn
   type: commercial
   domains:
-    - "**.fastly.**"
-    - "**fastlylb.net"
+    - "**.fastly.*"
+    - "**.fastlylb.net"
   headers: # https://www.fastly.com/documentation/reference/http/http-headers/
     - Server: Varnish
     - X-Varnish:
@@ -934,10 +934,12 @@
     - 266444
 
 - name: Google Cloud CDN
-  website: https://cloud.google.com/cdn
+  website: https://cloud.google.com/cdn # https://developers.google.com/speed/libraries?hl=de
   type: commercial
   domains:
-    - "**.google.**"
+    - "**.google.*"
+    - "**.google.co.*"
+    - "**.google.com.*"
     - "**.googlesyndication.com"
     - "**.youtube.*"
     - "*.googleusercontent.com"
@@ -984,14 +986,6 @@
     - 395973
     - 396178
     - 396982
-
-- name: Google Cloud Storage
-  type: private
-  domains:
-    - "**.googleapis.com"
-
-- name: Google Hosted Library
-  website: https://developers.google.com/speed/libraries?hl=de
 
 - name: GoSun
   domains:
