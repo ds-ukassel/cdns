@@ -14,7 +14,7 @@
     "website": "https://www.akamai.com",
     "type": "commercial",
     "domains": [
-      "**.akamai.**",
+      "**.akamai.*",
       "**akamaiedge.net",
       "*.akadns.net",
       "**akamaitechnologies.com",
@@ -1327,8 +1327,8 @@
     "website": "https://www.fastly.com/products/cdn",
     "type": "commercial",
     "domains": [
-      "**.fastly.**",
-      "**fastlylb.net"
+      "**.fastly.*",
+      "**.fastlylb.net"
     ],
     "headers": [
       {
@@ -1552,7 +1552,9 @@
     "website": "https://cloud.google.com/cdn",
     "type": "commercial",
     "domains": [
-      "**.google.**",
+      "**.google.*",
+      "**.google.co.*",
+      "**.google.com.*",
       "**.googlesyndication.com",
       "**.youtube.*",
       "*.googleusercontent.com",
