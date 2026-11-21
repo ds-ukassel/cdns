@@ -17,3 +17,4 @@ class CDN:
     headers: list[dict[str, str | None]]
     ranges: list[IPRange]
     asns: list[int]
+    certificates: list[str]

@@ -35,6 +35,15 @@
         },
         "minItems": 1
       },
+      "certificates": {
+        "description": "The issuer (company) names the CDN uses in certificates.",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+        "minItems": 1
+      },
       "ranges": {
         "description": "The IP ranges associated with the CDN",
         "type": "array",
