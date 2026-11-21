@@ -33,6 +33,10 @@ All CDNs are listed in [`cdns.yaml`](cdns.yaml) in this repository, and [`dist/c
     - Server: AwesomeCDN    # 'Server' header must contain 'AwesomeCDN'
     - X-Cache: HIT          # 'X-Cache' header must contain 'HIT'
       X-Whatever:           # AND 'X-Whatever' header must be present
+  certificates: # Keywords to look for in the certificate other than the CDN name
+    - "Awesome"
+    - "Awesome Inc."
+    - "AwesomeCDN"
 ```
 
 ## Domain Wildcard Syntax
@@ -90,6 +94,10 @@ The type can either be `commercial`, `private`, `public_assets` or `other`.
 - `other`: CDNs with an entirely different model
 
 The field is optional as this information isn't always available/clear.
+
+## Certificates
+The `certificates` contain a list of keywords to look for in the certificate of a website.
+The name of the CDN should always be searched as well and doesn't have to be included.
 
 ## Python API
 
