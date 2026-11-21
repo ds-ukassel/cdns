@@ -116,7 +116,7 @@
     - 393234
     - 393560
 
-- name: Alibaba Cloud CDN
+- name: Alibaba Cloud
   website: https://www.alibabacloud.com/de/product/content-delivery-network
   type: commercial
   domains:
@@ -176,6 +176,8 @@
     - X-AliCDN-DA-UPS-Status:
     - Alisite-Track:
     - eagleeye-traceid:
+  certificates:
+    - "Alibaba"
 
 - name: Alimama
   domains:
@@ -229,6 +231,9 @@
     - 36263
     - 62785
     - 401395
+  certificates:
+    - "CloudFront"
+    - "Amazon"
 
 - name: Amazon AWS
   type: commercial
@@ -274,6 +279,8 @@
     - X-Amzn-Trace-Id:
     - X-Amz-Storage-class:
     - x-reserved: "*amazon, aws and amazon web services*"
+  certificates:
+    - "Amazon"
 
 - name: Ananke
   domains:
@@ -283,11 +290,13 @@
   domains:
     - "**.saaswaf.com"
 
-- name: Apple CDN
+- name: Apple Edge Cache
   website: https://cache.edge.apple/
   type: private
   asns:
     - 714
+  certificates:
+    - "Apple Inc."
 
 - name: ArvanCloud
   website: https://www.arvancloud.ir/
@@ -387,6 +396,8 @@
     - "**.wanwang.space"
   headers:
     - X-Ser:
+  certificates:
+    - "Baishan"
 
 - name: BelugaCDN # Maybe also NuCDN? See https://www.peeringdb.com/asn/23393
   website: https://www.belugacdn.com/
@@ -445,7 +456,7 @@
 
 - name: BT Group
 
-- name: BunnyCDN
+- name: Bunny
   website: https://bunny.net/cdn/
   type: commercial
   domains:
@@ -462,7 +473,7 @@
   asns:
     - 200325
 
-- name: Bytedance CDN # CDN for TikTok and other Bytedance apps
+- name: Bytedance # CDN for TikTok and other Bytedance apps
   website: https://www.bytedance.com/
   type: private
 
@@ -878,7 +889,7 @@
     - 202422
     - 210559
 
-- name: GitHub CDN
+- name: GitHub
   website: https://github.com
   type: private
   domains:
@@ -894,6 +905,8 @@
   type: private
   domains:
     - "**.gitlab.io"
+  certificates:
+    - "GitLab"
 
 - name: GoCache
   website: https://gocache.com.br/
@@ -929,11 +942,10 @@
         - 208.89.72.56/29
       range_type: ipv4
       last_updated: 2026-10-28
-
   asns:
     - 266444
 
-- name: Google Cloud CDN
+- name: Google Cloud
   website: https://cloud.google.com/cdn # https://developers.google.com/speed/libraries?hl=de
   type: commercial
   domains:
@@ -986,6 +998,8 @@
     - 395973
     - 396178
     - 396982
+  certificates:
+    - "Google Trust Services"
 
 - name: GoSun
   domains:
@@ -1071,7 +1085,7 @@
   domains:
     - "**internapcdn.net"
 
-- name: iQIYI CDN
+- name: iQIYI
   domains:
     - "**.71edge.com"
   headers:
@@ -1140,7 +1154,7 @@
   domains:
     - "**ksyun**" # ksyuncdn.com
 
-- name: Kuaiwang CDN
+- name: Kuaiwang
   domains:
     - "**.cloudglb.com"
     - "**.fastweb.com"
@@ -1155,7 +1169,7 @@
 - name: LaunchCDN
   website: https://launchcdn.com/
 
-- name: LeaseWeb CDN
+- name: LeaseWeb
   website: https://www.leaseweb.com/en/products-services/cdn
   type: commercial
   asns:
@@ -1265,7 +1279,7 @@
     - 50928
     - 202804
 
-- name: Melbicom CDN
+- name: Melbicom
   type: commercial
   website: https://www.melbicom.net/cdn/
 
@@ -1290,7 +1304,7 @@
     - X-FB-PTM-Uuid:
     - X-FB-Edge-Debug:
 
-- name: Microsoft Azure CDN
+- name: Microsoft Azure
   website: https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview
   type: commercial
   domains:
@@ -1351,6 +1365,8 @@
     - 58862
     - 59067
     - 63314
+  certificates:
+    - "Microsoft Corporation"
 
 - name: MingFu Cloud
   domains:
@@ -1398,7 +1414,7 @@
     - "**.127.net"
     - "**.nease.net"
 
-- name: Netflix CDN # not sure if this is really a CDN
+- name: Netflix # not sure if this is really a CDN
   website: https://openconnect.netflix.com/en/
   type: private
   domains:
@@ -1436,7 +1452,7 @@
   domains:
     - "**.cdn.onappcdn.com"
 
-- name: OVH CDN
+- name: OVH Cloud
   website: https://docs.ovhcloud.com/en/
   type: commercial
   headers:
@@ -1505,8 +1521,6 @@
   headers:
     - X-QNM-Cache:
     - X-M-Log: "*QNM*"
-
-
 
 - name: Quantil # belongs to wangsu? see https://www.netify.ai/resources/cdn/wangsu
   domains:
@@ -2035,7 +2049,7 @@
     - "**.cdnnetworks.com"
     - "**.txcdn.cn"
 
-- name: UCloud CDN
+- name: UCloud
   type: commercial
   website: https://www.ucloud-global.com/en/docs/ucdn/intro
   domains:
@@ -2054,7 +2068,7 @@
   domains:
     - "**.unpkg.com"
 
-- name: Vangen CDN # YaoCDN
+- name: Vangen # YaoCDN
   domains:
     - "**.mygslb.com"
     - "**.cdnudns.com"
@@ -2098,7 +2112,7 @@
   headers:
     - Server: ECS
 
-- name: VeryCloud CDN
+- name: VeryCloud
   domains:
     - "**.verycloud.cn"
     - "**.verycdn.net"
@@ -2159,17 +2173,17 @@
     - "**ay1.b.yahoo.com"
     - "**.yimg.*"
 
-- name: Yandex CDN
+- name: Yandex
   website: https://yandex.cloud/en/services/cdn
   type: commercial
 
-- name: Yisu Cloud CDN
+- name: Yisu Cloud
   website: https://www.yisu.com
   type: commercial
   domains:
     - "**.yisuddoscdn.com"
 
-- name: Yunaq CDN
+- name: Yunaq
   domains:
     - "**.aqyun.com"
 
@@ -2199,7 +2213,7 @@
   domains:
     - "**zenedge.net"
 
-- name: Zenlayer CDN
+- name: Zenlayer
   website: https://www.zenlayer.com/cdn/
   type: commercial
   domains:
