@@ -7,6 +7,7 @@ export interface CDN {
   headers?: Record<string, string | null>[];
   asns?: number[];
   ranges?: IPRange[];
+  certificates?: string[]
 }
 
 export interface IPRange {
