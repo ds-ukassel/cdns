@@ -36,7 +36,6 @@ All CDNs are listed in [`cdns.yaml`](cdns.yaml) in this repository, and [`dist/c
   certificates: # Keywords to look for in the certificate other than the CDN name
     - "Awesome"
     - "Awesome Inc."
-    - "AwesomeCDN"
 ```
 
 ## Domain Wildcard Syntax
