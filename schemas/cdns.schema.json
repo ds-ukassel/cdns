@@ -39,8 +39,9 @@
         "description": "The issuer (company) names the CDN uses in certificates.",
         "type": "array",
         "items": {
-          "type": "string"
-        },
+          "type": "string",
+          "minLength": 1
+        }
         "minItems": 1
       },
       "ranges": {
