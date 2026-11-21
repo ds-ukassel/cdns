@@ -1348,12 +1348,6 @@
     ],
     "headers": [
       {
-        "Server": "Varnish"
-      },
-      {
-        "X-Varnish": null
-      },
-      {
         "X-Fastly-Request-ID": null
       },
       {

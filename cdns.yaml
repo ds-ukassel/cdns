@@ -829,8 +829,6 @@
     - "**.fastly.*"
     - "**.fastlylb.net"
   headers: # https://www.fastly.com/documentation/reference/http/http-headers/
-    - Server: Varnish
-    - X-Varnish:
     - X-Fastly-Request-ID:
     - X-Timer: S*,VS0,VE* # https://www.fastly.com/documentation/reference/http/http-headers/X-Timer/
     - Fastly-Restarts:
