@@ -206,7 +206,7 @@
     ]
   },
   {
-    "name": "Alibaba Cloud CDN",
+    "name": "Alibaba Cloud",
     "website": "https://www.alibabacloud.com/de/product/content-delivery-network",
     "type": "commercial",
     "domains": [
@@ -289,6 +289,9 @@
       {
         "eagleeye-traceid": null
       }
+    ],
+    "certificates": [
+      "Alibaba"
     ]
   },
   {
@@ -388,6 +391,10 @@
       36263,
       62785,
       401395
+    ],
+    "certificates": [
+      "CloudFront",
+      "Amazon"
     ]
   },
   {
@@ -499,6 +506,9 @@
       {
         "x-reserved": "*amazon, aws and amazon web services*"
       }
+    ],
+    "certificates": [
+      "Amazon"
     ]
   },
   {
@@ -514,11 +524,14 @@
     ]
   },
   {
-    "name": "Apple CDN",
+    "name": "Apple Edge Cache",
     "website": "https://cache.edge.apple/",
     "type": "private",
     "asns": [
       714
+    ],
+    "certificates": [
+      "Apple Inc."
     ]
   },
   {
@@ -660,6 +673,9 @@
       {
         "X-Ser": null
       }
+    ],
+    "certificates": [
+      "Baishan"
     ]
   },
   {
@@ -763,7 +779,7 @@
     "name": "BT Group"
   },
   {
-    "name": "BunnyCDN",
+    "name": "Bunny",
     "website": "https://bunny.net/cdn/",
     "type": "commercial",
     "domains": [
@@ -795,7 +811,7 @@
     ]
   },
   {
-    "name": "Bytedance CDN",
+    "name": "Bytedance",
     "website": "https://www.bytedance.com/",
     "type": "private"
   },
@@ -1473,7 +1489,7 @@
     ]
   },
   {
-    "name": "GitHub CDN",
+    "name": "GitHub",
     "website": "https://github.com",
     "type": "private",
     "domains": [
@@ -1500,6 +1516,9 @@
     "type": "private",
     "domains": [
       "**.gitlab.io"
+    ],
+    "certificates": [
+      "GitLab"
     ]
   },
   {
@@ -1548,7 +1567,7 @@
     ]
   },
   {
-    "name": "Google Cloud CDN",
+    "name": "Google Cloud",
     "website": "https://cloud.google.com/cdn",
     "type": "commercial",
     "domains": [
@@ -1623,6 +1642,9 @@
       395973,
       396178,
       396982
+    ],
+    "certificates": [
+      "Google Trust Services"
     ]
   },
   {
@@ -1759,7 +1781,7 @@
     ]
   },
   {
-    "name": "iQIYI CDN",
+    "name": "iQIYI",
     "domains": [
       "**.71edge.com"
     ],
@@ -1865,7 +1887,7 @@
     ]
   },
   {
-    "name": "Kuaiwang CDN",
+    "name": "Kuaiwang",
     "domains": [
       "**.cloudglb.com",
       "**.fastweb.com",
@@ -1883,7 +1905,7 @@
     "website": "https://launchcdn.com/"
   },
   {
-    "name": "LeaseWeb CDN",
+    "name": "LeaseWeb",
     "website": "https://www.leaseweb.com/en/products-services/cdn",
     "type": "commercial",
     "asns": [
@@ -2045,7 +2067,7 @@
     ]
   },
   {
-    "name": "Melbicom CDN",
+    "name": "Melbicom",
     "type": "commercial",
     "website": "https://www.melbicom.net/cdn/"
   },
@@ -2087,7 +2109,7 @@
     ]
   },
   {
-    "name": "Microsoft Azure CDN",
+    "name": "Microsoft Azure",
     "website": "https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview",
     "type": "commercial",
     "domains": [
@@ -2203,6 +2225,9 @@
       58862,
       59067,
       63314
+    ],
+    "certificates": [
+      "Microsoft Corporation"
     ]
   },
   {
@@ -2262,7 +2287,7 @@
     ]
   },
   {
-    "name": "Netflix CDN",
+    "name": "Netflix",
     "website": "https://openconnect.netflix.com/en/",
     "type": "private",
     "domains": [
@@ -2318,7 +2343,7 @@
     ]
   },
   {
-    "name": "OVH CDN",
+    "name": "OVH Cloud",
     "website": "https://docs.ovhcloud.com/en/",
     "type": "commercial",
     "headers": [
@@ -3104,7 +3129,7 @@
     ]
   },
   {
-    "name": "UCloud CDN",
+    "name": "UCloud",
     "type": "commercial",
     "website": "https://www.ucloud-global.com/en/docs/ucdn/intro",
     "domains": [
@@ -3131,7 +3156,7 @@
     ]
   },
   {
-    "name": "Vangen CDN",
+    "name": "Vangen",
     "domains": [
       "**.mygslb.com",
       "**.cdnudns.com",
@@ -3190,7 +3215,7 @@
     ]
   },
   {
-    "name": "VeryCloud CDN",
+    "name": "VeryCloud",
     "domains": [
       "**.verycloud.cn",
       "**.verycdn.net",
@@ -3263,12 +3288,12 @@
     ]
   },
   {
-    "name": "Yandex CDN",
+    "name": "Yandex",
     "website": "https://yandex.cloud/en/services/cdn",
     "type": "commercial"
   },
   {
-    "name": "Yisu Cloud CDN",
+    "name": "Yisu Cloud",
     "website": "https://www.yisu.com",
     "type": "commercial",
     "domains": [
@@ -3276,7 +3301,7 @@
     ]
   },
   {
-    "name": "Yunaq CDN",
+    "name": "Yunaq",
     "domains": [
       "**.aqyun.com"
     ]
@@ -3319,7 +3344,7 @@
     ]
   },
   {
-    "name": "Zenlayer CDN",
+    "name": "Zenlayer",
     "website": "https://www.zenlayer.com/cdn/",
     "type": "commercial",
     "domains": [
