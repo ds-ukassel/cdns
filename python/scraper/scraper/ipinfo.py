@@ -1,9 +1,9 @@
 import datetime
 from typing import Any
 
-from common.logger import LOGGER
-from ranges.clickhouse_service import ClickhouseService
-from ranges.utils import get_networks, detect_range_type
+from scraper.logger import LOGGER
+from scraper.clickhouse_service import ClickhouseService
+from scraper.utils import get_networks, detect_range_type
 
 
 def get_ranges(clickhouse: ClickhouseService, timestamp: datetime.datetime, cdn: dict[str, Any]) -> list[tuple[str, datetime.datetime, str, int, str]]:

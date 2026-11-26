@@ -26,14 +26,14 @@ include = [
 ]
 
 [project.optional-dependencies]
-ranges = [
-  "requests~=2.34.2",
+scraper = [
+  "requests>=2.34.2",
   "clickhouse-connect>=1.3.0",
   "beautifulsoup4>=4.15.0",
 ]
 
 [project.scripts]
-ranges = "ranges.main:main"
+scraper = "scraper.main:main"
 
 [build-system]
 requires = ["hatchling"]

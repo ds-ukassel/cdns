@@ -3,31 +3,30 @@ from pathlib import Path
 
 from requests import Session
 
-from common import config
-from common.config import CDN_YAML
-from common.logger import LOGGER
-from common.utils import read_yaml
-from ranges.clickhouse_service import ClickhouseService
-from ranges.scraper import range_api, ipinfo
+from scraper.config import *
+from scraper.logger import LOGGER
+from scraper.utils import read_yaml
+from scraper.clickhouse_service import ClickhouseService
+from scraper.scraper import range_api, ipinfo
 
 CDN_DATABASE = {
-    "host": config.CLICKHOUSE_CDN_HOST,
-    "port": config.CLICKHOUSE_CDN_PORT,
-    "user": config.CLICKHOUSE_CDN_USER,
-    "password": config.CLICKHOUSE_CDN_PASSWORD,
-    "database": config.CLICKHOUSE_CDN_DATABASE,
-    "table": config.CLICKHOUSE_CDN_TABLE,
-    "secure": config.CLICKHOUSE_SECURE
+    "host": CLICKHOUSE_CDN_HOST,
+    "port": CLICKHOUSE_CDN_PORT,
+    "user": CLICKHOUSE_CDN_USER,
+    "password": CLICKHOUSE_CDN_PASSWORD,
+    "database": CLICKHOUSE_CDN_DATABASE,
+    "table": CLICKHOUSE_CDN_TABLE,
+    "secure": CLICKHOUSE_SECURE
 }
 
 IPINFO_DATABASE = {
-    "host": config.CLICKHOUSE_IPINFO_HOST,
-    "port": config.CLICKHOUSE_IPINFO_PORT,
-    "user": config.CLICKHOUSE_IPINFO_USER,
-    "password": config.CLICKHOUSE_IPINFO_PASSWORD,
-    "database": config.CLICKHOUSE_IPINFO_DATABASE,
-    "table": config.CLICKHOUSE_IPINFO_TABLE,
-    "secure": config.CLICKHOUSE_SECURE
+    "host": CLICKHOUSE_IPINFO_HOST,
+    "port": CLICKHOUSE_IPINFO_PORT,
+    "user": CLICKHOUSE_IPINFO_USER,
+    "password": CLICKHOUSE_IPINFO_PASSWORD,
+    "database": CLICKHOUSE_IPINFO_DATABASE,
+    "table": CLICKHOUSE_IPINFO_TABLE,
+    "secure": CLICKHOUSE_SECURE
 }
 
 
