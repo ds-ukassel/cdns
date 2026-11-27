@@ -11,7 +11,7 @@ def main():
             SELECT
                 cdn_name,
                 groupArray(ip_range) AS ranges,
-                max(timestamp) as timestamp
+                max(timestamp) as crawl_timestamp
             FROM {CLICKHOUSE_CDN_DATABASE}.{CLICKHOUSE_CDN_TABLE}
             WHERE (cdn_name, timestamp) IN (
                 SELECT cdn_name, max(timestamp)
@@ -25,10 +25,10 @@ def main():
 
         print(json.dumps({
             row[0]: {
-                "ranges": row[1],
+                "ranges": sorted(row[1]),
                 "timestamp": row[2].isoformat(),
-            } for row in rows
-        }))
+            } for row in sorted(rows, key=lambda row: row[0])
+        }, indent=1))
 
 if __name__ == "__main__":
     main()
