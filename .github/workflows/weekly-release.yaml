@@ -1,0 +1,78 @@
+name: Weekly Release
+
+on:
+  schedule:
+    - cron: "0 12 * * 5"
+      timezone: "Europe/Berlin"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: true
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8.2.0
+
+      - name: Install uv dependencies
+        run: uv sync --frozen --all-extras
+
+      - name: Run Python script and save JSON
+        env:
+          CLICKHOUSE_CDN_HOST: ${{ secrets.CLICKHOUSE_CDN_HOST }}
+          CLICKHOUSE_CDN_PORT: ${{ secrets.CLICKHOUSE_CDN_PORT }}
+          CLICKHOUSE_CDN_USER: ${{ secrets.CLICKHOUSE_CDN_USER }}
+          CLICKHOUSE_CDN_PASSWORD: ${{ secrets.CLICKHOUSE_CDN_PASSWORD }}
+          CLICKHOUSE_CDN_DATABASE: ${{ vars.CLICKHOUSE_CDN_DATABASE }}
+          CLICKHOUSE_CDN_TABLE: ${{ vars.CLICKHOUSE_CDN_TABLE }}
+          CLICKHOUSE_SECURE: ${{ vars.CLICKHOUSE_SECURE }}
+        run: uv run release > dist/ranges.json
+
+      - name: Commit version changes
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: 'chore: Update CDN ip ranges'
+
+      - name: Calculate version and date
+        id: version
+        run: |
+          VERSION=$(TZ=Europe/Berlin date +%G.%V.0)
+          DATE=$(TZ=Europe/Berlin date +%d.%m.%Y)
+          
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+          echo "New version: $VERSION ($DATE)"
+
+      - name: Update versions
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          sed -i -E "s/version = \"(.+)\"/version = \"$VERSION\"/" pyproject.toml
+          sed -i -E "s/\"version\": \"(.+)\"/\"version\": \"$VERSION\"/" package.json
+
+      - name: Commit version changes
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: 'chore: Bump version to ${{ steps.version.outputs.version }}'
+
+      - name: Create GitHub Release for ranges
+        uses: softprops/action-gh-release@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: Release ${{ steps.version.outputs.date }}
+          files: dist/ranges.json
+          generate_release_notes: true
+          body: |
+            ## Release for version 'v${{ steps.version.outputs.version }}' (${{ steps.version.outputs.date }})
+            
+            - PyPi: https://pypi.org/project/cdns/${{ steps.version.outputs.version }}/
+            - NPM: https://www.npmjs.com/package/@ds-ukassel/cdns/v/${{ steps.version.outputs.version }}

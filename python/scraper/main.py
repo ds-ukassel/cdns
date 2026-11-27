@@ -9,26 +9,6 @@ from scraper.utils import read_yaml
 from scraper.clickhouse_service import ClickhouseService
 from scraper.scraper import range_api, ipinfo
 
-CDN_DATABASE = {
-    "host": CLICKHOUSE_CDN_HOST,
-    "port": CLICKHOUSE_CDN_PORT,
-    "user": CLICKHOUSE_CDN_USER,
-    "password": CLICKHOUSE_CDN_PASSWORD,
-    "database": CLICKHOUSE_CDN_DATABASE,
-    "table": CLICKHOUSE_CDN_TABLE,
-    "secure": CLICKHOUSE_SECURE
-}
-
-IPINFO_DATABASE = {
-    "host": CLICKHOUSE_IPINFO_HOST,
-    "port": CLICKHOUSE_IPINFO_PORT,
-    "user": CLICKHOUSE_IPINFO_USER,
-    "password": CLICKHOUSE_IPINFO_PASSWORD,
-    "database": CLICKHOUSE_IPINFO_DATABASE,
-    "table": CLICKHOUSE_IPINFO_TABLE,
-    "secure": CLICKHOUSE_SECURE
-}
-
 
 def main():
     LOGGER.info("Loading CDNs...")
