@@ -5,12 +5,27 @@ on:
     - cron: "0 12 1 * *"
       timezone: "Europe/Berlin"
 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to release (e.g. 26.11.0)"
+        required: true
+        type: string
+
+  push:
+    tags:
+      - "v*"
+
 permissions:
   contents: write
 
 jobs:
-  release:
+  prepare-release:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
+
+    outputs:
+      version: ${{ steps.version.outputs.version }}
 
     steps:
       - name: Checkout repository
@@ -18,44 +33,78 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v8.2.0
-
-      - name: Install uv dependencies
-        run: uv sync --frozen --all-extras
-
       - name: Calculate version and date
         id: version
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
         run: |
-          VERSION=$(TZ=Europe/Berlin date +%y.%m.0)
-          DATE=$(TZ=Europe/Berlin date +%d.%m.%Y)
-          
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
+            VERSION=$(TZ=Europe/Berlin date +%y.%m.0)
+          else
+            VERSION="$INPUT_VERSION"
+          fi
+
+          # Validate version format
+          if [[ ! "$VERSION" =~ ^[0-9][0-9]\.[0-9][0-9]\.[0-9]+$ ]]; then
+            echo "::error::Invalid version format: $VERSION"
+            exit 1
+          fi
+
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-          echo "date=$DATE" >> "$GITHUB_OUTPUT"
-          echo "New version: $VERSION ($DATE)"
+          echo "New version: $VERSION"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8.2.0
 
       - name: Update versions
         env:
           VERSION: ${{ steps.version.outputs.version }}
         run: |
-          sed -i -E "s/version = \"(.+)\"/version = \"$VERSION\"/" pyproject.toml
-          sed -i -E "s/\"version\": \"(.+)\"/\"version\": \"$VERSION\"/" package.json
-          
+          sed -i -E "s/^version = \".*\"/version = \"$VERSION\"/" pyproject.toml
+          sed -i -E "s/\"version\": \".*\"/\"version\": \"$VERSION\"/" package.json
+
           uv sync --all-extras
 
       - name: Commit version changes
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: 'release: v${{ steps.version.outputs.version }}'
+          commit_message: "release: v${{ steps.version.outputs.version }}"
+
+  create-release:
+    needs: prepare-release
+    if: |
+      always() &&
+      (
+        github.event_name == 'push' ||
+        needs.prepare-release.result == 'success'
+      )
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Determine release version
+        id: release
+        run: |
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            # If the workflow is triggered by a tag, use the version extracted from it (removing the v)
+            VERSION="${GITHUB_REF_NAME#v}"
+          else
+            # Otherwise, use the version created from the date or the user input
+            VERSION="${{ needs.prepare-release.outputs.version }}"
+          fi
+
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Creating release v$VERSION"
 
       - name: Create GitHub Release
         env:
-          GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.release.outputs.version }}
         run: |
-          gh release create v${{ steps.version.outputs.version }} \
-            --title "Release ${{ steps.version.outputs.date }}" \
+          gh release create "v$VERSION" \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "Release $VERSION" \
             --generate-notes \
-            --notes "## Release for version 'v${{ steps.version.outputs.version }}' (${{ steps.version.outputs.date }})
-          
-          - PyPi: https://pypi.org/project/cdns/${{ steps.version.outputs.version }}/
-          - NPM: https://www.npmjs.com/package/@ds-ukassel/cdns/v/${{ steps.version.outputs.version }}"
+            --notes "## Release for version 'v$VERSION'
+
+          - PyPI: https://pypi.org/project/cdns/$VERSION/
+          - NPM: https://www.npmjs.com/package/@ds-ukassel/cdns/v/$VERSION"
