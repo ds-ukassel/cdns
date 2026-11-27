@@ -71,7 +71,6 @@ jobs:
         with:
           tag_name: v${{ steps.version.outputs.version }}
           name: Release ${{ steps.version.outputs.date }}
-          files: dist/ranges.json
           generate_release_notes: true
           body: |
             ## Release for version 'v${{ steps.version.outputs.version }}' (${{ steps.version.outputs.date }})
