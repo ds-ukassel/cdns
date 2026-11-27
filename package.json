@@ -13,7 +13,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc && yq -o=json . cdns.yaml > dist/cdns.json",
+    "build": "tsc",
     "prepublish": "pnpm build",
     "test": "vitest"
   },

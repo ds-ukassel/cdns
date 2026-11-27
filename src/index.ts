@@ -17,6 +17,6 @@ export interface IPRange {
   url?: string;
 }
 
-export const cdns: CDN[] = _cdns;
+export const cdns: CDN[] = _cdns as CDN[];
 export * from './domains.js';
 export * from './headers.js';
