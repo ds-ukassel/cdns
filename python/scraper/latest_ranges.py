@@ -1,7 +1,7 @@
 import json
 
 from scraper.clickhouse_service import ClickhouseService
-from scraper.config import *
+from scraper.config import CDN_DATABASE
 
 
 def main():

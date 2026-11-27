@@ -3,7 +3,7 @@ from pathlib import Path
 
 from requests import Session
 
-from scraper.config import *
+from scraper.config import CDN_YAML, CDN_DATABASE, IPINFO_DATABASE
 from scraper.logger import LOGGER
 from scraper.utils import read_yaml
 from scraper.clickhouse_service import ClickhouseService
