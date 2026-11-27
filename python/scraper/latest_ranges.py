@@ -20,6 +20,7 @@ def main():
             )
               AND source != 'ipinfo'
             GROUP BY cdn_name
+            ORDER BY crawl_timestamp
             """
         ).result_rows
 
