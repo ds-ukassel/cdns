@@ -35,7 +35,7 @@ scraper = [
 
 [project.scripts]
 scraper = "scraper.main:main"
-release = "scraper.latest_ranges:main"
+latest_ranges = "scraper.latest_ranges:main"
 
 [build-system]
 requires = ["hatchling"]

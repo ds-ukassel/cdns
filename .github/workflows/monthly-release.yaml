@@ -33,7 +33,7 @@ jobs:
           CLICKHOUSE_CDN_DATABASE: ${{ vars.CLICKHOUSE_CDN_DATABASE }}
           CLICKHOUSE_CDN_TABLE: ${{ vars.CLICKHOUSE_CDN_TABLE }}
           CLICKHOUSE_SECURE: ${{ vars.CLICKHOUSE_SECURE }}
-        run: uv run release > dist/ranges.json
+        run: uv run latest_ranges > dist/ranges.json
 
       - name: Commit version changes
         uses: stefanzweifel/git-auto-commit-action@v7
