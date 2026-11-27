@@ -1,20 +1,21 @@
 import json
 
 from scraper.clickhouse_service import ClickhouseService
-from scraper.config import CDN_DATABASE
+from scraper.config import CDN_DATABASE, CLICKHOUSE_CDN_DATABASE, CLICKHOUSE_CDN_TABLE
 
 
 def main():
     with ClickhouseService(**CDN_DATABASE) as clickhouse:
         rows = clickhouse.execute_query(
-            """
+            f"""
             SELECT
                 cdn_name,
-                groupArray(ip_range) AS ranges
-            FROM cdns.cdn_ranges
+                groupArray(ip_range) AS ranges,
+                max(timestamp) as timestamp
+            FROM {CLICKHOUSE_CDN_DATABASE}.{CLICKHOUSE_CDN_TABLE}
             WHERE (cdn_name, timestamp) IN (
                 SELECT cdn_name, max(timestamp)
-                FROM cdns.cdn_ranges
+                FROM {CLICKHOUSE_CDN_DATABASE}.{CLICKHOUSE_CDN_TABLE}
                 GROUP BY cdn_name
             )
               AND source != 'ipinfo'
