@@ -2,6 +2,7 @@
 
 Provides a JS library [`@ds-ukassel/cdns`](https://www.npmjs.com/package/@ds-ukassel/cdns) and Python library [`cdns`](https://pypi.org/project/cdns/) to identify CDNs.
 All CDNs are listed in [`cdns.yaml`](cdns.yaml) in this repository, and [`dist/cdns.json`](dist/cdns.json) in the package.
+Additionally, the gathered IP ranges are included in [`dist/ranges.json`](dist/ranges.json).
 
 ## YAML Format
 
