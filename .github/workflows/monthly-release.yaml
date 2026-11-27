@@ -1,0 +1,173 @@
+name: Monthly Release
+
+on:
+  schedule:
+    - cron: "0 12 1 * *"
+      timezone: "Europe/Berlin"
+
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to release (e.g. 26.11.0)"
+        required: true
+        type: string
+
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+  id-token: write  # Required for OIDC
+
+jobs:
+  prepare-release:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: true
+
+      - name: Calculate version and date
+        id: version
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+        run: |
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
+            VERSION=$(TZ=Europe/Berlin date +%y.%m.0)
+          else
+            VERSION="$INPUT_VERSION"
+          fi
+
+          # Validate version format
+          if [[ ! "$VERSION" =~ ^[0-9][0-9]\.[0-9][0-9]\.[0-9]+$ ]]; then
+            echo "::error::Invalid version format: $VERSION"
+            exit 1
+          fi
+
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "New version: $VERSION"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8.2.0
+
+      - name: Update versions
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          sed -i -E "s/^version = \".*\"/version = \"$VERSION\"/" pyproject.toml
+          sed -i -E "s/\"version\": \".*\"/\"version\": \"$VERSION\"/" package.json
+
+          uv sync --all-extras
+
+      - name: Commit version changes
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "release: v${{ steps.version.outputs.version }}"
+
+  create-release:
+    needs: prepare-release
+    if: |
+      always() &&
+      (
+        github.event_name == 'push' ||
+        needs.prepare-release.result == 'success'
+      )
+    runs-on: ubuntu-latest
+    outputs:
+      release_tag: ${{ steps.release.outputs.tag }}
+    steps:
+      - name: Determine release version
+        id: release
+        run: |
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            VERSION="${GITHUB_REF_NAME#v}"
+          else
+            VERSION="${{ needs.prepare-release.outputs.version }}"
+          fi
+
+          TAG="v$VERSION"
+
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "Creating release $TAG"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.release.outputs.version }}
+        run: |
+          gh release create "v$VERSION" \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "Release $VERSION" \
+            --generate-notes \
+            --notes "## Release for version 'v$VERSION'
+
+          - PyPI: https://pypi.org/project/cdns/$VERSION/
+          - NPM: https://www.npmjs.com/package/@ds-ukassel/cdns/v/$VERSION"
+
+  publish-npm:
+    needs: create-release
+    runs-on: ubuntu-latest
+    name: Build package and publish to NPM
+    environment:
+      name: npm
+      url: https://www.npmjs.com/package/@ds-ukassel/cdns
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.create-release.outputs.release_tag }}
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 'lts/*'
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false  # never use caching in release builds
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Run build
+        run: pnpm run --if-present build
+      - name: Stage Publish
+        run: pnpm stage publish
+
+  publish-pypi:
+    needs: create-release
+    name: Build package and publish to PyPi
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/cdns
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.create-release.outputs.release_tag }}
+          persist-credentials: false
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8.2.0
+
+      - name: Install dependencies
+        run: uv sync --frozen --all-extras
+
+      - name: Build artifacts
+        run: uv build -o .target
+
+      - name: Publish to PyPi
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: .target
+          verbose: true
+          print-hash: true

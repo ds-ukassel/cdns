@@ -8,11 +8,11 @@ ENV UV_LOCKED=1 UV_NO_SYNC=1 UV_NO_DEV=1
 RUN --mount=type=cache,id=uv,target=/root/.cache/uv \
     --mount=type=bind,source=uv.lock,target=uv.lock \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
-    uv sync --no-install-project --extra ranges
+    uv sync --no-install-project --extra scraper
 
 COPY . /app
 
 RUN --mount=type=cache,id=uv,target=/root/.cache/uv \
-    uv sync --compile-bytecode --extra ranges
+    uv sync --compile-bytecode --extra scraper
 
-CMD ["uv", "run", "ranges"]
+CMD ["uv", "run", "scraper"]

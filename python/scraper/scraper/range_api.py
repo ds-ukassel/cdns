@@ -3,8 +3,8 @@ from typing import Any
 
 from requests import Session
 
-from common.logger import LOGGER
-from ranges.parser import PARSERS, Parser
+from scraper.logger import LOGGER
+from scraper.parser import PARSERS, Parser
 
 RANGE_SOURCE_API = "api"
 RANGE_SOURCE_STATIC = "static"
