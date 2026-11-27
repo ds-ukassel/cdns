@@ -56,6 +56,8 @@ jobs:
         run: |
           sed -i -E "s/version = \"(.+)\"/version = \"$VERSION\"/" pyproject.toml
           sed -i -E "s/\"version\": \"(.+)\"/\"version\": \"$VERSION\"/" package.json
+          
+          uv sync --all-extras
 
       - name: Commit version changes
         uses: stefanzweifel/git-auto-commit-action@v7
