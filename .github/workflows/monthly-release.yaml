@@ -80,21 +80,23 @@ jobs:
         needs.prepare-release.result == 'success'
       )
     runs-on: ubuntu-latest
-
+    outputs:
+      release_tag: ${{ steps.release.outputs.tag }}
     steps:
       - name: Determine release version
         id: release
         run: |
           if [[ "${{ github.event_name }}" == "push" ]]; then
-            # If the workflow is triggered by a tag, use the version extracted from it (removing the v)
             VERSION="${GITHUB_REF_NAME#v}"
           else
-            # Otherwise, use the version created from the date or the user input
             VERSION="${{ needs.prepare-release.outputs.version }}"
           fi
 
+          TAG="v$VERSION"
+
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-          echo "Creating release v$VERSION"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "Creating release $TAG"
 
       - name: Create GitHub Release
         env:
@@ -121,6 +123,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.create-release.outputs.release_tag }}
       - name: Set up pnpm
         uses: pnpm/action-setup@v6
       - name: Set up Node.js
@@ -151,6 +155,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
         with:
+          ref: ${{ needs.create-release.outputs.release_tag }}
           persist-credentials: false
 
       - name: Install uv
