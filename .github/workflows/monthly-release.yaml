@@ -24,26 +24,10 @@ jobs:
       - name: Install uv dependencies
         run: uv sync --frozen --all-extras
 
-      - name: Run Python script and save JSON
-        env:
-          CLICKHOUSE_CDN_HOST: ${{ secrets.CLICKHOUSE_CDN_HOST }}
-          CLICKHOUSE_CDN_PORT: ${{ secrets.CLICKHOUSE_CDN_PORT }}
-          CLICKHOUSE_CDN_USER: ${{ secrets.CLICKHOUSE_CDN_USER }}
-          CLICKHOUSE_CDN_PASSWORD: ${{ secrets.CLICKHOUSE_CDN_PASSWORD }}
-          CLICKHOUSE_CDN_DATABASE: ${{ vars.CLICKHOUSE_CDN_DATABASE }}
-          CLICKHOUSE_CDN_TABLE: ${{ vars.CLICKHOUSE_CDN_TABLE }}
-          CLICKHOUSE_SECURE: ${{ vars.CLICKHOUSE_SECURE }}
-        run: uv run latest_ranges > dist/ranges.json
-
-      - name: Commit version changes
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_message: 'chore: Update CDN ip ranges'
-
       - name: Calculate version and date
         id: version
         run: |
-          VERSION=$(TZ=Europe/Berlin date +%g.%m.0)
+          VERSION=$(TZ=Europe/Berlin date +%y.%m.0)
           DATE=$(TZ=Europe/Berlin date +%d.%m.%Y)
           
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
@@ -64,16 +48,14 @@ jobs:
         with:
           commit_message: 'release: v${{ steps.version.outputs.version }}'
 
-      - name: Create GitHub Release for ranges
-        uses: softprops/action-gh-release@v3
+      - name: Create GitHub Release
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-        with:
-          tag_name: v${{ steps.version.outputs.version }}
-          name: Release ${{ steps.version.outputs.date }}
-          generate_release_notes: true
-          body: |
-            ## Release for version 'v${{ steps.version.outputs.version }}' (${{ steps.version.outputs.date }})
-            
-            - PyPi: https://pypi.org/project/cdns/${{ steps.version.outputs.version }}/
-            - NPM: https://www.npmjs.com/package/@ds-ukassel/cdns/v/${{ steps.version.outputs.version }}
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        run: |
+          gh release create v${{ steps.version.outputs.version }} \
+            --title "Release ${{ steps.version.outputs.date }}" \
+            --generate-notes \
+            --notes "## Release for version 'v${{ steps.version.outputs.version }}' (${{ steps.version.outputs.date }})
+          
+          - PyPi: https://pypi.org/project/cdns/${{ steps.version.outputs.version }}/
+          - NPM: https://www.npmjs.com/package/@ds-ukassel/cdns/v/${{ steps.version.outputs.version }}"
