@@ -24,10 +24,10 @@ def main():
         ).result_rows
 
         print(json.dumps({
-            row[0]: {
-                "ranges": sorted(row[1]),
-                "timestamp": row[2].isoformat(),
-            } for row in sorted(rows, key=lambda row: row[0])
+            cdn: {
+                "ranges": sorted(ranges),
+                "timestamp": timestamp.isoformat(),
+            } for cdn, ranges, timestamp in rows
         }, indent=1))
 
 if __name__ == "__main__":
