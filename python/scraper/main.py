@@ -11,9 +11,7 @@ from scraper.scraper import range_api, ipinfo
 
 
 def main():
-    LOGGER.info("Loading CDNs...")
     cdns = read_yaml(Path(CDN_YAML))
-    LOGGER.info(f"Successfully loaded {len(cdns)} CDNs.")
 
     timestamp = datetime.datetime.now(datetime.timezone.utc)
 
