@@ -114,7 +114,6 @@ jobs:
 
   publish-npm:
     needs: create-release
-    if: needs.create-release.result == 'success'
     runs-on: ubuntu-latest
     name: Build package and publish to NPM
     environment:
@@ -142,7 +141,6 @@ jobs:
 
   publish-pypi:
     needs: create-release
-    if: needs.create-release.result == 'success'
     name: Build package and publish to PyPi
     runs-on: ubuntu-latest
     environment:
